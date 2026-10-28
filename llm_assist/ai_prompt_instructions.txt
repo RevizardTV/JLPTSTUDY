@@ -45,6 +45,8 @@ USABLE TAG DICTIONARY (Apply as many relevant tags as possible):
 - Grammatical Distinctions (for Verbs/Adjectives):
   "godan-verb", "ichidan-verb", "suru-verb", "kuru-verb", "transitive", "intransitive"
 
+-Meta distincters:
+  "Kanji","includes-kana","katakana","hiragana","loan-word","commonly-used","daily-life"
 --------------------------------------------------------------------------------
 JSON SCHEMAS & FORMATS
 --------------------------------------------------------------------------------
