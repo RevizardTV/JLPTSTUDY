@@ -1,44 +1,250 @@
 <script lang="ts">
   import { questionSets } from '#lib/stores.js';
-  import type { QuestionSet } from '#lib/types.js';
+  import type { QuestionSet, VocabItem, Question } from '#lib/types.js';
+  import { SvelteMap, SvelteSet } from 'svelte/reactivity';
+  import VocabUploadModal from '#lib/components/VocabUploadModal.svelte';
 
-  let searchQuery = $state<string>("");
+  let kanjiQuery = $state<string>("");
+  let kanaQuery = $state<string>("");
+  let romajiQuery = $state<string>("");
+  let selectedTagFilter = $state<string>("all");
+  let showVocabModal = $state<boolean>(false);
 
-  // Svelte 5 derived state replacing legacy $:/
+  // Use $derived.by for block-based computations with SvelteMap
+  const questionReadingMap = $derived.by(() => {
+    const map = new SvelteMap<string, string>();
+    ($questionSets as QuestionSet[]).forEach(set => {
+      set.questions.forEach((q: Question) => {
+        const target = q.kanji || q.prompt;
+        const reading = q.reading || q.options[q.answer]?.kana || q.options[0]?.kana;
+        if (target && reading) {
+          map.set(target.trim(), reading.trim());
+        }
+      });
+    });
+    return map;
+  });
+
   const allVocab = $derived(
-    ($questionSets as QuestionSet[]).flatMap(s => s.vocab || [])
+    ($questionSets as QuestionSet[]).flatMap((s: QuestionSet) => s.vocab || [])
   );
 
+  // Fixed: Replaced invalid $derived(() => { ... })() with $derived.by(...)
+  const availableVocabTags = $derived.by(() => {
+    const tagsSet = new SvelteSet<string>();
+    allVocab.forEach((item) => {
+      if (typeof item === 'object' && item !== null && Array.isArray((item as VocabItem).vocabTags)) {
+        (item as VocabItem).vocabTags!.forEach(t => tagsSet.add(t.toLowerCase().trim()));
+      }
+    });
+    return Array.from(tagsSet).sort();
+  });
+
+  function isJapaneseText(text: string): boolean {
+    return /[\u3040-\u30ff\u4e00-\u9faf]/.test(text);
+  }
+
+  function parseVocabItem(item: VocabItem | string) {
+    const rawWord = typeof item === 'string' ? item : item.word;
+    const meaning = typeof item === 'string' ? 'N/A' : item.meaning;
+    const vocabTags = typeof item === 'object' && item !== null && Array.isArray((item as VocabItem).vocabTags) ? (item as VocabItem).vocabTags! : [];
+
+    let kanji = rawWord;
+    let kana = '';
+    let romaji = '';
+
+    const match = rawWord.match(/^([^(]+)\(([^)]+)\)$/);
+    if (match) {
+      kanji = match[1].trim();
+      const insideParen = match[2].trim();
+
+      if (isJapaneseText(insideParen)) {
+        kana = insideParen;
+      } else {
+        romaji = insideParen;
+      }
+    }
+
+    if (!kana && questionReadingMap.has(kanji)) {
+      kana = questionReadingMap.get(kanji)!;
+    }
+
+    if (!kana) {
+      kana = kanji;
+    }
+
+    return {
+      kanji,
+      kana,
+      romaji,
+      meaning,
+      vocabTags
+    };
+  }
+
   const filteredVocab = $derived(
-    allVocab.filter(item => 
-      item.word.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.meaning.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+    allVocab.map((item: VocabItem | string) => parseVocabItem(item)).filter(item => {
+      const qKanji = kanjiQuery;
+      const qKana = kanaQuery;
+      const qRomaji = romajiQuery;
+      const tagFilter = selectedTagFilter;
+
+      const matchesKanji = !qKanji.trim() || item.kanji.toLowerCase().includes(qKanji.toLowerCase().trim());
+      const matchesKana = !qKana.trim() || item.kana.toLowerCase().includes(qKana.toLowerCase().trim());
+      const matchesRomaji = !qRomaji.trim() || 
+        item.meaning.toLowerCase().includes(qRomaji.toLowerCase().trim()) ||
+        item.romaji.toLowerCase().includes(qRomaji.toLowerCase().trim());
+      
+      const matchesTag = tagFilter === 'all' || item.vocabTags.some(t => t.toLowerCase() === tagFilter.toLowerCase());
+
+      return matchesKanji && matchesKana && matchesRomaji && matchesTag;
+    })
+  );
+
+  function clearAllFilters() {
+    kanjiQuery = "";
+    kanaQuery = "";
+    romajiQuery = "";
+    selectedTagFilter = "all";
+  }
+
+  const hasActiveFilters = $derived(
+    kanjiQuery.trim().length > 0 || kanaQuery.trim().length > 0 || romajiQuery.trim().length > 0 || selectedTagFilter !== "all"
   );
 </script>
 
 <div class="space-y-6">
   <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
     <div>
-      <h2 class="text-2xl font-bold">Vocabulary Reference</h2>
-      <p class="text-slate-500 text-sm">Real-time search across all stored sets.</p>
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Vocabulary Reference</h2>
+      <p class="text-slate-500 text-sm">Filter vocabulary by Kanji, Kana, Romaji/Meaning, or specific tags (noun, verb, animal, counter).</p>
     </div>
-    <input 
-      type="text" 
-      bind:value={searchQuery} 
-      placeholder="Search vocabulary..." 
-      class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-sm focus:ring-2 focus:ring-brand-500 outline-none w-full sm:w-72"
-    />
+    
+    <div class="flex items-center space-x-2">
+      <button 
+        onclick={() => showVocabModal = true}
+        class="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-bold transition shadow">
+        + Upload Vocab JSON
+      </button>
+
+      {#if hasActiveFilters}
+        <button 
+          onclick={clearAllFilters}
+          class="px-3 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 text-slate-600 dark:text-slate-300 rounded-xl text-xs font-semibold transition">
+          Clear Filters
+        </button>
+      {/if}
+    </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {#each filteredVocab as item, idx (item.word + idx)}
-      <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex justify-between items-center">
+  <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-3">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div class="space-y-1">
+        <label for="kanji-filter" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Search Kanji</label>
+        <input 
+          id="kanji-filter"
+          type="text" 
+          bind:value={kanjiQuery} 
+          placeholder="e.g. 学校..." 
+          class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-xs focus:ring-2 focus:ring-brand-500 outline-none text-slate-800 dark:text-slate-200"
+        />
+      </div>
+
+      <div class="space-y-1">
+        <label for="kana-filter" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Search Kana</label>
+        <input 
+          id="kana-filter"
+          type="text" 
+          bind:value={kanaQuery} 
+          placeholder="e.g. がっこう..." 
+          class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-xs focus:ring-2 focus:ring-brand-500 outline-none text-slate-800 dark:text-slate-200"
+        />
+      </div>
+
+      <div class="space-y-1">
+        <label for="romaji-filter" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Search Romaji / Meaning</label>
+        <input 
+          id="romaji-filter"
+          type="text" 
+          bind:value={romajiQuery} 
+          placeholder="e.g. school..." 
+          class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-xs focus:ring-2 focus:ring-brand-500 outline-none text-slate-800 dark:text-slate-200"
+        />
+      </div>
+    </div>
+
+    {#if availableVocabTags.length > 0}
+      <div class="pt-2 border-t border-slate-100 dark:border-slate-700/50 flex flex-wrap items-center gap-1.5">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mr-2">Vocab Tag:</span>
+        <button
+          onclick={() => selectedTagFilter = 'all'}
+          class={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
+            selectedTagFilter === 'all'
+              ? 'bg-brand-500 text-white'
+              : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
+          }`}
+        >
+          All Tags
+        </button>
+        {#each availableVocabTags as tag (tag)}
+          <button
+            onclick={() => selectedTagFilter = tag}
+            class={`px-3 py-1 rounded-full text-xs font-bold capitalize transition-all ${
+              selectedTagFilter === tag
+                ? 'bg-brand-500 text-white'
+                : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
+            }`}
+          >
+            #{tag}
+          </button>
+        {/each}
+      </div>
+    {/if}
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {#each filteredVocab as item, idx (item.kanji + idx)}
+      <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between space-y-3 transition hover:shadow-md">
         <div>
-          <h4 class="font-bold text-lg text-brand-600 font-japanese">{item.word}</h4>
-          <p class="text-xs text-slate-500">{item.meaning}</p>
+          <div class="flex justify-between items-start">
+            <div class="text-2xl font-bold font-japanese text-brand-600 dark:text-brand-400 mb-2">
+              {item.kanji}
+            </div>
+            {#if item.vocabTags && item.vocabTags.length > 0}
+              <div class="flex flex-wrap gap-1">
+                {#each item.vocabTags as tag (tag)}
+                  <span class="text-[10px] px-2 py-0.5 bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20 capitalize font-medium">
+                    #{tag}
+                  </span>
+                {/each}
+              </div>
+            {/if}
+          </div>
+          
+          <div class="inline-flex items-center space-x-1 px-2.5 py-1 bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-200 font-japanese text-xs rounded-lg border border-slate-200 dark:border-slate-600">
+             <span class="text-slate-400 text-[10px] font-sans">Kana:</span>
+             <span class="font-bold text-brand-500">{item.kana}</span>
+          </div>
         </div>
+
+        <div class="pt-3 border-t border-slate-100 dark:border-slate-700/50 flex justify-between items-center text-xs">
+          <span class="text-slate-400 uppercase tracking-wider font-bold text-[10px]">Meaning</span>
+          <span class="font-semibold text-slate-700 dark:text-slate-200">
+            {item.meaning}
+            {#if item.romaji}
+              <span class="text-slate-400 font-normal">({item.romaji})</span>
+            {/if}
+          </span>
+        </div>
+      </div>
+    {:else}
+      <div class="col-span-full py-12 text-center text-slate-400">
+        No vocabulary items match your combined search filters and tags.
       </div>
     {/each}
   </div>
 </div>
+
+{#if showVocabModal}
+  <VocabUploadModal onclose={() => showVocabModal = false} />
+{/if}

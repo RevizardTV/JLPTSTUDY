@@ -3,6 +3,7 @@
   import TagFilter from '#lib/components/TagFilter.svelte';
   import PackFilter from '#lib/components/PackFilter.svelte';
   import BatchUploadModal from '#lib/components/BatchUploadModal.svelte';
+  import MultiSetUploadModal from '#lib/components/MultiSetUploadModal.svelte';
   import SingleUploadModal from '#lib/components/SingleUploadModal.svelte';
   import CustomBuilderModal from '#lib/components/CustomBuilderModal.svelte';
   import type { QuestionSet, QuizConfig } from '#lib/types.js';
@@ -13,6 +14,7 @@
 
   let selectedCategory = $state<string>('all');
   let showBatchModal = $state<boolean>(false);
+  let showMultiModal = $state<boolean>(false);
   let showSingleModal = $state<boolean>(false);
   let showCustomModal = $state<boolean>(false);
 
@@ -82,7 +84,7 @@
       <p class="text-rose-100 text-sm sm:text-base mb-6">Practice grammar, kanji, reading, and vocabulary questions with instant feedback.</p>
       
       <div class="flex flex-wrap gap-3">
-        <button onclick={() => startQuiz({ mode: 'all', practice: true })} class="px-5 py-2.5 bg-white text-brand-600 font-bold rounded-xl shadow hover:bg-slate-100 transition">
+        <button onclick={() => startQuiz({ mode: 'all', practice: true })} class="px-5 py-2.5 bg-white text-slate-900 font-bold rounded-xl shadow hover:bg-slate-100 transition">
           Start All Questions
         </button>
         <button onclick={() => showCustomModal = true} class="px-5 py-2.5 bg-brand-700/50 hover:bg-brand-700 text-white font-bold rounded-xl border border-white/20 transition">
@@ -91,8 +93,11 @@
         <button onclick={() => showSingleModal = true} class="px-5 py-2.5 bg-slate-900/40 hover:bg-slate-900/60 text-white font-bold rounded-xl border border-white/20 transition">
           + Add Single Set
         </button>
+        <button onclick={() => showMultiModal = true} class="px-5 py-2.5 bg-indigo-600/80 hover:bg-indigo-600 text-white font-bold rounded-xl border border-white/20 transition">
+          + Multi-Set Upload
+        </button>
         <button onclick={() => showBatchModal = true} class="px-5 py-2.5 bg-slate-900/40 hover:bg-slate-900/60 text-white font-bold rounded-xl border border-white/20 transition">
-          + Batch Upload JSON
+          + Batch JSON
         </button>
       </div>
     </div>
@@ -110,8 +115,8 @@
     {/each}
   </div>
 
-  <!-- Filters Grid: Pack/Collection Filter & Searchable Tag Filter -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <!-- Separate Independent Filter Sections -->
+  <div class="space-y-4">
     <PackFilter bind:selectedPacks />
     <TagFilter bind:selectedTags />
   </div>
@@ -123,19 +128,20 @@
       {@const stats = typeof rawStats === 'object' && rawStats !== null ? rawStats : null}
       <div class="bg-white dark:bg-slate-800 rounded-xl border p-5 transition hover:shadow-md flex flex-col justify-between border-slate-200 dark:border-slate-700 space-y-3">
         <div>
-          <div class="flex justify-between items-start mb-2">
+          <div class="flex justify-between items-start mb-2 gap-2">
             <span class="text-xs font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-brand-600 dark:text-brand-400 capitalize">
-              {set.category || 'kanji'} {set.packTitle ? `• ${set.packTitle}` : ''} • {set.title}
+              {set.category || 'kanji'}
             </span>
-            <span class="text-xs text-slate-400 font-medium">
+            <span class="text-xs text-slate-400 font-medium whitespace-nowrap">
               {stats && 'bestScore' in stats ? `Best: ${stats.bestScore}/${set.questions.length}` : 'Not Started'}
             </span>
           </div>
-          <h4 class="font-bold text-slate-800 dark:text-slate-100 mb-1">{set.title}</h4>
+          
+          <h4 class="font-bold text-lg text-slate-800 dark:text-slate-100 mb-1">{set.title}</h4>
           <p class="text-xs text-slate-500 line-clamp-2">{set.questions.length} questions included</p>
 
           <!-- Pack & Tags Badges on Card -->
-          <div class="flex flex-wrap gap-1 mt-2">
+          <div class="flex flex-wrap gap-1 mt-3">
             {#if set.packTitle}
               <span class="text-[10px] px-2 py-0.5 bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20 font-medium">
                 📦 {set.packTitle}
@@ -151,12 +157,15 @@
           </div>
         </div>
 
+        <!-- Action Buttons -->
         <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/50 flex space-x-2">
-          <button onclick={() => startQuiz({ mode: 'exercise', setId: set.id, practice: true })} class="flex-1 py-1.5 bg-brand-50 hover:bg-brand-100 text-brand-600 dark:bg-brand-950/40 dark:text-brand-400 font-semibold text-xs rounded-lg transition">
-            Practice
+          <button onclick={() => startQuiz({ mode: 'exercise', setId: set.id, practice: true })} class="flex-1 py-2 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow transition flex items-center justify-center space-x-1">
+            <span>✏️</span>
+            <span>Practice</span>
           </button>
-          <button onclick={() => startQuiz({ mode: 'exercise', setId: set.id, practice: false, timed: true })} class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 font-semibold text-xs rounded-lg transition">
-            Timed
+          <button onclick={() => startQuiz({ mode: 'exercise', setId: set.id, practice: false, timed: true })} class="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-1">
+            <span>⏱️</span>
+            <span>Timed</span>
           </button>
         </div>
       </div>
@@ -170,6 +179,10 @@
   <!-- Modals -->
   {#if showBatchModal}
     <BatchUploadModal onclose={() => showBatchModal = false} />
+  {/if}
+
+  {#if showMultiModal}
+    <MultiSetUploadModal onclose={() => showMultiModal = false} />
   {/if}
 
   {#if showSingleModal}

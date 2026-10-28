@@ -12,7 +12,6 @@ export interface Question {
   answer: number;
   kanji?: string;
   reading?: string;
-  // Added optional fields so QuizScreen can map them without type errors
   setId?: string;
   setTitle?: string;
   contextText?: string;
@@ -21,6 +20,7 @@ export interface Question {
 export interface VocabItem {
   word: string;
   meaning: string;
+  vocabTags?: string[]; // Added support for vocab-specific tags (e.g. noun, verb, counter, animal)
 }
 
 export interface QuestionSet {
@@ -46,7 +46,6 @@ export interface UserProgressData {
   totalQuizzes: number;
 }
 
-// Added Quiz & Progress Event Types
 export interface QuizConfig {
   mode: 'all' | 'exercise' | string;
   setId?: string;
