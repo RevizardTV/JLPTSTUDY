@@ -1,3 +1,5 @@
+export type CategoryType = 'kanji' | 'grammar' | 'reading' | 'vocabulary' | string;
+
 export interface Option {
   text: string;
   kana: string;
@@ -28,7 +30,7 @@ export interface VocabItem {
 export interface QuestionSet {
   id: string;
   title: string;
-  category: string;
+  category: CategoryType;
   tags?: string[];
   packTitle?: string;
   contextPassages: string[];

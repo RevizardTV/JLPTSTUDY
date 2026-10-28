@@ -60,13 +60,13 @@
     
     <div class="space-y-3 text-xs">
       <div>
-        <label class="block font-bold mb-1">Set Title (e.g. EX-20)</label>
-        <input type="text" bind:value={title} placeholder="EX-20" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
+        <label for="single-title" class="block font-bold mb-1">Set Title (e.g. EX-20)</label>
+        <input id="single-title" type="text" bind:value={title} placeholder="EX-20" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
       </div>
 
       <div>
-        <label class="block font-bold mb-1">Category</label>
-        <select bind:value={category} class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700">
+        <label for="single-category" class="block font-bold mb-1">Category</label>
+        <select id="single-category" bind:value={category} class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700">
           <option value="kanji">Kanji</option>
           <option value="grammar">Grammar</option>
           <option value="reading">Reading</option>
@@ -75,37 +75,37 @@
       </div>
 
       <div>
-        <label class="block font-bold mb-1">Context Sentence / Passage</label>
-        <input type="text" bind:value={contextPassage} placeholder="きょうはがっこうへ行きます。" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700 font-japanese" />
+        <label for="single-context" class="block font-bold mb-1">Context Sentence / Passage</label>
+        <input id="single-context" type="text" bind:value={contextPassage} placeholder="きょうはがっこうへ行きます。" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700 font-japanese" />
       </div>
 
       <div>
-        <label class="block font-bold mb-1">Target Word / Prompt</label>
-        <input type="text" bind:value={prompt} placeholder="行く" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700 font-japanese" />
+        <label for="single-prompt" class="block font-bold mb-1">Target Word / Prompt</label>
+        <input id="single-prompt" type="text" bind:value={prompt} placeholder="行く" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700 font-japanese" />
       </div>
 
       <div class="grid grid-cols-2 gap-2">
         <div>
-          <label class="block font-bold mb-1">Option 1 (Correct or Wrong)</label>
-          <input type="text" bind:value={opt1} placeholder="いく" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
+          <label for="single-opt1" class="block font-bold mb-1">Option 1 (Correct or Wrong)</label>
+          <input id="single-opt1" type="text" bind:value={opt1} placeholder="いく" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
         </div>
         <div>
-          <label class="block font-bold mb-1">Option 2</label>
-          <input type="text" bind:value={opt2} placeholder="くる" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
+          <label for="single-opt2" class="block font-bold mb-1">Option 2</label>
+          <input id="single-opt2" type="text" bind:value={opt2} placeholder="くる" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
         </div>
         <div>
-          <label class="block font-bold mb-1">Option 3</label>
-          <input type="text" bind:value={opt3} placeholder="みる" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
+          <label for="single-opt3" class="block font-bold mb-1">Option 3</label>
+          <input id="single-opt3" type="text" bind:value={opt3} placeholder="みる" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
         </div>
         <div>
-          <label class="block font-bold mb-1">Option 4</label>
-          <input type="text" bind:value={opt4} placeholder="する" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
+          <label for="single-opt4" class="block font-bold mb-1">Option 4</label>
+          <input id="single-opt4" type="text" bind:value={opt4} placeholder="する" class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700" />
         </div>
       </div>
 
       <div>
-        <label class="block font-bold mb-1">Correct Option Index (0 to 3)</label>
-        <select bind:value={correctAnswer} class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700">
+        <label for="single-correct" class="block font-bold mb-1">Correct Option Index (0 to 3)</label>
+        <select id="single-correct" bind:value={correctAnswer} class="w-full p-2.5 border rounded-xl dark:bg-slate-900 dark:border-slate-700">
           <option value={0}>Option 1</option>
           <option value={1}>Option 2</option>
           <option value={2}>Option 3</option>

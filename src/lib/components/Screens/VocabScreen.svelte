@@ -2,7 +2,7 @@
   import { questionSets } from '#lib/stores.js';
   import type { QuestionSet, VocabItem, Question } from '#lib/types.js';
   import { SvelteMap, SvelteSet } from 'svelte/reactivity';
-  import VocabUploadModal from '#lib/components/VocabUploadModal.svelte';
+  import VocabUploadModal from '#lib/components/modals/VocabUploadModal.svelte';
 
   let kanjiQuery = $state<string>("");
   let kanaQuery = $state<string>("");

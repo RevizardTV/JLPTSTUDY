@@ -1,12 +1,12 @@
 <script lang="ts">
   import { questionSets, userProgress, deleteQuestionSet } from '#lib/stores.js';
-  import TagFilter from '#lib/components/TagFilter.svelte';
-  import PackFilter from '#lib/components/PackFilter.svelte';
-  import BatchUploadModal from '#lib/components/BatchUploadModal.svelte';
-  import MultiSetUploadModal from '#lib/components/MultiSetUploadModal.svelte';
-  import SingleUploadModal from '#lib/components/SingleUploadModal.svelte';
-  import CustomBuilderModal from '#lib/components/CustomBuilderModal.svelte';
-  import DataWiper from '#lib/components/DataWiper.svelte';
+  import TagFilter from '#lib/components/filters/TagFilter.svelte';
+  import PackFilter from '#lib/components/filters/PackFilter.svelte';
+  import BatchUploadModal from '#lib/components/modals/BatchUploadModal.svelte';
+  import MultiSetUploadModal from '#lib/components/modals/MultiSetUploadModal.svelte';
+  import SingleUploadModal from '#lib/components/modals/SingleUploadModal.svelte';
+  import CustomBuilderModal from '#lib/components/modals/CustomBuilderModal.svelte';
+  import DataWiper from '#lib/components/buttons/DataWiper.svelte';
   import type { QuizConfig } from '#lib/types.js';
 
   let { onnavigate }: { 

@@ -1,43 +1,185 @@
 [
   {
-    "id": "set-n5-vocab-batch-01",
-    "title": "JLPT N5 Daily Objects",
-    "category": "vocabulary",
-    "packTitle": "JLPT N5 Core Pack",
-    "tags": ["n5", "basics"],
-    "contextPassages": [
-      "机の上に本とペンがあります。"
-    ],
+    "id": "set-batch-vol1-kanji",
+    "title": "N5 Essential Kanji Set",
+    "category": "kanji",
+    "packTitle": "Master Batch Pack A",
+    "tags": ["kanji", "n5", "core"],
+    "contextPassages": ["あしたは日曜日です。"],
     "questions": [
       {
         "qNum": 1,
-        "prompt": "What does 机 (つくえ) mean?",
+        "prompt": "日",
         "contextIdx": 0,
         "options": [
-          { "text": "Desk", "kana": "つくえ", "english": "desk" },
-          { "text": "Chair", "kana": "いす", "english": "chair" },
-          { "text": "Door", "kana": "ドア", "english": "door" },
-          { "text": "Window", "kana": "まど", "english": "window" }
+          { "text": "げつ", "kana": "げつ", "english": "moon" },
+          { "text": "にち", "kana": "にち", "english": "sun / day" },
+          { "text": "すい", "kana": "すい", "english": "water" },
+          { "text": "もく", "kana": "もく", "english": "tree" }
         ],
-        "answer": 0,
-        "kanji": "机",
-        "reading": "つくえ"
+        "answer": 1,
+        "kanji": "日",
+        "reading": "にち"
       }
     ],
     "vocab": [
       {
-        "word": "机",
-        "kana": "つくえ",
-        "meaning": "desk",
-        "romaji": "tsukue",
-        "vocabTags": ["noun", "furniture"]
+        "word": "日曜日",
+        "kana": "にちようび",
+        "romaji": "nichiyoubi",
+        "meaning": "Sunday"
+      }
+    ]
+  },
+  {
+    "id": "set-batch-vol2-grammar",
+    "title": "N5 Basic Particles",
+    "category": "grammar",
+    "packTitle": "Master Batch Pack A",
+    "tags": ["grammar", "n5", "particles"],
+    "contextPassages": ["りんごを食べます。"],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "りんご ___ 食べます。",
+        "contextIdx": 0,
+        "options": [
+          { "text": "を", "kana": "を", "english": "object marker" },
+          { "text": "に", "kana": "に", "english": "target marker" },
+          { "text": "で", "kana": "で", "english": "tool/place marker" },
+          { "text": "が", "kana": "が", "english": "subject marker" }
+        ],
+        "answer": 0,
+        "kanji": "りんごを食べます",
+        "reading": "りんごをたべます"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "食べる",
+        "kana": "たべる",
+        "romaji": "taberu",
+        "meaning": "to eat"
       },
       {
-        "word": "椅子",
-        "kana": "いす",
-        "meaning": "chair",
-        "romaji": "isu",
-        "vocabTags": ["noun", "furniture"]
+        "word": "りんご",
+        "kana": "りんご",
+        "romaji": "ringo",
+        "meaning": "apple"
+      }
+    ]
+  },
+  {
+    "id": "set-batch-vol3-vocab",
+    "title": "Daily Routine Vocabulary",
+    "category": "vocabulary",
+    "packTitle": "Master Batch Pack B",
+    "tags": ["vocab", "n5", "daily"],
+    "contextPassages": ["まいあさ、コーヒーを飲みます。"],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "飲む",
+        "contextIdx": 0,
+        "options": [
+          { "text": "のむ", "kana": "のむ", "english": "to drink" },
+          { "text": "よむ", "kana": "よむ", "english": "to read" },
+          { "text": "かく", "kana": "かく", "english": "to write" },
+          { "text": "いく", "kana": "いく", "english": "to go" }
+        ],
+        "answer": 0,
+        "kanji": "飲む",
+        "reading": "のむ"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "飲む",
+        "kana": "のむ",
+        "romaji": "nomu",
+        "meaning": "to drink"
+      },
+      {
+        "word": "コーヒー",
+        "kana": "こーひー",
+        "romaji": "koohii",
+        "meaning": "coffee"
+      }
+    ]
+  },
+  {
+    "id": "set-batch-vol4-reading",
+    "title": "Short Story Comprehension",
+    "category": "reading",
+    "packTitle": "Master Batch Pack B",
+    "tags": ["reading", "n5", "stories"],
+    "contextPassages": ["きのう、えいがをみました。とてもおもしろかったです。"],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "映画はどうでしたか。",
+        "contextIdx": 0,
+        "options": [
+          { "text": "つまらなかったです", "kana": "つまらなかったです", "english": "It was boring" },
+          { "text": "おもしろかったです", "kana": "おもしろかったです", "english": "It was interesting" },
+          { "text": "見ていません", "kana": "みていません", "english": "I didn't watch it" },
+          { "text": "わかりません", "kana": "わかりません", "english": "I don't know" }
+        ],
+        "answer": 1,
+        "kanji": "面白かった",
+        "reading": "おもしろかった"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "映画",
+        "kana": "えいが",
+        "romaji": "eiga",
+        "meaning": "movie"
+      },
+      {
+        "word": "面白い",
+        "kana": "おもしろい",
+        "romaji": "omoshiroi",
+        "meaning": "interesting"
+      }
+    ]
+  },
+  {
+    "id": "set-batch-vol5-kanji",
+    "title": "Numbers & Counters",
+    "category": "kanji",
+    "packTitle": "Master Batch Pack C",
+    "tags": ["kanji", "n5", "numbers"],
+    "contextPassages": ["つくえのうえに、りんごが三つあります。"],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "三つ",
+        "contextIdx": 0,
+        "options": [
+          { "text": "ひとつ", "kana": "ひとつ", "english": "one" },
+          { "text": "ふたつ", "kana": "ふたつ", "english": "two" },
+          { "text": "みっつ", "kana": "みっつ", "english": "three" },
+          { "text": "よっつ", "kana": "よっつ", "english": "four" }
+        ],
+        "answer": 2,
+        "kanji": "三つ",
+        "reading": "みっつ"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "三つ",
+        "kana": "みっつ",
+        "romaji": "mittsu",
+        "meaning": "three (things)"
+      },
+      {
+        "word": "机",
+        "kana": "つくえ",
+        "romaji": "tsukue",
+        "meaning": "desk"
       }
     ]
   }

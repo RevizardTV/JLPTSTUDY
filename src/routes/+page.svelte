@@ -1,11 +1,11 @@
 <script lang="ts">
   import '../app.css';
-  import Navbar from '#lib/components/Navbar.svelte';
-  import Dashboard from '#lib/components/Dashboard.svelte';
-  import QuizScreen from '#lib/components/QuizScreen.svelte';
-  import SummaryScreen from '#lib/components/SummaryScreen.svelte';
-  import VocabScreen from '#lib/components/VocabScreen.svelte';
-  import StatsScreen from '#lib/components/StatsScreen.svelte';
+  import Navbar from '#lib/components/buttons/Navbar.svelte';
+  import Dashboard from '#lib/components/Screens/Dashboard.svelte';
+  import QuizScreen from '#lib/components/Screens/QuizScreen.svelte';
+  import SummaryScreen from '#lib/components/Screens/SummaryScreen.svelte';
+  import VocabScreen from '#lib/components/Screens/VocabScreen.svelte';
+  import StatsScreen from '#lib/components/Screens/StatsScreen.svelte';
   import type { QuizConfig, FinishEventData } from '#lib/types.js';
 
   let currentScreen = $state<string>('dashboard');
