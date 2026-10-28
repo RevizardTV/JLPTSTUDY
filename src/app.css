@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-500: #e05638;
+  --font-japanese: 'Hiragino Mincho ProN', serif;
+}
