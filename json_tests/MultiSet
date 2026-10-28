@@ -1,0 +1,44 @@
+[
+  {
+    "id": "set-n5-vocab-batch-01",
+    "title": "JLPT N5 Daily Objects",
+    "category": "vocabulary",
+    "packTitle": "JLPT N5 Core Pack",
+    "tags": ["n5", "basics"],
+    "contextPassages": [
+      "机の上に本とペンがあります。"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "What does 机 (つくえ) mean?",
+        "contextIdx": 0,
+        "options": [
+          { "text": "Desk", "kana": "つくえ", "english": "desk" },
+          { "text": "Chair", "kana": "いす", "english": "chair" },
+          { "text": "Door", "kana": "ドア", "english": "door" },
+          { "text": "Window", "kana": "まど", "english": "window" }
+        ],
+        "answer": 0,
+        "kanji": "机",
+        "reading": "つくえ"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "机",
+        "kana": "つくえ",
+        "meaning": "desk",
+        "romaji": "tsukue",
+        "vocabTags": ["noun", "furniture"]
+      },
+      {
+        "word": "椅子",
+        "kana": "いす",
+        "meaning": "chair",
+        "romaji": "isu",
+        "vocabTags": ["noun", "furniture"]
+      }
+    ]
+  }
+]

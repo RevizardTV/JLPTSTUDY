@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 import type { QuestionSet, UserProgressData } from '#lib/types.js';
+import { SvelteSet } from 'svelte/reactivity';
 
 export const initialData: QuestionSet[] = [
   {
@@ -50,11 +51,25 @@ userProgress.subscribe(value => {
   }
 });
 
-const savedSets = typeof window !== 'undefined' ? localStorage.getItem('kanji_quiz_sets') : null;
-export const questionSets = writable<QuestionSet[]>(savedSets ? JSON.parse(savedSets) : initialData);
+// Load sets using the unified 'kanji_question_sets' key
+const savedSets = typeof window !== 'undefined' ? localStorage.getItem('kanji_question_sets') : null;
+const rawSets: QuestionSet[] = savedSets ? JSON.parse(savedSets) : initialData;
+
+// Runtime safety pass to guarantee unique IDs and prevent each_key_duplicate crashes
+const seenIds = new SvelteSet<string>();
+const sanitizedSets = rawSets.map((set, index) => {
+  let id = set.id || `set-${index}`;
+  if (seenIds.has(id)) {
+    id = `${id}-${index}-${Date.now()}`;
+  }
+  seenIds.add(id);
+  return { ...set, id };
+});
+
+export const questionSets = writable<QuestionSet[]>(sanitizedSets);
 
 questionSets.subscribe(value => {
   if (typeof window !== 'undefined') {
-    localStorage.setItem('kanji_quiz_sets', JSON.stringify(value));
+    localStorage.setItem('kanji_question_sets', JSON.stringify(value));
   }
 });

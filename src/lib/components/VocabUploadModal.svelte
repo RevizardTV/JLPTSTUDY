@@ -2,6 +2,7 @@
   import { questionSets } from '#lib/stores.js';
   import type { QuestionSet, VocabItem } from '#lib/types.js';
   import { SvelteMap } from 'svelte/reactivity';
+  import { getExistingVocabSignatures, filterUniqueVocab } from '#lib/utils/vocabChecker.js';
 
   let { onclose }: { onclose: () => void } = $props();
 
@@ -9,12 +10,16 @@
   let jsonInput = $state<string>('');
   let errorMessage = $state<string | null>(null);
   let successCount = $state<number | null>(null);
+  let duplicateCount = $state<number>(0);
+  let allDuplicatesNotice = $state<boolean>(false);
 
   const availableSets = $derived($questionSets as QuestionSet[]);
 
   function handleUpload() {
     errorMessage = null;
     successCount = null;
+    duplicateCount = 0;
+    allDuplicatesNotice = false;
 
     if (!jsonInput.trim()) {
       errorMessage = 'Please paste a valid JSON array of vocabulary items.';
@@ -29,7 +34,7 @@
         return;
       }
 
-      const validVocab: VocabItem[] = [];
+      const rawParsedVocab: VocabItem[] = [];
 
       for (let i = 0; i < parsed.length; i++) {
         const item = parsed[i] as Record<string, unknown>;
@@ -42,15 +47,26 @@
         const rawTags = item.vocabTags || item.tags;
         const vocabTags = Array.isArray(rawTags) ? rawTags.map((t) => String(t)) : [];
 
-        validVocab.push({
+        rawParsedVocab.push({
           word: String(item.word),
           meaning: String(item.meaning),
+          kana: typeof item.kana === 'string' ? item.kana : undefined,
+          romaji: typeof item.romaji === 'string' ? item.romaji : undefined,
           vocabTags
         });
       }
 
       questionSets.update((existing) => {
         const setMap = new SvelteMap<string, QuestionSet>(existing.map((s) => [s.id, s]));
+        const existingSignatures = getExistingVocabSignatures(existing);
+
+        const { uniqueVocab, skippedCount } = filterUniqueVocab(rawParsedVocab, existingSignatures);
+        duplicateCount = skippedCount;
+
+        if (uniqueVocab.length === 0 && rawParsedVocab.length > 0) {
+          allDuplicatesNotice = true;
+          return existing;
+        }
 
         if (targetSetId === 'standalone' || !setMap.has(targetSetId)) {
           const standaloneId = `vocab-import-${Date.now()}`;
@@ -62,12 +78,12 @@
             tags: ['vocab', 'custom'],
             contextPassages: [],
             questions: [],
-            vocab: validVocab
+            vocab: uniqueVocab
           };
           setMap.set(standaloneId, newSet);
         } else {
           const existingSet = setMap.get(targetSetId)!;
-          const updatedVocab = [...(existingSet.vocab || []), ...validVocab];
+          const updatedVocab = [...(existingSet.vocab || []), ...uniqueVocab];
           setMap.set(targetSetId, {
             ...existingSet,
             vocab: updatedVocab
@@ -79,13 +95,15 @@
           localStorage.setItem('kanji_question_sets', JSON.stringify(updated));
         }
 
+        successCount = uniqueVocab.length;
         return updated;
       });
 
-      successCount = validVocab.length;
-      setTimeout(() => {
-        onclose();
-      }, 1200);
+      if (!allDuplicatesNotice) {
+        setTimeout(() => {
+          onclose();
+        }, 1500);
+      }
     } catch (e: unknown) {
       const errMsg = e instanceof Error ? e.message : 'Unknown error';
       errorMessage = `Invalid JSON format: ${errMsg}`;
@@ -118,7 +136,7 @@
           <span>📖</span>
           <span>Direct Vocabulary Upload</span>
         </h3>
-        <p class="text-xs text-slate-500">Insert vocabulary items with optional vocabTags (noun, verb, animal, counter, etc.).</p>
+        <p class="text-xs text-slate-500">Automatically detects duplicates and ignores empty question layouts.</p>
       </div>
       <button onclick={onclose} class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg font-bold px-2 py-1 rounded-lg">
         ✕
@@ -131,10 +149,26 @@
       </div>
     {/if}
 
-    {#if successCount !== null}
-      <div class="p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl text-xs font-semibold flex items-center space-x-2">
-        <span>✓</span>
-        <span>Successfully imported {successCount} vocabulary item{successCount > 1 ? 's' : ''}!</span>
+    {#if allDuplicatesNotice}
+      <div class="p-3 bg-amber-500/10 border border-amber-500/20 text-amber-500 rounded-xl text-xs font-semibold space-y-1">
+        <div class="flex items-center space-x-2">
+          <span>⚠️</span>
+          <span>All items in this payload already exist in your vocabulary! No new items were imported.</span>
+        </div>
+      </div>
+    {/if}
+
+    {#if successCount !== null && successCount > 0}
+      <div class="p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl text-xs font-semibold space-y-1">
+        <div class="flex items-center space-x-2">
+          <span>✓</span>
+          <span>Successfully imported {successCount} new vocabulary item{successCount > 1 ? 's' : ''}!</span>
+        </div>
+        {#if duplicateCount > 0}
+          <div class="text-slate-400 text-[11px] font-normal pl-4">
+            Skipped {duplicateCount} duplicate item{duplicateCount > 1 ? 's' : ''} with matching kana.
+          </div>
+        {/if}
       </div>
     {/if}
 
@@ -154,7 +188,7 @@
 
     <div class="space-y-2">
       <div class="flex justify-between items-center">
-        <label for="vocab-json-textarea" class="text-xs font-bold uppercase tracking-wider text-slate-400">Vocab Array JSON (with vocabTags)</label>
+        <label for="vocab-json-textarea" class="text-xs font-bold uppercase tracking-wider text-slate-400">Vocab Array JSON</label>
         <label class="text-xs text-brand-500 hover:underline cursor-pointer font-medium">
           <span>📁 Select .json file</span>
           <input type="file" accept=".json" onchange={handleFileUpload} class="hidden" />
@@ -164,7 +198,7 @@
       <textarea
         id="vocab-json-textarea"
         bind:value={jsonInput}
-        placeholder={`[\n  {\n    "word": "猫 (ねこ)",\n    "meaning": "cat",\n    "vocabTags": ["animal", "noun"]\n  }\n]`}
+        placeholder={`[\n  {\n    "word": "猫",\n    "kana": "ねこ",\n    "meaning": "cat",\n    "romaji": "neko",\n    "vocabTags": ["animal", "noun"]\n  }\n]`}
         class="w-full h-48 p-3 text-xs font-mono rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 resize-none"
       ></textarea>
     </div>

@@ -6,6 +6,7 @@
   import MultiSetUploadModal from '#lib/components/MultiSetUploadModal.svelte';
   import SingleUploadModal from '#lib/components/SingleUploadModal.svelte';
   import CustomBuilderModal from '#lib/components/CustomBuilderModal.svelte';
+  import DataWiper from '#lib/components/DataWiper.svelte';
   import type { QuestionSet, QuizConfig } from '#lib/types.js';
 
   let { onnavigate }: { 
@@ -120,6 +121,9 @@
     <PackFilter bind:selectedPacks />
     <TagFilter bind:selectedTags />
   </div>
+
+  <!-- Data Wiper Component Integration -->
+  <DataWiper />
 
   <!-- Exercise Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

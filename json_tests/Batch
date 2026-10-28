@@ -1,0 +1,37 @@
+[
+  {
+    "id": "set-n5-kanji-batch-01",
+    "title": "JLPT N5 Essential Kanji",
+    "category": "kanji",
+    "packTitle": "Kanji Master Series",
+    "tags": ["kanji", "n5"],
+    "contextPassages": [
+      "毎日水路の水を飲みます。"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "Select the correct reading for 水.",
+        "contextIdx": 0,
+        "options": [
+          { "text": "mizu", "kana": "みず", "english": "water" },
+          { "text": "hi", "kana": "ひ", "english": "fire" },
+          { "text": "ki", "kana": "き", "english": "tree" },
+          { "text": "tsuchi", "kana": "つち", "english": "earth" }
+        ],
+        "answer": 0,
+        "kanji": "水",
+        "reading": "みず"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "水",
+        "kana": "みず",
+        "meaning": "water",
+        "romaji": "mizu",
+        "vocabTags": ["noun", "nature"]
+      }
+    ]
+  }
+]

@@ -20,7 +20,9 @@ export interface Question {
 export interface VocabItem {
   word: string;
   meaning: string;
-  vocabTags?: string[]; // Added support for vocab-specific tags (e.g. noun, verb, counter, animal)
+  kana?: string;
+  romaji?: string;      // Explicit Romaji field
+  vocabTags?: string[]; // Vocab-specific tags (noun, verb, animal, counter, etc.)
 }
 
 export interface QuestionSet {

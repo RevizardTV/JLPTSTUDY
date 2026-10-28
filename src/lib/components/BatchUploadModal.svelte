@@ -2,13 +2,11 @@
   import { questionSets } from '#lib/stores.js';
   import type { QuestionSet } from '#lib/types.js';
   import { SvelteSet } from 'svelte/reactivity';
+  import { getExistingVocabSignatures, filterUniqueVocab } from '#lib/utils/vocabChecker.js';
+
   let { onclose }: { onclose: () => void } = $props();
   
   let jsonInput = $state("");
-
-  function normalizeText(str: string): string {
-    return str.toLowerCase().replace(/\s+/g, '');
-  }
 
   function handleUpload() {
     try {
@@ -16,31 +14,28 @@
       const newSets: QuestionSet[] = Array.isArray(parsed) ? parsed : [parsed];
 
       questionSets.update((currentSets) => {
-        // Collect all existing normalized vocab entries across all current sets
-        const existingVocabSet = new SvelteSet<string>();
-        currentSets.forEach((set) => {
-          set.vocab?.forEach((v) => {
-            existingVocabSet.add(normalizeText(v.word));
-          });
-        });
+        const existingSignatures = getExistingVocabSignatures(currentSets);
+        const existingIds = new SvelteSet<string>(currentSets.map((s) => s.id));
 
-        // Process incoming sets and filter out duplicate vocab words
-        const processedSets = newSets.map((newSet) => {
-          if (!newSet.vocab) return newSet;
+        const processedSets = newSets.map((newSet, index) => {
+          // Ensure unique ID to prevent Svelte each_key_duplicate crashes
+          if (existingIds.has(newSet.id)) {
+            newSet.id = `${newSet.id}-${Date.now()}-${index}`;
+          }
+          existingIds.add(newSet.id);
 
-          const uniqueVocab = newSet.vocab.filter((v) => {
-            const normalized = normalizeText(v.word);
-            if (existingVocabSet.has(normalized)) {
-              return false; // Skip if it already exists globally
-            }
-            existingVocabSet.add(normalized); // Mark as seen
-            return true;
-          });
+          if (!newSet.vocab || newSet.vocab.length === 0) return newSet;
 
+          const { uniqueVocab } = filterUniqueVocab(newSet.vocab, existingSignatures);
           return { ...newSet, vocab: uniqueVocab };
         });
 
-        return [...currentSets, ...processedSets];
+        const updated = [...currentSets, ...processedSets];
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('kanji_question_sets', JSON.stringify(updated));
+        }
+
+        return updated;
       });
 
       onclose();

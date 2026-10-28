@@ -1,0 +1,37 @@
+[
+  {
+    "word": "猫",
+    "kana": "ねこ",
+    "meaning": "cat",
+    "romaji": "neko",
+    "vocabTags": ["animal", "noun"]
+  },
+  {
+    "word": "犬",
+    "kana": "いぬ",
+    "meaning": "dog",
+    "romaji": "inu",
+    "vocabTags": ["animal", "noun"]
+  },
+  {
+    "word": "本",
+    "kana": "ほん",
+    "meaning": "book",
+    "romaji": "hon",
+    "vocabTags": ["noun"]
+  },
+  {
+    "word": "走る",
+    "kana": "はしる",
+    "meaning": "to run",
+    "romaji": "hashiru",
+    "vocabTags": ["verb"]
+  },
+  {
+    "word": "一冊",
+    "kana": "いっさつ",
+    "meaning": "one bound volume (counter)",
+    "romaji": "issatsu",
+    "vocabTags": ["counter", "noun"]
+  }
+]

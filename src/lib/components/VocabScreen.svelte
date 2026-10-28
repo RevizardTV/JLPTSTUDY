@@ -10,7 +10,6 @@
   let selectedTagFilter = $state<string>("all");
   let showVocabModal = $state<boolean>(false);
 
-  // Use $derived.by for block-based computations with SvelteMap
   const questionReadingMap = $derived.by(() => {
     const map = new SvelteMap<string, string>();
     ($questionSets as QuestionSet[]).forEach(set => {
@@ -29,7 +28,6 @@
     ($questionSets as QuestionSet[]).flatMap((s: QuestionSet) => s.vocab || [])
   );
 
-  // Fixed: Replaced invalid $derived(() => { ... })() with $derived.by(...)
   const availableVocabTags = $derived.by(() => {
     const tagsSet = new SvelteSet<string>();
     allVocab.forEach((item) => {
@@ -40,47 +38,39 @@
     return Array.from(tagsSet).sort();
   });
 
-  function isJapaneseText(text: string): boolean {
-    return /[\u3040-\u30ff\u4e00-\u9faf]/.test(text);
-  }
-
   function parseVocabItem(item: VocabItem | string) {
-    const rawWord = typeof item === 'string' ? item : item.word;
-    const meaning = typeof item === 'string' ? 'N/A' : item.meaning;
-    const vocabTags = typeof item === 'object' && item !== null && Array.isArray((item as VocabItem).vocabTags) ? (item as VocabItem).vocabTags! : [];
+  const rawWord = typeof item === 'string' ? item : item.word;
+  const meaning = typeof item === 'string' ? 'N/A' : item.meaning;
+  const explicitKana = typeof item === 'object' && item !== null ? (item as VocabItem).kana : undefined;
+  const explicitRomaji = typeof item === 'object' && item !== null ? (item as VocabItem).romaji : undefined;
+  const vocabTags = typeof item === 'object' && item !== null && Array.isArray((item as VocabItem).vocabTags) ? (item as VocabItem).vocabTags! : [];
 
-    let kanji = rawWord;
-    let kana = '';
-    let romaji = '';
+  let kanji = rawWord;
+  let kana = explicitKana || '';
 
-    const match = rawWord.match(/^([^(]+)\(([^)]+)\)$/);
-    if (match) {
-      kanji = match[1].trim();
-      const insideParen = match[2].trim();
-
-      if (isJapaneseText(insideParen)) {
-        kana = insideParen;
-      } else {
-        romaji = insideParen;
-      }
-    }
-
-    if (!kana && questionReadingMap.has(kanji)) {
-      kana = questionReadingMap.get(kanji)!;
-    }
-
-    if (!kana) {
-      kana = kanji;
-    }
-
-    return {
-      kanji,
-      kana,
-      romaji,
-      meaning,
-      vocabTags
-    };
+  // Fallback to legacy parsing if word format contains parentheses
+  const match = rawWord.match(/^([^(]+)\(([^)]+)\)$/);
+  if (!kana && match) {
+    kanji = match[1].trim();
+    kana = match[2].trim();
   }
+
+  if (!kana && questionReadingMap.has(kanji)) {
+    kana = questionReadingMap.get(kanji)!;
+  }
+
+  if (!kana) {
+    kana = kanji;
+  }
+
+  return {
+    kanji,
+    kana,
+    romaji: explicitRomaji || '',
+    meaning,
+    vocabTags
+  };
+}
 
   const filteredVocab = $derived(
     allVocab.map((item: VocabItem | string) => parseVocabItem(item)).filter(item => {
@@ -232,7 +222,7 @@
           <span class="font-semibold text-slate-700 dark:text-slate-200">
             {item.meaning}
             {#if item.romaji}
-              <span class="text-slate-400 font-normal">({item.romaji})</span>
+              <span class="text-slate-400 font-normal ml-1">({item.romaji})</span>
             {/if}
           </span>
         </div>

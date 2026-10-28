@@ -2,16 +2,19 @@
   import { questionSets } from '#lib/stores.js';
   import type { QuestionSet } from '#lib/types.js';
   import { SvelteMap } from 'svelte/reactivity';
+  import { getExistingVocabSignatures, filterUniqueVocab } from '#lib/utils/vocabChecker.js';
 
   let { onclose }: { onclose: () => void } = $props();
 
   let jsonInput = $state('');
   let errorMessage = $state<string | null>(null);
   let successCount = $state<number | null>(null);
+  let skippedVocabCount = $state<number>(0);
 
   function handleUpload() {
     errorMessage = null;
     successCount = null;
+    skippedVocabCount = 0;
 
     if (!jsonInput.trim()) {
       errorMessage = 'Please paste a valid JSON array.';
@@ -48,12 +51,27 @@
         });
       }
 
-      // Merge newly uploaded sets with existing store content using SvelteMap
       questionSets.update((existing) => {
         const setMap = new SvelteMap<string, QuestionSet>(existing.map((s) => [s.id, s]));
-        validSets.forEach((newSet) => setMap.set(newSet.id, newSet));
-        const updated = Array.from(setMap.values());
+        const existingSignatures = getExistingVocabSignatures(existing);
 
+        validSets.forEach((newSet, index) => {
+          // Gracefully handle duplicate set IDs by appending a safe suffix if it already exists
+          let finalId = newSet.id;
+          if (setMap.has(finalId)) {
+            finalId = `${newSet.id}-${Date.now()}-${index}`;
+            newSet = { ...newSet, id: finalId };
+          }
+
+          if (newSet.vocab && newSet.vocab.length > 0) {
+            const { uniqueVocab, skippedCount } = filterUniqueVocab(newSet.vocab, existingSignatures);
+            newSet.vocab = uniqueVocab;
+            skippedVocabCount += skippedCount;
+          }
+          setMap.set(newSet.id, newSet);
+        });
+
+        const updated = Array.from(setMap.values());
         if (typeof window !== 'undefined') {
           localStorage.setItem('kanji_question_sets', JSON.stringify(updated));
         }
@@ -64,7 +82,7 @@
       successCount = validSets.length;
       setTimeout(() => {
         onclose();
-      }, 1200);
+      }, 1500);
     } catch (e: unknown) {
       const errMsg = e instanceof Error ? e.message : 'Unknown error';
       errorMessage = `Invalid JSON format: ${errMsg}`;
@@ -97,7 +115,7 @@
           <span>📦</span>
           <span>Upload Multiple Question Sets</span>
         </h3>
-        <p class="text-xs text-slate-500">Batch upload a collection or multiple study sets at once</p>
+        <p class="text-xs text-slate-500">Batch upload multiple study sets while automatically filtering out duplicate vocab</p>
       </div>
       <button onclick={onclose} class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg font-bold px-2 py-1 rounded-lg">
         ✕
@@ -111,9 +129,16 @@
     {/if}
 
     {#if successCount !== null}
-      <div class="p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl text-xs font-semibold flex items-center space-x-2">
-        <span>✓</span>
-        <span>Successfully imported {successCount} question set{successCount > 1 ? 's' : ''}!</span>
+      <div class="p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl text-xs font-semibold space-y-1">
+        <div class="flex items-center space-x-2">
+          <span>✓</span>
+          <span>Successfully imported {successCount} question set{successCount > 1 ? 's' : ''}!</span>
+        </div>
+        {#if skippedVocabCount > 0}
+          <div class="text-slate-400 text-[11px] font-normal pl-4">
+            Skipped {skippedVocabCount} duplicate vocabulary item{skippedVocabCount > 1 ? 's' : ''} already present in storage.
+          </div>
+        {/if}
       </div>
     {/if}
 
@@ -129,7 +154,7 @@
       <textarea
         id="json-textarea"
         bind:value={jsonInput}
-        placeholder={`[\n  {\n    "id": "set-1",\n    "title": "Set 1",\n    "category": "kanji",\n    "packTitle": "N5 Series",\n    "questions": [...]\n  },\n  ...\n]`}
+        placeholder={`[\n  {\n    "id": "set-1",\n    "title": "Set 1",\n    "category": "kanji",\n    "packTitle": "N5 Series",\n    "questions": [...],\n    "vocab": [...]\n  }\n]`}
         class="w-full h-64 p-3 text-xs font-mono rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 resize-none"
       ></textarea>
     </div>
