@@ -1,0 +1,210 @@
+================================================================================
+AI INSTRUCTION MANUAL: JAPANESE QUIZ & VOCABULARY JSON GENERATION
+================================================================================
+
+Target Application Spec:
+- Engine: Svelte 5 (Runes & Reactive Collections)
+- Data Normalizer: Full support for separate `word`, `kana`, `romaji`, and `meaning` fields.
+
+--------------------------------------------------------------------------------
+CRITICAL RULE 1: EXHAUSTIVE VOCABULARY EXTRACTION (MOST IMPORTANT)
+--------------------------------------------------------------------------------
+1. COMPREHENSIVE COVERAGE: You MUST extract and provide as much vocabulary as 
+   humanly possible for each set.
+2. INCLUDE INCORRECT OPTIONS: Do NOT limit vocabulary to correct answers or main 
+   prompts. EVERY SINGLE word, verb, adjective, or noun that appears across 
+   ALL multiple-choice options (including distractors and wrong choices), context 
+   passages, and prompts MUST be extracted into the `vocab` array.
+3. SEPARATE KANA AND ROMAJI: Never combine Romaji in parenthesized strings in 
+   `kana` (e.g. NEVER write "kana": "nichiyoubi"). Always put pure Japanese Kana 
+   (Hiragana/Katakana) in `kana` and Latin script in `romaji`.
+
+--------------------------------------------------------------------------------
+CRITICAL RULE 2: HEAVY AND SYSTEMATIC TAGGING (MUST USE EXTENSIVELY)
+--------------------------------------------------------------------------------
+1. MANDATORY TAGS: Every vocabulary item AND question set MUST be tagged as 
+   granularly as possible using `tags` (for sets) and `vocabTags` (for vocabulary).
+2. USE MULTIPLE TAG TYPES: Include part-of-speech tags, semantic domain tags, 
+   JLPT levels, and thematic groupings simultaneously for every item.
+
+USABLE TAG DICTIONARY (Apply as many relevant tags as possible):
+
+- Parts of Speech:
+  "noun", "verb", "i-adjective", "na-adjective", "adverb", "particle",
+  "pronoun", "counter", "expression", "prefix", "suffix", "conjunction"
+
+- Semantic Categories / Topics:
+  "animal", "colour", "food", "drink", "family", "time", "days-of-week",
+  "weather", "body-part", "clothing", "place", "direction", "nature",
+  "school", "work", "hobby", "transportation", "shopping", "technology",
+  "emotion", "number", "calendar", "season", "house", "furniture"
+
+- JLPT / Proficiency Levels:
+  "n5", "n4", "n3", "n2", "n1", "beginner", "intermediate", "advanced"
+
+- Grammatical Distinctions (for Verbs/Adjectives):
+  "godan-verb", "ichidan-verb", "suru-verb", "kuru-verb", "transitive", "intransitive"
+
+--------------------------------------------------------------------------------
+JSON SCHEMAS & FORMATS
+--------------------------------------------------------------------------------
+
+FORMAT 1: MULTI-SET / BATCH QUESTION SET ARRAY
+Used for: Batch Upload Modal & Multi-Set Upload Modal.
+Root Element: MUST be a JSON Array (`[...]`) containing QuestionSet objects.
+
+Schema Structure:
+[
+  {
+    "id": "string (unique string ID)",
+    "title": "string (human-readable title)",
+    "category": "string ('kanji' | 'grammar' | 'reading' | 'vocabulary')",
+    "packTitle": "string (optional collection name)",
+    "tags": ["string array for tag filtering (e.g. 'n5', 'kanji', 'nature', 'animals')"],
+    "contextPassages": ["string array of reading context sentences"],
+    "questions": [
+      {
+        "qNum": number (1-indexed question index),
+        "prompt": "string (the target prompt or sentence snippet)",
+        "contextIdx": number (0-indexed reference to contextPassages array),
+        "options": [
+          {
+            "text": "string (option label displayed)",
+            "kana": "string (pure hiragana/katakana reading)",
+            "english": "string (English translation/definition)"
+          }
+        ],
+        "answer": number (0-indexed index of the correct option inside options array),
+        "kanji": "string (optional target kanji character/word)",
+        "reading": "string (optional pure kana reading of prompt)"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "string (Japanese word in Kanji/Kana)",
+        "kana": "string (Pure Hiragana or Katakana)",
+        "romaji": "string (Hepburn Romaji notation)",
+        "meaning": "string (English definition)",
+        "vocabTags": ["string array (e.g. 'noun', 'animal', 'n5', 'beginner')"]
+      }
+    ]
+  }
+]
+
+--------------------------------------------------------------------------------
+FORMAT 2: DIRECT VOCABULARY ARRAY
+Used for: Vocab Upload Modal (Direct Vocabulary Import).
+Root Element: MUST be a JSON Array (`[...]`) containing VocabItem objects.
+
+Schema Structure:
+[
+  {
+    "word": "string (Japanese word in Kanji/Kana)",
+    "kana": "string (Pure Hiragana or Katakana)",
+    "romaji": "string (Hepburn Romaji notation)",
+    "meaning": "string (English definition)",
+    "vocabTags": ["string array (e.g. 'i-adjective', 'colour', 'n5')"]
+  }
+]
+
+--------------------------------------------------------------------------------
+EXAMPLE DEMONSTRATION OF ALL RULES IN ACTION
+--------------------------------------------------------------------------------
+
+Below is an ideal Multi-Set Question payload demonstrating total vocabulary extraction 
+and heavy tagging from prompts, context sentences, and wrong options:
+
+[
+  {
+    "id": "set-n5-animals-colours-demo",
+    "title": "JLPT N5 Animals & Colours Exercise",
+    "category": "kanji",
+    "packTitle": "N5 Comprehensive Series",
+    "tags": ["n5", "kanji", "nature", "animal", "colour", "beginner"],
+    "contextPassages": [
+      "あしたは公園で白い猫と赤い鳥を見ます。"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "白い",
+        "contextIdx": 0,
+        "options": [
+          { "text": "しろい", "kana": "しろい", "english": "white" },
+          { "text": "くろい", "kana": "くろい", "english": "black" },
+          { "text": "あかい", "kana": "あかい", "english": "red" },
+          { "text": "あおい", "kana": "あおい", "english": "blue" }
+        ],
+        "answer": 0,
+        "kanji": "白い",
+        "reading": "しろい"
+      }
+    ],
+    "vocab": [
+      {
+        "word": "明日",
+        "kana": "あした",
+        "romaji": "ashita",
+        "meaning": "tomorrow",
+        "vocabTags": ["noun", "time", "n5", "calendar"]
+      },
+      {
+        "word": "公園",
+        "kana": "こうえん",
+        "romaji": "kouen",
+        "meaning": "park",
+        "vocabTags": ["noun", "place", "nature", "n5"]
+      },
+      {
+        "word": "白い",
+        "kana": "しろい",
+        "romaji": "shiroi",
+        "meaning": "white",
+        "vocabTags": ["i-adjective", "colour", "n5"]
+      },
+      {
+        "word": "黒い",
+        "kana": "くろい",
+        "romaji": "kuroi",
+        "meaning": "black (from incorrect option 2)",
+        "vocabTags": ["i-adjective", "colour", "n5"]
+      },
+      {
+        "word": "赤い",
+        "kana": "あかい",
+        "romaji": "akai",
+        "meaning": "red (from context and incorrect option 3)",
+        "vocabTags": ["i-adjective", "colour", "n5"]
+      },
+      {
+        "word": "青い",
+        "kana": "あおい",
+        "romaji": "aoi",
+        "meaning": "blue (from incorrect option 4)",
+        "vocabTags": ["i-adjective", "colour", "n5"]
+      },
+      {
+        "word": "猫",
+        "kana": "ねこ",
+        "romaji": "neko",
+        "meaning": "cat",
+        "vocabTags": ["noun", "animal", "n5"]
+      },
+      {
+        "word": "鳥",
+        "kana": "とり",
+        "romaji": "tori",
+        "meaning": "bird",
+        "vocabTags": ["noun", "animal", "nature", "n5"]
+      },
+      {
+        "word": "見る",
+        "kana": "みる",
+        "romaji": "miru",
+        "meaning": "to see / to watch",
+        "vocabTags": ["verb", "ichidan-verb", "transitive", "n5"]
+      }
+    ]
+  }
+]
+================================================================================
