@@ -1,368 +1,437 @@
 [
-  {
-    "id": "set-batch-comprehensive-01",
-    "title": "JLPT N5-N4 Comprehensive Master Pack",
-    "category": "kanji",
-    "packTitle": "Master Batch Pack Alpha",
-    "tags": ["kanji", "grammar", "vocabulary", "n5", "n4", "beginner"],
-    "contextPassages": [
-      "あしたの朝、七時に図書館へ行って日本語の本を借ります。",
-      "この店のかつ丼は安くておいしいです。",
-      "日曜日に友達と電車で東京へ行きました。"
-    ],
-    "questions": [
-      {
-        "qNum": 1,
-        "prompt": "朝",
-        "contextIdx": 0,
-        "options": [
-          { "text": "ゆうがた", "kana": "ゆうがた", "english": "evening" },
-          { "text": "あさ", "kana": "あさ", "english": "morning" },
-          { "text": "よる", "kana": "よる", "english": "night" },
-          { "text": "ひる", "kana": "ひる", "english": "noon / daytime" }
-        ],
-        "answer": 1,
-        "kanji": "朝",
-        "reading": "あさ"
-      },
-      {
-        "qNum": 2,
-        "prompt": "図書館",
-        "contextIdx": 0,
-        "options": [
-          { "text": "びょういん", "kana": "びょういん", "english": "hospital" },
-          { "text": "ゆうびんきょく", "kana": "ゆうびんきょく", "english": "post office" },
-          { "text": "としょかん", "kana": "としょかん", "english": "library" },
-          { "text": "ぎんこう", "kana": "ぎんこう", "english": "bank" }
-        ],
-        "answer": 2,
-        "kanji": "図書館",
-        "reading": "としょかん"
-      },
-      {
-        "qNum": 3,
-        "prompt": "行く",
-        "contextIdx": 0,
-        "options": [
-          { "text": "いく", "kana": "いく", "english": "to go" },
-          { "text": "くる", "kana": "くる", "english": "to come" },
-          { "text": "かえる", "kana": "かえる", "english": "to return" },
-          { "text": "あるく", "kana": "あるく", "english": "to walk" }
-        ],
-        "answer": 0,
-        "kanji": "行く",
-        "reading": "いく"
-      },
-      {
-        "qNum": 4,
-        "prompt": "本",
-        "contextIdx": 0,
-        "options": [
-          { "text": "え", "kana": "え", "english": "picture" },
-          { "text": "ねん", "kana": "ねん", "english": "year" },
-          { "text": "ほん", "kana": "ほん", "english": "book" },
-          { "text": "かみ", "kana": "かみ", "english": "paper" }
-        ],
-        "answer": 2,
-        "kanji": "本",
-        "reading": "ほん"
-      },
-      {
-        "qNum": 5,
-        "prompt": "借りる",
-        "contextIdx": 0,
-        "options": [
-          { "text": "かす", "kana": "かす", "english": "to lend" },
-          { "text": "かりる", "kana": "かりる", "english": "to borrow" },
-          { "text": "かう", "kana": "かう", "english": "to buy" },
-          { "text": "うる", "kana": "うる", "english": "to sell" }
-        ],
-        "answer": 1,
-        "kanji": "借りる",
-        "reading": "かりる"
-      },
-      {
-        "qNum": 6,
-        "prompt": "店",
-        "contextIdx": 1,
-        "options": [
-          { "text": "いえ", "kana": "いえ", "english": "house" },
-          { "text": "みせ", "kana": "みせ", "english": "shop / store" },
-          { "text": "まち", "kana": "まち", "english": "town" },
-          { "text": "にわ", "kana": "にわ", "english": "garden" }
-        ],
-        "answer": 1,
-        "kanji": "店",
-        "reading": "みせ"
-      },
-      {
-        "qNum": 7,
-        "prompt": "安い",
-        "contextIdx": 1,
-        "options": [
-          { "text": "たかい", "kana": "たかい", "english": "expensive / tall" },
-          { "text": "あたらしい", "kana": "あたらしい", "english": "new" },
-          { "text": "やすい", "kana": "やすい", "english": "cheap" },
-          { "text": "ふるい", "kana": "ふるい", "english": "old" }
-        ],
-        "answer": 2,
-        "kanji": "安い",
-        "reading": "やすい"
-      },
-      {
-        "qNum": 8,
-        "prompt": "日曜日",
-        "contextIdx": 2,
-        "options": [
-          { "text": "どようび", "kana": "どようび", "english": "Saturday" },
-          { "text": "にちようび", "kana": "にちようび", "english": "Sunday" },
-          { "text": "げつようび", "kana": "げつようび", "english": "Monday" },
-          { "text": "きんようび", "kana": "きんようび", "english": "Friday" }
-        ],
-        "answer": 1,
-        "kanji": "日曜日",
-        "reading": "にちようび"
-      },
-      {
-        "qNum": 9,
-        "prompt": "友達",
-        "contextIdx": 2,
-        "options": [
-          { "text": "せんせい", "kana": "せんせい", "english": "teacher" },
-          { "text": "ともだち", "kana": "ともだち", "english": "friend" },
-          { "text": "かいしゃいん", "kana": "かいしゃいん", "english": "company employee" },
-          { "text": "きょうだい", "kana": "きょうだい", "english": "siblings" }
-        ],
-        "answer": 1,
-        "kanji": "友達",
-        "reading": "ともだち"
-      },
-      {
-        "qNum": 10,
-        "prompt": "電車",
-        "contextIdx": 2,
-        "options": [
-          { "text": "くるま", "kana": "くるま", "english": "car" },
-          { "text": "ひこうき", "kana": "ひこうき", "english": "airplane" },
-          { "text": "でんしゃ", "kana": "でんしゃ", "english": "train" },
-          { "text": "じてんしゃ", "kana": "じてんしゃ", "english": "bicycle" }
-        ],
-        "answer": 2,
-        "kanji": "電車",
-        "reading": "でんしゃ"
-      }
-    ],
-    "vocab": [
-      {
-        "word": "明日",
-        "kana": "あした",
-        "romaji": "ashita",
-        "meaning": "tomorrow",
-        "vocabTags": ["noun", "time", "n5"]
-      },
-      {
-        "word": "朝",
-        "kana": "あさ",
-        "romaji": "asa",
-        "meaning": "morning",
-        "vocabTags": ["noun", "time", "n5"]
-      },
-      {
-        "word": "七時",
-        "kana": "しちじ",
-        "romaji": "shichiji",
-        "meaning": "7 o'clock",
-        "vocabTags": ["noun", "time", "n5"]
-      },
-      {
-        "word": "図書館",
-        "kana": "としょかん",
-        "romaji": "toshokan",
-        "meaning": "library",
-        "vocabTags": ["noun", "place", "n5"]
-      },
-      {
-        "word": "行く",
-        "kana": "いく",
-        "romaji": "iku",
-        "meaning": "to go",
-        "vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
-      },
-      {
-        "word": "日本語",
-        "kana": "にほんご",
-        "romaji": "nihongo",
-        "meaning": "Japanese language",
-        "vocabTags": ["noun", "language", "n5"]
-      },
-      {
-        "word": "本",
-        "kana": "ほん",
-        "romaji": "hon",
-        "meaning": "book",
-        "vocabTags": ["noun", "object", "n5"]
-      },
-      {
-        "word": "借りる",
-        "kana": "かりる",
-        "romaji": "kariru",
-        "meaning": "to borrow",
-        "vocabTags": ["verb", "ichidan-verb", "transitive", "n5"]
-      },
-      {
-        "word": "店",
-        "kana": "みせ",
-        "romaji": "mise",
-        "meaning": "shop, store",
-        "vocabTags": ["noun", "place", "n5"]
-      },
-      {
-        "word": "安い",
-        "kana": "やすい",
-        "romaji": "yasui",
-        "meaning": "cheap, inexpensive",
-        "vocabTags": ["adjective", "i-adjective", "n5"]
-      },
-      {
-        "word": "美味しい",
-        "kana": "おいしい",
-        "romaji": "oishii",
-        "meaning": "delicious",
-        "vocabTags": ["adjective", "i-adjective", "n5"]
-      },
-      {
-        "word": "日曜日",
-        "kana": "にちようび",
-        "romaji": "nichiyoubi",
-        "meaning": "Sunday",
-        "vocabTags": ["noun", "time", "n5"]
-      },
-      {
-        "word": "友達",
-        "kana": "ともだち",
-        "romaji": "tomodachi",
-        "meaning": "friend",
-        "vocabTags": ["noun", "person", "n5"]
-      },
-      {
-        "word": "電車",
-        "kana": "でんしゃ",
-        "romaji": "densha",
-        "meaning": "train",
-        "vocabTags": ["noun", "transport", "n5"]
-      },
-      {
-        "word": "夕方",
-        "kana": "ゆうがた",
-        "romaji": "yuugata",
-        "meaning": "evening (from distractors)",
-        "vocabTags": ["noun", "time", "n4"]
-      },
-      {
-        "word": "夜",
-        "kana": "よる",
-        "romaji": "yoru",
-        "meaning": "night (from distractors)",
-        "vocabTags": ["noun", "time", "n5"]
-      },
-      {
-        "word": "昼",
-        "kana": "ひる",
-        "romaji": "hiru",
-        "meaning": "noon / daytime (from distractors)",
-        "vocabTags": ["noun", "time", "n5"]
-      },
-      {
-        "word": "病院",
-        "kana": "びょういん",
-        "romaji": "byouin",
-        "meaning": "hospital (from distractors)",
-        "vocabTags": ["noun", "place", "n5"]
-      },
-      {
-        "word": "郵便局",
-        "kana": "ゆうびんきょく",
-        "romaji": "yuubinkyoku",
-        "meaning": "post office (from distractors)",
-        "vocabTags": ["noun", "place", "n5"]
-      },
-      {
-        "word": "銀行",
-        "kana": "ぎんこう",
-        "romaji": "ginkou",
-        "meaning": "bank (from distractors)",
-        "vocabTags": ["noun", "place", "n5"]
-      },
-      {
-        "word": "来る",
-        "kana": "くる",
-        "romaji": "kuru",
-        "meaning": "to come (from distractors)",
-        "vocabTags": ["verb", "irregular-verb", "intransitive", "n5"]
-      },
-      {
-        "word": "帰る",
-        "kana": "かえる",
-        "romaji": "kaeru",
-        "meaning": "to return home (from distractors)",
-        "vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
-      },
-      {
-        "word": "歩く",
-        "kana": "あるく",
-        "romaji": "aruku",
-        "meaning": "to walk (from distractors)",
-        "vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
-      },
-      {
-        "word": "貸す",
-        "kana": "かす",
-        "romaji": "kasu",
-        "meaning": "to lend (from distractors)",
-        "vocabTags": ["verb", "godan-verb", "transitive", "n5"]
-      },
-      {
-        "word": "買う",
-        "kana": "かう",
-        "romaji": "kau",
-        "meaning": "to buy (from distractors)",
-        "vocabTags": ["verb", "godan-verb", "transitive", "n5"]
-      },
-      {
-        "word": "売る",
-        "kana": "うる",
-        "romaji": "uru",
-        "meaning": "to sell (from distractors)",
-        "vocabTags": ["verb", "godan-verb", "transitive", "n4"]
-      },
-      {
-        "word": "高い",
-        "kana": "たかい",
-        "romaji": "takai",
-        "meaning": "expensive / tall (from distractors)",
-        "vocabTags": ["adjective", "i-adjective", "n5"]
-      },
-      {
-        "word": "新しい",
-        "kana": "あたらしい",
-        "romaji": "atarashii",
-        "meaning": "new (from distractors)",
-        "vocabTags": ["adjective", "i-adjective", "n5"]
-      },
-      {
-        "word": "古い",
-        "kana": "ふるい",
-        "romaji": "furui",
-        "meaning": "old (from distractors)",
-        "vocabTags": ["adjective", "i-adjective", "n5"]
-      },
-      {
-        "word": "飛行機",
-        "kana": "ひこうき",
-        "romaji": "hikouki",
-        "meaning": "airplane (from distractors)",
-        "vocabTags": ["noun", "transport", "n5"]
-      }
-    ]
-  }
+	{
+		"id": "set-batch-comprehensive-01",
+		"title": "JLPT N5-N4 Comprehensive Master Pack",
+		"category": "kanji",
+		"packTitle": "Master Batch Pack Alpha",
+		"tags": [
+			"kanji",
+			"grammar",
+			"vocabulary",
+			"n5",
+			"n4",
+			"beginner"
+		],
+		"contextPassages": [
+			"あしたの朝、七時に図書館へ行って日本語の本を借ります。",
+			"この店のかつ丼は安くておいしいです。",
+			"日曜日に友達と電車で東京へ行きました。"
+		],
+		"questions": [
+			{
+				"qNum": 1,
+				"prompt": "朝",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "ゆうがた",
+						"kana": "ゆうがた",
+						"english": "evening"
+					},
+					{
+						"text": "あさ",
+						"kana": "あさ",
+						"english": "morning"
+					},
+					{
+						"text": "よる",
+						"kana": "よる",
+						"english": "night"
+					},
+					{
+						"text": "ひる",
+						"kana": "ひる",
+						"english": "noon / daytime"
+					}
+				],
+				"answer": 1,
+				"kanji": "朝",
+				"reading": "あさ"
+			},
+			{
+				"qNum": 2,
+				"prompt": "図書館",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "びょういん",
+						"kana": "びょういん",
+						"english": "hospital"
+					},
+					{
+						"text": "ゆうびんきょく",
+						"kana": "ゆうびんきょく",
+						"english": "post office"
+					},
+					{
+						"text": "としょかん",
+						"kana": "としょかん",
+						"english": "library"
+					},
+					{
+						"text": "ぎんこう",
+						"kana": "ぎんこう",
+						"english": "bank"
+					}
+				],
+				"answer": 2,
+				"kanji": "図書館",
+				"reading": "としょかん"
+			},
+			{
+				"qNum": 3,
+				"prompt": "行く",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "いく",
+						"kana": "いく",
+						"english": "to go"
+					},
+					{
+						"text": "くる",
+						"kana": "くる",
+						"english": "to come"
+					},
+					{
+						"text": "かえる",
+						"kana": "かえる",
+						"english": "to return"
+					},
+					{
+						"text": "あるく",
+						"kana": "あるく",
+						"english": "to walk"
+					}
+				],
+				"answer": 0,
+				"kanji": "行く",
+				"reading": "いく"
+			},
+			{
+				"qNum": 4,
+				"prompt": "本",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "え",
+						"kana": "え",
+						"english": "picture"
+					},
+					{
+						"text": "ねん",
+						"kana": "ねん",
+						"english": "year"
+					},
+					{
+						"text": "ほん",
+						"kana": "ほん",
+						"english": "book"
+					},
+					{
+						"text": "かみ",
+						"kana": "かみ",
+						"english": "paper"
+					}
+				],
+				"answer": 2,
+				"kanji": "本",
+				"reading": "ほん"
+			},
+			{
+				"qNum": 5,
+				"prompt": "借りる",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "かす",
+						"kana": "かす",
+						"english": "to lend"
+					},
+					{
+						"text": "かりる",
+						"kana": "かりる",
+						"english": "to borrow"
+					},
+					{
+						"text": "かう",
+						"kana": "かう",
+						"english": "to buy"
+					},
+					{
+						"text": "うる",
+						"kana": "うる",
+						"english": "to sell"
+					}
+				],
+				"answer": 1,
+				"kanji": "借りる",
+				"reading": "かりる"
+			},
+			{
+				"qNum": 6,
+				"prompt": "店",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "いえ",
+						"kana": "いえ",
+						"english": "house"
+					},
+					{
+						"text": "みせ",
+						"kana": "みせ",
+						"english": "shop / store"
+					},
+					{
+						"text": "まち",
+						"kana": "まち",
+						"english": "town"
+					},
+					{
+						"text": "にわ",
+						"kana": "にわ",
+						"english": "garden"
+					}
+				],
+				"answer": 1,
+				"kanji": "店",
+				"reading": "みせ"
+			},
+			{
+				"qNum": 7,
+				"prompt": "安い",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "たかい",
+						"kana": "たかい",
+						"english": "expensive / tall"
+					},
+					{
+						"text": "あたらしい",
+						"kana": "あたらしい",
+						"english": "new"
+					},
+					{
+						"text": "やすい",
+						"kana": "やすい",
+						"english": "cheap"
+					},
+					{
+						"text": "ふるい",
+						"kana": "ふるい",
+						"english": "old"
+					}
+				],
+				"answer": 2,
+				"kanji": "安い",
+				"reading": "やすい"
+			},
+			{
+				"qNum": 8,
+				"prompt": "日曜日",
+				"contextIdx": 2,
+				"options": [
+					{
+						"text": "どようび",
+						"kana": "どようび",
+						"english": "Saturday"
+					},
+					{
+						"text": "にちようび",
+						"kana": "にちようび",
+						"english": "Sunday"
+					},
+					{
+						"text": "げつようび",
+						"kana": "げつようび",
+						"english": "Monday"
+					},
+					{
+						"text": "きんようび",
+						"kana": "きんようび",
+						"english": "Friday"
+					}
+				],
+				"answer": 1,
+				"kanji": "日曜日",
+				"reading": "にちようび"
+			},
+			{
+				"qNum": 9,
+				"prompt": "友達",
+				"contextIdx": 2,
+				"options": [
+					{
+						"text": "せんせい",
+						"kana": "せんせい",
+						"english": "teacher"
+					},
+					{
+						"text": "ともだち",
+						"kana": "ともだち",
+						"english": "friend"
+					},
+					{
+						"text": "かいしゃいん",
+						"kana": "かいしゃいん",
+						"english": "company employee"
+					},
+					{
+						"text": "きょうだい",
+						"kana": "きょうだい",
+						"english": "siblings"
+					}
+				],
+				"answer": 1,
+				"kanji": "友達",
+				"reading": "ともだち"
+			},
+			{
+				"qNum": 10,
+				"prompt": "電車",
+				"contextIdx": 2,
+				"options": [
+					{
+						"text": "くるま",
+						"kana": "くるま",
+						"english": "car"
+					},
+					{
+						"text": "ひこうき",
+						"kana": "ひこうき",
+						"english": "airplane"
+					},
+					{
+						"text": "でんしゃ",
+						"kana": "でんしゃ",
+						"english": "train"
+					},
+					{
+						"text": "じてんしゃ",
+						"kana": "じてんしゃ",
+						"english": "bicycle"
+					}
+				],
+				"answer": 2,
+				"kanji": "電車",
+				"reading": "でんしゃ"
+			}
+		],
+		"vocab": [
+			{
+				"word": "明日",
+				"kana": "あした",
+				"romaji": "ashita",
+				"meaning": "tomorrow",
+				"vocabTags": [
+					"noun",
+					"time",
+					"n5"
+				]
+			},
+			{
+				"word": "朝",
+				"kana": "あさ",
+				"romaji": "asa",
+				"meaning": "morning",
+				"vocabTags": [
+					"noun",
+					"time",
+					"n5"
+				]
+			},
+			{
+				"word": "七時",
+				"kana": "しちじ",
+				"romaji": "shichiji",
+				"meaning": "7 o'clock",
+				"vocabTags": [
+					"noun",
+					"time",
+					"n5"
+				]
+			},
+			{
+				"word": "図書館",
+				"kana": "としょかん",
+				"romaji": "toshokan",
+				"meaning": "library",
+				"vocabTags": [
+					"noun",
+					"place",
+					"n5"
+				]
+			},
+			{
+				"word": "行く",
+				"kana": "いく",
+				"romaji": "iku",
+				"meaning": "to go",
+				"vocabTags": [
+					"verb",
+					"godan-verb",
+					"intransitive",
+					"n5"
+				]
+			},
+			{
+				"word": "日本語",
+				"kana": "にほんご",
+				"romaji": "nihongo",
+				"meaning": "Japanese language",
+				"vocabTags": [
+					"noun",
+					"language",
+					"n5"
+				]
+			},
+			{
+				"word": "本",
+				"kana": "ほん",
+				"romaji": "hon",
+				"meaning": "book",
+				"vocabTags": [
+					"noun",
+					"object",
+					"n5"
+				]
+			},
+			{
+				"word": "借りる",
+				"kana": "かりる",
+				"romaji": "kariru",
+				"meaning": "to borrow",
+				"vocabTags": [
+					"verb",
+					"ichidan-verb",
+					"transitive",
+					"n5"
+				]
+			},
+			{
+				"word": "店",
+				"kana": "みせ",
+				"romaji": "mise",
+				"meaning": "shop, store",
+				"vocabTags": [
+					"noun",
+					"place",
+					"n5"
+				]
+			},
+			{
+				"word": "安い",
+				"kana": "やすい",
+				"romaji": "yasui",
+				"meaning": "cheap, inexpensive",
+				"vocabTags": [
+					"adjective",
+					"i-adjective",
+					"n5"
+				]
+			}
+		]
+	}
 ]

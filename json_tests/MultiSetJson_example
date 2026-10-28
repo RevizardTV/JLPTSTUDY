@@ -1,186 +1,710 @@
 [
-  {
-    "id": "set-batch-vol1-kanji",
-    "title": "N5 Essential Kanji Set",
-    "category": "kanji",
-    "packTitle": "Master Batch Pack A",
-    "tags": ["kanji", "n5", "core"],
-    "contextPassages": ["あしたは日曜日です。"],
-    "questions": [
-      {
-        "qNum": 1,
-        "prompt": "日",
-        "contextIdx": 0,
-        "options": [
-          { "text": "げつ", "kana": "げつ", "english": "moon" },
-          { "text": "にち", "kana": "にち", "english": "sun / day" },
-          { "text": "すい", "kana": "すい", "english": "water" },
-          { "text": "もく", "kana": "もく", "english": "tree" }
-        ],
-        "answer": 1,
-        "kanji": "日",
-        "reading": "にち"
-      }
-    ],
-    "vocab": [
-      {
-        "word": "日曜日",
-        "kana": "にちようび",
-        "romaji": "nichiyoubi",
-        "meaning": "Sunday"
-      }
-    ]
-  },
-  {
-    "id": "set-batch-vol2-grammar",
-    "title": "N5 Basic Particles",
-    "category": "grammar",
-    "packTitle": "Master Batch Pack A",
-    "tags": ["grammar", "n5", "particles"],
-    "contextPassages": ["りんごを食べます。"],
-    "questions": [
-      {
-        "qNum": 1,
-        "prompt": "りんご ___ 食べます。",
-        "contextIdx": 0,
-        "options": [
-          { "text": "を", "kana": "を", "english": "object marker" },
-          { "text": "に", "kana": "に", "english": "target marker" },
-          { "text": "で", "kana": "で", "english": "tool/place marker" },
-          { "text": "が", "kana": "が", "english": "subject marker" }
-        ],
-        "answer": 0,
-        "kanji": "りんごを食べます",
-        "reading": "りんごをたべます"
-      }
-    ],
-    "vocab": [
-      {
-        "word": "食べる",
-        "kana": "たべる",
-        "romaji": "taberu",
-        "meaning": "to eat"
-      },
-      {
-        "word": "りんご",
-        "kana": "りんご",
-        "romaji": "ringo",
-        "meaning": "apple"
-      }
-    ]
-  },
-  {
-    "id": "set-batch-vol3-vocab",
-    "title": "Daily Routine Vocabulary",
-    "category": "vocabulary",
-    "packTitle": "Master Batch Pack B",
-    "tags": ["vocab", "n5", "daily"],
-    "contextPassages": ["まいあさ、コーヒーを飲みます。"],
-    "questions": [
-      {
-        "qNum": 1,
-        "prompt": "飲む",
-        "contextIdx": 0,
-        "options": [
-          { "text": "のむ", "kana": "のむ", "english": "to drink" },
-          { "text": "よむ", "kana": "よむ", "english": "to read" },
-          { "text": "かく", "kana": "かく", "english": "to write" },
-          { "text": "いく", "kana": "いく", "english": "to go" }
-        ],
-        "answer": 0,
-        "kanji": "飲む",
-        "reading": "のむ"
-      }
-    ],
-    "vocab": [
-      {
-        "word": "飲む",
-        "kana": "のむ",
-        "romaji": "nomu",
-        "meaning": "to drink"
-      },
-      {
-        "word": "コーヒー",
-        "kana": "こーひー",
-        "romaji": "koohii",
-        "meaning": "coffee"
-      }
-    ]
-  },
-  {
-    "id": "set-batch-vol4-reading",
-    "title": "Short Story Comprehension",
-    "category": "reading",
-    "packTitle": "Master Batch Pack B",
-    "tags": ["reading", "n5", "stories"],
-    "contextPassages": ["きのう、えいがをみました。とてもおもしろかったです。"],
-    "questions": [
-      {
-        "qNum": 1,
-        "prompt": "映画はどうでしたか。",
-        "contextIdx": 0,
-        "options": [
-          { "text": "つまらなかったです", "kana": "つまらなかったです", "english": "It was boring" },
-          { "text": "おもしろかったです", "kana": "おもしろかったです", "english": "It was interesting" },
-          { "text": "見ていません", "kana": "みていません", "english": "I didn't watch it" },
-          { "text": "わかりません", "kana": "わかりません", "english": "I don't know" }
-        ],
-        "answer": 1,
-        "kanji": "面白かった",
-        "reading": "おもしろかった"
-      }
-    ],
-    "vocab": [
-      {
-        "word": "映画",
-        "kana": "えいが",
-        "romaji": "eiga",
-        "meaning": "movie"
-      },
-      {
-        "word": "面白い",
-        "kana": "おもしろい",
-        "romaji": "omoshiroi",
-        "meaning": "interesting"
-      }
-    ]
-  },
-  {
-    "id": "set-batch-vol5-kanji",
-    "title": "Numbers & Counters",
-    "category": "kanji",
-    "packTitle": "Master Batch Pack C",
-    "tags": ["kanji", "n5", "numbers"],
-    "contextPassages": ["つくえのうえに、りんごが三つあります。"],
-    "questions": [
-      {
-        "qNum": 1,
-        "prompt": "三つ",
-        "contextIdx": 0,
-        "options": [
-          { "text": "ひとつ", "kana": "ひとつ", "english": "one" },
-          { "text": "ふたつ", "kana": "ふたつ", "english": "two" },
-          { "text": "みっつ", "kana": "みっつ", "english": "three" },
-          { "text": "よっつ", "kana": "よっつ", "english": "four" }
-        ],
-        "answer": 2,
-        "kanji": "三つ",
-        "reading": "みっつ"
-      }
-    ],
-    "vocab": [
-      {
-        "word": "三つ",
-        "kana": "みっつ",
-        "romaji": "mittsu",
-        "meaning": "three (things)"
-      },
-      {
-        "word": "机",
-        "kana": "つくえ",
-        "romaji": "tsukue",
-        "meaning": "desk"
-      }
-    ]
-  }
+	{
+		"id": "set-multiset-vol1-n5",
+		"title": "JLPT N5 Core Vocabulary & Kanji Set",
+		"category": "kanji",
+		"packTitle": "Master Batch Pack A",
+		"tags": [
+			"kanji",
+			"n5",
+			"core"
+		],
+		"contextPassages": [
+			"あしたは日曜日です。朝七時に起きます。",
+			"としょかんへ行って本を読みます。"
+		],
+		"questions": [
+			{
+				"qNum": 1,
+				"prompt": "日",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "げつ",
+						"kana": "げつ",
+						"english": "moon"
+					},
+					{
+						"text": "にち",
+						"kana": "にち",
+						"english": "sun / day"
+					},
+					{
+						"text": "すい",
+						"kana": "すい",
+						"english": "water"
+					},
+					{
+						"text": "もく",
+						"kana": "もく",
+						"english": "tree"
+					}
+				],
+				"answer": 1,
+				"kanji": "日",
+				"reading": "にち"
+			},
+			{
+				"qNum": 2,
+				"prompt": "朝",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "あさ",
+						"kana": "あさ",
+						"english": "morning"
+					},
+					{
+						"text": "よる",
+						"kana": "よる",
+						"english": "night"
+					},
+					{
+						"text": "ひる",
+						"kana": "ひる",
+						"english": "noon"
+					},
+					{
+						"text": "ゆうがた",
+						"kana": "ゆうがた",
+						"english": "evening"
+					}
+				],
+				"answer": 0,
+				"kanji": "朝",
+				"reading": "あさ"
+			},
+			{
+				"qNum": 3,
+				"prompt": "七時",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "ろくじ",
+						"kana": "ろくじ",
+						"english": "6 o'clock"
+					},
+					{
+						"text": "しちじ",
+						"kana": "しちじ",
+						"english": "7 o'clock"
+					},
+					{
+						"text": "はちじ",
+						"kana": "はちじ",
+						"english": "8 o'clock"
+					},
+					{
+						"text": "くじ",
+						"kana": "くじ",
+						"english": "9 o'clock"
+					}
+				],
+				"answer": 1,
+				"kanji": "七時",
+				"reading": "しちじ"
+			},
+			{
+				"qNum": 4,
+				"prompt": "図書館",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "びょういん",
+						"kana": "びょういん",
+						"english": "hospital"
+					},
+					{
+						"text": "ぎんこう",
+						"kana": "ぎんこう",
+						"english": "bank"
+					},
+					{
+						"text": "としょかん",
+						"kana": "としょかん",
+						"english": "library"
+					},
+					{
+						"text": "ゆうびんきょく",
+						"kana": "ゆうびんきょく",
+						"english": "post office"
+					}
+				],
+				"answer": 2,
+				"kanji": "図書館",
+				"reading": "としょかん"
+			},
+			{
+				"qNum": 5,
+				"prompt": "本",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "え",
+						"kana": "え",
+						"english": "picture"
+					},
+					{
+						"text": "ほん",
+						"kana": "ほん",
+						"english": "book"
+					},
+					{
+						"text": "かみ",
+						"kana": "かみ",
+						"english": "paper"
+					},
+					{
+						"text": "てがみ",
+						"kana": "てがみ",
+						"english": "letter"
+					}
+				],
+				"answer": 1,
+				"kanji": "本",
+				"reading": "ほん"
+			},
+			{
+				"qNum": 6,
+				"prompt": "行く",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "いく",
+						"kana": "いく",
+						"english": "to go"
+					},
+					{
+						"text": "くる",
+						"kana": "くる",
+						"english": "to come"
+					},
+					{
+						"text": "かえる",
+						"kana": "かえる",
+						"english": "to return"
+					},
+					{
+						"text": "みる",
+						"kana": "みる",
+						"english": "to see"
+					}
+				],
+				"answer": 0,
+				"kanji": "行く",
+				"reading": "いく"
+			},
+			{
+				"qNum": 7,
+				"prompt": "食べる",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "のむ",
+						"kana": "のむ",
+						"english": "to drink"
+					},
+					{
+						"text": "たべる",
+						"kana": "たべる",
+						"english": "to eat"
+					},
+					{
+						"text": "かう",
+						"kana": "かう",
+						"english": "to buy"
+					},
+					{
+						"text": "よむ",
+						"kana": "よむ",
+						"english": "to read"
+					}
+				],
+				"answer": 1,
+				"kanji": "食べる",
+				"reading": "たべる"
+			},
+			{
+				"qNum": 8,
+				"prompt": "見る",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "きく",
+						"kana": "きく",
+						"english": "to listen"
+					},
+					{
+						"text": "はなす",
+						"kana": "はなす",
+						"english": "to speak"
+					},
+					{
+						"text": "みる",
+						"kana": "みる",
+						"english": "to look / watch"
+					},
+					{
+						"text": "あう",
+						"kana": "あう",
+						"english": "to meet"
+					}
+				],
+				"answer": 2,
+				"kanji": "見る",
+				"reading": "みる"
+			},
+			{
+				"qNum": 9,
+				"prompt": "友達",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "せんせい",
+						"kana": "せんせい",
+						"english": "teacher"
+					},
+					{
+						"text": "ともだち",
+						"kana": "ともだち",
+						"english": "friend"
+					},
+					{
+						"text": "がくせい",
+						"kana": "がくせい",
+						"english": "student"
+					},
+					{
+						"text": "しゃいん",
+						"kana": "しゃいん",
+						"english": "employee"
+					}
+				],
+				"answer": 1,
+				"kanji": "友達",
+				"reading": "ともだち"
+			},
+			{
+				"qNum": 10,
+				"prompt": "車",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "でんしゃ",
+						"kana": "でんしゃ",
+						"english": "train"
+					},
+					{
+						"text": "くるま",
+						"kana": "くるま",
+						"english": "car"
+					},
+					{
+						"text": "ひこうき",
+						"kana": "ひこうき",
+						"english": "airplane"
+					},
+					{
+						"text": "じてんしゃ",
+						"kana": "じてんしゃ",
+						"english": "bicycle"
+					}
+				],
+				"answer": 1,
+				"kanji": "車",
+				"reading": "くるま"
+			}
+		],
+		"vocab": [
+			{
+				"word": "日曜日",
+				"kana": "にちようび",
+				"romaji": "nichiyoubi",
+				"meaning": "Sunday",
+				"vocabTags": [
+					"noun",
+					"n5"
+				]
+			},
+			{
+				"word": "朝",
+				"kana": "あさ",
+				"romaji": "asa",
+				"meaning": "morning",
+				"vocabTags": [
+					"noun",
+					"n5"
+				]
+			},
+			{
+				"word": "図書館",
+				"kana": "としょかん",
+				"romaji": "toshokan",
+				"meaning": "library",
+				"vocabTags": [
+					"noun",
+					"n5"
+				]
+			},
+			{
+				"word": "本",
+				"kana": "ほん",
+				"romaji": "hon",
+				"meaning": "book",
+				"vocabTags": [
+					"noun",
+					"n5"
+				]
+			}
+		]
+	},
+	{
+		"id": "set-multiset-vol2-grammar",
+		"title": "JLPT N5 Particles & Grammar Set",
+		"category": "grammar",
+		"packTitle": "Master Batch Pack B",
+		"tags": [
+			"grammar",
+			"n5",
+			"particles"
+		],
+		"contextPassages": [
+			"りんごを食べます。",
+			"ペンで手紙を書きます。"
+		],
+		"questions": [
+			{
+				"qNum": 1,
+				"prompt": "りんご ___ 食べます。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "target marker"
+					},
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "tool marker"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					}
+				],
+				"answer": 0,
+				"kanji": "りんごを食べます",
+				"reading": "りんごをたべます"
+			},
+			{
+				"qNum": 2,
+				"prompt": "ペン ___ 手紙を書きます。",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "で",
+						"kana": "for",
+						"english": "by means of / with"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "to / at"
+					},
+					{
+						"text": "と",
+						"kana": "と",
+						"english": "with (someone)"
+					}
+				],
+				"answer": 1,
+				"kanji": "ペンで手紙を書く",
+				"reading": "ぺんでてがみをかく"
+			},
+			{
+				"qNum": 3,
+				"prompt": "学校 ___ 行きます。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "へ",
+						"kana": "へ",
+						"english": "direction marker (to)"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "の",
+						"kana": "の",
+						"english": "possessive marker"
+					}
+				],
+				"answer": 0,
+				"kanji": "学校へ行く",
+				"reading": "がっこうへいく"
+			},
+			{
+				"qNum": 4,
+				"prompt": "東京 ___ 住んでいます。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "location marker (in)"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "から",
+						"kana": "から",
+						"english": "from"
+					},
+					{
+						"text": "まで",
+						"kana": "まで",
+						"english": "until"
+					}
+				],
+				"answer": 0,
+				"kanji": "東京に住む",
+				"reading": "とうきょうにすむ"
+			},
+			{
+				"qNum": 5,
+				"prompt": "これ ___ 私のペンです。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "target marker"
+					},
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "location marker"
+					}
+				],
+				"answer": 0,
+				"kanji": "これは私のペンです",
+				"reading": "これはわたしのぺんです"
+			},
+			{
+				"qNum": 6,
+				"prompt": "犬 ___ 猫が好きです。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "と",
+						"kana": "と",
+						"english": "and / with"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "target marker"
+					},
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "tool marker"
+					}
+				],
+				"answer": 0,
+				"kanji": "犬と猫",
+				"reading": "いぬとねこ"
+			},
+			{
+				"qNum": 7,
+				"prompt": "部屋 ___ だれもいません。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "existence location marker"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "へ",
+						"kana": "へ",
+						"english": "direction marker"
+					},
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "action location marker"
+					}
+				],
+				"answer": 0,
+				"kanji": "部屋にだれもいない",
+				"reading": "へやにだれもいない"
+			},
+			{
+				"qNum": 8,
+				"prompt": "きのう、映画 ___ 見ました。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "が",
+						"kana": "가",
+						"english": "subject marker"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "target marker"
+					},
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "location marker"
+					}
+				],
+				"answer": 0,
+				"kanji": "映画を見る",
+				"reading": "えいがをみる"
+			},
+			{
+				"qNum": 9,
+				"prompt": "バス ___ 来ました。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "means of transport"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "target marker"
+					},
+					{
+						"text": "と",
+						"kana": "と",
+						"english": "with"
+					}
+				],
+				"answer": 0,
+				"kanji": "バスで来る",
+				"reading": "ばすでくる"
+			},
+			{
+				"qNum": 10,
+				"prompt": "私 ___ 学生です。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "の",
+						"kana": "の",
+						"english": "possessive marker"
+					}
+				],
+				"answer": 0,
+				"kanji": "私は学生です",
+				"reading": "わたしはがくせいです"
+			}
+		],
+		"vocab": [
+			{
+				"word": "食べる",
+				"kana": "たべる",
+				"romaji": "taberu",
+				"meaning": "to eat",
+				"vocabTags": [
+					"verb",
+					"n5"
+				]
+			},
+			{
+				"word": "書く",
+				"kana": "かく",
+				"romaji": "kaku",
+				"meaning": "to write",
+				"vocabTags": [
+					"verb",
+					"n5"
+				]
+			},
+			{
+				"word": "行く",
+				"kana": "いく",
+				"romaji": "iku",
+				"meaning": "to go",
+				"vocabTags": [
+					"verb",
+					"n5"
+				]
+			}
+		]
+	}
 ]
