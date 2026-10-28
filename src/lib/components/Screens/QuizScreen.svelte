@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import { questionSets } from '#lib/stores.js';
-  import type { Question, QuestionSet, QuizConfig, UserAnswer, FinishEventData, Option } from '#lib/types.js';
+  import { questionSets, userProgress, updateSetProgressIndex } from '#lib/stores.js';
+  import type { Question, QuestionSet, QuizConfig, UserAnswer, FinishEventData, Option, SetProgress } from '#lib/types.js';
 
   let { config, onfinish, onexit }: { 
     config: QuizConfig; 
@@ -9,7 +9,9 @@
     onexit: () => void 
   } = $props();
 
-  let questions = $state<Question[]>([]);
+  type ExtendedQuestion = Question & { contextEnglishText?: string };
+
+  let questions = $state<ExtendedQuestion[]>([]);
   let currentIndex = $state<number>(0);
   let score = $state<number>(0);
   let userAnswers = $state<UserAnswer[]>([]);
@@ -34,7 +36,7 @@
 
   function loadQuestions() {
     if (config.customQuestions) {
-      questions = config.customQuestions;
+      questions = config.customQuestions as ExtendedQuestion[];
     } else if (config.mode === 'exercise' && config.setId) {
       const sets: QuestionSet[] = $questionSets;
       const setObj = sets.find((s) => s.id === config.setId);
@@ -43,11 +45,30 @@
           ...q,
           setId: setObj.id,
           setTitle: setObj.title,
-          contextText: setObj.contextPassages[q.contextIdx] || ""
+          contextText: setObj.contextPassages[q.contextIdx] || "",
+          contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || ""
         }));
+
+        const progressData = $userProgress.completedSets[setObj.id];
+        if (progressData && typeof progressData === 'object') {
+          const savedProgress = progressData as SetProgress;
+          if (savedProgress.bestScore !== undefined) {
+            score = savedProgress.bestScore;
+          }
+          if (savedProgress.userAnswers && Array.isArray(savedProgress.userAnswers)) {
+            userAnswers = [...savedProgress.userAnswers];
+          }
+
+          const firstIncompleteIdx = questions.findIndex(q => !userAnswers.some(ans => ans.question.prompt === q.prompt));
+          if (firstIncompleteIdx !== -1) {
+            currentIndex = firstIncompleteIdx;
+          } else if (savedProgress.currentIndex !== undefined && savedProgress.currentIndex < questions.length) {
+            currentIndex = savedProgress.currentIndex;
+          }
+        }
       }
     } else if (config.mode === 'all') {
-      const all: Question[] = [];
+      const all: ExtendedQuestion[] = [];
       const sets: QuestionSet[] = $questionSets;
       sets.forEach((setObj) => {
         setObj.questions.forEach((q) => {
@@ -55,11 +76,27 @@
             ...q,
             setId: setObj.id,
             setTitle: setObj.title,
-            contextText: setObj.contextPassages[q.contextIdx] || ""
+            contextText: setObj.contextPassages[q.contextIdx] || "",
+            contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || ""
           });
         });
       });
       questions = all;
+    }
+
+    syncCurrentQuestionState();
+  }
+
+  function syncCurrentQuestionState() {
+    if (questions.length === 0) return;
+    const q = questions[currentIndex];
+    const existingAns = userAnswers.find(ans => ans.question.prompt === q.prompt);
+    if (existingAns) {
+      selectedOption = existingAns.selected;
+      isAnswered = true;
+    } else {
+      selectedOption = null;
+      isAnswered = false;
     }
   }
 
@@ -78,30 +115,55 @@
       selected: idx,
       isCorrect
     });
+
+    const attemptedCount = new Set(userAnswers.map(a => a.question.prompt)).size;
+
+    if (config.setId) {
+      updateSetProgressIndex(config.setId, currentIndex, questions.length, score, attemptedCount, userAnswers);
+    }
+  }
+
+  function prevQuestion() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      syncCurrentQuestionState();
+    }
   }
 
   function nextQuestion() {
     if (currentIndex + 1 < questions.length) {
       currentIndex++;
-      selectedOption = null;
-      isAnswered = false;
+      syncCurrentQuestionState();
+
+      const attemptedCount = new Set(userAnswers.map(a => a.question.prompt)).size;
+      if (config.setId) {
+        updateSetProgressIndex(config.setId, currentIndex, questions.length, score, attemptedCount, userAnswers);
+      }
     } else {
       finishQuiz();
     }
   }
 
+  function handleCustomExit() {
+    if (config.setId && questions.length > 0) {
+      const attemptedCount = new Set(userAnswers.map(a => a.question.prompt)).size;
+      updateSetProgressIndex(config.setId, currentIndex, questions.length, score, attemptedCount, userAnswers);
+    }
+    onexit();
+  }
+
   function finishQuiz() {
     if (timerInterval) clearInterval(timerInterval);
+    const activeSetId = config.setId || questions[0]?.setId;
     onfinish({
       score,
       total: questions.length,
       userAnswers,
       secondsElapsed,
-      setId: config.setId
+      setId: activeSetId
     });
   }
 
-  // Helper to robustly normalize option into object with text, kana, english
   function getOptionDetails(opt: string | Option): { text: string; kana: string; english: string } {
     if (typeof opt === 'string') {
       return { text: opt, kana: opt, english: 'N/A' };
@@ -112,22 +174,26 @@
       english: opt.english || 'N/A'
     };
   }
+
+  const completionPercentage = $derived(
+    questions.length > 0 ? Math.round(((currentIndex + 1) / questions.length) * 100) : 0
+  );
 </script>
 
 <div class="max-w-3xl mx-auto space-y-6">
   <!-- Quiz Control Bar -->
   <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center justify-between">
-    <button onclick={onexit} class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 transition" title="Exit Quiz">
+    <button onclick={handleCustomExit} class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 transition" title="Exit Quiz">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
     </button>
 
     <div class="grow mx-4 max-w-md">
       <div class="flex justify-between text-xs font-semibold mb-1">
         <span class="text-brand-500">{questions[currentIndex]?.setTitle || 'EX-1'} {config.practice !== false ? '(Practice)' : '(Assessment)'}</span>
-        <span>Question {currentIndex + 1} / {questions.length}</span>
+        <span>Question {currentIndex + 1} / {questions.length} ({completionPercentage}% done)</span>
       </div>
       <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
-        <div class="bg-brand-500 h-full transition-all duration-300" style="width: {((currentIndex + 1) / questions.length) * 100}%"></div>
+        <div class="bg-brand-500 h-full transition-all duration-300" style="width: {completionPercentage}%"></div>
       </div>
     </div>
 
@@ -148,9 +214,16 @@
     {@const q = questions[currentIndex]}
     <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 sm:p-8 shadow-lg relative space-y-6">
       
-      <!-- Context Passage -->
-      <div class="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200/80 dark:border-slate-800 text-lg sm:text-xl font-japanese leading-relaxed text-slate-800 dark:text-slate-200">
-        {q.contextText}
+      <!-- Context Passage with Optional English Translation -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200/80 dark:border-slate-800 space-y-2">
+        <div class="text-lg sm:text-xl font-japanese leading-relaxed text-slate-800 dark:text-slate-200">
+          {q.contextText}
+        </div>
+        {#if q.contextEnglishText}
+          <div class="text-xs italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-2">
+            {q.contextEnglishText}
+          </div>
+        {/if}
       </div>
 
       <!-- Prompt -->
@@ -175,7 +248,6 @@
               <span>{details.text}</span>
             </div>
             
-            <!-- Display Kana & English meaning for ALL choices once an answer is selected -->
             {#if isAnswered}
               <div class="mt-2 text-xs text-slate-500 dark:text-slate-400 flex justify-between border-t border-slate-100 dark:border-slate-700 pt-1">
                 <span>Kana: <strong class="font-japanese">{details.kana}</strong></span>
@@ -186,9 +258,9 @@
         {/each}
       </div>
 
-      <!-- Instant Feedback / Explanation Box -->
       {#if isAnswered}
         {@const isCorrect = selectedOption === q.answer}
+        {@const correctOpt = getOptionDetails(q.options[q.answer])}
         <div class="p-4 rounded-xl border transition-all {isCorrect ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200' : 'bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800 text-rose-900 dark:text-rose-200'}">
           <div class="flex items-start space-x-3">
             <div class="p-1.5 rounded-full text-white shrink-0 {isCorrect ? 'bg-emerald-500' : 'bg-rose-500'}">
@@ -201,11 +273,11 @@
             <div>
               <h4 class="font-bold text-base">{isCorrect ? '正解 (Correct!)' : '不正解 (Incorrect)'}</h4>
               <p class="text-sm mt-0.5 text-slate-600 dark:text-slate-300">
-                {isCorrect ? `Great reading! "${q.kanji || q.prompt}" is read as "${q.reading || getOptionDetails(q.options[q.answer]).kana}".` : `The correct answer is: ${getOptionDetails(q.options[q.answer]).text}`}
+                {isCorrect 
+                  ? `Great reading! "${q.kanji || q.prompt}" is read as "${q.reading || correctOpt.kana}".` 
+                  : `The correct answer is: ${correctOpt.text}`
+                }
               </p>
-              <div class="mt-2 text-xs font-mono bg-white/50 dark:bg-black/20 p-2 rounded border border-black/5 dark:border-white/5">
-                Word: {q.kanji || q.prompt} | Reading: {q.reading || getOptionDetails(q.options[q.answer]).kana}
-              </div>
             </div>
           </div>
         </div>
@@ -213,7 +285,12 @@
 
       <!-- Footer Actions -->
       <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700">
-        <span class="text-xs text-slate-400">JLPT N5-N4 Kanji Practice</span>
+        <button 
+          onclick={prevQuestion} 
+          disabled={currentIndex === 0}
+          class="px-4 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 font-semibold text-sm rounded-xl transition disabled:opacity-40 disabled:hover:bg-transparent">
+          ← Previous
+        </button>
 
         <div class="flex space-x-2">
           {#if !isAnswered}
@@ -225,7 +302,7 @@
             </button>
           {:else}
             <button onclick={nextQuestion} class="px-6 py-2 bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm rounded-xl shadow transition flex items-center space-x-1">
-              <span>Next Question</span>
+              <span>{currentIndex + 1 === questions.length ? 'Finish Quiz' : 'Next Question'}</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </button>
           {/if}

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { recordQuizCompletion } from '#lib/stores.js';
   import type { FinishEventData, QuizConfig } from '#lib/types.js';
 
   let { 
@@ -9,12 +10,30 @@
     onnavigate: (event: { screen: string; config?: QuizConfig }) => void 
   } = $props();
 
+  let savedSuccessfully = $state<boolean>(false);
+
+  // Automatically record completion in userProgress on load
+  $effect(() => {
+    if (data.setId) {
+      recordQuizCompletion(data);
+      savedSuccessfully = true;
+    }
+  });
+
   const percentage = $derived(
     data.total > 0 ? Math.round((data.score / data.total) * 100) : 0
   );
 </script>
 
 <div class="space-y-6 max-w-2xl mx-auto py-6">
+  <!-- Success Feedback Banner -->
+  {#if savedSuccessfully}
+    <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 rounded-2xl text-xs font-bold flex items-center space-x-2 shadow-sm">
+      <span class="text-base">✅</span>
+      <span>Quiz results successfully recorded! Your set completion and best score have been updated on your dashboard.</span>
+    </div>
+  {/if}
+
   <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 text-center shadow-lg space-y-4">
     <span class="inline-block px-3 py-1 bg-brand-500/10 text-brand-500 rounded-full text-xs font-bold uppercase tracking-wider">
       Quiz Completed!

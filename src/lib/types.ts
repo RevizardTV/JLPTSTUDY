@@ -34,8 +34,15 @@ export interface QuestionSet {
   tags?: string[];
   packTitle?: string;
   contextPassages: string[];
+  contextEnglish?: string[]; // Added to support context translation display
   questions: Question[];
   vocab?: VocabItem[];
+}
+
+export interface UserAnswer {
+  question: Question;
+  selected: number;
+  isCorrect: boolean;
 }
 
 export interface SetProgress {
@@ -43,6 +50,10 @@ export interface SetProgress {
   total: number;
   accuracy: number;
   completedAt?: string;
+  currentIndex?: number;
+  progressPercentage?: number;
+  attemptedCount?: number;
+  userAnswers?: UserAnswer[]; // Added to fix the property type error
 }
 
 export interface UserProgressData {
@@ -58,12 +69,6 @@ export interface QuizConfig {
   practice: boolean;
   timed?: boolean;
   customQuestions?: Question[];
-}
-
-export interface UserAnswer {
-  question: Question;
-  selected: number;
-  isCorrect: boolean;
 }
 
 export interface FinishEventData {

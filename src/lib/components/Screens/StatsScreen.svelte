@@ -4,28 +4,31 @@
   import { SvelteMap } from 'svelte/reactivity';
   import { calculateGlobalStats } from '#lib/utils/statsUtils.js';
 
-  // Compute global stats
   const stats = $derived(calculateGlobalStats($questionSets, $userProgress));
 
-  // Filter completed lists strictly against sets that actually exist in the store using SvelteMap
-  const validCompletedMap = $derived(() => {
+  const validActiveMap = $derived(() => {
     const map = new SvelteMap<string, SetProgress>();
     const existingIds = new Set($questionSets.map(s => s.id));
     
     Object.entries($userProgress.completedSets).forEach(([setId, data]) => {
-      if (existingIds.has(setId) && data && typeof data === 'object' && 'bestScore' in data) {
+      if (existingIds.has(setId) && data && typeof data === 'object') {
         map.set(setId, data as SetProgress);
       }
     });
     return map;
   });
 
-  const completedList = $derived(Array.from(validCompletedMap().entries()));
+  const activeList = $derived(Array.from(validActiveMap().entries()));
 
-  // Find sets that haven't been completed yet
   const pendingSets = $derived(
-    $questionSets.filter(set => !validCompletedMap().has(set.id))
+    $questionSets.filter(set => !validActiveMap().has(set.id))
   );
+
+  // Helper to look up set title by ID
+  function getSetTitle(setId: string): string {
+    const found = $questionSets.find(s => s.id === setId);
+    return found ? found.title : setId;
+  }
 </script>
 
 <div class="space-y-6 max-w-4xl mx-auto">
@@ -52,31 +55,33 @@
 
     <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 text-center shadow-sm">
       <span class="text-xs text-slate-400 uppercase font-semibold">Pending Sets</span>
-      <div class="text-3xl font-extrabold text-amber-500 my-2">{stats.pendingSetsCount} / {stats.totalSetsCount}</div>
+      <div class="text-3xl font-extrabold text-amber-500 my-2">{pendingSets.length} / {$questionSets.length}</div>
     </div>
   </div>
 
-  <!-- Completed Performance History Table -->
+  <!-- Attempted Sets History Table -->
   <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm space-y-4">
-    <h3 class="font-bold text-slate-800 dark:text-slate-100">Completed Sets History</h3>
+    <h3 class="font-bold text-slate-800 dark:text-slate-100">Attempted Sets History</h3>
     
-    {#if completedList.length === 0}
-      <p class="text-xs text-slate-400 py-4 text-center">No valid completed quiz sessions found for active sets.</p>
+    {#if activeList.length === 0}
+      <p class="text-xs text-slate-400 py-4 text-center">No active quiz sessions found yet. Start practicing to see stats here!</p>
     {:else}
       <table class="w-full text-left text-sm border-collapse">
         <thead>
           <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-400 text-xs">
-            <th class="py-2">Set ID</th>
+            <th class="py-2">Set Title</th>
             <th class="py-2">Best Score</th>
+            <th class="py-2">Attempted</th>
             <th class="py-2">Accuracy</th>
           </tr>
         </thead>
         <tbody>
-          {#each completedList as [setId, data] (setId)}
+          {#each activeList as [setId, data] (setId)}
             <tr class="border-b border-slate-100 dark:border-slate-700/50">
-              <td class="py-3 font-bold text-slate-800 dark:text-slate-200">{setId}</td>
-              <td class="py-3 text-slate-600 dark:text-slate-300">{data.bestScore} / {data.total}</td>
-              <td class="py-3 font-semibold text-brand-500">{data.accuracy}%</td>
+              <td class="py-3 font-bold text-slate-800 dark:text-slate-200">{getSetTitle(setId)}</td>
+              <td class="py-3 text-slate-600 dark:text-slate-300">{data.bestScore ?? 0} / {data.total}</td>
+              <td class="py-3 text-slate-600 dark:text-slate-300">{data.attemptedCount ?? 0} / {data.total}</td>
+              <td class="py-3 font-semibold text-brand-500">{data.accuracy ?? 0}%</td>
             </tr>
           {/each}
         </tbody>
@@ -89,7 +94,7 @@
     <h3 class="font-bold text-slate-800 dark:text-slate-100">Sets Pending Completion</h3>
     
     {#if pendingSets.length === 0}
-      <p class="text-xs text-emerald-500 py-4 text-center font-medium">🎉 Amazing job! You have completed all available question sets.</p>
+      <p class="text-xs text-emerald-500 py-4 text-center font-medium">🎉 Amazing job! You have started or completed all available question sets.</p>
     {:else}
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {#each pendingSets as set (set.id)}

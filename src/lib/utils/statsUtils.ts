@@ -24,16 +24,26 @@ export function calculateGlobalStats(
   let weightedScoreSum = 0;
   let totalPossibleSum = 0;
   let completedSetsCount = 0;
+  let touchedSetsCount = 0;
 
   // Only count progress for sets that currently exist in questionSets
   const existingSetIds = new Set(questionSets.map(s => s.id));
 
-  const completedEntries = Object.entries(progress.completedSets || {});
-  completedEntries.forEach(([setId, entry]) => {
-    if (existingSetIds.has(setId) && entry && typeof entry === 'object' && 'bestScore' in entry) {
-      completedSetsCount++;
+  const progressEntries = Object.entries(progress.completedSets || {});
+  progressEntries.forEach(([setId, entry]) => {
+    if (existingSetIds.has(setId) && entry && typeof entry === 'object') {
       const setProg = entry as SetProgress;
-      totalQuestionsCompleted += setProg.bestScore || 0;
+      
+      const attempted = setProg.attemptedCount || (setProg.userAnswers ? setProg.userAnswers.length : 0);
+      if (attempted > 0) {
+        touchedSetsCount++;
+      }
+
+      if (setProg.bestScore !== undefined && setProg.total !== undefined && setProg.bestScore === setProg.total) {
+        completedSetsCount++;
+      }
+
+      totalQuestionsCompleted += attempted;
       weightedScoreSum += setProg.bestScore || 0;
       totalPossibleSum += setProg.total || 0;
     }
@@ -42,7 +52,7 @@ export function calculateGlobalStats(
   const overallAccuracy = 
     totalPossibleSum > 0 ? Math.round((weightedScoreSum / totalPossibleSum) * 100) : 0;
 
-  const pendingSetsCount = Math.max(0, totalSetsCount - completedSetsCount);
+  const pendingSetsCount = Math.max(0, totalSetsCount - touchedSetsCount);
 
   return {
     totalSetsCount,
