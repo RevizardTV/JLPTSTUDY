@@ -42,12 +42,13 @@ const defaultProgress: UserProgressData = {
   totalQuizzes: 0
 };
 
-const savedProgress = typeof window !== 'undefined' ? localStorage.getItem('kanji_quiz_progress') : null;
+// Unified progress key: 'kanji_question_progress'
+const savedProgress = typeof window !== 'undefined' ? localStorage.getItem('kanji_question_progress') : null;
 export const userProgress = writable<UserProgressData>(savedProgress ? JSON.parse(savedProgress) : defaultProgress);
 
 userProgress.subscribe(value => {
   if (typeof window !== 'undefined') {
-    localStorage.setItem('kanji_quiz_progress', JSON.stringify(value));
+    localStorage.setItem('kanji_question_progress', JSON.stringify(value));
   }
 });
 
@@ -73,3 +74,20 @@ questionSets.subscribe(value => {
     localStorage.setItem('kanji_question_sets', JSON.stringify(value));
   }
 });
+
+/**
+ * Deletes a question set by ID and automatically removes its corresponding 
+ * completed stats entry from user progress to keep analytics clean.
+ */
+export function deleteQuestionSet(setId: string) {
+  questionSets.update((sets) => sets.filter((s) => s.id !== setId));
+  
+  userProgress.update((prog) => {
+    const updatedCompleted = { ...prog.completedSets };
+    delete updatedCompleted[setId];
+    return {
+      ...prog,
+      completedSets: updatedCompleted
+    };
+  });
+}

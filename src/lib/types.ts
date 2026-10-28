@@ -21,8 +21,8 @@ export interface VocabItem {
   word: string;
   meaning: string;
   kana?: string;
-  romaji?: string;      // Explicit Romaji field
-  vocabTags?: string[]; // Vocab-specific tags (noun, verb, animal, counter, etc.)
+  romaji?: string;
+  vocabTags?: string[];
 }
 
 export interface QuestionSet {
@@ -36,13 +36,15 @@ export interface QuestionSet {
   vocab?: VocabItem[];
 }
 
-export interface SetStats {
+export interface SetProgress {
   bestScore: number;
+  total: number;
+  accuracy: number;
   completedAt?: string;
 }
 
 export interface UserProgressData {
-  completedSets: Record<string, SetStats | boolean>;
+  completedSets: Record<string, SetProgress | boolean>;
   weakQuestions: number[];
   customPackages: string[];
   totalQuizzes: number;

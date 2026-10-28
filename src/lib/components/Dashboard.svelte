@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { questionSets, userProgress } from '#lib/stores.js';
+  import { questionSets, userProgress, deleteQuestionSet } from '#lib/stores.js';
   import TagFilter from '#lib/components/TagFilter.svelte';
   import PackFilter from '#lib/components/PackFilter.svelte';
   import BatchUploadModal from '#lib/components/BatchUploadModal.svelte';
@@ -7,7 +7,7 @@
   import SingleUploadModal from '#lib/components/SingleUploadModal.svelte';
   import CustomBuilderModal from '#lib/components/CustomBuilderModal.svelte';
   import DataWiper from '#lib/components/DataWiper.svelte';
-  import type { QuestionSet, QuizConfig } from '#lib/types.js';
+  import type { QuizConfig } from '#lib/types.js';
 
   let { onnavigate }: { 
     onnavigate: (event: { screen: string; config?: QuizConfig }) => void 
@@ -63,7 +63,7 @@
 
   // Filter sets by category, active tags, and active pack collections
   let filteredSets = $derived(
-    ($questionSets as QuestionSet[]).filter((s) => {
+    $questionSets.filter((s) => {
       const matchesCategory = selectedCategory === 'all' || (s.category || 'kanji') === selectedCategory;
       const matchesTags = selectedTags.size === 0 || s.tags?.some((tag) => selectedTags.has(tag));
       const matchesPacks = selectedPacks.size === 0 || (s.packTitle && selectedPacks.has(s.packTitle));
@@ -73,6 +73,13 @@
 
   function startQuiz(config: QuizConfig) {
     onnavigate({ screen: 'quiz', config });
+  }
+
+  // Handle deleting a question set and its progress data safely
+  function handleDelete(setId: string, title: string) {
+    if (confirm(`Are you sure you want to delete "${title}" (${setId})?`)) {
+      deleteQuestionSet(setId);
+    }
   }
 </script>
 
@@ -136,9 +143,18 @@
             <span class="text-xs font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-brand-600 dark:text-brand-400 capitalize">
               {set.category || 'kanji'}
             </span>
-            <span class="text-xs text-slate-400 font-medium whitespace-nowrap">
-              {stats && 'bestScore' in stats ? `Best: ${stats.bestScore}/${set.questions.length}` : 'Not Started'}
-            </span>
+            <div class="flex items-center space-x-2">
+              <span class="text-xs text-slate-400 font-medium whitespace-nowrap">
+                {stats && 'bestScore' in stats ? `Best: ${stats.bestScore}/${set.questions.length}` : 'Not Started'}
+              </span>
+              <!-- Delete Set Button -->
+              <button 
+                onclick={() => handleDelete(set.id, set.title)} 
+                title="Delete Set"
+                class="text-slate-400 hover:text-red-500 transition p-1 rounded-md hover:bg-red-500/10 text-xs">
+                🗑️
+              </button>
+            </div>
           </div>
           
           <h4 class="font-bold text-lg text-slate-800 dark:text-slate-100 mb-1">{set.title}</h4>
