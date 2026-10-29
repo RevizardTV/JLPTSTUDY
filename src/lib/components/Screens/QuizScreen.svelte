@@ -298,39 +298,48 @@
 				class="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200/80 dark:border-slate-800 space-y-2"
 			>
 				<div
-					class="text-lg sm:text-xl font-japanese leading-relaxed text-slate-800 dark:text-slate-200"
+					class="text-xl sm:text-2xl font-japanese leading-relaxed text-slate-800 dark:text-slate-200"
 				>
 					{q.contextText}
 				</div>
 				{#if isAnswered && q.contextEnglishText}
 					<div
-						class="text-xs italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-2"
+						class="text-sm sm:text-base italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-2"
 					>
 						{q.contextEnglishText}
 					</div>
 				{/if}
 			</div>
 
-			<!-- Prompt / Target Word with Installed Meaning Stacked Below -->
-			<div class="space-y-2">
-				<span class="inline-block text-xs uppercase font-bold text-slate-400 tracking-wider"
-					>Target Word</span
-				>
+			<!-- Prompt / Target Word with Large, Clear Kanji Sizing -->
+			<div class="space-y-3">
+				<div class="flex items-center justify-between">
+					<span class="inline-block text-xs uppercase font-bold text-slate-400 tracking-wider"
+						>Target Word</span
+					>
+					{#if q.kanjiReading}
+						<span
+							class="text-xs font-japanese font-semibold px-2 py-0.5 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded"
+						>
+							{q.kanjiReading}
+						</span>
+					{/if}
+				</div>
 				<div
-					class="text-2xl sm:text-3xl font-bold font-japanese text-brand-600 dark:text-brand-500 leading-relaxed"
+					class="text-3xl sm:text-4xl font-bold font-japanese text-brand-600 dark:text-brand-500 leading-relaxed tracking-wide"
 				>
 					{q.prompt}
 				</div>
 				{#if isAnswered && q.english}
 					<div
-						class="text-sm italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-2 animate-fadeIn"
+						class="text-base sm:text-lg italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-3 animate-fadeIn font-medium"
 					>
 						{q.english}
 					</div>
 				{/if}
 			</div>
 
-			<!-- Multiple Choice Options -->
+			<!-- Multiple Choice Options (Enlarged for readability) -->
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 				{#each q.options as opt, idx (idx)}
 					{@const details = getOptionDetails(opt)}
@@ -345,17 +354,17 @@
 							? 'border-rose-500 bg-rose-50 dark:bg-rose-950/40 text-rose-900 dark:text-rose-200'
 							: 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-brand-500 hover:bg-brand-50/50'}"
 					>
-						<div class="font-japanese text-lg font-medium flex items-center space-x-2">
+						<div class="font-japanese text-xl sm:text-2xl font-medium flex items-center space-x-2">
 							<span class="text-xs text-slate-400 font-sans">{idx + 1}.</span>
 							<span>{details.text}</span>
 						</div>
 
 						{#if isAnswered}
 							<div
-								class="mt-2 text-xs text-slate-500 dark:text-slate-400 flex justify-between border-t border-slate-100 dark:border-slate-700 pt-1"
+								class="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 flex justify-between border-t border-slate-200/60 dark:border-slate-700 pt-2"
 							>
-								<span>Kana: <strong class="font-japanese">{details.kana}</strong></span>
-								<span>Eng: <strong>{details.english}</strong></span>
+								<span>Kana: <strong class="font-japanese text-sm">{details.kana}</strong></span>
+								<span>Eng: <strong class="font-medium">{details.english}</strong></span>
 							</div>
 						{/if}
 					</button>
@@ -400,7 +409,7 @@
 							<h4 class="font-bold text-base">
 								{isCorrect ? '正解 (Correct!)' : '不正解 (Incorrect)'}
 							</h4>
-							<p class="text-sm mt-0.5 text-slate-600 dark:text-slate-300">
+							<p class="text-sm sm:text-base mt-0.5 text-slate-700 dark:text-slate-200">
 								{isCorrect
 									? `"${q.kanji || q.prompt}" (${q.reading || correctOpt.kana}) is correct.`
 									: `The correct answer is "${correctOpt.text}" (${correctOpt.english}).`}
