@@ -1,0 +1,2121 @@
+---
+SetId: set-jtest-ex-kanji-01
+Title: JTEST_EX Kanji Exercise Set 1
+Category: kanji
+PackTitle: JTEST_EX
+Tags: n5, kanji, beginner, test, exercise
+ContextPassages: しけんは来月の七月八日、木よう日、九時からです。 | ふうとうにお金が八万円入っていました。 | きょうは天気がいいです。がっこうの5かいのまどから、北に白い山がよく見えます。 | この山には百本のさくらがあります。春にはおおぜいの人が花見にきます。 | はははまいにち、だいがくのとしょかんではたらいています。
+ContextEnglish: The exam starts from 9 o'clock on Thursday, July 8th next month. | 80,000 yen was inside the envelope. | Today the weather is good. From the window on the 5th floor of the school, you can see the white mountain to the north clearly. | There are a hundred cherry trees on this mountain. In spring, many people come for cherry blossom viewing. | My mother works at the university library every day.
+
+1. [来月]
+   1) くげつ - next month
+   2) らいがつ - next month
+   3) くがつ - next month
+   4) らいげつ - next month
+   English: The exam is next month, [_____] 8th.
+   Kanji: 来月
+   Reading: らいげつ
+   ContextIdx: 0
+
+2. [七月]
+   1) しちがつ - July
+   2) しちげつ - July
+   3) なのがつ - July
+   4) なのげつ - July
+   English: The exam is on [_____] 8th.
+   Kanji: 七月
+   Reading: しちがつ
+   ContextIdx: 0
+
+3. [木よう日]
+   1) きにょうび - Thursday
+   2) すいようび - Wednesday
+   3) かようび - Tuesday
+   4) もくようび - Thursday
+   English: The exam is on [_____].
+   Kanji: 木曜日
+   Reading: もくようび
+   ContextIdx: 0
+
+4. [九時]
+   1) くうじ - 9 o'clock
+   2) きゅじ - 9 o'clock
+   3) くじ - 9 o'clock
+   4) きゅうじ - 9 o'clock
+   English: The exam starts from [_____].
+   Kanji: 九時
+   Reading: くじ
+   ContextIdx: 0
+
+5. [お金]
+   1) おちゃ - tea
+   2) おかし - sweets
+   3) おさら - plate
+   4) おかね - money
+   English: There was [_____] in the envelope.
+   Kanji: お金
+   Reading: おかね
+   ContextIdx: 1
+
+6. [八万円]
+   1) はちまんえん - 80,000 yen
+   2) はっせんえん - 8,000 yen
+   3) はちばんえん - 80,000 yen
+   4) はっけんえん - 80,000 yen
+   English: There was [_____] inside.
+   Kanji: 八万円
+   Reading: はちまんえん
+   ContextIdx: 1
+
+7. [入って]
+   1) いれって - enter
+   2) いって - go
+   3) はって - paste
+   4) はいって - contained / entered
+   English: Money was [_____] inside the envelope.
+   Kanji: 入って
+   Reading: はいって
+   ContextIdx: 1
+
+8. [天気]
+   1) げんき - health
+   2) けんき - research
+   3) てんき - weather
+   4) でんき - electricity
+   English: Today the [_____] is nice.
+   Kanji: 天気
+   Reading: てんき
+   ContextIdx: 2
+
+9. [北]
+   1) みなみ - south
+   2) きた - north
+   3) ひがし - east
+   4) にし - west
+   English: A white mountain can be seen to the [_____].
+   Kanji: 北
+   Reading: きた
+   ContextIdx: 2
+
+10. [白い]
+   1) たかい - high / expensive
+   2) ひろい - spacious
+   3) しろい - white
+   4) おかい - red
+   English: A [_____] mountain can be seen clearly.
+   Kanji: 白い
+   Reading: しろい
+   ContextIdx: 2
+
+11. [山]
+   1) まち - town
+   2) むら - village
+   3) かわ - river
+   4) やま - mountain
+   English: There are 100 cherry trees on this [_____].
+   Kanji: 山
+   Reading: やま
+   ContextIdx: 3
+
+12. [百本]
+   1) ひゃくぼん - 100 trees
+   2) ひゃっぽん - 100 trees
+   3) ひゃっぷん - 100 minutes
+   4) ひゃくふん - 100 minutes
+   English: There are [_____] of cherry trees.
+   Kanji: 百本
+   Reading: ひゃっぽん
+   ContextIdx: 3
+
+13. [春]
+   1) はる - spring
+   2) なつ - summer
+   3) あき - autumn
+   4) ふゆ - winter
+   English: In [_____], many people come.
+   Kanji: 春
+   Reading: はる
+   ContextIdx: 3
+
+14. [人]
+   1) にん - person
+   2) ひと - person
+   3) じん - person
+   4) いと - thread
+   English: Many [_____] come for cherry blossom viewing.
+   Kanji: 人
+   Reading: ひと
+   ContextIdx: 3
+
+15. [花見]
+   1) つきみ - moon viewing
+   2) はなみ - flower viewing
+   3) かぜみ - wind viewing
+   4) ゆきみ - snow viewing
+   English: Many people come for [_____].
+   Kanji: 花見
+   Reading: はなみ
+   ContextIdx: 3
+
+16. はは
+   1) 父 - father ([父]->ちち)
+   2) 火 - fire ([火]->ひ)
+   3) 花 - flower ([花]->はな)
+   4) 母 - mother ([母]->はは)
+   English: My [_____] works at the university library every day.
+   Kanji: 母
+   Reading: はは
+   ContextIdx: 4
+
+17. まいにち
+   1) 宙日 - space day ([宙]->ちゅう[日]->にち)
+   2) 週日 - weekday ([週]->しゅう[日]->じつ)
+   3) 中日 - middle day ([中]->ちゅう[日]->にち)
+   4) 毎日 - every day ([毎]->まい[日]->にち)
+   English: My mother works [_____] at the university library.
+   Kanji: 毎日
+   Reading: まいにち
+   ContextIdx: 4
+
+18. だいがく
+   1) 大核 - large nucleus ([大]->だい[核]->かく)
+   2) 退学 - leaving school ([退]->たい[学]->がく)
+   3) 大学 - university ([大]->だい[学]->がく)
+   4) 最核 - top nucleus ([最]->さい[核]->かく)
+   English: My mother works at the [_____]'s library.
+   Kanji: 大学
+   Reading: だいがく
+   ContextIdx: 4
+
+19. としょかん
+   1) 図書館 - library ([図]->と[書]->しょ[館]->かん)
+   2) 図所館 - library miswriting ([図]->と[所]->しょ[館]->かん)
+   3) 読所管 - reading place office ([読]->どく[所]->しょ[管]->かん)
+   4) 読書館 - reading hall ([読]->どく[書]->しょ[館]->かん)
+   English: She works at the [_____].
+   Kanji: 図書館
+   Reading: としょかん
+   ContextIdx: 4
+
+20. はたらいて
+   1) 動いて - moving ([動]->うごいて)
+   2) 隠いて - hiding ([隠]->かくれて)
+   3) 働いて - working ([働]->はたらいて)
+   4) 行いて - going ([行]->おこなって)
+   English: She is [_____] at the library.
+   Kanji: 働いて
+   Reading: はたらいて
+   ContextIdx: 4
+
+21. [ちいさい]
+   1) 中さい - medium ([中]->ちゅう)
+   2) 少さい - small miswriting ([少]->しょう)
+   3) 小さい - small ([小]->ちいさい)
+   4) 大さい - large miswriting ([大]->だい)
+   English: My older brother goes out putting a [_____] radio in his pocket.
+   Kanji: 小さい
+   Reading: ちいさい
+
+22. [らじお]
+   1) ラゾオ - radio miswriting
+   2) ラジオ - radio
+   3) ウゾオ - radio miswriting
+   4) ウジオ - radio miswriting
+   English: My brother puts a small [_____] in his pocket.
+   Reading: ラジオ
+
+23. [ぽけっと]
+   1) ポケット - pocket
+   2) パクット - pocket miswriting
+   3) ポクット - pocket miswriting
+   4) パケット - packet
+   English: He puts it in his [_____].
+   Reading: ポケット
+
+24. [でかけ]
+   1) 外かけ - go out miswriting ([外]->そと)
+   2) 行かけ - go out miswriting ([行]->い)
+   3) 来かけ - come miswriting ([来]->き)
+   4) 出かけ - depart / go out ([出]->でかけ)
+   English: He puts it in his pocket and [_____]s.
+   Kanji: 出かけ
+   Reading: でかけ
+
+25. [でんしゃ]
+   1) 電車 - train ([電]->でん[車]->しゃ)
+   2) 雷車 - thunder car ([雷]->らい[車]->しゃ)
+   3) 電東 - electric east ([電]->でん[東]->とう)
+   4) 雷東 - thunder east ([雷]->らい[東]->とう)
+   English: And he goes to work listening to it inside the [_____].
+   Kanji: 電車
+   Reading: でんしゃ
+
+26. [きき]
+   1) 聞き - listening ([聞]->きき)
+   2) 開き - opening ([開]->ひらき)
+   3) 閉き - closing ([閉]->とじ)
+   4) 間き - interval ([間]->あいだ)
+   English: He goes to work [_____] to the radio.
+   Kanji: 聞き
+   Reading: きき
+
+27. [かいしゃ]
+   1) 社員 - company employee ([社]->しゃ[員]->いん)
+   2) 社会 - society ([社]->しゃ[会]->かい)
+   3) 会計 - accounting ([会]->かい[計]->けい)
+   4) 会社 - company ([会]->かい[社]->しゃ)
+   English: He goes to the [_____].
+   Kanji: 会社
+   Reading: かいしゃ
+
+28. [先]
+   1) せん - before / ahead
+   2) つぎ - next
+   3) すぐ - immediately
+   4) さき - ahead / first
+   English: Please eat [_____].
+   Kanji: 先
+   Reading: さき
+
+29. [食べて]
+   1) とべて - eat miswriting
+   2) のべて - eat miswriting
+   3) たべて - eat
+   4) くべて - eat miswriting
+   English: Please [_____] first.
+   Kanji: 食べて
+   Reading: たべて
+
+30. [後で]
+   1) あとで - afterwards
+   2) のちで - later
+   3) ごで - afterwards
+   4) こうで - later
+   English: I will eat [_____].
+   Kanji: 後で
+   Reading: あとで
+
+31. 水を[買って]いきます。
+   1) かって - buy
+   2) つくって - make
+   3) とって - take
+   4) あらって - wash
+   English: I will [_____] water and go.
+   Kanji: 買って
+   Reading: かって
+
+32. お[先]にしつれいします。
+   1) せん - ahead
+   2) ぜん - ahead
+   3) ざき - ahead
+   4) さき - ahead
+   English: Pardon me for leaving [_____] you.
+   Kanji: 先
+   Reading: さき
+
+33. きのうはゆうはんに[ぎゅうにく]をたべた。
+   1) 牛内 - beef miswriting ([牛]->ぎゅう[内]->ない)
+   2) 午内 - noon inside ([午]->ご[内]->ない)
+   3) 牛肉 - beef ([牛]->ぎゅう[肉]->にく)
+   4) 午肉 - noon meat ([午]->ご[肉]->にく)
+   English: Yesterday I ate [_____] for dinner.
+   Kanji: 牛肉
+   Reading: ぎゅうにく
+
+34. [毎朝]、なんじにおきますか。
+   1) まいにち - every day
+   2) まいとし - every year
+   3) まいげつ - every month
+   4) まいあさ - every morning
+   English: What time do you wake up [_____]?
+   Kanji: 毎朝
+   Reading: まいあさ
+
+35. わたしのこどもは[はな]がすきです。
+   1) 了ども - child miswriting ([了]->りょう)
+   2) 子ども - child ([子]->こ)
+   3) 于ども - child miswriting ([于]->う)
+   4) 予ども - child miswriting ([予]->よ)
+   English: My [_____] likes flowers.
+   Kanji: 子ども
+   Reading: こども
+
+36. この部屋は[明るくて]ひろいです。
+   1) かおるくて - bright miswriting
+   2) あかるくて - bright
+   3) あつるくて - bright miswriting
+   4) あさるくて - bright miswriting
+   English: This room is [_____] and spacious.
+   Kanji: 明るくて
+   Reading: あかるくて
+
+37. むいかの[ごご]にあいましょう。
+   1) 午役 - noon officer ([午]->ご[役]->やく)
+   2) 牛役 - cow officer ([牛]->ぎゅう[役]->やく)
+   3) 午後 - afternoon ([午]->ご[後]->ご)
+   4) 牛後 - cow after ([牛]->ぎゅう[後]->ご)
+   English: Let's meet on the afternoon of the 6th.
+   Kanji: 午後
+   Reading: ごご
+
+38. えきの[北口]をでて、まっすぐいってください。
+   1) にしくち - west exit
+   2) にしぐち - west exit
+   3) きたくち - north exit
+   4) きたぐち - north exit
+   English: Exit the [_____] of the station and go straight.
+   Kanji: 北口
+   Reading: きたぐち
+
+39. これはなんの[ぱーていー]ですか。
+   1) ベーティー - party miswriting
+   2) バーティー - party miswriting
+   3) パーディー - party miswriting
+   4) パーティー - party
+   English: What kind of [_____] is this?
+   Reading: パーティー
+
+40. せんせいは[黒い]めがねをかけています。
+   1) しろい - white
+   2) くらい - dark
+   3) くろい - black
+   4) からい - spicy
+   English: The teacher is wearing [_____] glasses.
+   Kanji: 黒い
+   Reading: くろい
+
+41. [朝]
+   1) あさ - morning
+   2) ひる - noon
+   3) よる - night
+   4) ばん - evening
+   English: I woke up at 7 o'clock yesterday [_____].
+   Kanji: 朝
+   Reading: あさ
+
+42. [七時]
+   1) ななじ - 7 o'clock miswriting
+   2) しちじ - 7 o'clock
+   3) はち - 8 o'clock
+   4) ろくじ - 6 o'clock
+   English: I woke up at [_____] in the morning.
+   Kanji: 七時
+   Reading: しちじ
+
+43. [雨]
+   1) あめ - rain
+   2) うま - horse
+   3) いみ - meaning
+   4) ゆめ - dream
+   English: Because [_____] fell and it was cold, I drank hot coffee.
+   Kanji: 雨
+   Reading: あめ
+
+44. [飲み]
+   1) よみ - reading
+   2) くみ - class
+   3) のみ - drinking
+   4) すみ - residence
+   English: I [_____] hot coffee.
+   Kanji: 飲み
+   Reading: のみ
+
+45. [きた]
+   1) 非 - non ([非]->ひ)
+   2) 化 - change ([化]->か)
+   3) 北 - north ([北]->きた)
+   4) 比 - compare ([比]->ひ)
+   English: I was born in a [_____] country.
+   Kanji: 北
+   Reading: きた
+
+46. [うまれ]
+   1) 主まれ - born miswriting ([主]->しゅ)
+   2) 佳まれ - born miswriting ([佳]->か)
+   3) 住まれ - born miswriting ([住]->じゅう)
+   4) 生まれ - born ([生]->うまれ)
+   English: I was [_____] in a northern country.
+   Kanji: 生まれ
+   Reading: うまれ
+
+47. [学校]
+   1) かっこう - school miswriting
+   2) がっこう - school
+   3) がこう - school miswriting
+   4) かこう - school miswriting
+   English: What is behind the [_____]?
+   Kanji: 学校
+   Reading: がっこう
+
+48. [後ろ]
+   1) うしろ - behind / back
+   2) いしろ - behind miswriting
+   3) あしろ - behind miswriting
+   4) おしろ - castle
+   English: What is [_____] the school?
+   Kanji: 後ろ
+   Reading: うしろ
+
+49. [何]
+   1) なに - what
+   2) なん - what
+   3) か - question particle
+   4) なんに - how many people
+   English: [_____] is behind the school?
+   Kanji: 何
+   Reading: なに
+
+50. [小さい]
+   1) ちさい - small miswriting
+   2) すくさい - small miswriting
+   3) ちいさい - small
+   4) しさい - small miswriting
+   English: There is a [_____] park.
+   Kanji: 小さい
+   Reading: ちいさい
+
+Answer Key:
+1. 4, 2. 1, 3. 4, 4. 3, 5. 4, 6. 1, 7. 4, 8. 3, 9. 2, 10. 3, 11. 4, 12. 2, 13. 1, 14. 2, 15. 2, 16. 4, 17. 4, 18. 3, 19. 1, 20. 3, 21. 3, 22. 2, 23. 1, 24. 4, 25. 1, 26. 1, 27. 4, 28. 4, 29. 3, 30. 1, 31. 1, 32. 4, 33. 3, 34. 4, 35. 2, 36. 2, 37. 3, 38. 4, 39. 4, 40. 3, 41. 1, 42. 2, 43. 1, 44. 3, 45. 3, 46. 4, 47. 2, 48. 1, 49. 1, 50. 3
+
+Vocab:
+試験 ( [試]->し[験]->けん ) [shiken] - examination, test (noun, school, n5, kanji)
+来月 ( [来]->らい[月]->げつ ) [raigetsu] - next month (noun, time, n5, kanji)
+七月 ( [七]->しち[月]->がつ ) [shichigatsu] - July (noun, calendar, n5, kanji)
+八日 ( [八]->よう[日]->か ) [youka] - eighth day of the month (noun, calendar, n5, kanji)
+木曜日 ( [木]->もく[曜]->よう[日]->び ) [mokuyoubi] - Thursday (noun, days-of-week, n5, kanji)
+九時 ( [九]->く[時]->じ ) [kuji] - 9 o'clock (noun, time, n5, kanji)
+封筒 ( [封]->ふう[筒]->とう ) [fuutou] - envelope (noun, daily-life, n5, kanji)
+お金 ( [金]->かね ) [okane] - money (noun, daily-life, n5, kanji)
+八万円 ( [八]->はち[万]->まん[円]->えん ) [hachimanen] - 80,000 yen (noun, number, n5, kanji)
+入る ( [入]->はい・る ) [hairu] - to enter, to be contained (verb, godan-verb, intransitive, n5, kanji)
+今日 ( [今]->きょう ) [kyou] - today (noun, time, n5, kanji)
+天気 ( [天]->てん[気]->き ) [tenki] - weather (noun, weather, n5, kanji)
+良い ( [良]->よ・い ) [yoi] - good, fine (i-adjective, n5, kanji)
+学校 ( [学]->がっ[校]->こう ) [gakkou] - school (noun, school, n5, kanji)
+階 ( [階]->かい ) [kai] - floor, counter for storeys (counter, n5, kanji)
+窓 ( [窓]->まど ) [mado] - window (noun, house, n5, kanji)
+北 ( [北]->きた ) [kita] - north (noun, direction, n5, kanji)
+白い ( [白]->しろ・い ) [shiroi] - white (i-adjective, colour, n5, kanji)
+山 ( [山]->やま ) [yama] - mountain (noun, nature, n5, kanji)
+よく [yoku] - well, frequently (adverb, n5)
+見える ( [見]->み・える ) [mieru] - to be visible (verb, ichidan-verb, intransitive, n5, kanji)
+この [kono] - this (pronoun, n5)
+桜 ( [桜]->さくら ) [sakura] - cherry blossom (noun, nature, n5, kanji)
+春 ( [春]->はる ) [haru] - spring (noun, season, n5, kanji)
+大勢 ( [大]->おお[勢]->ぜい ) [oozei] - great number of people (noun, n5, kanji)
+人 ( [人]->ひと ) [hito] - person (noun, n5, kanji)
+花見 ( [花]->はな[見]->み ) [hanami] - cherry blossom viewing (noun, hobby, n5, kanji)
+来る ( [来]->く・る ) [kuru] - to come (verb, kuru-verb, intransitive, n5, kanji)
+母 ( [母]->はは ) [haha] - mother (noun, family, n5, kanji)
+毎日 ( [毎]->まい[日]->にち ) [mainichi] - every day (noun, time, n5, kanji)
+大学 ( [大]->だい[学]->がく ) [daigaku] - university (noun, school, n5, kanji)
+図書館 ( [図]->と[書]->しょ[館]->かん ) [toshokan] - library (noun, place, n5, kanji)
+働く ( [働]->はたら・く ) [hataraku] - to work (verb, godan-verb, intransitive, n5, kanji)
+兄 ( [兄]->あに ) [ani] - older brother (noun, family, n5, kanji)
+小さい ( [小]->ちい・さい ) [chiisai] - small (i-adjective, n5, kanji)
+ラジオ [rajio] - radio (noun, loan-word, katakana, n5)
+ポケット [poketto] - pocket (noun, loan-word, katakana, n5)
+入れる ( [入]->い・れる ) [ireru] - to put in, to insert (verb, ichidan-verb, transitive, n5, kanji)
+出かける ( [出]->で・かける ) [dekakeru] - to go out (verb, ichidan-verb, intransitive, n5, kanji)
+そして [soshite] - and then (conjunction, n5)
+電車 ( [電]->でん[車]->しゃ ) [densha] - electric train (noun, transportation, n5, kanji)
+中 ( [中]->なか ) [naka] - inside (noun, direction, n5, kanji)
+聞く ( [聞]->き・く ) [kiku] - to hear, to listen (verb, godan-verb, transitive, n5, kanji)
+会社 ( [会]->かい[社]->しゃ ) [kaisha] - company (noun, work, n5, kanji)
+行く ( [行]->い・く ) [iku] - to go (verb, godan-verb, intransitive, n5, kanji)
+先に ( [先]->さき・に ) [saki ni] - ahead, before (adverb, time, n5, kanji)
+食べる ( [食]->た・べる ) [taberu] - to eat (verb, ichidan-verb, transitive, n5, kanji)
+後で ( [後]->あと・で ) [ato de] - afterwards (adverb, time, n5, kanji)
+水 ( [水]->みず ) [mizu] - water (noun, drink, n5, kanji)
+買う ( [買]->か・う ) [kau] - to buy (verb, godan-verb, transitive, n5, kanji)
+お先に ( [先]->さき ) [osaki ni] - pardon me for leaving before you (expression, daily-life, n5, kanji)
+昨日 ( [昨]->きのう ) [kinou] - yesterday (noun, time, n5, kanji)
+夕飯 ( [夕]->ゆう[飯]->はん ) [yuuhan] - evening meal (noun, food, n5, kanji)
+牛肉 ( [牛]->ぎゅう[肉]->にく ) [gyuuniku] - beef (noun, food, n5, kanji)
+毎朝 ( [毎]->まい[朝]->あさ ) [maiasa] - every morning (noun, time, n5, kanji)
+何時 ( [何]->なん[時]->じ ) [nanji] - what time (noun, time, n5, kanji)
+起きる ( [起]->お・きる ) [okiru] - to wake up (verb, ichidan-verb, intransitive, n5, kanji)
+子ども ( [子]->こ ) [kodomo] - child (noun, family, n5, kanji)
+花 ( [花]->はな ) [hana] - flower (noun, nature, n5, kanji)
+好き ( [好]->す・き ) [suki] - liking, fondness (na-adjective, emotion, n5, kanji)
+部屋 ( [部]->へ[屋]->や ) [heya] - room (noun, house, n5, kanji)
+明るい ( [明]->あか・るい ) [akarui] - bright (i-adjective, n5, kanji)
+広い ( [広]->ひろ・い ) [hiroi] - spacious, wide (i-adjective, n5, kanji)
+六日 ( [六]->むい[日]->か ) [muika] - sixth day of the month (noun, calendar, n5, kanji)
+午後 ( [午]->ご[後]->ご ) [gogo] - afternoon (noun, time, n5, kanji)
+会う ( [会]->あ・う ) [au] - to meet (verb, godan-verb, intransitive, n5, kanji)
+駅 ( [駅]->えき ) [eki] - station (noun, place, n5, kanji)
+北口 ( [北]->きた[口]->ぐち ) [kitaguchi] - north exit (noun, place, n5, kanji)
+出る ( [出]->で・る ) [deru] - to exit, to leave (verb, ichidan-verb, intransitive, n5, kanji)
+まっすぐ [massugu] - straight (adverb, direction, n5)
+先生 ( [先]->せん[生]->せい ) [sensei] - teacher (noun, work, n5, kanji)
+黒い ( [黒]->くろ・い ) [kuroi] - black (i-adjective, colour, n5, kanji)
+眼鏡 ( [眼]->め[鏡]->がね ) [megane] - glasses (noun, clothing, n5, kanji)
+朝 ( [朝]->あさ ) [asa] - morning (noun, time, n5, kanji)
+雨 ( [雨]->あめ ) [ame] - rain (noun, weather, n5, kanji)
+降る ( [降]->ふ・る ) [furu] - to fall (rain, snow) (verb, godan-verb, intransitive, n5, kanji)
+寒い ( [寒]->さむ・い ) [samui] - cold (weather) (i-adjective, weather, n5, kanji)
+熱い ( [熱]->あつ・い ) [atsui] - hot (thing) (i-adjective, n5, kanji)
+コーヒー [koohee] - coffee (noun, drink, loan-word, katakana, n5)
+飲む ( [飲]->の・む ) [nomu] - to drink (verb, godan-verb, transitive, n5, kanji)
+国 ( [国]->くに ) [kuni] - country (noun, place, n5, kanji)
+生まれる ( [生]->うま・れる ) [umareru] - to be born (verb, ichidan-verb, intransitive, n5, kanji)
+後ろ ( [後]->うしろ ) [ushiro] - behind, back (noun, direction, n5, kanji)
+何 ( [何]->なに ) [nani] - what (pronoun, n5, kanji)
+公園 ( [公]->こう[園]->えん ) [kouen] - park (noun, place, n5, kanji)
+---
+SetId: set-jtest-ex-kanji-02
+Title: JTEST_EX Kanji Exercise Set 2
+Category: kanji
+PackTitle: JTEST_EX
+Tags: n5, kanji, beginner, test, exercise
+ContextPassages: 雨の日は外へ出ないで、家でゆっくり休みます。 | すいようびはがっこうでおべんとうをたべます。 | ふうとうにお金が八万円入っていました。 | 手紙をまだ半分しか読んでいません。 | そのかめらはすこしたかいです。
+ContextEnglish: On rainy days, I don't go outside and rest slowly at home. | On Wednesdays, I eat my bento at school. | 80,000 yen was in the envelope. | I have only read half of the letter. | That camera is a bit expensive.
+
+1. [雨]
+   1) うみ - sea
+   2) かみ - paper / hair
+   3) あめ - rain
+   4) あさ - morning
+   English: On [_____] days, I don't go outside.
+   Kanji: 雨
+   Reading: あめ
+   ContextIdx: 0
+
+2. [外]
+   1) がい - outside
+   2) そど - outside miswriting
+   3) かい - outside
+   4) そと - outside
+   English: I don't go [_____] on rainy days.
+   Kanji: 外
+   Reading: そと
+   ContextIdx: 0
+
+3. [出ない]
+   1) だない - don't exit miswriting
+   2) でない - don't exit
+   3) しゅつない - don't exit miswriting
+   4) しゅない - don't exit miswriting
+   English: I don't go out on rainy days.
+   Kanji: 出ない
+   Reading: でない
+   ContextIdx: 0
+
+4. [家]
+   1) いえ - house / home
+   2) や - house
+   3) けん - house counter
+   4) かん - hall
+   English: I rest slowly at [_____].
+   Kanji: 家
+   Reading: いえ
+   ContextIdx: 0
+
+5. [休み]
+   1) やすみ - rest / break
+   2) すすみ - rest miswriting
+   3) すみ - rest miswriting
+   4) やみ - darkness
+   English: I take a [_____] at home.
+   Kanji: 休み
+   Reading: やすみ
+   ContextIdx: 0
+
+6. すいようび
+   1) 金曜日 - Friday ([金]->きん[曜]->よう[日]->び)
+   2) 水曜日 - Wednesday ([水]->すい[曜]->よう[日]->び)
+   3) 木曜日 - Thursday ([木]->もく[曜]->よう[日]->び)
+   4) 火曜日 - Tuesday ([火]->か[曜]->よう[日]->び)
+   English: On [_____]s, I eat my lunch box at school.
+   Kanji: 水曜日
+   Reading: すいようび
+   ContextIdx: 1
+
+7. がっこう
+   1) 学功 - school miswriting ([学]->がく[功]->こう)
+   2) 学赤 - school miswriting ([学]->がく[赤]->せき)
+   3) 学変 - school miswriting ([学]->がく[変]->へん)
+   4) 学校 - school ([学]->がっ[校]->こう)
+   English: On Wednesday, I eat my lunch at [_____].
+   Kanji: 学校
+   Reading: がっこう
+   ContextIdx: 1
+
+8. たべ
+   1) 飲べ - eat miswriting ([飲]->の)
+   2) 食べ - eat ([食]->たべ)
+   3) 館べ - eat miswriting ([館]->かん)
+   4) 吸べ - eat miswriting ([吸]->す)
+   English: I [_____] my lunch box at school.
+   Kanji: 食べ
+   Reading: たべ
+   ContextIdx: 1
+
+9. 八万円
+   1) はちせんえん - 8,000 yen
+   2) はっせんえん - 8,000 yen
+   3) はちまんえん - 80,000 yen
+   4) はっちまんえん - 80,000 yen
+   English: 80,000 yen was in the envelope.
+   Kanji: 八万円
+   Reading: はちまんえん
+   ContextIdx: 2
+
+10. 入って
+   1) はいって - entered / contained
+   2) いって - go
+   3) はって - paste
+   4) いいって - good miswriting
+   English: 80,000 yen was [_____] inside.
+   Kanji: 入って
+   Reading: はいって
+   ContextIdx: 2
+
+11. [手紙]
+   1) てかみ - letter miswriting
+   2) しゅかみ - letter miswriting
+   3) てがみ - letter
+   4) しゅがみ - letter miswriting
+   English: I have only read half of the [_____].
+   Kanji: 手紙
+   Reading: てがみ
+   ContextIdx: 3
+
+12. [半分]
+   1) かんぶん - half miswriting
+   2) はんぶん - half
+   3) はんふｎ - half miswriting
+   4) かんふｎ - half miswriting
+   English: I have only read [_____] of the letter.
+   Kanji: 半分
+   Reading: はんぶん
+   ContextIdx: 3
+
+13. [読んで]
+   1) すんで - live / finish
+   2) やんで - stop
+   3) さいんで - read miswriting
+   4) よんで - read
+   English: I haven't [_____] the letter yet.
+   Kanji: 読んで
+   Reading: よんで
+   ContextIdx: 3
+
+14. すこし
+   1) 小し - small miswriting ([小]->ちい)
+   2) 炎し - flame miswriting ([炎]->ほのお)
+   3) 火し - fire miswriting ([火]->ひ)
+   4) 少し - a little ([少]->すこし)
+   English: That camera is [_____] expensive.
+   Kanji: 少し
+   Reading: すこし
+   ContextIdx: 4
+
+15. たかい
+   1) 高い - expensive / high ([高]->たかい)
+   2) 重い - heavy ([重]->おもい)
+   3) 低い - low ([低]->ひくい)
+   4) 広い - spacious ([広]->ひろい)
+   English: That camera is a little [_____].
+   Kanji: 高い
+   Reading: たかい
+   ContextIdx: 4
+
+16. [銀行]
+   1) きんこう - bank miswriting
+   2) ぎんこう - bank
+   3) ぎんきょ - bank miswriting
+   4) きんきょ - bank miswriting
+   English: The [_____] is on the left side of this road.
+   Kanji: 銀行
+   Reading: ぎんこう
+
+17. [道]
+   1) みち - road / way
+   2) まち - town
+   3) どう - road
+   4) とう - road
+   English: Go down this [_____] for 4 km to the west.
+   Kanji: 道
+   Reading: みち
+
+18. [西]
+   1) にし - west
+   2) きた - north
+   3) みなみ - south
+   4) ひがし - east
+   English: Go down this road to the [_____].
+   Kanji: 西
+   Reading: にし
+
+19. [四]
+   1) し - four
+   2) いし - stone
+   3) よん - four
+   4) よ - four
+   English: Go [_____] kilometers west down this road.
+   Kanji: 四
+   Reading: よん
+
+20. [左]
+   1) みぎ - right
+   2) した - down / below
+   3) うえ - up / above
+   4) ひだり - left
+   English: The bank is on the [_____] side.
+   Kanji: 左
+   Reading: ひだり
+
+21. [駅]
+   1) えき - station
+   2) あき - autumn
+   3) うま - horse
+   4) ゆき - snow
+   English: There is a big river south of the [_____].
+   Kanji: 駅
+   Reading: えき
+
+22. [南]
+   1) ひがし - east
+   2) きた - north
+   3) にし - west
+   4) みなみ - south
+   English: There is a big river to the [_____] of the station.
+   Kanji: 南
+   Reading: みなみ
+
+23. [川]
+   1) がわ - river
+   2) かわ - river
+   3) せん - river
+   4) くに - country
+   English: There is a big [_____] south of the station.
+   Kanji: 川
+   Reading: かわ
+
+24. らいねん
+   1) 昨年 - last year ([昨]->さく[年]->ねん)
+   2) 来年 - next year ([来]->らい[年]->ねん)
+   3) 去年 - last year ([去]->きょ[年]->ねん)
+   4) 行年 - age at death ([行]->ぎょう[年]->ねん)
+   English: I want to go abroad next year's summer.
+   Kanji: 来年
+   Reading: らいねん
+
+25. なつ
+   1) 夏 - summer ([夏]->なつ)
+   2) 冬 - winter ([冬]->ふゆ)
+   3) 春 - spring ([春]->はる)
+   4) 秋 - autumn ([秋]->あき)
+   English: I want to go abroad in the [_____].
+   Kanji: 夏
+   Reading: なつ
+
+26. がいこく
+   1) 外玉 - foreign sphere ([外]->がい[玉]->たま)
+   2) 例国 - example country ([例]->れい[国]->こく)
+   3) 例玉 - example sphere ([例]->れい[玉]->たま)
+   4) 外国 - foreign country ([外]->がい[国]->こく)
+   English: I want to go to a [_____] country next summer.
+   Kanji: 外国
+   Reading: がいこく
+
+27. いきたい
+   1) 来たい - want to come ([来]->き)
+   2) 住たい - want to live ([住]->す)
+   3) 行きたい - want to go ([行]->いき)
+   4) 主たい - main ([主]->しゅ)
+   English: I [_____] to go to a foreign country next summer.
+   Kanji: 行きたい
+   Reading: いきたい
+
+28. [天気]
+   1) てんけ - weather miswriting
+   2) ていき - regular
+   3) てんき - weather
+   4) ていけ - fixed form
+   English: Since the [_____] is good, let's play tennis outside after class.
+   Kanji: 天気
+   Reading: てんき
+
+29. [後で]
+   1) うしろで - behind
+   2) ごで - after
+   3) あとで - afterwards
+   4) こうで - later
+   English: Let's play tennis [_____] class.
+   Kanji: 後で
+   Reading: あとで
+
+30. [外]
+   1) がい - outside
+   2) そこ - there
+   3) かい - outside
+   4) そと - outside
+   English: Let's play tennis [_____] after class.
+   Kanji: 外
+   Reading: そと
+
+31. [今月]
+   1) こんつき - this month miswriting
+   2) こんげつ - this month
+   3) いまつき - this month miswriting
+   4) こんがつ - this month miswriting
+   English: I talked with Mr. Sato on the 5th of [_____].
+   Kanji: 今月
+   Reading: こんげつ
+
+32. [五日]
+   1) ごにち - 5 days
+   2) ごひ - 5 days
+   3) いつか - 5th day of the month
+   4) いっか - one family
+   English: I talked with Mr. Sato on the [_____] of this month.
+   Kanji: 五日
+   Reading: いつか
+
+33. [話]
+   1) はなし - talk / conversation
+   2) ばなし - talk
+   3) わ - talk
+   4) ごん - talk
+   English: I had a [_____] with Mr. Sato.
+   Kanji: 話
+   Reading: はなし
+
+34. まえ
+   1) 下 - under ([下]->した)
+   2) 後 - behind ([後]->うしろ)
+   3) 上 - above ([上]->うえ)
+   4) 前 - front / before ([前]->まえ)
+   English: Get off the bus in [_____] of the station.
+   Kanji: 前
+   Reading: まえ
+
+35. みなみ
+   1) 北 - north ([北]->きた)
+   2) 東 - east ([東]->ひがし)
+   3) 南 - south ([南]->みなみ)
+   4) 西 - west ([西]->にし)
+   English: Please go about 100 meters towards the [_____].
+   Kanji: 南
+   Reading: みなみ
+
+36. いって
+   1) 来て - come ([来]->き)
+   2) 行って - go ([行]->いっ)
+   3) 着て - wear ([着]->き)
+   4) 住て - live miswriting ([住]->す)
+   English: Please [_____] about 100 meters south.
+   Kanji: 行って
+   Reading: いって
+
+37. ひだり
+   1) 左 - left ([左]->ひだり)
+   2) 右 - right ([右]->みぎ)
+   3) 石 - stone ([石]->いし)
+   4) 在 - exist ([在]->ざい)
+   English: There is a big hotel on the [_____] side.
+   Kanji: 左
+   Reading: ひだり
+
+38. おおきい
+   1) 小きい - small miswriting ([小]->ちい)
+   2) 太きい - thick miswriting ([太]->ふと)
+   3) 大きい - big / large ([大]->おお)
+   4) 少きい - few miswriting ([少]->すく)
+   English: There is a [_____] hotel on the left side.
+   Kanji: 大きい
+   Reading: おおきい
+
+39. [入って]
+   1) いって - go
+   2) はいって - enter / get in
+   3) はって - paste
+   4) いて - be
+   English: After taking a bath and resting a little, I will study.
+   Kanji: 入って
+   Reading: はいって
+
+40. [休んで]
+   1) やすんで - resting
+   2) すすんで - advancing
+   3) ぬすんで - stealing
+   4) やんで - stopping
+   English: After [_____] a little, I will study.
+   Kanji: 休んで
+   Reading: やすんで
+
+41. しんぶん
+   1) 新聞 - newspaper ([新]->しん[聞]->ぶん)
+   2) 新刊 - new publication ([新]->しん[刊]->かん)
+   3) 新間 - newspaper miswriting ([新]->しん[間]->かん)
+   4) 新門 - newspaper miswriting ([新]->しん[門]->もん)
+   English: I always buy a [_____] here.
+   Kanji: 新聞
+   Reading: しんぶん
+
+42. かい
+   1) 会い - meeting ([会]->あ)
+   2) 行い - deed ([行]->おこな)
+   3) 食い - eating ([食]->く)
+   4) 買い - buying ([買]->か)
+   English: I buy a newspaper here.
+   Kanji: 買い
+   Reading: かい
+
+43. [一日]
+   1) いちひ - 1 day miswriting
+   2) いっちにち - 1 day miswriting
+   3) いちにち - 1 day
+   4) いっちに - 1 day miswriting
+   English: One day is 24 hours.
+   Kanji: 一日
+   Reading: いちにち
+
+44. [二十四]
+   1) にちゅうよ - 24 miswriting
+   2) にじゅうよ - 24
+   3) にじゅよん - 24 miswriting
+   4) にちゅよん - 24 miswriting
+   English: One day is [_____] hours.
+   Kanji: 二十四
+   Reading: にじゅうよ
+
+45. [時間]
+   1) じかん - hours / time
+   2) じけん - incident
+   3) しかん - time miswriting
+   4) しけん - exam
+   English: One day is 24 [_____]s.
+   Kanji: 時間
+   Reading: じかん
+
+46. [六十分]
+   1) ろくじゅうふん - 60 minutes miswriting
+   2) ろくじゅうふん - 60 minutes miswriting
+   3) ろっくじゅっぷん - 60 minutes miswriting
+   4) ろくじゅっぷん - 60 minutes
+   English: One hour is [_____] minutes.
+   Kanji: 六十分
+   Reading: ろくじゅっぷん
+
+47. [一分]
+   1) いちふん - 1 minute miswriting
+   2) いっぷん - 1 minute
+   3) いっちぷん - 1 minute miswriting
+   4) いちぷん - 1 minute miswriting
+   English: One minute is 60 seconds.
+   Kanji: 一分
+   Reading: いっぷん
+
+48. [ながい]
+   1) 高い - high ([高]->たかい)
+   2) 張い - long miswriting ([張]->は)
+   3) 長い - long ([長]->ながい)
+   4) 短い - short ([短]->みじかい)
+   English: I rode the train for a [_____] time.
+   Kanji: 長い
+   Reading: ながい
+
+49. [でんしゃ]
+   1) 雷車 - thunder car ([雷]->らい[車]->しゃ)
+   2) 雷社 - thunder company ([雷]->らい[社]->しゃ)
+   3) 電社 - electric company ([電]->でん[社]->しゃ)
+   4) 電車 - train ([電]->でん[車]->しゃ)
+   English: I rode the [_____] for a long time.
+   Kanji: 電車
+   Reading: でんしゃ
+
+50. [あかるく]
+   1) 明るく - bright ([明]->あかるく)
+   2) 昼るく - daytime miswriting ([昼]->ひる)
+   3) 月るく - month miswriting ([月]->つき)
+   4) 日るく - day miswriting ([日]->ひ)
+   English: The eastern sky became [_____].
+   Kanji: 明るく
+   Reading: あかるく
+
+Answer Key:
+1. 3, 2. 4, 3. 2, 4. 1, 5. 1, 6. 2, 7. 4, 8. 2, 9. 3, 10. 1, 11. 3, 12. 2, 13. 4, 14. 4, 15. 1, 16. 2, 17. 1, 18. 1, 19. 3, 20. 4, 21. 1, 22. 4, 23. 2, 24. 2, 25. 1, 26. 4, 27. 3, 28. 3, 29. 3, 30. 4, 31. 2, 32. 3, 33. 1, 34. 4, 35. 3, 36. 2, 37. 1, 38. 3, 39. 2, 40. 1, 41. 1, 42. 4, 43. 3, 44. 2, 45. 1, 46. 4, 47. 2, 48. 3, 49. 4, 50. 1
+
+Vocab:
+雨 ( [雨]->あめ ) [ame] - rain (noun, weather, n5, kanji)
+日 ( [日]->ひ ) [hi] - day (noun, calendar, n5, kanji)
+外 ( [外]->そと ) [soto] - outside (noun, direction, n5, kanji)
+出る ( [出]->で・る ) [deru] - to go out (verb, ichidan-verb, intransitive, n5, kanji)
+家 ( [家]->いえ ) [ie] - house, home (noun, house, n5, kanji)
+ゆっくり [yukkuri] - slowly, at ease (adverb, n5)
+休む ( [休]->やす・む ) [yasumu] - to rest, to take a break (verb, godan-verb, intransitive, n5, kanji)
+水曜日 ( [水]->すい[曜]->よう[日]->び ) [suiyoubi] - Wednesday (noun, days-of-week, n5, kanji)
+学校 ( [学]->がっ[校]->こう ) [gakkou] - school (noun, school, n5, kanji)
+お弁当 ( [弁]->べん[当]->とう ) [obentou] - bento, lunch box (noun, food, n5, kanji)
+食べる ( [食]->た・べる ) [taberu] - to eat (verb, ichidan-verb, transitive, n5, kanji)
+封筒 ( [封]->ふう[筒]->とう ) [fuutou] - envelope (noun, daily-life, n5, kanji)
+お金 ( [金]->かね ) [okane] - money (noun, daily-life, n5, kanji)
+手紙 ( [手]->て[紙]->がみ ) [tegami] - letter (noun, daily-life, n5, kanji)
+半分 ( [半]->はん[分]->ぶん ) [hanbun] - half (noun, number, n5, kanji)
+読む ( [読]->よ・む ) [yomu] - to read (verb, godan-verb, transitive, n5, kanji)
+カメラ [kamera] - camera (noun, loan-word, katakana, n5)
+少し ( [少]->すこ・し ) [sukoshi] - a little (adverb, n5, kanji)
+高い ( [高]->たか・い ) [takai] - high, expensive (i-adjective, n5, kanji)
+銀行 ( [銀]->ぎん[行]->こう ) [ginkou] - bank (noun, place, n5, kanji)
+道 ( [道]->みち ) [michi] - road, street (noun, place, n5, kanji)
+西 ( [西]->にし ) [nishi] - west (noun, direction, n5, kanji)
+四 ( [四]->よん ) [yon] - four (number, n5, kanji)
+キロ [kiro] - kilometer, kilogram (noun, counter, loan-word, katakana, n5)
+行く ( [行]->い・く ) [iku] - to go (verb, godan-verb, intransitive, n5, kanji)
+左 ( [左]->ひだり ) [hidari] - left (noun, direction, n5, kanji)
+駅 ( [駅]->えき ) [eki] - station (noun, place, n5, kanji)
+南 ( [南]->みなみ ) [minami] - south (noun, direction, n5, kanji)
+大きい ( [大]->おお・きい ) [ookii] - big, large (i-adjective, n5, kanji)
+川 ( [川]->かわ ) [kawa] - river (noun, nature, n5, kanji)
+来年 ( [来]->らい[年]->ねん ) [rainen] - next year (noun, time, n5, kanji)
+夏 ( [夏]->なつ ) [natsu] - summer (noun, season, n5, kanji)
+外国 ( [外]->がい[国]->こく ) [gaikoku] - foreign country (noun, place, n5, kanji)
+授業 ( [授]->じゅ[業]->ぎょう ) [jugyou] - lesson, class (noun, school, n5, kanji)
+今月 ( [今]->こん[月]->げつ ) [kongetsu] - this month (noun, time, n5, kanji)
+五日 ( [五]->いつ[日]->か ) [itsuka] - 5th day of the month (noun, calendar, n5, kanji)
+話 ( [話]->はなし ) [hanashi] - conversation, talk (noun, n5, kanji)
+前 ( [前]->まえ ) [mae] - front, before (noun, direction, n5, kanji)
+バス [basu] - bus (noun, transportation, loan-word, katakana, n5)
+降りる ( [降]->お・りる ) [oriru] - to get off (verb, ichidan-verb, intransitive, n5, kanji)
+メートル [meetoru] - meter (noun, counter, loan-word, katakana, n5)
+ホテル [hoteru] - hotel (noun, place, loan-word, katakana, n5)
+お風呂 ( [風]->ふ[呂]->ろ ) [ofuro] - bath (noun, house, n5, kanji)
+入る ( [入]->はい・る ) [hairu] - to enter (verb, godan-verb, intransitive, n5, kanji)
+勉強 ( [勉]->べん[強]->きょう ) [benkyou] - study (noun, suru-verb, school, n5, kanji)
+新聞 ( [新]->しん[聞]->ぶん ) [shinbun] - newspaper (noun, daily-life, n5, kanji)
+買う ( [買]->か・う ) [kau] - to buy (verb, godan-verb, transitive, n5, kanji)
+一日 ( [一]->いち[日]->にち ) [ichinichi] - one day (noun, time, n5, kanji)
+二十四時間 ( [二]->に[十]->じゅう[四]->よ[時]->じ[間]->かん ) [nijūyojikan] - 24 hours (noun, time, n5, kanji)
+時間 ( [時]->じ[間]->かん ) [jikan] - time, hour (noun, time, n5, kanji)
+秒 ( [秒]->びょう ) [byou] - second (noun, time, n5, kanji)
+一分 ( [一]->いっ[分]->ぷん ) [ippun] - one minute (noun, time, n5, kanji)
+長い ( [長]->なが・い ) [nagai] - long (i-adjective, n5, kanji)
+電車 ( [電]->でん[車]->しゃ ) [densha] - train (noun, transportation, n5, kanji)
+東 ( [東]->ひがし ) [higashi] - east (noun, direction, n5, kanji)
+空 ( [空]->そら ) [sora] - sky (noun, nature, n5, kanji)
+明るい ( [明]->あか・るい ) [akarui] - bright (i-adjective, n5, kanji)
+---
+SetId: set-jtest-ex-kanji-03
+Title: JTEST_EX Kanji Exercise Set 3
+Category: kanji
+PackTitle: JTEST_EX
+Tags: n5, kanji, beginner, test, exercise
+ContextPassages: 昨日はとなりの村から歩いて帰ってきた。 | わたしはりょうしんと一緒にすんでいます。 | ふくがよごれたから、あらった。 | テーブルのうえにおさらが並んでいます。 | わたしのかいしゃはあのビルのなかです。
+ContextEnglish: Yesterday I walked back from the neighboring village. | I am living together with my parents. | My clothes got dirty, so I washed them. | Plates are lined up on top of the table. | My company is inside that building.
+
+1. [よんで]
+   1) 諸んで - read miswriting ([諸]->しょ)
+   2) 続んで - continue ([続]->つづ)
+   3) 読んで - read ([読]->よ)
+   4) 緒んで - together miswriting ([緒]->しょ)
+   English: Please read this book.
+   Kanji: 読んで
+   Reading: よんで
+
+2. [授業]
+   1) しゅきょう - lesson miswriting
+   2) しゅうきょう - religion
+   3) じゅぎょう - lesson / class
+   4) じゅうぎょう - lesson miswriting
+   English: I take Japanese classes.
+   Kanji: 授業
+   Reading: じゅぎょう
+
+3. [電話]
+   1) でんき - electricity
+   2) でんわ - telephone
+   3) てんわ - telephone miswriting
+   4) てんき - weather
+   English: There is no telephone in that old house.
+   Kanji: 電話
+   Reading: でんわ
+
+4. かようび
+   1) 土ようび - Saturday ([土]->ど[曜]->よう[日]->び)
+   2) 火ようび - Tuesday ([火]->か[曜]->よう[日]->び)
+   3) 水ようび - Wednesday ([水]->すい[曜]->よう[日]->び)
+   4) 木ようび - Thursday ([木]->もく[曜]->よう[日]->び)
+   English: I went to the library on Tuesday.
+   Kanji: 火曜日
+   Reading: かようび
+
+5. 生まれました
+   1) ほまれました - born miswriting
+   2) ふまれました - stepped on
+   3) おまれました - born miswriting
+   4) うまれました - born
+   English: A cute baby girl was born.
+   Kanji: 生まれました
+   Reading: うまれました
+
+6. でて
+   1) 缶て - exit miswriting ([缶]->かん)
+   2) 申て - say miswriting ([申]->もう)
+   3) 出て - exit / leave ([出]->で)
+   4) 由て - reason miswriting ([由]->ゆう)
+   English: Everyone, please exit from the right door.
+   Kanji: 出て
+   Reading: でて
+
+7. 魚
+   1) さくら - cherry blossom
+   2) さらく - fish miswriting
+   3) さなか - fish miswriting
+   4) さかな - fish
+   English: I ate fish for the first time yesterday.
+   Kanji: 魚
+   Reading: さかな
+
+8. 高い
+   1) ほそい - thin
+   2) ひくい - low
+   3) ふとい - thick
+   4) たかい - expensive / high
+   English: This white fish is expensive.
+   Kanji: 高い
+   Reading: たかい
+
+9. はなし
+   1) 話 - talk / story ([話]->はなし)
+   2) 語 - language ([語]->ご)
+   3) 詰 - packed ([詰]->つ)
+   4) 読 - read ([読]->よ)
+   English: Please listen carefully to the teacher's talk.
+   Kanji: 話
+   Reading: はなし
+
+10. がっこう
+   1) 学校 - school ([学]->がっ[校]->こう)
+   2) 字校 - school miswriting ([字]->じ[校]->こう)
+   3) 字枚 - school miswriting ([字]->じ[枚]->まい)
+   4) 学枚 - school miswriting ([学]->がく[枚]->まい)
+   English: Sato rested from school today.
+   Kanji: 学校
+   Reading: がっこう
+
+11. [母]
+   1) ちち - father
+   2) はは - mother
+   3) あね - older sister
+   4) いもうと - younger sister
+   English: My mother caught a cold and her hand was hot.
+   Kanji: 母
+   Reading: はは
+
+12. ぎんこう
+   1) 金行 - gold row ([金]->きん[行]->こう)
+   2) 銀行 - bank ([銀]->ぎん[行]->こう)
+   3) 良行 - good row ([良]->りょう[行]->こう)
+   4) 傘行 - umbrella row ([傘]->さん[行]->こう)
+   English: Where is the bank?
+   Kanji: 銀行
+   Reading: ぎんこう
+
+13. [人]
+   1) にん - person
+   2) ひと - person
+   3) しと - person miswriting
+   4) じん - person
+   English: That person is very famous.
+   Kanji: 人
+   Reading: ひと
+
+14. えいご
+   1) 英話 - English talk ([英]->えい[話]->わ)
+   2) 英詰 - English miswriting ([英]->えい[詰]->つ)
+   3) 英誘 - English miswriting ([英]->えい[誘]->ゆう)
+   4) 英語 - English language ([英]->えい[語]->ご)
+   English: I cannot speak English at all.
+   Kanji: 英語
+   Reading: えいご
+
+15. [立って]
+   1) たって - stand
+   2) すわって - sit
+   3) のって - ride
+   4) とまって - stop
+   English: Please stand in front of the door.
+   Kanji: 立って
+   Reading: たって
+
+16. ごご
+   1) 半後 - half after ([半]->はん[後]->ご)
+   2) 牛後 - cow after ([牛]->ぎゅう[後]->ご)
+   3) 午後 - afternoon ([午]->ご[後]->ご)
+   4) 干後 - dry after ([干]->かん[後]->ご)
+   English: I listened to the radio in my room yesterday afternoon.
+   Kanji: 午後
+   Reading: ごご
+
+17. えき
+   1) へや - room
+   2) もん - gate
+   3) えき - station
+   4) うち - home
+   English: Let's meet at the station on Tuesday.
+   Kanji: 駅
+   Reading: えき
+
+18. [三本]
+   1) さんほん - 3 bottles miswriting
+   2) さんぽん - 3 bottles miswriting
+   3) さんぼん - 3 bottles
+   4) みつほん - 3 bottles miswriting
+   English: I bought 3 bottles of beer.
+   Kanji: 三本
+   Reading: さんぼん
+
+19. くらくて
+   1) 黒くて - black ([黒]->くろくて)
+   2) 暗くて - dark ([暗]->くらくて)
+   3) 晩くて - evening miswriting ([晩]->ばん)
+   4) 暮くて - livelihood miswriting ([暮]->く)
+   English: This room is dark and cold.
+   Kanji: 暗くて
+   Reading: くらくて
+
+20. れぽーと
+   1) ルポート - report miswriting
+   2) ルプート - report miswriting
+   3) レポート - report
+   4) レプート - report miswriting
+   English: I will submit the report tomorrow.
+   Reading: レポート
+
+21. 歩いて
+   1) ないて - cry
+   2) はいて - wear
+   3) あるいて - walk
+   4) つづいて - continue
+   English: Yesterday I walked back from the neighboring village.
+   Kanji: 歩いて
+   Reading: あるいて
+   ContextIdx: 0
+
+22. 一緒
+   1) いっしゅう - one cycle
+   2) いっしゅ - one kind
+   3) いっしょう - lifetime
+   4) いっしょ - together
+   English: I live together with my parents.
+   Kanji: 一緒
+   Reading: いっしょ
+   ContextIdx: 1
+
+23. あらった
+   1) 沈った - washed miswriting ([沈]->しず)
+   2) 洗った - washed ([洗]->あら)
+   3) 浴った - bathed ([浴]->あび)
+   4) 流った - flowed ([流]->なが)
+   English: My clothes got dirty, so I washed them.
+   Kanji: 洗った
+   Reading: あらった
+   ContextIdx: 2
+
+24. 並んで
+   1) ならんで - lined up
+   2) あそんで - play
+   3) はこんで - carry
+   4) ころんで - fall over
+   English: Plates are lined up on the table.
+   Kanji: 並んで
+   Reading: ならんで
+   ContextIdx: 3
+
+25. なか
+   1) 史 - history ([史]->し)
+   2) 中 - inside / center ([中]->なか)
+   3) 央 - center ([央]->おう)
+   4) 内 - inside ([内]->うち)
+   English: My company is inside that building.
+   Kanji: 中
+   Reading: なか
+   ContextIdx: 4
+
+26. [男]
+   1) おどこ - man miswriting
+   2) おとこ - man
+   3) おどご - man miswriting
+   4) おとご - man miswriting
+   English: Who is that man over there?
+   Kanji: 男
+   Reading: おとこ
+
+27. そら
+   1) 川 - river ([川]->かわ)
+   2) 池 - pond ([池]->いけ)
+   3) 空 - sky ([空]->そら)
+   4) 風 - wind ([風]->かぜ)
+   English: The eastern sky is beautiful.
+   Kanji: 空
+   Reading: そら
+
+28. あめ
+   1) ゆき - snow
+   2) きり - mist
+   3) あめ - rain
+   4) つゆ - rainy season
+   English: Yesterday rain fell.
+   Kanji: 雨
+   Reading: あめ
+
+29. 入り口
+   1) のりぐち - boarding entrance
+   2) かえりぐち - return exit
+   3) おりぐち - exit
+   4) いりぐち - entrance
+   English: Where is the entrance of the store?
+   Kanji: 入り口
+   Reading: いりぐち
+
+30. げんき
+   1) 元气 - health miswriting ([元]->げん[气]->き)
+   2) 元気 - healthy / well ([元]->げん[気]->き)
+   3) 无气 - health miswriting ([无]->む[气]->き)
+   4) 无気 - health miswriting ([无]->む[気]->き)
+   English: Is your mother healthy?
+   Kanji: 元気
+   Reading: げんき
+
+31. [開けられません]
+   1) あけられません - cannot open
+   2) うけられません - cannot receive
+   3) かけられません - cannot hang
+   4) つけられません - cannot attach
+   English: This gate cannot be opened with a child's strength.
+   Kanji: 開けられません
+   Reading: あけられません
+
+32. はんぶん
+   1) 半部 - half section ([半]->はん[部]->ぶ)
+   2) 半分 - half ([半]->はん[分]->ぶん)
+   3) 平部 - flat section ([平]->へい[部]->ぶ)
+   4) 平分 - divide equally ([平]->へい[分]->ぶん)
+   English: I ate half of the bread.
+   Kanji: 半分
+   Reading: はんぶん
+
+33. おかね
+   1) おぎん - money miswriting
+   2) おかね - money
+   3) おがね - money miswriting
+   4) おきん - money miswriting
+   English: I have a lot of money today.
+   Kanji: お金
+   Reading: おかね
+
+34. りょうり
+   1) 科理 - cuisine miswriting ([科]->か[理]->り)
+   2) 料理 - cooking / cuisine ([料]->りょう[理]->り)
+   3) 科里 - cuisine miswriting ([科]->か[里]->り)
+   4) 料里 - cuisine miswriting ([料]->りょう[里]->り)
+   English: The food at this restaurant is delicious.
+   Kanji: 料理
+   Reading: りょうり
+
+35. [千円]
+   1) せいえん - 1,000 yen miswriting
+   2) せいねん - youth
+   3) せんねん - 1,000 years
+   4) せんえん - 1,000 yen
+   English: This is 1,000 yen each.
+   Kanji: 千円
+   Reading: せんえん
+
+36. およいで
+   1) 凍いで - swim miswriting ([凍]->とう)
+   2) 水いで - swim miswriting ([水]->みず)
+   3) 氷いで - swim miswriting ([氷]->こおり)
+   4) 泳いで - swimming ([泳]->およ)
+   English: Children are swimming in the river.
+   Kanji: 泳いで
+   Reading: およいで
+
+37. なん
+   1) 同 - same ([同]->どう)
+   2) 何 - what ([何]->なん)
+   3) 向 - facing ([向]->こう)
+   4) 伺 - inquire ([伺]->うかが)
+   English: What is this?
+   Kanji: 何
+   Reading: なん
+
+38. とおか
+   1) とおか - 10th day of the month
+   2) とうか - 10th day miswriting
+   3) じゅうか - 10th day miswriting
+   4) じゅっか - 10 lessons
+   English: Today is October 10th.
+   Kanji: 十日
+   Reading: とおか
+
+39. みち
+   1) かど - corner
+   2) はし - bridge
+   3) へん - vicinity
+   4) 道 - road / street ([道]->みち)
+   English: Please go down this road for 100 meters.
+   Kanji: 道
+   Reading: みち
+
+40. せまい
+   1) 広い - spacious ([広]->ひろい)
+   2) 小い - small miswriting ([小]->ちい)
+   3) 高い - high ([高]->たかい)
+   4) 狭い - narrow ([狭]->せまい)
+   English: This room is narrow.
+   Kanji: 狭い
+   Reading: せまい
+
+41. [小さい]
+   1) 小い - small miswriting
+   2) 小さい - small
+   3) 少い - few
+   4) 少さい - small miswriting
+   English: Please give me that small calendar.
+   Kanji: 小さい
+   Reading: ちいさい
+
+42. した
+   1) 下 - under / below ([下]->した)
+   2) 外 - outside ([外]->そと)
+   3) 上 - above ([上]->うえ)
+   4) 中 - inside ([中]->なか)
+   English: There is a cat under the chair.
+   Kanji: 下
+   Reading: した
+
+43. むいか
+   1) 九日 - 9th day ([九]->ここの[日]->か)
+   2) 三日 - 3rd day ([三]->みっ[日]->か)
+   3) 六日 - 6th day ([六]->むい[日]->か)
+   4) 五日 - 5th day ([五]->いつ[日]->か)
+   English: Let's meet on the afternoon of the 6th.
+   Kanji: 六日
+   Reading: むいか
+
+44. [乗った]
+   1) やった - did
+   2) いった - went
+   3) のった - rode / boarded
+   4) おった - snapped
+   English: Have you ever ridden the Shinkansen?
+   Kanji: 乗った
+   Reading: のった
+
+45. しつもん
+   1) 質問 - question ([質]->しつ[問]->もん)
+   2) せつめい - explanation
+   3) せんもん - specialty
+   4) しょうめい - proof
+   English: Think carefully before answering the question.
+   Kanji: 質問
+   Reading: しつもん
+
+46. かいしゃ
+   1) かいじや - company miswriting
+   2) かいしや - company miswriting
+   3) かいじゃ - company miswriting
+   4) かいしゃ - company
+   English: Tanaka will take a day off from the company tomorrow.
+   Kanji: 会社
+   Reading: かいしゃ
+
+47. にし
+   1) 酉 - sign of the bird ([酉]->とり)
+   2) 西 - west ([西]->にし)
+   3) 東 - east ([東]->ひがし)
+   4) 束 - bundle ([束]->たば)
+   English: There is a big river to the west of this town.
+   Kanji: 西
+   Reading: にし
+
+48. たくしー
+   1) タクシー - taxi
+   2) タウシー - taxi miswriting
+   3) タケシー - taxi miswriting
+   4) タワシー - taxi miswriting
+   English: I went to the company by taxi yesterday.
+   Reading: タクシー
+
+49. らいねん
+   1) 未年 - year of the sheep ([未]->ひつじ[年]->とし)
+   2) 未牛 - sheep cow miswriting ([未]->ひつじ[牛]->うし)
+   3) 来年 - next year ([来]->らい[年]->ねん)
+   4) 来牛 - next cow miswriting ([来]->らい[牛]->うし)
+   English: I want a long vacation next year.
+   Kanji: 来年
+   Reading: らいねん
+
+50. あたらしい
+   1) いそがしい - busy
+   2) あたらしい - new
+   3) なつかしい - nostalgic
+   4) うつくしい - beautiful
+   English: There is a new library near my home.
+   Kanji: 新しい
+   Reading: あたらしい
+
+Answer Key:
+1. 3, 2. 3, 3. 2, 4. 2, 5. 4, 6. 3, 7. 4, 8. 4, 9. 1, 10. 1, 11. 2, 12. 2, 13. 2, 14. 4, 15. 1, 16. 3, 17. 3, 18. 3, 19. 2, 20. 3, 21. 3, 22. 4, 23. 2, 24. 1, 25. 2, 26. 2, 27. 3, 28. 3, 29. 4, 30. 2, 31. 1, 32. 2, 33. 2, 34. 2, 35. 4, 36. 4, 37. 2, 38. 1, 39. 4, 40. 4, 41. 2, 42. 1, 43. 3, 44. 3, 45. 1, 46. 4, 47. 2, 48. 1, 49. 3, 50. 2
+
+Vocab:
+本 ( [本]->ほん ) [hon] - book (noun, n5, kanji)
+読む ( [読]->よ・む ) [yomu] - to read (verb, godan-verb, transitive, n5, kanji)
+日本語 ( [日]->に[本]->ほん[語]->ご ) [nihongo] - Japanese language (noun, n5, kanji)
+授業 ( [授]->じゅ[業]->ぎょう ) [jugyou] - class, lesson (noun, school, n5, kanji)
+受ける ( [受]->う・ける ) [ukeru] - to take (a test), to receive (verb, ichidan-verb, transitive, n5, kanji)
+古い ( [古]->ふる・い ) [furui] - old (i-adjective, n5, kanji)
+家 ( [家]->いえ ) [ie] - house (noun, house, n5, kanji)
+電話 ( [電]->でん[話]->わ ) [denwa] - telephone (noun, daily-life, n5, kanji)
+火曜日 ( [火]->か[曜]->よう[日]->び ) [kayoubi] - Tuesday (noun, days-of-week, n5, kanji)
+図書館 ( [図]->と[書]->しょ[館]->かん ) [toshokan] - library (noun, place, n5, kanji)
+可愛い ( [可]->か[愛]->わ・いい ) [kawaii] - cute (i-adjective, n5, kanji)
+女の子 ( [女]->おんな[の]->の[子]->こ ) [onnanoko] - girl (noun, family, n5, kanji)
+生まれる ( [生]->うま・れる ) [umareru] - to be born (verb, ichidan-verb, intransitive, n5, kanji)
+皆さん ( [皆]->みな[さ]->さん[ん]->ん ) [minasan] - everyone (pronoun, n5, kanji)
+右 ( [右]->みぎ ) [migi] - right (noun, direction, n5, kanji)
+ドア [doa] - door (noun, house, loan-word, katakana, n5)
+出る ( [出]->で・る ) [deru] - to exit (verb, ichidan-verb, intransitive, n5, kanji)
+魚 ( [魚]->さかな ) [sakana] - fish (noun, food, nature, n5, kanji)
+食べる ( [食]->た・べる ) [taberu] - to eat (verb, ichidan-verb, transitive, n5, kanji)
+白い ( [白]->しろ・い ) [shiroi] - white (i-adjective, colour, n5, kanji)
+高い ( [高]->たか・い ) [takai] - expensive, high (i-adjective, n5, kanji)
+先生 ( [先]->せん[生]->せい ) [sensei] - teacher (noun, work, n5, kanji)
+話 ( [話]->はなし ) [hanashi] - talk, story (noun, n5, kanji)
+よく [yoku] - carefully, well (adverb, n5)
+聞く ( [聞]->き・く ) [kiku] - to listen (verb, godan-verb, transitive, n5, kanji)
+学校 ( [学]->がっ[校]->こう ) [gakkou] - school (noun, school, n5, kanji)
+休む ( [休]->やす・む ) [yasumu] - to be absent, to rest (verb, godan-verb, intransitive, n5, kanji)
+母 ( [母]->はは ) [haha] - mother (noun, family, n5, kanji)
+風邪をひく ( [風]->かぜ[邪]->をひく ) [kaze o hiku] - to catch a cold (expression, health, n5, kanji)
+手 ( [手]->て ) [te] - hand (noun, body-part, n5, kanji)
+銀行 ( [銀]->ぎん[行]->こう ) [ginkou] - bank (noun, place, n5, kanji)
+人 ( [人]->ひと ) [hito] - person (noun, n5, kanji)
+有名 ( [有]->ゆう[名]->めい ) [yuumei] - famous (na-adjective, n5, kanji)
+英語 ( [英]->えい[語]->ご ) [eigo] - English language (noun, n5, kanji)
+全然 ( [全]->ぜん[然]->ぜん ) [zenzen] - not at all (adverb, n5, kanji)
+できる [dekiru] - to be able to (verb, ichidan-verb, n5)
+立つ ( [立]->た・つ ) [tatsu] - to stand (verb, godan-verb, intransitive, n5, kanji)
+前 ( [前]->まえ ) [mae] - in front of (noun, direction, n5, kanji)
+午後 ( [午]->ご[後]->ご ) [gogo] - afternoon (noun, time, n5, kanji)
+部屋 ( [部]->へ[屋]->や ) [heya] - room (noun, house, n5, kanji)
+ラジオ [rajio] - radio (noun, loan-word, katakana, n5)
+駅 ( [駅]->えき ) [eki] - station (noun, place, n5, kanji)
+会う ( [会]->あ・う ) [au] - to meet (verb, godan-verb, intransitive, n5, kanji)
+ビール [biiru] - beer (noun, drink, loan-word, katakana, n5)
+三本 ( [三]->さん[本]->ぼん ) [sanbon] - 3 bottles/long items (counter, n5, kanji)
+暗い ( [暗]->くら・い ) [kurai] - dark (i-adjective, n5, kanji)
+レポート [repooto] - report (noun, school, loan-word, katakana, n5)
+出す ( [出]->だ・す ) [dasu] - to submit (verb, godan-verb, transitive, n5, kanji)
+明日 ( [明]->あした ) [ashita] - tomorrow (noun, time, n5, kanji)
+昨日 ( [昨]->きのう ) [kinou] - yesterday (noun, time, n5, kanji)
+隣 ( [隣]->となり ) [tonari] - neighbor, next door (noun, place, n5, kanji)
+村 ( [村]->むら ) [mura] - village (noun, place, n5, kanji)
+歩く ( [歩]->ある・く ) [aruku] - to walk (verb, godan-verb, intransitive, n5, kanji)
+帰る ( [帰]->かえ・る ) [kaeru] - to return home (verb, godan-verb, intransitive, n5, kanji)
+両親 ( [両]->りょう[親]->しん ) [ryoushin] - parents (noun, family, n5, kanji)
+一緒 ( [一]->いっ[緒]->しょ ) [issho] - together (noun, n5, kanji)
+住む ( [住]->す・む ) [sumu] - to live, reside (verb, godan-verb, intransitive, n5, kanji)
+服 ( [服]->ふく ) [fuku] - clothes (noun, clothing, n5, kanji)
+汚れる ( [汚]->よご・れる ) [yogoreru] - to get dirty (verb, ichidan-verb, intransitive, n5, kanji)
+洗う ( [洗]->あら・う ) [arau] - to wash (verb, godan-verb, transitive, n5, kanji)
+テーブル [teeburu] - table (noun, furniture, loan-word, katakana, n5)
+上 ( [上]->うえ ) [ue] - top, on (noun, direction, n5, kanji)
+お皿 ( [皿]->さら ) [osara] - plate (noun, house, n5, kanji)
+並ぶ ( [並]->なら・ぶ ) [narabu] - to line up (verb, godan-verb, intransitive, n5, kanji)
+会社 ( [会]->かい[社]->しゃ ) [kaisha] - company (noun, work, n5, kanji)
+ビル [biru] - building (noun, place, loan-word, katakana, n5)
+中 ( [中]->なか ) [naka] - inside (noun, direction, n5, kanji)
+男 ( [男]->おとこ ) [otoko] - man (noun, n5, kanji)
+誰 ( [誰]->だれ ) [dare] - who (pronoun, n5)
+空 ( [空]->そら ) [sora] - sky (noun, nature, n5, kanji)
+雨 ( [雨]->あめ ) [ame] - rain (noun, weather, n5, kanji)
+降る ( [降]->ふ・る ) [furu] - to fall (rain) (verb, godan-verb, intransitive, n5, kanji)
+店 ( [店]->みせ ) [mise] - store (noun, place, n5, kanji)
+入り口 ( [入]->い・り[口]->ぐち ) [iriguchi] - entrance (noun, place, n5, kanji)
+元気 ( [元]->げん[気]->き ) [genki] - healthy, energetic (na-adjective, health, n5, kanji)
+門 ( [門]->もん ) [mon] - gate (noun, house, n5, kanji)
+力 ( [力]->ちから ) [chikara] - strength, power (noun, body-part, n5, kanji)
+開ける ( [開]->あ・ける ) [akeru] - to open (verb, ichidan-verb, transitive, n5, kanji)
+パン [pan] - bread (noun, food, loan-word, katakana, n5)
+半分 ( [半]->はん[分]->ぶん ) [hanbun] - half (noun, number, n5, kanji)
+料理 ( [料]->りょう[理]->り ) [ryouri] - cooking, cuisine (noun, food, n5, kanji)
+美味しい ( [美]->おい・しい ) [oishii] - delicious (i-adjective, food, n5, kanji)
+千円 ( [千]->せん[円]->えん ) [sen'en] - 1,000 yen (noun, number, n5, kanji)
+泳ぐ ( [泳]->およ・ぐ ) [oyogu] - to swim (verb, godan-verb, intransitive, n5, kanji)
+川 ( [川]->かわ ) [kawa] - river (noun, nature, n5, kanji)
+十日 ( [十]->とお[日]->か ) [tooka] - 10th day of the month (noun, calendar, n5, kanji)
+道 ( [道]->みち ) [michi] - road (noun, place, n5, kanji)
+百 ( [百]->ひゃく ) [hyaku] - hundred (number, n5, kanji)
+交番 ( [交]->こう[番]->ばん ) [kouban] - police box (noun, place, n5, kanji)
+狭い ( [狭]->せま・い ) [semai] - narrow, small (i-adjective, n5, kanji)
+カレンダー [karendaa] - calendar (noun, loan-word, katakana, n5)
+椅子 ( [椅]->い[子]->す ) [isu] - chair (noun, furniture, n5, kanji)
+下 ( [下]->した ) [shita] - under, below (noun, direction, n5, kanji)
+猫 ( [猫]->ねこ ) [neko] - cat (noun, animal, n5)
+新幹線 ( [新]->しん[幹]->かん[線]->せん ) [shinkansen] - bullet train (noun, transportation, n5, kanji)
+乗る ( [乗]->の・る ) [noru] - to ride, board (verb, godan-verb, intransitive, n5, kanji)
+考える ( [考]->かんが・える ) [kangaeru] - to think, consider (verb, ichidan-verb, transitive, n5, kanji)
+質問 ( [質]->しつ[問]->もん ) [shitsumon] - question (noun, school, n5, kanji)
+答える ( [答]->こた・える ) [kotaeru] - to answer (verb, ichidan-verb, intransitive, n5, kanji)
+西 ( [西]->にし ) [nishi] - west (noun, direction, n5, kanji)
+タクシー [takushii] - taxi (noun, transportation, loan-word, katakana, n5)
+来年 ( [来]->らい[年]->ねん ) [rainen] - next year (noun, time, n5, kanji)
+休み ( [休]->やす・み ) [yasumi] - vacation, rest (noun, time, n5, kanji)
+欲しい ( [欲]->ほ・しい ) [hoshii] - wanted, desired (i-adjective, n5, kanji)
+新しい ( [新]->あた・らしい ) [atarashii] - new (i-adjective, n5, kanji)
+---
+SetId: set-jtest-ex-kanji-04
+Title: JTEST_EX Kanji Exercise Set 4
+Category: kanji
+PackTitle: JTEST_EX
+Tags: n5, kanji, beginner, test, exercise
+ContextPassages: 今月のとおかにえんそくにいきます。 | 北のまちに電車ででかけました。 | 世界の歴史をあまり知らないのでもっと勉強したい。 | こんしゅうはてんきがよかった。 | このことばの意味はなんですか。
+ContextEnglish: I am going on an excursion on the 10th of this month. | I departed for a northern town by train. | Since I don't know much about world history, I want to study more. | The weather was good this week. | What is the meaning of this word?
+
+1. [今月]
+   1) こんげつ - this month
+   2) こんがつ - this month miswriting
+   3) ほんげつ - this month miswriting
+   4) ほんがつ - this month miswriting
+   English: I go on an excursion on the 10th of [_____].
+   Kanji: 今月
+   Reading: こんげつ
+   ContextIdx: 0
+
+2. [電車]
+   1) てんしゃ - train miswriting
+   2) てんじゃ - train miswriting
+   3) でんしゃ - electric train
+   4) でんじゃ - train miswriting
+   English: I went to the northern town by [_____].
+   Kanji: 電車
+   Reading: でんしゃ
+   ContextIdx: 1
+
+3. 大事
+   1) 大字 - large character ([大]->だい[字]->じ)
+   2) 大事 - important ([大]->だい[事]->じ)
+   3) 犬字 - dog character ([犬]->いぬ[字]->じ)
+   4) 犬事 - dog matter ([犬]->いぬ[事]->じ)
+   English: I use this bag carefully because it's important.
+   Kanji: 大事
+   Reading: だいじ
+
+4. えいがかん
+   1) 眩写館 - cinema miswriting ([眩]->げん)
+   2) 映写館 - projection hall ([映]->えい[写]->しゃ[館]->かん)
+   3) 映画館 - movie theater ([映]->えい[画]->が[館]->かん)
+   4) 眩画館 - cinema miswriting ([眩]->げん)
+   English: That movie theater has good sound.
+   Kanji: 映画館
+   Reading: えいがかん
+
+5. 読んで
+   1) よんで - reading
+   2) のんで - drinking
+   3) とんで - flying
+   4) しんで - dying
+   English: My father is reading the newspaper now.
+   Kanji: 読んで
+   Reading: よんで
+
+6. [耳]
+   1) くち - mouth
+   2) あたま - head
+   3) みみ - ear
+   4) からだ - body
+   English: My father's eyes and ears are big.
+   Kanji: 耳
+   Reading: みみ
+
+7. 見せて
+   1) 目せて - show miswriting ([目]->め)
+   2) 覚せて - show miswriting ([覚]->おぼ)
+   3) 聞せて - show miswriting ([聞]->き)
+   4) 見せて - show ([見]->み)
+   English: Please show me that book.
+   Kanji: 見せて
+   Reading: みせて
+
+8. はな
+   1) 衣 - garment ([衣]->ころも)
+   2) 芘 - flower miswriting
+   3) 笩 - flower miswriting
+   4) 花 - flower ([花]->はな)
+   English: My child likes flowers.
+   Kanji: 花
+   Reading: はな
+
+9. [外国]
+   1) がいこく - foreign country
+   2) がいごく - foreign country miswriting
+   3) かいこく - opening of a country
+   4) かいごく - foreign country miswriting
+   English: Next year I will go to study abroad in a foreign country.
+   Kanji: 外国
+   Reading: がいこく
+
+10. いもうと
+   1) いもと - younger sister miswriting
+   2) むすめ - daughter
+   3) いもうと - younger sister
+   4) むすうめ - daughter miswriting
+   English: I wrote a letter in place of my younger sister.
+   Kanji: 妹
+   Reading: いもうと
+
+11. からだ
+   1) からた - body miswriting
+   2) かだら - body miswriting
+   3) がらた - body miswriting
+   4) からだ - body
+   English: Exercising refreshed my head and body.
+   Kanji: 体
+   Reading: からだ
+
+12. [不便]
+   1) ぶべん - inconvenience miswriting
+   2) ぶへん - inconvenience miswriting
+   3) ふべん - inconvenience
+   4) ふへん - unchangeable
+   English: Transportation is inconvenient here.
+   Kanji: 不便
+   Reading: ふべん
+
+13. えいご
+   1) 芙語 - English miswriting ([芙]->ふ)
+   2) 荼語 - English miswriting ([荼]->と)
+   3) 竺語 - English miswriting ([竺]->じく)
+   4) 英語 - English language ([英]->えい[語]->ご)
+   English: Please translate this sentence into English.
+   Kanji: 英語
+   Reading: えいご
+
+14. あに
+   1) 姉 - older sister ([姉]->あね)
+   2) 兄 - older brother ([兄]->あに)
+   3) 母 - mother ([母]->はは)
+   4) 父 - father ([父]->ちち)
+   English: My older brother goes to university every day.
+   Kanji: 兄
+   Reading: あに
+
+15. せかい
+   1) せか - world miswriting
+   2) せいか - outcome
+   3) せかい - the world
+   4) せいかい - correct answer
+   English: Since I don't know world history well, I want to study more.
+   Kanji: 世界
+   Reading: せかい
+   ContextIdx: 2
+
+16. 浴びます
+   1) いびます - bathe miswriting
+   2) あびます - take a shower / bathe
+   3) うびます - bathe miswriting
+   4) おびます - carry
+   English: I am taking a shower.
+   Kanji: 浴びます
+   Reading: あびます
+
+17. はやく
+   1) 早く - early / fast ([早]->はや)
+   2) 卓く - table miswriting ([卓]->たく)
+   3) 旱く - drought miswriting ([旱]->かん)
+   4) 阜く - mound miswriting ([阜]->ふ)
+   English: Please send the photo quickly.
+   Kanji: 早く
+   Reading: はやく
+
+18. 吸って
+   1) あって - meet
+   2) かって - buy
+   3) いって - go
+   4) すって - smoke / inhale
+   English: May I smoke tobacco?
+   Kanji: 吸って
+   Reading: すって
+
+19. 百
+   1) ひゃく - one hundred
+   2) びゃく - hundred miswriting
+   3) はく - count
+   4) ばく - explosion
+   English: Go 100 meters down this road.
+   Kanji: 百
+   Reading: ひゃく
+
+20. しがつ
+   1) 四月 - April ([四]->し[月]->がつ)
+   2) 七月 - July ([七]->しち[月]->がつ)
+   3) 一月 - January ([一]->いち[月]->がつ)
+   4) 八月 - August ([八]->はち[月]->がつ)
+   English: Cherry blossoms bloom in April.
+   Kanji: 四月
+   Reading: しがつ
+
+21. 山
+   1) 上 - above ([上]->うえ)
+   2) 山 - mountain ([山]->やま)
+   3) 止 - stop ([止]->と)
+   4) 凸 - convex ([凸]->とつ)
+   English: I climbed a mountain with my mother.
+   Kanji: 山
+   Reading: やま
+
+22. おくれました
+   1) おかれました - late miswriting
+   2) おくれました - was late
+   3) おそれました - was afraid
+   4) およれました - late miswriting
+   English: Yesterday I was late for class.
+   Kanji: 遅れました
+   Reading: おくれました
+
+23. ゆうはん
+   1) 夕飲 - evening drink ([夕]->ゆう[飲]->の)
+   2) 夕飯 - evening meal ([夕]->ゆう[飯]->はん)
+   3) 夜飲 - night drink ([夜]->よる[飲]->の)
+   4) 夜飯 - night meal ([夜]->よる[飯]->はん)
+   English: Yesterday I ate beef for dinner.
+   Kanji: 夕飯
+   Reading: ゆうはん
+
+24. [病気]
+   1) びょうき - illness / sickness
+   2) ぴょうき - illness miswriting
+   3) ひょうき - express
+   4) ひょうぎ - conference
+   English: I became sick again.
+   Kanji: 病気
+   Reading: びょうき
+
+25. ただしく
+   1) 止しく - correct miswriting ([止]->と)
+   2) 丘して - hill miswriting ([丘]->おか)
+   3) 正しく - correctly / properly ([正]->ただ)
+   4) 疋しく - counter miswriting ([疋]->ひき)
+   English: Please use the machine correctly.
+   Kanji: 正しく
+   Reading: ただしく
+
+26. 何人
+   1) なにじん - what nationality
+   2) なににん - how many people miswriting
+   3) なんじん - what nationality miswriting
+   4) なんにん - how many people
+   English: How many people are there in the classroom?
+   Kanji: 何人
+   Reading: なんにん
+
+27. てんき
+   1) 天気 - weather ([天]->てん[気]->き)
+   2) 天汽 - weather miswriting ([天]->てん[汽]->き)
+   3) 矢気 - weather miswriting ([矢]->や[気]->き)
+   4) 矢汽 - weather miswriting ([矢]->や[汽]->き)
+   English: The weather was good this week.
+   Kanji: 天気
+   Reading: てんき
+   ContextIdx: 3
+
+28. [違います]
+   1) ちがいます - differ / vary
+   2) ちかいます - swear
+   3) かたいます - discuss
+   4) おもいます - think
+   English: Way of thinking varies depending on the person.
+   Kanji: 違います
+   Reading: ちがいます
+
+29. かめら
+   1) 刀メラ - camera miswriting
+   2) カメヲ - camera miswriting
+   3) 刀メヲ - camera miswriting
+   4) カメラ - camera
+   English: That is a nice camera.
+   Reading: カメラ
+
+30. ことし
+   1) 令年 - command year ([令]->れい[年]->ねん)
+   2) 来年 - next year ([来]->らい[年]->ねん)
+   3) 今年 - this year ([今]->こ[年]->とし)
+   4) 金年 - gold year ([金]->きん[年]->ねん)
+   English: I will return to my home country during this year's winter vacation.
+   Kanji: 今年
+   Reading: ことし
+
+31. [飲んでいます]
+   1) たのんでいます - requesting
+   2) すんでいます - living
+   3) のんでいます - drinking
+   4) やんでいます - stopping
+   English: Ogawa has been drinking milk every morning since April.
+   Kanji: 飲んでいます
+   Reading: のんでいます
+
+32. ながい
+   1) 安い - cheap ([安]->やすい)
+   2) 広い - spacious ([広]->ひろい)
+   3) 多い - many ([多]->おおい)
+   4) 長い - long ([長]->ながい)
+   English: There is a long river over there.
+   Kanji: 長い
+   Reading: ながい
+
+33. 門
+   1) と - door
+   2) はこ - box
+   3) まど - window
+   4) もん - gate
+   English: This gate cannot be opened with a child's strength.
+   Kanji: 門
+   Reading: もん
+
+34. しゃしん
+   1) 曷真 - photo miswriting
+   2) 曷頁 - photo miswriting
+   3) 写真 - photograph ([写]->しゃ[真]->しん)
+   4) 写頁 - photo miswriting
+   English: Please send the photo quickly.
+   Kanji: 写真
+   Reading: しゃしん
+
+35. 背広
+   1) せびろ - business suit
+   2) せひろ - business suit miswriting
+   3) せいこう - success
+   4) せこう - execution
+   English: Nakada is wearing a black suit.
+   Kanji: 背広
+   Reading: せびろ
+
+36. [２０度]
+   1) ２０広 - 20 degrees miswriting
+   2) ２０度 - 20 degrees
+   3) ２０庄 - 20 degrees miswriting
+   4) ２０席 - 20 seats
+   English: In this country, it can get above 20 degrees even in winter.
+   Kanji: ２０度
+   Reading: にじゅうど
+
+37. 意味
+   1) いみ - meaning
+   2) いい - good
+   3) いり - entry
+   4) いし - doctor / stone
+   English: What is the meaning of this word?
+   Kanji: 意味
+   Reading: いみ
+   ContextIdx: 4
+
+38. 女の子
+   1) おんなのこ - girl
+   2) おなのこ - girl miswriting
+   3) あんなのこ - girl miswriting
+   4) あなのこ - girl miswriting
+   English: A cute baby girl was born.
+   Kanji: 女の子
+   Reading: おんなのこ
+
+39. うしろ
+   1) あとろ - behind miswriting
+   2) ごろ - around
+   3) うしろ - behind / back
+   4) こうろ - sea route
+   English: There is a park behind the station.
+   Kanji: 後ろ
+   Reading: うしろ
+
+40. 大きな
+   1) 犬きな - big miswriting ([犬]->いぬ)
+   2) 夫きな - big miswriting ([夫]->おっと)
+   3) 大きな - big / large ([大]->おお)
+   4) 夭きな - big miswriting
+   English: There is a big river west of this town.
+   Kanji: 大きな
+   Reading: おおきな
+
+Answer Key:
+1. 1, 2. 3, 3. 2, 4. 3, 5. 1, 6. 3, 7. 4, 8. 4, 9. 1, 10. 3, 11. 4, 12. 3, 13. 4, 14. 2, 15. 3, 16. 2, 17. 1, 18. 4, 19. 1, 20. 1, 21. 2, 22. 2, 23. 2, 24. 1, 25. 3, 26. 4, 27. 1, 28. 1, 29. 4, 30. 3, 31. 3, 32. 4, 33. 4, 34. 3, 35. 1, 36. 2, 37. 1, 38. 1, 39. 3, 40. 3
+
+Vocab:
+今月 ( [今]->こん[月]->げつ ) [kongetsu] - this month (noun, time, n5, kanji)
+十日 ( [十]->とお[日]->か ) [tooka] - 10th day of the month (noun, calendar, n5, kanji)
+遠足 ( [遠]->えん[足]->そく ) [ensoku] - excursion (noun, school, n5, kanji)
+北 ( [北]->きた ) [kita] - north (noun, direction, n5, kanji)
+町 ( [町]->まち ) [machi] - town (noun, place, n5, kanji)
+電車 ( [電]->でん[車]->しゃ ) [densha] - train (noun, transportation, n5, kanji)
+出かける ( [出]->で・かける ) [dekakeru] - to depart, go out (verb, ichidan-verb, intransitive, n5, kanji)
+大事 ( [大]->だい[事]->じ ) [daiji] - important (na-adjective, n5, kanji)
+使う ( [使]->つか・う ) [tsukau] - to use (verb, godan-verb, transitive, n5, kanji)
+映画館 ( [映]->えい[画]->が[館]->かん ) [eigakan] - movie theater (noun, place, n5, kanji)
+音 ( [音]->おと ) [oto] - sound (noun, n5, kanji)
+新聞 ( [新]->しん[聞]->ぶん ) [shinbun] - newspaper (noun, daily-life, n5, kanji)
+読む ( [読]->よ・む ) [yomu] - to read (verb, godan-verb, transitive, n5, kanji)
+目 ( [目]->め ) [me] - eye (noun, body-part, n5, kanji)
+耳 ( [耳]->みみ ) [mimi] - ear (noun, body-part, n5, kanji)
+見せる ( [見]->み・せる ) [miseru] - to show (verb, ichidan-verb, transitive, n5, kanji)
+花 ( [花]->はな ) [hana] - flower (noun, nature, n5, kanji)
+外国 ( [外]->がい[国]->こく ) [gaikoku] - foreign country (noun, place, n5, kanji)
+留学 ( [留]->りゅう[学]->がく ) [ryuugaku] - studying abroad (noun, suru-verb, school, n5, kanji)
+妹 ( [妹]->いもうと ) [imouto] - younger sister (noun, family, n5, kanji)
+代わりに ( [代]->か・わりに ) [kawari ni] - instead of (expression, n5, kanji)
+手紙 ( [手]->て[紙]->がみ ) [tegami] - letter (noun, daily-life, n5, kanji)
+書く ( [書]->か・く ) [kaku] - to write (verb, godan-verb, transitive, n5, kanji)
+頭 ( [頭]->あたま ) [atama] - head (noun, body-part, n5, kanji)
+体 ( [体]->からだ ) [karada] - body (noun, body-part, n5, kanji)
+交通 ( [交]->こう[通]->つう ) [koutsuu] - traffic, transportation (noun, transportation, n5, kanji)
+不便 ( [不]->ふ[便]->べん ) [fuben] - inconvenient (na-adjective, n5, kanji)
+文 ( [文]->ぶん ) [bun] - sentence (noun, school, n5, kanji)
+英語 ( [英]->えい[語]->ご ) [eigo] - English language (noun, n5, kanji)
+兄 ( [兄]->あに ) [ani] - older brother (noun, family, n5, kanji)
+世界 ( [世]->せ[界]->かい ) [sekai] - world (noun, place, n5, kanji)
+歴史 ( [歴]->れき[史]->し ) [rekishi] - history (noun, school, n5, kanji)
+知る ( [知]->し・る ) [shiru] - to know (verb, godan-verb, transitive, n5, kanji)
+勉強 ( [勉]->べん[強]->きょう ) [benkyou] - study (noun, suru-verb, school, n5, kanji)
+シャワー [shawaa] - shower (noun, loan-word, katakana, n5)
+浴びる ( [浴]->あ・びる ) [abiru] - to bathe, shower (verb, ichidan-verb, transitive, n5, kanji)
+早く ( [早]->はや・く ) [hayaku] - quickly, early (adverb, time, n5, kanji)
+写真 ( [写]->しゃ[真]->しん ) [shashin] - photograph (noun, n5, kanji)
+送る ( [送]->おく・る ) [okuru] - to send (verb, godan-verb, transitive, n5, kanji)
+煙草 ( [煙]->た[草]->ばこ ) [tabako] - tobacco (noun, daily-life, n5)
+吸う ( [吸]->す・う ) [suu] - to smoke, inhale (verb, godan-verb, transitive, n5, kanji)
+道 ( [道]->みち ) [michi] - road (noun, place, n5, kanji)
+百 ( [百]->ひゃく ) [hyaku] - hundred (number, n5, kanji)
+四月 ( [四]->し[月]->がつ ) [shigatsu] - April (noun, calendar, n5, kanji)
+咲く ( [咲]->さ・く ) [saku] - to bloom (verb, godan-verb, intransitive, n5, kanji)
+山 ( [山]->やま ) [yama] - mountain (noun, nature, n5, kanji)
+登る ( [登]->のぼ・る ) [noboru] - to climb (verb, godan-verb, intransitive, n5, kanji)
+遅れる ( [遅]->おく・れる ) [okureru] - to be late (verb, ichidan-verb, intransitive, n5, kanji)
+夕飯 ( [夕]->ゆう[飯]->はん ) [yuuhan] - dinner (noun, food, n5, kanji)
+牛肉 ( [牛]->ぎゅう[肉]->にく ) [gyuuniku] - beef (noun, food, n5, kanji)
+病気 ( [病]->びょう[気]->き ) [byouki] - illness (noun, health, n5, kanji)
+機械 ( [機]->き[械]->かい ) [kikai] - machine (noun, technology, n5, kanji)
+正しく ( [正]->ただ・しく ) [tadashiku] - correctly (adverb, n5, kanji)
+教室 ( [教]->きょう[室]->しつ ) [kyoushitsu] - classroom (noun, school, n5, kanji)
+何人 ( [何]->なん[人]->にん ) [nannin] - how many people (noun, number, n5, kanji)
+今週 ( [今]->こん[週]->しゅう ) [konshuu] - this week (noun, time, n5, kanji)
+天気 ( [天]->てん[気]->き ) [tenki] - weather (noun, weather, n5, kanji)
+考え方 ( [考]->かんが・え[方]->かた ) [kangaekata] - way of thinking (noun, n5, kanji)
+違う ( [違]->ちが・う ) [chigau] - to differ (verb, godan-verb, intransitive, n5, kanji)
+カメラ [kamera] - camera (noun, loan-word, katakana, n5)
+今年 ( [今]->こ[年]->とし ) [kotoshi] - this year (noun, time, n5, kanji)
+冬休み ( [冬]->ふゆ[休]->やす・み ) [fuyuyasumi] - winter vacation (noun, time, n5, kanji)
+帰る ( [帰]->かえ・る ) [kaeru] - to return (verb, godan-verb, intransitive, n5, kanji)
+牛乳 ( [牛]->ぎゅう[乳]->にゅう ) [gyuunyuu] - milk (noun, drink, n5, kanji)
+飲む ( [飲]->の・む ) [nomu] - to drink (verb, godan-verb, transitive, n5, kanji)
+門 ( [門]->もん ) [mon] - gate (noun, house, n5, kanji)
+背広 ( [背]->せ[広]->びろ ) [sebiro] - business suit (noun, clothing, n5, kanji)
+度 ( [度]->ど ) [do] - degree (counter, n5, kanji)
+言葉 ( [言]->こと[葉]->ば ) [kotoba] - word, language (noun, school, n5, kanji)
+意味 ( [意]->い[味]->み ) [imi] - meaning (noun, school, n5, kanji)
+女の子 ( [女]->おんな[の]->の[子]->こ ) [onnanoko] - girl (noun, family, n5, kanji)
+後ろ ( [後]->うしろ ) [ushiro] - behind (noun, direction, n5, kanji)
+---

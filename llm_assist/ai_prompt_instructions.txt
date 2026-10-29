@@ -12,6 +12,9 @@ Task: Process raw Japanese study materials, reading passages, JLPT drills, or vo
   The context passages (`ContextPassages`) must act as general pre-entry background themes, reading introductions, or conversational settings. **NEVER** write a context passage that mirrors the exact question sentence with the blank already filled in, as this spoils the answer before the user attempts the quiz.
 - ⚠️ **WARNING: RESPECT BLANKS & TRANSLATIONS!** 
   When providing the full sentence English translation (`English:`) for a question, always treat it as a sentence translation with a placeholder or reflection of the blank (e.g., `[_____]`), rather than directly spelling out the answer inside the sentence translation.
+- ⚠️ **WARNING: KANA GUIDE & SEPARATION REQUIREMENT FOR KANJI!**
+  - Whenever Kanji is present in prompt lines, option texts, target explanations, or readings, include inline Kana guides using standard formatting (e.g., `木 [き]`, `木 [tree kanji] -> ki`).
+  - In the `Vocab:` section, when Japanese words contain Kanji, separate readings by character boundaries using hyphenated bracketed segments corresponding to each Kanji character: `Kanji1Kanji2 (こう-えん) [kou-en]` or `漢字1漢字2 -> [K1-kana][K2-kana]` structure (e.g., `公園 (こう-えん)`).
 - ⚠️ **WARNING: STRICT 1-INDEXING & OPTIONS FORMAT!** 
   Never deviate from the exact line syntax. Questions must start with `1. `, options must start with `1) `, `2) `, `3) `, `4) `, and include their meaning format (`text - meaning`).
 - ⚠️ **WARNING: VOCABULARY PLACEMENT REQUIREMENT!** 
@@ -30,11 +33,13 @@ When given raw Japanese source material or a request to create question sets:
 2. BUILD QUESTIONS ACCURATELY:
    - Assign a 1-indexed number (1., 2., 3...) to each question in a set.
    - Provide exactly 4 options per question using closing parenthesis format (`1) text - meaning`).
+   - If options or prompt targets contain Kanji, add an explicit inline Kana guide annotation (e.g., `1) 学校 [がっこう] - school`).
    - Supply optional fields (`English:`, `Kanji:`, `Reading:`, `ContextIdx:`) when applicable, ensuring `English:` provides the full sentence translation with a placeholder for any blank.
 
 3. HARVEST ALL VOCABULARY (EXHAUSTIVE EXTRACTION & PLACEMENT AT THE END):
    - Scan context passages, target prompts, kanji targets, and ALL multiple-choice options.
    - INFER KANJI FOR DISTRACTORS: If a distractor option is provided only in Hiragana/Kana (e.g. "くろい"), infer its proper standard Kanji ("黒い") for the vocab block.
+   - **KANA SEPARATION RULE:** Format Kanji compound words in the vocabulary section with per-kanji segmented Kana readings: `Kanji1Kanji2 (K1kana-K2kana) [romaji1-romaji2]`.
    - **CRITICAL REQUIREMENT:** The vocabulary block for each set MUST be placed at the very end of that set under the `Vocab:` header.
 
 4. APPLY HEAVY & SYSTEMATIC TAGGING:
@@ -52,6 +57,7 @@ CRITICAL DATA INTEGRITY & TYPE RULES
 - ALIGNED CONTEXTS: `ContextPassages` and `ContextEnglish` entries must align 1-to-1 using pipe (`|`) delimiters.
 - STRICT 1-INDEXING FOR QUESTIONS: Question lines MUST start with a number and a period (`1. `, `2. `).
 - STRICT CLOSING PARENTHESIS FOR OPTIONS: Option lines MUST start with numbers 1 through 4 followed by a closing parenthesis (`1) `, `2) `, etc.).
+- KANJI-TO-KANA MAPPING: Multi-kanji words must visually split character readings in vocabulary blocks (e.g., `木 [tree kanji -> き]`, `公園 (こう-えん) [kou-en]`).
 
 --------------------------------------------------------------------------------
 TAGGING DICTIONARY (Apply heavily across tags and vocabulary definitions)
@@ -93,12 +99,12 @@ ContextPassages: general introductory theme passage 1 | passage 2 (required: rea
 ContextEnglish: English translation 1 | English translation 2 (English translation of contextPassages)
 
 1. Prompt text or target sentence with blank
-   1) Option text - meaning
-   2) Option text - meaning
-   3) Option text - meaning
-   4) Option text - meaning
-   English: Full sentence translation with [_____] placeholder (optional),the prompt text is translated
-   Kanji: target kanji (optional)
+   1) Option text [kana guide] - meaning
+   2) Option text [kana guide] - meaning
+   3) Option text [kana guide] - meaning
+   4) Option text [kana guide] - meaning
+   English: Full sentence translation with [_____] placeholder (optional), the prompt text is translated
+   Kanji: target kanji [kanji -> kana guide] (optional)
    Reading: kana reading (optional)
    ContextIdx: 0 (optional integer)
 
@@ -106,7 +112,7 @@ Answer Key:
 1. correct_option_number, 2. correct_option_number
 
 Vocab:
-Japanese Word (kana) [romaji] - Meaning (tag1, tag2)
+Kanji1Kanji2 (K1kana-K2kana) [K1romaji-K2romaji] - Meaning (tag1, tag2)
 Japanese Word (kana) [romaji] - Meaning (tag1, tag2)
 
 --------------------------------------------------------------------------------
@@ -114,8 +120,7 @@ EXAMPLE DEMONSTRATION
 --------------------------------------------------------------------------------
 
 Below is an ideal multi-set payload demonstrating total vocabulary harvesting, 
-distractor Kanji inference, option typing, and exhaustive tagging in the text format, 
-with non-spoiler context passages and explicit sentence translations:
+distractor Kanji inference, option typing, character-separated Kana guides, and exhaustive tagging in the text format:
 
 ---
 SetId: set-n5-animals-colours-demo
@@ -126,13 +131,13 @@ Tags: n5, kanji, nature, animal, colour, beginner
 ContextPassages: 週末の公園での楽しい生き物の観察についてです。
 ContextEnglish: This is about observing fun living creatures at the park on the weekend.
 
-1. 白い
+1. 白い [白 -> しろ]
    1) しろい - white
    2) くろい - black
    3) あかい - red
    4) あおい - blue
    English: Look at the [_____] creature.
-   Kanji: 白い
+   Kanji: 白い [白 -> しろ]
    Reading: しろい
    ContextIdx: 0
 
@@ -140,11 +145,11 @@ Answer Key:
 1. 1
 
 Vocab:
-公園 (こうえん) [kouen] - park (noun, place, n5)
-白い (しろい) [shiroi] - white (i-adjective, colour, n5)
-黒い (くろい) [kuroi] - black (extracted from distractor option 2) (i-adjective, colour, n5)
-赤い (あかい) [akai] - red (extracted from distractor option 3) (i-adjective, colour, n5)
-青い (あおい) [aoi] - blue (extracted from distractor option 4) (i-adjective, colour, n5)
+公園 (こう)(えん) [kou-en] - park (noun, place, n5)
+白い (しろ)(い) [shiro-i] - white (i-adjective, colour, n5)
+黒い (くろ)(い) [kuro-i] - black (extracted from distractor option 2) (i-adjective, colour, n5)
+赤い (あか)(い) [aka-i] - red (extracted from distractor option 3) (i-adjective, colour, n5)
+青い (あお)(い) [ao-i] - blue (extracted from distractor option 4) (i-adjective, colour, n5)
 
 --------------------------------------------------------------------------------
 DIRECT VOCABULARY INSERTION FORMAT (Alternative Parsing Syntax)
@@ -161,8 +166,8 @@ ContextPassages: 毎日の生活でよく使われる基本的な単語のリス
 ContextEnglish: This is a list of basic words commonly used in daily life.
 
 Vocab:
-毎日 (まいにち) [mainichi] - every day (noun, time, n5)
+毎日 (まい)(にち) [mai-nichi] - every day (noun, time, n5)
 本 (ほん) [hon] - book (noun, n5)
-読む (よむ) [yomu] - to read (verb, godan-verb, n5)
+読む (よ)(む) [yo-mu] - to read (verb, godan-verb, n5)
 猫 (ねこ) [neko] - cat (noun, animal, n5)
 ================================================================================

@@ -1,0 +1,2671 @@
+---
+SetId: set-jtest-ex-01
+Title: JTEST Grammar Practice Set 1 (Q1-50)
+Category: grammar
+PackTitle: JTEST_EX
+Tags: n5, grammar, jtest, beginner, practice
+ContextPassages: 文法[ぶんぽう]の基礎[きそ]問題[もんだい]集[しゅう]の第[だい]1セットです。 | 毎日[まいにち]の生活[せいかつ]で使[つか]われる基本的な[きほんてきな]表現[ひょうげん]を学びましょう[まなびましょう]。
+ContextEnglish: This is the first set of basic grammar practice questions. | Let's learn basic expressions used in daily life.
+
+1. まいにちしんぶん _______ 読みます。
+   1) へ - towards (direction)
+   2) を - object marker
+   3) に - to / at / in
+   4) が - subject marker
+   English: I read the newspaper ( [新]->しん[聞]->ぶん ) every day ( [毎]->まい[日]->にち ).
+   Reading: まいにちしんぶんをよみます。
+   ContextIdx: 0
+
+2. 田中さんは _______ 来ていませんよ。
+   1) もう - already / more
+   2) だけ - only
+   3) まだ - not yet
+   4) まで - until
+   English: Tanaka-san ( [田]->た[中]->なかさん ) has not come ( [来]->き ) yet.
+   Reading: たなかさんはまだきていませんよ。
+   ContextIdx: 0
+
+3. ナイフ _______ パンをきりました。
+   1) で - by means of / with
+   2) を - object marker
+   3) に - at / to
+   4) が - subject marker
+   English: I cut the bread with a knife.
+   Reading: ないふでぱんをきりました。
+   ContextIdx: 0
+
+4. 家にかえってねたほう _______ いいですよ。
+   1) と - with / quote marker
+   2) に - to / at
+   3) が - subject marker (had better)
+   4) は - topic marker
+   English: It is better to go home ( [家]->うち ) and sleep ( [寝]->ね ).
+   Reading: うちにかえってねたほうがいいですよ。
+   ContextIdx: 0
+
+5. お母さん、もうあそびに _______ もいいですか？
+   1) 行く - to go ([行]->い)
+   2) 行って - go and... ([行]->い)
+   3) 行った - went ([行]->い)
+   4) 行っている - is going ([行]->い)
+   English: Mother ( [母]->かあさん ), may I go ( [行]->い ) play?
+   Reading: おかあさん、もうあそびにいってもいいですか？
+   ContextIdx: 0
+
+6. すいようびには日本語のテスト _______ 。
+   1) はいます - (incorrect for inanimate)
+   2) はあります - topic exists
+   3) がいます - (incorrect for inanimate)
+   4) があります - there is / have
+   English: On Wednesday ( [水]->すい[曜]->よう[日]->び ), there is a Japanese ( [日]->に[本]->ほん[語]->ご ) test.
+   Reading: すいようびにはにほんごのてすとがあります。
+   ContextIdx: 0
+
+7. あなたのかみは _______ よ。
+   1) 長ってすぎます - (grammatically incorrect)
+   2) 長くすぎます - (grammatically incorrect)
+   3) 長いすぎます - (grammatically incorrect)
+   4) 長すぎます - too long ([長]->なが)
+   English: Your hair ( [髪]->かみ ) is too long ( [長]->なが ).
+   Reading: あなたのかみはながすぎますよ。
+   ContextIdx: 0
+
+8. わたしはけいかんに _______ です。
+   1) なりたい - want to become
+   2) したい - want to do
+   3) いきたい - want to go
+   4) いたい - want to be / exist
+   English: I want to become a police officer ( [警]->けい[官]->かん ).
+   Reading: わたしはけいかんになりたいです。
+   ContextIdx: 0
+
+9. わたしは、これから _______ に行きます。
+   1) およぐ - to swim ([泳]->およ)
+   2) およいで - swimming ([泳]->およ)
+   3) およぎ - swim (stem form) ([泳]->およ)
+   4) およいだ - swam ([泳]->およ)
+   English: I am going for a swim ( [泳]->およ ) now.
+   Reading: わたしは、これからおよぎにいきます。
+   ContextIdx: 0
+
+10. あの人たちはどこに行っているん _______ 。
+    1) だろう - I wonder
+    2) つもりだ - intend to
+    3) から - because
+    4) けれども - although
+    English: I wonder where those people ( [人]->ひと ) are going ( [行]->い ).
+    Reading: あのひとたちはどこにいっているんだろう。
+    ContextIdx: 0
+
+11. この本は _______ 読みました。
+    1) どう - how
+    2) もう - already
+    3) も - also
+    4) まだ - yet
+    English: I have already read ( [読]->よ ) this book ( [本]->ほん ).
+    Reading: このほんはもうよみました。
+    ContextIdx: 0
+
+12. 山田さんはたいへんいい人ですよ。なにもわるいことはきいたことが _______ わ。
+    1) しません - do not do
+    2) いません - do not exist (living)
+    3) なりません - do not become
+    4) ありません - do not exist / haven't heard
+    English: Yamada-san ( [山]->やま[田]->ださん ) is a very good person ( [人]->ひと ). I haven't heard anything bad ( [悪]->わる ) about him.
+    Reading: やまださんはたいへんいいひとですよ。なにもわるいことはきいたことがありませんわ。
+    ContextIdx: 0
+
+13. ここにじゅうしょを書いて _______ か？
+    1) ください - please
+    2) くださいます - to give me
+    3) くださいません - won't you please...
+    4) くださいましょうか - shall we give
+    English: Won't you please write ( [書]->か ) your address ( [住]->じゅう[所]->しょ ) here?
+    Reading: ここにじゅうしょをかいてくださいませんか？
+    ContextIdx: 0
+
+14. あなたはあそこへ行って _______ いけませんよ。
+    1) が - subject marker
+    2) は - must not (te-form + wa ikemasen)
+    3) と - and / with
+    4) に - to / at
+    English: You must not go ( [行]->い ) over there.
+    Reading: あなたはあそこへいってはいけませんよ。
+    ContextIdx: 0
+
+15. どれ _______ ここではたらいていましたか？
+    1) まで - until
+    2) もう - already
+    3) より - than
+    4) くらい - about how long
+    English: About how long did you work ( [働]->はたら ) here?
+    Reading: どれくらいここではたらいていましたか？
+    ContextIdx: 0
+
+16. わたしはおんがくをきく _______ 好きです。
+    1) のが - nominalizer + subject marker
+    2) ので - because
+    3) のに - although / for
+    4) のは - nominalizer + topic marker
+    English: I like listening ( [聞]->き ) to music ( [音]->おん[楽]->がく ).
+    Reading: わたしはおんがくをきくのがすきです。
+    ContextIdx: 0
+
+17. わたしは一人でクリスマスをすごす _______ です。
+    1) たい - want to
+    2) つもり - plan / intend to
+    3) だろう - probably
+    4) ほう - comparison / side
+    English: I plan to spend Christmas alone ( [一]->ひと[人]->りで ).
+    Reading: わたしはひとりですごすつもりです。
+    ContextIdx: 0
+
+18. _______ ながら水を飲まないでください。
+    1) あるく - to walk ([歩]->ある)
+    2) あるいて - walking ([歩]->ある)
+    3) あるき - walk (stem form) ([歩]->ある)
+    4) あるかな - shall I walk ([歩]->ある)
+    English: Please do not drink water ( [水]->みず ) while walking ( [歩]->ある ).
+    Reading: あるきながらみずをのまないでください。
+    ContextIdx: 0
+
+19. れいぞうこにビールが入っている _______ 、そこにすわって飲みましょう。
+    1) から - because / since
+    2) と - if / when
+    3) なら - if
+    4) たら - if / after
+    English: Since there is beer in the refrigerator ( [冷]->れい[蔵]->ぞう[庫]->こ ), let's sit there and drink.
+    Reading: れいぞうこにびーるがはいっているから、そこにすわってのみましょう。
+    ContextIdx: 0
+
+20. わたしのことをいつまでも _______ ください。
+    1) わすれない - do not forget
+    2) わすれないて - (incorrect form)
+    3) わすれなくて - without forgetting
+    4) わすれないで - please do not forget
+    English: Please do not ever forget ( [忘]->わす ) me.
+    Reading: わたしのことをいつまでもわすれないでください。
+    ContextIdx: 0
+
+21. まっすぐベッドに行きなさい。明日は _______ なりますよ。
+    1) いそがしいに - (incorrect)
+    2) いそがしく - busy (adverbial) ([忙]->いそが)
+    3) いそがしい - busy ([忙]->いそが)
+    4) いそがしくて - busy (te-form) ([忙]->いそが)
+    English: Go straight to bed. You will become busy ( [忙]->いそが ) tomorrow ( [明]->あし[日]->た ).
+    Reading: まっすぐべっどにいきなさい。あしたはいそがしくなりますよ。
+    ContextIdx: 0
+
+22. とうきょうにかえる _______ 、もういちどあなたに会いたいです。
+    1) まえ - before ([前]->まえ)
+    2) まえで - (incorrect)
+    3) まえに - before doing... ([前]->まえに)
+    4) まえには - (redundant)
+    English: Before returning to Tokyo ( [東]->とう[京]->きょう ), I want to meet you once more.
+    Reading: とうきょうにかえるまえに、もういちどあなたにあいたいです。
+    ContextIdx: 0
+
+23. もうすこし _______ してくださいませんか。
+    1) しずかに - quietly ([静]->しず)
+    2) しずかだ - quiet (plain state)
+    3) しずか - quiet
+    4) しずかで - quiet (te-form)
+    English: Could you please be a little quieter ( [静]->しず )?
+    Reading: もうすこししずかにしてくださいませんか。
+    ContextIdx: 0
+
+24. わたしは、あなたに _______ にここに来ました。
+    1) 会う - to meet ([会]->あ)
+    2) 会って - meeting ([会]->あ)
+    3) 会い - meet (stem form) ([会]->あ)
+    4) 会います - will meet ([会]->あ)
+    English: I came ( [来]->き ) here to meet ( [会]->あ ) you.
+    Reading: わたしは、あなたにあいにここにきました。
+    ContextIdx: 0
+
+25. そんなにしんぱい _______ な。彼はぜったい大丈夫だ。
+    1) し - do
+    2) する - do (prohibitive with na)
+    3) した - did
+    4) している - doing
+    English: Don't worry so much. He ( [彼]->かれ ) is definitely fine ( [大]->だい[丈]->じょう[夫]->ぶ ).
+    Reading: そんなにしんぱいするな。かれはぜったいだいじょうぶだ。
+    ContextIdx: 0
+
+26. わたしたちはもうあの家にすんで _______ 。
+    1) あります - exist (inanimate)
+    2) いました - was living
+    3) います - is living
+    4) いません - is not living
+    English: We do not live in that house ( [家]->うち ) anymore.
+    Reading: わたしたちはもうあのいえにすんでいません。
+    ContextIdx: 0
+
+27. それ、母には _______ ほうがいいですよ。
+    1) 言うな - don't say
+    2) 言わないで - without saying
+    3) 言わない - not say ([言]->い)
+    4) 言わなくて - not saying
+    English: It is better not to say ( [言]->い ) that to mother ( [母]->はは ).
+    Reading: それ、ははにはいわないほうがいいですよ。
+    ContextIdx: 0
+
+28. こどもたちが先生のまわりに _______ います。
+    1) すわり - sit (stem)
+    2) すわって - sitting ([座]->すわ)
+    3) すわる - to sit
+    4) すわった - sat
+    English: The children are sitting ( [座]->すわ ) around the teacher ( [先]->せん[生]->せい ).
+    Reading: こどもたちがせんせいのまわりにすわっています。
+    ContextIdx: 0
+
+29. 兄はたにんにものを教える _______ 上手なんです。
+    1) のは - topic
+    2) のが - subject marker (good at)
+    3) ので - because
+    4) のに - although
+    English: My older brother ( [兄]->あに ) is good at teaching things to others.
+    Reading: あにはたにんにものをおしえるのがじょうずなんです。
+    ContextIdx: 0
+
+30. かのじょのへやはあまりきれい _______ 。
+    1) いません - do not exist (living)
+    2) じゃいません - (incorrect)
+    3) ありません - does not exist
+    4) じゃありません - is not (na-adj negative)
+    English: Her ( [彼]->かの[女]->じょ ) room ( [部]->へ[屋]->や ) is not very clean.
+    Reading: かのじょのへやはあまりきれいじゃありません。
+    ContextIdx: 0
+
+31. わたしはここにいちど _______ 来たことがあります。
+    1) だけ - only
+    2) もう - already
+    3) まだ - yet
+    4) まえ - before
+    English: I have only come ( [来]->き ) here once.
+    Reading: わたしはここにいちどだけきたことがあります。
+    ContextIdx: 0
+
+32. アキラ _______ わたし _______ あなたのともだちなんですよ。
+    1) は/は - topic/topic
+    2) や/や - and/and
+    3) と/と - and/and
+    4) も/も - both ... and ...
+    English: Both Akira and I are your friends ( [友]->とも[達]->だち ).
+    Reading: あきらもわたしもあなたのともだちなんですよ。
+    ContextIdx: 0
+
+33. 母はとなりのおくさんと少し話を _______ から家にかえっていった。
+    1) し - do
+    2) する - to do
+    3) して - after doing ([話]->はなし)
+    4) した - did
+    English: After talking a bit with the neighbor's wife, my mother went home.
+    Reading: はははとなりのおくさんとすこしはなしをしてからいえにかえっていった。
+    ContextIdx: 0
+
+34. 家にいるよりここ _______ ほうがきけんですよ。
+    1) を - object marker
+    2) な - na-adj connector
+    3) に - at / in
+    4) の - possessive / location noun marker
+    English: Being here is more dangerous ( [危]->き[険]->けん ) than being at home.
+    Reading: いえにいるよりここのほうがきけんですよ。
+    ContextIdx: 0
+
+35. わたしがあなた _______ ならんで立ってもいいですか？
+    1) と - with
+    2) で - at
+    3) を - object
+    4) に - to
+    English: May I stand ( [立]->た ) in line next to you?
+    Reading: わたしがあなたとならんでたってもいいですか？
+    ContextIdx: 0
+
+36. コーヒーでも飲みながら _______ 。
+    1) 話します - will speak
+    2) 話しません - won't speak
+    3) 話しましょう - let's talk ([話]->はな)
+    4) 話しましよう - (typo variant)
+    English: Let's talk ( [話]->はな ) while drinking coffee.
+    Reading: こーひーでものみながらはなしましょう。
+    ContextIdx: 0
+
+37. みなさん、なぜここにあつまったか、わかっている _______ 。
+    1) でした - was
+    2) でしました - (incorrect)
+    3) でしょう - probably / right?
+    4) でしましょう - (incorrect)
+    English: Everyone, you probably know why we gathered ( [集]->あつ ) here, right?
+    Reading: みなさん、なぜここにあつまったか、わかっているでしょう。
+    ContextIdx: 0
+
+38. わたしの学校にはたくさんの学生が _______ 。
+    1) いっています - is going
+    2) います - exist (living)
+    3) あります - exist (non-living)
+    4) あっています - is meeting
+    English: There are many students ( [学]->がく[生]->せい ) at my school ( [学]->がっ[校]->こう ).
+    Reading: わたしのがっこうにはたくさんのがくせいがいます。
+    ContextIdx: 0
+
+39. このじしょはここ _______ つかってください。
+    1) に - at (static)
+    2) の - of
+    3) で - at (action location)
+    4) を - object marker
+    English: Please use ( [使]->つか ) this dictionary ( [辞]->じ[書]->しょ ) here.
+    Reading: このじしょはここにつかってください。
+    ContextIdx: 0
+
+40. なにか _______ ことがありますか？
+    1) 言たい - (incorrect)
+    2) 言いたい - want to say ([言]->い)
+    3) 言うたい - (incorrect)
+    4) 言ってたい - (incorrect)
+    English: Is there something you want to say ( [言]->い )?
+    Reading: なにかいいたいことがありますか？
+    ContextIdx: 0
+
+41. これ _______ ちずです。
+    1) に - to / at
+    2) を - object marker
+    3) は - topic marker
+    4) や - and
+    English: This is a map ( [地]->ち[図]->ず ).
+    Reading: これはちずです。
+    ContextIdx: 0
+
+42. スーパー _______ かいものをしました。
+    1) か - or / question
+    2) に - to / at
+    3) で - at (location of action)
+    4) へ - towards
+    English: I did shopping ( [買]->かい[物]->もの ) at the supermarket.
+    Reading: すーぱーでかいものをしました。
+    ContextIdx: 0
+
+43. 犬が２ひきいます。ねこ _______ ２ひきいます。
+    1) や - and
+    2) も - also
+    3) で - at
+    4) に - to
+    English: There are two dogs ( [犬]->いぬ ). There are also two cats ( [猫]->ねこ ).
+    Reading: いぬがにひきいます。ねこもにひきいます。
+    ContextIdx: 0
+
+44. らいげつおきなわへりょこう _______ 行きます。
+    1) と - with
+    2) が - subject
+    3) を - object
+    4) に - target / purpose
+    English: Next month ( [来]->らい[月]->げつ ), I will go on a trip ( [旅]->りょ[行]->こう ) to Okinawa.
+    Reading: らいげつおきなわへりょこうにいきます。
+    ContextIdx: 0
+
+45. ぼくはまいにち中国語 _______ べんきょうします。
+    1) と - and
+    2) の - of
+    3) や - and
+    4) を - direct object marker
+    English: I study Chinese ( [中]->ちゅう[国]->ご[語]->ご ) every day ( [毎]->まい[日]->にち ).
+    Reading: ぼくはまいにちちゅうごくごをべんきょうします。
+    ContextIdx: 0
+
+46. – らいしゅうもひとりで来ますか？ – いいえ、らいしゅうはともだち _______ 来ます。
+    1) と - with
+    2) は - topic
+    3) へ - towards
+    4) が - subject
+    English: "Will you come alone next week too?" "No, next week I will come with a friend ( [友]->とも[達]->だち )."
+    Reading: らいしゅうもひとりできますか？いいえ、らいしゅうはともだちときます。
+    ContextIdx: 0
+
+47. “どういたしまして”はえいご _______ なんといいますか？
+    1) が - subject
+    2) を - object
+    3) で - by means of / in
+    4) に - to
+    English: How do you say "douitashimashite" in English ( [英]->えい[語]->ご )?
+    Reading: どういたしましてはえいごでなんといいますか？
+    ContextIdx: 0
+
+48. ここにじゅうしょ _______ せいねんがっぴをかいてください。
+    1) で - at
+    2) を - object
+    3) と - and
+    4) も - also
+    English: Please write your address and date of birth ( [生]->せい[年]->ねん[月]->がっ[日]->ぴ ) here.
+    Reading: ここにじゅうしょとせいねんがっぴをかいてください。
+    ContextIdx: 0
+
+49. わたしはいつもうちからがっこう _______ くるまで行きます。
+    1) しか - only
+    2) まで - until / as far as
+    3) ごろ - around
+    4) で - at
+    English: I always go from my home to school ( [学]->がっ[校]->こう ) by car ( [車]->くるま ).
+    Reading: わたしはいつもうちからがっこうまでくるまでいきます。
+    ContextIdx: 0
+
+50. このバスはゆうびんきょくのまえ _______ とおります。
+    1) で - at
+    2) に - to
+    3) へ - towards
+    4) を - through / along (path of motion)
+    English: This bus passes in front of ( [前]->まえ ) the post office ( [郵]->ゆう[便]->びん[局]->きょく ).
+    Reading: このばすはゆうびんきょくのまえをとおります。
+    ContextIdx: 0
+
+Answer Key:
+1. 2, 2. 3, 3. 1, 4. 3, 5. 2, 6. 4, 7. 4, 8. 1, 9. 3, 10. 1, 11. 2, 12. 4, 13. 3, 14. 2, 15. 4, 16. 1, 17. 2, 18. 3, 19. 1, 20. 4, 21. 2, 22. 3, 23. 1, 24. 3, 25. 2, 26. 4, 27. 3, 28. 2, 29. 2, 30. 4, 31. 1, 32. 4, 33. 3, 34. 4, 35. 1, 36. 3, 37. 3, 38. 2, 39. 3, 40. 2, 41. 3, 42. 3, 43. 2, 44. 4, 45. 4, 46. 1, 47. 3, 48. 3, 49. 2, 50. 4
+
+Vocab:
+毎日 ( [毎]->まい[日]->にち ) [mainichi] - every day (noun, time, n5)
+新聞 ( [新]->しん[聞]->ぶん ) [shinbun] - newspaper (noun, daily-life, n5)
+読む ( [読]->よ-む ) [yomu] - to read (verb, godan-verb, transitive, n5)
+来る ( [来]->く-る ) [kuru] - to come (verb, kuru-verb, intransitive, n5)
+切る ( [切]->き-る ) [kiru] - to cut (verb, godan-verb, transitive, n5)
+家 ( [家]->うち ) [uchi] - house / home (noun, house, n5)
+帰る ( [帰]->かえ-る ) [kaeru] - to return (verb, godan-verb, intransitive, n5)
+寝る ( [寝]->ね-る ) [neru] - to sleep (verb, ichidan-verb, intransitive, n5)
+お母さん ( [母]->かあ-さん ) [okaasan] - mother (noun, family, n5)
+遊ぶ ( [遊]->あそ-ぶ ) [asobu] - to play (verb, godan-verb, intransitive, n5)
+行く ( [行]->い-く ) [iku] - to go (verb, godan-verb, intransitive, n5)
+水曜日 ( [水]->すい[曜]->よう[日]->び ) [suiyoubi] - Wednesday (noun, days-of-week, n5)
+日本語 ( [日]->に[本]->ほん[語]->ご ) [nihongo] - Japanese language (noun, school, n5)
+長い ( [長]->なが-い ) [nagai] - long (i-adjective, n5)
+警官 ( [警]->けい[官]->かん ) [keikan] - police officer (noun, work, n5)
+泳ぐ ( [泳]->およ-ぐ ) [oyogu] - to swim (verb, godan-verb, intransitive, n5)
+人たち ( [人]->ひと-たち ) [hitotachi] - people (noun, n5)
+本 ( [本]->ほん ) [hon] - book (noun, school, n5)
+山田 ( [山]->やま[田]->だ ) [yamada] - Yamada (family name) (noun, n5)
+人 ( [人]->ひと ) [hito] - person (noun, n5)
+悪い ( [悪]->わる-い ) [warui] - bad (i-adjective, n5)
+聞く ( [聞]->き-く ) [kiku] - to hear / listen (verb, godan-verb, transitive, n5)
+住所 ( [住]->じゅう[所]->しょ ) [juusho] - address (noun, daily-life, n5)
+書く ( [書]->か-く ) [kaku] - to write (verb, godan-verb, transitive, n5)
+働く ( [働]->はたら-く ) [hataraku] - to work (verb, godan-verb, intransitive, n5)
+音楽 ( [音]->おん[楽]->がく ) [ongaku] - music (noun, hobby, n5)
+一人 ( [一]->ひと[人]->り ) [hitori] - one person / alone (noun, number, n5)
+過ごす ( [過]->す-ごす ) [sugosu] - to spend time (verb, godan-verb, transitive, n5)
+歩く ( [歩]->ある-く ) [aruku] - to walk (verb, godan-verb, intransitive, n5)
+水 ( [水]->みず ) [mizu] - water (noun, drink, n5)
+飲む ( [飲]->の-む ) [nomu] - to drink (verb, godan-verb, transitive, n5)
+冷蔵庫 ( [冷]->れい[蔵]->ぞう[庫]->こ ) [reizouko] - refrigerator (noun, furniture, n5)
+入る ( [入]->はい-る ) [hairu] - to enter / be inside (verb, godan-verb, intransitive, n5)
+座る ( [座]->すわ-る ) [suwaru] - to sit (verb, godan-verb, intransitive, n5)
+忘れる ( [忘]->わす-れる ) [wasureru] - to forget (verb, ichidan-verb, transitive, n5)
+明日 ( [明]->あし[日]->た ) [ashita] - tomorrow (noun, time, n5)
+忙しい ( [忙]->いそが-しい ) [isogashii] - busy (i-adjective, n5)
+東京 ( [東]->とう[京]->きょう ) [toukyou] - Tokyo (noun, place, n5)
+前 ( [前]->まえ ) [mae] - before / front (noun, time, direction, n5)
+会う ( [会]->あ-う ) [au] - to meet (verb, godan-verb, intransitive, n5)
+静か ( [静]->しず-か ) [shizuka] - quiet (na-adjective, n5)
+心配 ( [心]->しん[配]->ぱい ) [shinpai] - worry / concern (noun, suru-verb, emotion, n5)
+彼 ( [彼]->かれ ) [kare] - he / boyfriend (pronoun, n5)
+大丈夫 ( [大]->だい[丈]->じょう[夫]->ぶ ) [daijoubu] - fine / okay (na-adjective, n5)
+住む ( [住]->す-む ) [sumu] - to live / reside (verb, godan-verb, intransitive, n5)
+母 ( [母]->はは ) [haha] - mother (own) (noun, family, n5)
+言う ( [言]->い-う ) [iu] - to say (verb, godan-verb, transitive, n5)
+子供 ( [子]->こ[供]->ども ) [kodomo] - child (noun, family, n5)
+先生 ( [先]->せん[生]->せい ) [sensei] - teacher (noun, school, work, n5)
+周り ( [周]->まわ-り ) [mawari] - surroundings (noun, direction, n5)
+兄 ( [兄]->あに ) [ani] - older brother (noun, family, n5)
+他人 ( [他]->た[人]->にん ) [tanin] - other people (noun, n4)
+物 ( [物]->もの ) [mono] - thing / object (noun, n5)
+教える ( [教]->おし-える ) [oshieru] - to teach (verb, ichidan-verb, transitive, n5)
+上手 ( [上]->じょう[手]->ず ) [jouzu] - skilled / good at (na-adjective, n5)
+彼女 ( [彼]->かの[女]->じょ ) [kanojo] - she / girlfriend (pronoun, n5)
+部屋 ( [部]->へ[屋]->や ) [heya] - room (noun, house, n5)
+一度 ( [一]->いち[度]->ど ) [ichido] - once / one time (adverb, n5)
+友達 ( [友]->とも[達]->だち ) [tomodachi] - friend (noun, n5)
+隣 ( [隣]->となり ) [tonari] - next door / neighbor (noun, place, n5)
+奥さん ( [奥]->おく-さん ) [okusan] - wife (someone else's) (noun, family, n5)
+話 ( [話]->はなし ) [hanashi] - talk / story (noun, n5)
+危険 ( [危]->き[険]->けん ) [kiken] - danger (na-adjective, n5)
+並ぶ ( [並]->なら-ぶ ) [narabu] - to stand in line (verb, godan-verb, intransitive, n5)
+立つ ( [立]->た-つ ) [tatsu] - to stand (verb, godan-verb, intransitive, n5)
+話す ( [話]->はな-す ) [hanasu] - to speak (verb, godan-verb, transitive, n5)
+集まる ( [集]->あつ-まる ) [atsumaru] - to gather (verb, godan-verb, intransitive, n5)
+分かる ( [分]->わか-る ) [wakaru] - to understand (verb, godan-verb, intransitive, n5)
+学校 ( [学]->がっ[校]->こう ) [gakkou] - school (noun, school, place, n5)
+学生 ( [学]->がく[生]->せい ) [gakusei] - student (noun, school, n5)
+辞書 ( [辞]->じ[書]->しょ ) [jisho] - dictionary (noun, school, n5)
+使う ( [使]->つか-う ) [tsukau] - to use (verb, godan-verb, transitive, n5)
+地図 ( [地]->ち[図]->ず ) [chizu] - map (noun, n5)
+買い物 ( [買]->かい[物]->もの ) [kaimono] - shopping (noun, suru-verb, shopping, n5)
+犬 ( [犬]->いぬ ) [inu] - dog (noun, animal, n5)
+猫 ( [猫]->ねこ ) [neko] - cat (noun, animal, n5)
+来月 ( [来]->らい[月]->げつ ) [raigetsu] - next month (noun, time, n5)
+旅行 ( [旅]->りょ[行]->こう ) [ryokou] - trip / travel (noun, suru-verb, n5)
+中国語 ( [中]->ちゅう[国]->ご[語]->ご ) [chuugokugo] - Chinese language (noun, school, n5)
+勉強 ( [勉]->べん[強]->きょう ) [benkyou] - study (noun, suru-verb, school, n5)
+来週 ( [来]->らい[週]->しゅう ) [raishuu] - next week (noun, time, n5)
+英語 ( [英]->えい[語]->ご ) [eigo] - English language (noun, school, n5)
+生年月日 ( [生]->せい[年]->ねん[月]->がっ[日]->ぴ ) [seinengappi] - date of birth (noun, daily-life, n5)
+車 ( [車]->くるま ) [kuruma] - car (noun, transportation, n5)
+郵便局 ( [郵]->ゆう[便]->びん[局]->きょく ) [yuubinkyoku] - post office (noun, place, n5)
+通る ( [通]->とお-る ) [tooru] - to pass through (verb, godan-verb, intransitive, n5)
+---
+SetId: set-jtest-ex-02
+Title: JTEST Grammar Practice Set 2 (Q51-100)
+Category: grammar
+PackTitle: JTEST_EX
+Tags: n5, grammar, jtest, beginner, practice
+ContextPassages: 日常[にちじょう]生活[せいかつ]での質問[しつもん]や回答[かいとう]に関する[にかんする]練習[れんしゅう]問題[もんだい]です。 | 正しい[ただしい]助詞[じょし]や活用[かつよう]を選びましょう[えらびましょう]。
+ContextEnglish: These are practice questions regarding daily life questions and answers. | Let's choose the correct particles and conjugations.
+
+1. どれ _______ あなたのかぎですか？
+   1) は - topic marker
+   2) や - and
+   3) を - object marker
+   4) が - subject marker (interrogative subject)
+   English: Which one is your key ( [鍵]->かぎ )?
+   Reading: どれがあなたのかぎですか？
+   ContextIdx: 0
+
+2. なつやすみはなんにち _______ はじまりますか？
+   1) だけ - only
+   2) では - in / at
+   3) から - from
+   4) まで - until
+   English: From what date does summer vacation ( [夏]->なつ[休]->やすみ ) start ( [始]->はじ )?
+   Reading: なつやすみはなんにちからはじまりますか？
+   ContextIdx: 0
+
+3. しんぶんをさがしましたが、どこ _______ ありません。
+   1) にも - nowhere / anywhere (with negative)
+   2) でも - anywhere
+   3) までも - even up to
+   4) へも - to nowhere
+   English: I searched for the newspaper ( [新]->しん[聞]->ぶん ), but it wasn't anywhere.
+   Reading: しんぶんをさがしましたが、どこにもありません。
+   ContextIdx: 0
+
+4. パーティーはなんじにはじまる _______ しっていますか？
+   1) か - embedded question marker
+   2) で - at
+   3) を - object marker
+   4) が - subject marker
+   English: Do you know what time ( [何]->なん[時]->じ ) the party starts?
+   Reading: ぱーてぃーはなんじにはじまるかしっていますか？
+   ContextIdx: 0
+
+5. おかねは1000円 _______ あります。
+   1) ぐらい - about / approximately
+   2) ごろ - around (time point)
+   3) しか - only (with negative)
+   4) にも - even in
+   English: I have about 1000 yen ( [円]->えん ).
+   Reading: おかねはせんえんぐらいあります。
+   ContextIdx: 0
+
+6. かさはそこ _______ おいてください。
+   1) と - with
+   2) が - subject
+   3) を - object
+   4) に - at / on (target of location)
+   English: Please put ( [置]->お ) the umbrella ( [傘]->かさ ) there.
+   Reading: かさはそこにおいてください。
+   ContextIdx: 0
+
+7. わたしはあまり _______ ありませんでした。
+   1) げんきでは - well / healthy ([元]->げん[気]->き)
+   2) げんきには - (incorrect)
+   3) げんきな - (pre-noun form)
+   4) げんきだ - (plain form)
+   English: I was not very well ( [元]->げん[気]->き ).
+   Reading: わたしはあまりげんきではありませんでした。
+   ContextIdx: 0
+
+8. わたしのへやは _______ ないです。
+   1) ひろいく - (incorrect)
+   2) ひろいでは - (incorrect)
+   3) ひろく - spacious (adverbial form) ([広]->ひろ)
+   4) ひろい - spacious ([広]->ひろ)
+   English: My room ( [部]->へ[屋]->や ) is not spacious ( [広]->ひろ ).
+   Reading: わたしのへやはひろくないです。
+   ContextIdx: 0
+
+9. あの子はうたを _______ うたいます。
+   1) じょうず - skillful ([上]->じょう[手]->ず)
+   2) じょううな - (typo variant)
+   3) じょうずに - skillfully (adverbial) ([上]->じょう[手]->ず)
+   4) じょうずで - skillful (te-form)
+   English: That child ( [子]->こ ) sings songs ( [歌]->うた ) skillfully ( [上]->じょう[手]->ず ).
+   Reading: あのおのこはうたをじょうずにうたいます。
+   ContextIdx: 0
+
+10. 字をもうすこし _______ かきましょう。
+    1) 大きい - big ([大]->おお)
+    2) 大きく - big (adverbial form) ([大]->おお)
+    3) 大きいに - (incorrect)
+    4) 大きくに - (incorrect)
+    English: Let's write ( [書]->か ) characters ( [字]->じ ) a little bigger ( [大]->おお ).
+    Reading: じをもうすこしおおきくかきましょう。
+    ContextIdx: 0
+
+11. わたしはもっと _______ たいです。
+    1) はなし - speak (stem form) ([話]->はなし)
+    2) はなす - to speak
+    3) はなした - spoke
+    4) はなします - will speak
+    English: I want to speak ( [話]->はなし ) more.
+    Reading: わたしはもっとはなしたいです。
+    ContextIdx: 0
+
+12. ここで _______ ください。
+    1) あそばない - do not play ([遊]->あそ)
+    2) あそばなく - (incorrect stem)
+    3) あそばなくて - (te-form negative)
+    4) あそばないで - please do not play
+    English: Please do not play ( [遊]->あそ ) here.
+    Reading: ここであそばないでください。
+    ContextIdx: 0
+
+13. わたしはきのう _______ まえに、てがみをかきました。
+    1) ねる - to sleep (plain non-past) ([寝]->ね)
+    2) ねた - slept
+    3) ねるの - (incorrect connection)
+    4) ねたの - (incorrect connection)
+    English: Yesterday ( [昨]->き[日]->のう ), before going to sleep ( [寝]->ね ), I wrote a letter.
+    Reading: わたしはきのうねるまえに、てがみをかきました。
+    ContextIdx: 0
+
+14. きのう本を _______ に行きました。
+    1) かって - buying
+    2) かう - to buy
+    3) かわ - (negative stem)
+    4) かい - buy (stem form for purpose) ([買]->か)
+    English: Yesterday I went ( [行]->い ) to buy ( [買]->か ) a book ( [本]->ほん ).
+    Reading: きのうほんをかいにいきました。
+    ContextIdx: 0
+
+15. わたしはおんがくを _______ ながらべんきょうします。
+    1) きく - to listen ([聞]->き)
+    2) きき - listen (stem form for nagara) ([聞]->き)
+    3) きいた - listened
+    4) きいて - listening
+    English: I study while listening ( [聞]->き ) to music ( [音]->おん[楽]->がく ).
+    Reading: わたしはおんがくをききながらべんきょうします。
+    ContextIdx: 0
+
+16. あした山田さんが _______ 人はだれですか？
+    1) あって - meeting
+    2) あいます - will meet
+    3) あった - met
+    4) あう - person Yamada will meet (relative clause plain) ([会]->あ)
+    English: Who is the person ( [人]->ひと ) Yamada-san will meet ( [会]->あ ) tomorrow?
+    Reading: あしたやまださんがあうひとはだれですか？
+    ContextIdx: 0
+
+17. いますぐビールをのみますか？いいえ、おふろに _______ からのみます。
+    1) はいる - to enter
+    2) はいり - enter (stem)
+    3) はいります - will enter
+    4) はいって - after entering (te-form + kara) ([入]->はい)
+    English: "Will you drink beer right now?" "No, I'll drink after taking a bath ( [風呂]->ふろ )."
+    Reading: いますぐびーるをのみますか？いいえ、おふろにはいってからのみます。
+    ContextIdx: 0
+
+18. かべにポスターがはって _______ 。
+    1) います - action in progress
+    2) なります - becomes
+    3) あります - resulting state marker (te-form + arimasu)
+    4) します - does
+    English: A poster is pasted ( [貼]->は ) on the wall ( [壁]->かべ ).
+    Reading: かべにぽすたーがはってあります。
+    ContextIdx: 0
+
+19. このえはわたしがきのうこうえんで _______ えです。
+    1) かく - draw
+    2) かかない - not draw
+    3) かいた - drew (past plain modifier) ([描]->か)
+    4) かいて - drawing
+    English: This picture ( [絵]->え ) is a picture I drew at the park ( [公]->こう[園]->えん ) yesterday.
+    Reading: このえはわたしがきのうこうえんでかいたえです。
+    ContextIdx: 0
+
+20. こどもはゆうべばんごはんを _______ ねました。
+    1) たべなくた - (incorrect)
+    2) たべないで - without eating ([食]->たべ)
+    3) たべない - plain negative
+    4) たべなく - negative stem
+    English: The child went to sleep without eating ( [食]->たべ ) dinner ( [晩]->ばん[御]->ご[飯]->はん ) last night.
+    Reading: こどもはゆうべばんごはんをたべないでねました。
+    ContextIdx: 0
+
+21. しんぶんはあまり _______ 。
+    1) よみます - read
+    2) よみません - do not read (negative with amari) ([読]->よ)
+    3) よんでください - please read
+    4) よみましょう - let's read
+    English: I do not read ( [読]->よ ) the newspaper very much.
+    Reading: しんぶんはあまりよみません。
+    ContextIdx: 0
+
+22. りょこうは _______ でしたか？
+    1) どう - how
+    2) いつ - when
+    3) なぜ - why
+    4) だれ - who
+    English: How was your trip ( [旅]->りょ[行]->こう )?
+    Reading: りょこうはどうでしたか？
+    ContextIdx: 0
+
+23. – _______ しごとをやすみましたか？ – びょうきだったからです。
+    1) どこの - where
+    2) どなたが - who
+    3) どうして - why
+    4) どのぐらい - how much / how long
+    English: "Why did you take off work ( [仕]->し[事]->ごと )?" "Because I was sick ( [病]->びょう[気]->き )."
+    Reading: どうしてしごとをやすみましたか？びょうきだったからです。
+    ContextIdx: 0
+
+24. – それは _______ の国のきってですか？ – 日本のです。
+    1) なに - what
+    2) どれ - which
+    3) いつ - when
+    4) どこ - which country / where ([国]->くに)
+    English: "Where is that stamp ( [切]->きっ[手]->て ) from?" "It's from Japan ( [日]->に[本]->ほん )."
+    Reading: それはどこのくにのきってですか？にほんのです。
+    ContextIdx: 0
+
+25. – パーティーではどんな _______ をのみましたか？ – ジュースやコーラをのみました。
+    1) ひと - person
+    2) こと - matter / abstract thing
+    3) もの - concrete thing / items
+    4) とき - time
+    English: "What kind of things/drinks did you drink at the party?" "I drank juice and cola."
+    Reading: ぱーてぃーではどんなものをのみましたか？じゅーすやこーらをのみました。
+    ContextIdx: 0
+
+26. びょうきできょういちにち、_______ たべませんでした。
+    1) なにに - to what
+    2) なにか - something
+    3) なんで - why / by what
+    4) なにも - nothing (with negative)
+    English: Because I was sick ( [病]->びょう[気]->き ), I ate nothing all day today ( [一]->いち[日]->にち ).
+    Reading: びょうきできょういちにち、なにもたべませんでした。
+    ContextIdx: 0
+
+27. _______ ください。
+    1) りんごを３つを - (double particle error)
+    2) りんごが３つを - (incorrect particle mix)
+    3) りんごを３つ - three apples, please
+    4) りんごが３つ - (incorrect particle for request)
+    English: Please give me three apples.
+    Reading: りんごをみっつください。
+    ContextIdx: 0
+
+28. おにいさんはおげんきですか？
+    1) はい、おかげさまで。 - Yes, thanks to you (fine) ([元]->げん[気]->き)
+    2) いいえ、ありがとう。 - No, thank you.
+    3) あ、どういたしまして。 - Ah, you are welcome.
+    4) ええ、すみません。 - Yes, sorry.
+    English: "Is your older brother ( [兄]->にいさん ) well?" "Yes, fine, thank you."
+    Reading: おにいさんはおげんきですか？はい、おかげさまで。
+    ContextIdx: 0
+
+29. さとうさんはもう来ましたか？
+    1) いいえ、来ませんでした。 - No, didn't come
+    2) いいえ、まだです。 - No, not yet
+    3) はい、そうです。 - Yes, that's right
+    4) はい、もうです。 - (grammatically incorrect)
+    English: "Has Satou-san already come ( [来]->き )?" "No, not yet."
+    Reading: さとうさんはもうきましたか？いいえ、まだです。
+    ContextIdx: 0
+
+30. – えきからがっこうまではとおいですか？ – いいえ、_______ 。
+    1) あるいて3ぷんです - 3 minutes on foot ([歩]->ある)
+    2) 3ぷんあるきます。 - walk 3 minutes
+    3) あるいて3ぷんかかります - takes 3 mins walking
+    4) 3分あるいています - walking 3 mins
+    English: "Is it far from the station ( [駅]->えき ) to the school?" "No, it's 3 minutes on foot ( [歩]->ある )."
+    Reading: えきからがっこうまではとおいですか？いいえ、あるいてさんぷんです。
+    ContextIdx: 0
+
+31. パ－ティーはいつ _______ いいですか。
+    1) が - subject marker (interrogative question preference)
+    2) に - at
+    3) を - object
+    4) と - with
+    English: When would be good for the party?
+    Reading: ぱーてぃーはいつがいいですか。
+    ContextIdx: 0
+
+32. 目の中にゴミ _______ 入って、いたいです。
+    1) を - object
+    2) が - subject marker
+    3) に - at / into
+    4) で - with / by
+    English: Trash got into my eye ( [目]->め ), and it hurts.
+    Reading: めのなかにごみがはいって、いたいです。
+    ContextIdx: 0
+
+33. あの店は何 _______ いう名前ですか。
+    1) が - subject
+    2) に - to
+    3) の - of
+    4) と - quote marker (called / named)
+    English: What is that store ( [店]->みせ ) called ( [名]->な[前]->まえ )?
+    Reading: あのみせはなんというなまえですか。
+    ContextIdx: 0
+
+34. 30分 _______ まちましたが、バスは来ませんでした。
+    1) ごろ - around (time point)
+    2) など - etc.
+    3) しか - only
+    4) ぐらい - about (duration)
+    English: I waited for about 30 minutes ( [分]->ふん ), but the bus didn't come.
+    Reading: さんじゅっぷんぐらいまちましたが、ばすはきませんでした。
+    ContextIdx: 0
+
+35. 1日 _______ 3かいくすりをのみます。
+    1) が - subject
+    2) に - per / in (frequency per time period)
+    3) へ - towards
+    4) を - object
+    English: I take medicine ( [薬]->くすり ) 3 times a day ( [日]->にち ).
+    Reading: いちにちにさんかいくすりをのんみます。
+    ContextIdx: 0
+
+36. 大学 _______ 電車で30分かかります。
+    1) を - object
+    2) が - subject
+    3) では - at
+    4) まで - to / until (destination)
+    English: It takes 30 minutes by train ( [電]->でん[車]->しゃ ) to the university ( [大]->だい[学]->がく ).
+    Reading: だいがくまででんしゃでさんじゅっぷんかかります。
+    ContextIdx: 0
+
+37. このしんぶんは _______ からもういりません。
+    1) おとといの - day before yesterday's
+    2) おとといのだ - it's from day before yesterday ([一]->おと[昨]->とい[日]->の)
+    3) おとといので - (incorrect)
+    4) おとといだった - was day before yesterday
+    English: This newspaper is from the day before yesterday, so I don't need it anymore.
+    Reading: このしんぶんはおとといのだからもういりません。
+    ContextIdx: 0
+
+38. このことばを _______ ください。
+    1) おぼえて - please memorize ([覚]->おぼ)
+    2) おぼりて - (incorrect conjugation)
+    3) おぼって - (incorrect conjugation)
+    4) おぼえって - (incorrect conjugation)
+    English: Please memorize ( [覚]->おぼ ) this word ( [言]->こと[葉]->ば ).
+    Reading: このことばをおぼえてください。
+    ContextIdx: 0
+
+39. 公園の花はとても _______ 。
+    1) きれいだった - was beautiful (na-adj past plain)
+    2) きれかった - (incorrect na-adj past)
+    3) きれくなかった - (incorrect na-adj past)
+    4) きれくないだった - (incorrect)
+    English: The flowers ( [花]->はな ) in the park ( [公]->こう[園]->えん ) were very beautiful.
+    Reading: こうえんのはなはとてもきれいだった。
+    ContextIdx: 0
+
+40. まいあさうちでせんたくを _______ から、学校に行きます。
+    1) する - to do
+    2) して - doing (te-form + kara = after doing) ([洗]->せん[濯]->たく)
+    3) します - will do
+    4) した - did
+    English: Every morning ( [毎]->まい[朝]->あさ ), after doing laundry ( [洗]->せん[濯]->たく ) at home, I go to school.
+    Reading: まいあさうちでせんたくをしてから、がっこうにいきます。
+    ContextIdx: 0
+
+41. パンを _______ きります。
+    1) うす - (stem)
+    2) うすい - thin ([薄]->うす)
+    3) うすいで - (incorrect)
+    4) うすく - thinly (adverbial form) ([薄]->うす)
+    English: Slice the bread thinly ( [薄]->うす ).
+    Reading: ぱんをうすくきります。
+    ContextIdx: 0
+
+42. A「もうこの本を読みましたか。」B「いいえ、 _______ 。」
+    1) まだです - Not yet
+    2) まだ読みました - (contradictory)
+    3) もうです - (incorrect)
+    4) もう読みませんでした - (incorrect)
+    English: A: "Have you read this book already?" B: "No, not yet."
+    Reading: もうこのほんをよみましたか。いいえ、まだです。
+    ContextIdx: 0
+
+43. ひるごはんの時間をもっと _______ しませんか。
+    1) おそく - late (adverbial) ([遅]->おそ)
+    2) おそい - late
+    3) おそいに - (incorrect)
+    4) おそくて - late (te-form)
+    English: Shall we make the lunch time a little later ( [遅]->おそ )?
+    Reading: ひるごはんのじかんをもっとおそくしませんか。
+    ContextIdx: 0
+
+44. そのこうさてん _______ 左にまがってください。
+    1) が - subject
+    2) を - space/path of motion particle
+    3) に - at
+    4) と - with
+    English: Please turn left ( [左]->ひだり ) at that intersection ( [交]->こう[差]->さ[点]->てん ).
+    Reading: そのこうさてんをひだりにまがってください。
+    ContextIdx: 0
+
+45. パーティーで、だれ _______ ギターをひきましたか。
+    1) を - object
+    2) も - also
+    3) は - topic
+    4) が - subject (who played)
+    English: Who played the guitar at the party?
+    Reading: ぱーてぃーで、だれがぎたーをひきましたか。
+    ContextIdx: 0
+
+46. わたしがきのう _______ カメラはどこにありますか。
+    1) 買って - buying
+    2) 買う - buy
+    3) 買った - bought (past plain relative clause) ([買]->か)
+    4) 買わない - don't buy
+    English: Where is the camera I bought ( [買]->か ) yesterday?
+    Reading: わたしがきのうかったかめらはどこにありますか。
+    ContextIdx: 0
+
+47. あたらしいようふく _______ ほしいです。
+    1) に - to / at
+    2) が - object of desire particle
+    3) と - with
+    4) の - of
+    English: I want new Western clothes ( [洋]->よう[服]->ふく ).
+    Reading: あたらしいようふくがほしいです。
+    ContextIdx: 0
+
+48. 時間がありません。 _______ ください。
+    1) はやくして - hurry up / make it quick ([早]->はや)
+    2) はやくなって - become fast
+    3) はやいにして - (incorrect)
+    4) はやいになって - (incorrect)
+    English: There is no time ( [時]->じ[間]->かん ). Please hurry up ( [早]->はや ).
+    Reading: じかんがありません。はやくしてください。
+    ContextIdx: 0
+
+49. 駅までいっしょに _______ ましょう。
+    1) かえ - return (stem)
+    2) かえり - return (masu stem + mashou) ([帰]->かえ)
+    3) かえる - to return
+    4) かえって - returning
+    English: Let's go home ( [帰]->かえ ) together to the station.
+    Reading: えきまでいっしょにかえりましょう。
+    ContextIdx: 0
+
+50. このテストは、じしょを _______ ください。
+    1) つかうないで - (incorrect)
+    2) つかわないで - please do not use ([使]->つか)
+    3) つかいないで - (incorrect)
+    4) つかないで - (incorrect)
+    English: Please do not use ( [使]->つか ) dictionaries for this test.
+    Reading: このてすとは、じしょをつかわないでください。
+    ContextIdx: 0
+
+Answer Key:
+1. 4, 2. 3, 3. 1, 4. 1, 5. 1, 6. 4, 7. 1, 8. 3, 9. 3, 10. 2, 11. 1, 12. 4, 13. 1, 14. 4, 15. 2, 16. 4, 17. 4, 18. 3, 19. 3, 20. 2, 21. 2, 22. 1, 23. 3, 24. 4, 25. 3, 26. 4, 27. 3, 28. 1, 29. 2, 30. 1, 31. 1, 32. 2, 33. 4, 34. 4, 35. 2, 36. 4, 37. 2, 38. 1, 39. 1, 40. 2, 41. 4, 42. 1, 43. 1, 44. 2, 45. 4, 46. 3, 47. 2, 48. 1, 49. 2, 50. 2
+
+Vocab:
+鍵 ( [鍵]->かぎ ) [kagi] - key (noun, house, n5)
+夏休み ( [夏]->なつ[休]->やすみ ) [natsuyasumi] - summer vacation (noun, time, n5)
+始まる ( [始]->はじ-まる ) [hajimaru] - to begin (verb, godan-verb, intransitive, n5)
+探す ( [探]->さが-す ) [sagasu] - to search / look for (verb, godan-verb, transitive, n5)
+何時 ( [何]->なん[時]->じ ) [nanji] - what time (noun, time, n5)
+知る ( [知]->し-る ) [shiru] - to know (verb, godan-verb, transitive, n5)
+お金 ( [金]->かね ) [okane] - money (noun, n5)
+円 ( [円]->えん ) [en] - yen (noun, counter, n5)
+傘 ( [傘]->かさ ) [kasa] - umbrella (noun, daily-life, n5)
+置く ( [置]->お-く ) [oku] - to put / place (verb, godan-verb, transitive, n5)
+元気 ( [元]->げん[気]->き ) [genki] - healthy / energetic (na-adjective, n5)
+広い ( [広]->ひろ-い ) [hiroi] - spacious (i-adjective, n5)
+歌 ( [歌]->うた ) [uta] - song (noun, n5)
+歌う ( [歌]->うた-う ) [utau] - to sing (verb, godan-verb, transitive, n5)
+字 ( [字]->じ ) [ji] - character / letter (noun, school, n5)
+大きい ( [大]->おお-きい ) [ookii] - big (i-adjective, n5)
+昨日 ( [昨]->き[日]->のう ) [kinou] - yesterday (noun, time, n5)
+買う ( [買]->か-う ) [kau] - to buy (verb, godan-verb, transitive, n5)
+風呂 ( [風]->ふ[呂]->ろ ) [furo] - bath (noun, house, n5)
+壁 ( [壁]->かべ ) [kabe] - wall (noun, house, n5)
+貼る ( [貼]->は-る ) [haru] - to paste / stick (verb, godan-verb, transitive, n5)
+絵 ( [絵]->え ) [e] - picture / drawing (noun, hobby, n5)
+公園 ( [公]->こう[園]->えん ) [kouen] - park (noun, place, n5)
+描く ( [描]->か-く ) [kaku] - to draw / paint (verb, godan-verb, transitive, n5)
+晩ご飯 ( [晩]->ばん[御]->ご[飯]->はん ) [bangohan] - dinner (noun, food, n5)
+仕事 ( [仕]->し[事]->ごと ) [shigoto] - work / job (noun, work, n5)
+病気 ( [病]->びょう[気]->き ) [byouki] - illness / sick (noun, n5)
+切手 ( [切]->きっ[手]->て ) [kitte] - stamp (noun, daily-life, n5)
+日本 ( [日]->に[本]->ほん ) [nihon] - Japan (noun, place, n5)
+一日 ( [一]->いち[日]->にち ) [ichinichi] - one day (noun, calendar, time, n5)
+駅 ( [駅]->えき ) [eki] - station (noun, place, transportation, n5)
+遠い ( [遠]->とお-い ) [tooi] - far / distant (i-adjective, n5)
+目 ( [目]->め ) [me] - eye (noun, body-part, n5)
+痛い ( [痛]->いた-い ) [itai] - painful (i-adjective, n5)
+店 ( [店]->みせ ) [mise] - store / shop (noun, place, shopping, n5)
+名前 ( [名]->な[前]->まえ ) [namae] - name (noun, n5)
+分 ( [分]->ふん ) [fun] - minute (noun, counter, time, n5)
+薬 ( [薬]->くすり ) [kusuri] - medicine (noun, daily-life, n5)
+大学 ( [大]->だい[学]->がく ) [daigaku] - university (noun, school, place, n5)
+電車 ( [電]->でん[車]->しゃ ) [densha] - train (noun, transportation, n5)
+言葉 ( [言]->こと[葉]->ば ) [kotoba] - word / language (noun, school, n5)
+覚える ( [覚]->おぼ-える ) [oboeru] - to memorize (verb, ichidan-verb, transitive, n5)
+花 ( [花]->はな ) [hana] - flower (noun, nature, n5)
+洗濯 ( [洗]->せん[濯]->たく ) [sentaku] - laundry (noun, suru-verb, daily-life, n5)
+毎朝 ( [毎]->まい[朝]->あさ ) [maiasa] - every morning (noun, time, n5)
+薄い ( [薄]->うす-い ) [usui] - thin (i-adjective, n5)
+時間 ( [時]->じ[間]->かん ) [jikan] - time / hours (noun, time, n5)
+遅い ( [遅]->おそ-い ) [osoi] - late / slow (i-adjective, n5)
+交差点 ( [交]->こう[差]->さ[点]->てん ) [kousaten] - intersection (noun, place, transportation, n5)
+左 ( [左]->ひだり ) [hidari] - left (noun, direction, n5)
+曲がる ( [曲]->ま-がる ) [magaru] - to turn (verb, godan-verb, intransitive, n5)
+洋服 ( [洋]->よう[服]->ふく ) [youfuku] - Western clothes (noun, clothing, n5)
+早い ( [早]->はや-い ) [hayai] - early / fast (i-adjective, n5)
+---
+SetId: set-jtest-ex-03
+Title: JTEST Grammar Practice Set 3 (Q101-150)
+Category: grammar
+PackTitle: JTEST_EX
+Tags: n5, grammar, jtest, beginner, reading-passages
+ContextPassages: 短文[たんぶん]や文章[ぶんしょう]の穴埋め[あなうめ]問題[もんだい]の練習[れんしゅう]です。 | 文脈[ぶんみゃく]に合った[あった]適切[てきせつ]な言葉[ことば]を選びましょう[えらびましょう]。
+ContextEnglish: Practice with short sentences and text fill-in-the-blank questions. | Let's choose the appropriate words matching the context.
+
+1. これは何 _______ いう花ですか。
+   1) に - to
+   2) と - quote marker (called)
+   3) が - subject
+   4) で - in / by
+   English: What flower ( [花]->はな ) is this called?
+   Reading: これはおはなはなんというはなですか。
+   ContextIdx: 0
+
+2. えきまでタクシーで１０００円 _______ です。
+   1) ぐらい - about / around
+   2) など - etc.
+   3) ごろ - around (time point)
+   4) も - even / as much as
+   English: It is about 1000 yen ( [円]->えん ) to the station by taxi.
+   Reading: えきまでたくしーでせんえんぐらいです。
+   ContextIdx: 0
+
+3. 本田「はい、本田です。」 北山「あ、北山花子です。すみません、 _______ 。」
+   1) ひろこさんをおねがいします - Hiroko-san, please ([願]->ねが)
+   2) ひろこさんをください - please give me Hiroko-san
+   3) ひろこさんと話しますか - do you talk with Hiroko-san
+   4) ひろこさんと話しませんか - won't you talk with Hiroko-san
+   English: Honda: "Hello, Honda speaking." Kitayama: "Ah, Kitayama Hanako. Excuse me, may I speak to Hiroko-san, please?"
+   Reading: ほんだ「はい、ほんだです。」きたやま「あ、きたやまはなこです。すみません、ひろこさんをおねがいします。」
+   ContextIdx: 0
+
+4. 日本 _______ ラーメンはおいしいです。
+   1) に - in
+   2) の - possessive/origin marker
+   3) を - object
+   4) へ - towards
+   English: Ramen from Japan ( [日]->に[本]->ほん ) is delicious.
+   Reading: にほんのらーめんはおいしいです。
+   ContextIdx: 0
+
+5. 女１「さようなら。」女２「さようなら。また _______ 。」
+   1) おととり - day before yesterday
+   2) 今日 - today ([今]->きょう[日]->う)
+   3) 来週 - next week ([来]->らい[週]->しゅう)
+   4) 今月 - this month ([今]->こん[月]->げつ)
+   English: Woman 1: "Goodbye." Woman 2: "Goodbye. See you next week ( [来]->らい[週]->しゅう )."
+   Reading: おんな１「さようなら。」おんな２「さようなら。またらいしゅう。」
+   ContextIdx: 0
+
+6. きのうわたしはふじさんへ行きました。ふじさんは「１」いちばん高い山です。
+   1) 日本で - in Japan ([日]->に[本]->ほん)
+   2) 日本に - to Japan
+   3) 日本は - Japan as for
+   4) 日本へ - towards Japan
+   English: Fuji-san is the tallest mountain ( [山]->やま ) in Japan ( [日]->に[本]->ほん ).
+   Reading: ふじさんはにほんでいちばんたかいやまです。
+   ContextIdx: 0
+
+7. 人がたいへん「２」。
+   1) おおいでした - (incorrect past form)
+   2) おおかったです - were many ([多]->おお)
+   3) おおいです - are many
+   4) おおくないです - are not many
+   English: There were very many people ( [人]->ひと ).
+   Reading: ひとがたいへんおおかったです。
+   ContextIdx: 0
+
+8. てんきがよかったですから、とても「３」。
+   1) きれいです - is beautiful
+   2) きれかったです - (incorrect past form)
+   3) きれくでした - (incorrect past form)
+   4) きれいでした - was beautiful
+   English: Because the weather was good, it was very beautiful.
+   Reading: てんきがよかったですから、とてもきれいでした。
+   ContextIdx: 0
+
+9. 「４」、すこしさむかったです。
+   1) では - well then
+   2) じゃ - well so
+   3) それで - therefore
+   4) でも - however / but
+   English: However ( [但]->で[事]->も ), it was a little cold ( [寒]->さむ ).
+   Reading: でも、すこしさむかったです。
+   ContextIdx: 0
+
+10. 「５」、とてもたのしかったです。
+    1) ちょっとつかれましたが - I got a bit tired, but... ([疲]->つか)
+    2) ちょっとつまらかったですが - (incorrect form)
+    3) ちょっとつかいましだが - (incorrect)
+    4) ちょっとつめたかったですが - was a bit cold to touch, but...
+    English: I got a bit tired ( [疲]->つか ), but it was very enjoyable ( [楽]->たの ).
+    Reading: ちょっとつかれましたが、とてもたのしかったです。
+    ContextIdx: 0
+
+11. まいにちおふろに _______ からねます。
+    1) 入り - enter (stem)
+    2) 入る - to enter
+    3) 入った - entered
+    4) 入って - taking a bath (te-form + kara = after) ([入]->はい)
+    English: Every day after taking a bath ( [風呂]->ふろ ), I go to sleep.
+    Reading: まいにちおふろにはいってからねます。
+    ContextIdx: 0
+
+12. きのう友達に電話を _______ が、いませんでした。
+    1) します - do / call
+    2) しました - made a phone call ([電]->でん[話]->わ)
+    3) して - making a call
+    4) する - to make a call
+    English: Yesterday I called my friend ( [友]->とも[達]->だち ), but they were not there.
+    Reading: きのうともだちにでんわをしましたが、いませんでした。
+    ContextIdx: 0
+
+13. 土よう日はさんぽ _______ ギターをれんしゅう _______ します。
+    1) したり/したり - doing x and doing y ([散]->さん[歩]->ぽ / [練]->れん[習]->しゅう)
+    2) しったり/しったり - (incorrect)
+    3) して/して - doing x, doing y
+    4) しいて/しいて - (incorrect)
+    English: On Saturdays ( [土]->ど[曜]->よう[日]->び ), I do things like taking walks and practicing guitar.
+    Reading: どようびはさんぽしたりぎたーをれんしゅうしたりします。
+    ContextIdx: 0
+
+14. このみかんはぜんぶ _______ いくらですか。
+    1) を - object
+    2) の - of
+    3) で - total/extent marker (all together)
+    4) に - to
+    English: How much is all of these mandarins together?
+    Reading: このみかんはぜんぶでいくらですか。
+    ContextIdx: 0
+
+15. おさけを飲みます ________ ？
+    1) に - to
+    2) と - with
+    3) か - question particle
+    4) は - topic
+    English: Do you drink alcohol ( [酒]->さけ )?
+    Reading: おさけをのみますか？
+    ContextIdx: 0
+
+16. きょうは _______ ねます。
+    1) はやいに - (incorrect)
+    2) はやい - early
+    3) はやくない - not early
+    4) はやく - early (adverbial) ([早]->はや)
+    English: I will go to sleep early ( [早]->はや ) today.
+    Reading: きょうははやくねます。
+    ContextIdx: 0
+
+17. 本を _______ 前に、このかみに名前を書いてください。
+    1) かりて - borrowing
+    2) かりる - to borrow (plain non-past before mae) ([借]->か)
+    3) かりた - borrowed
+    4) かりない - do not borrow
+    English: Before borrowing ( [借]->か ) books, please write your name on this paper ( [紙]->かみ ).
+    Reading: ほんをかりるまえに、このかみになまえをかいてください。
+    ContextIdx: 0
+
+18. わたしは音楽を _______ ながらべんきょうをします。
+    1) 聞く - to listen
+    2) 聞か - (negative stem)
+    3) 聞き - listening (stem form for nagara) ([聞]->き)
+    4) 聞いて - listening
+    English: I study while listening ( [聞]->き ) to music ( [音]->おん[楽]->がく ).
+    Reading: わたしはおんがくをききながらべんきょうをします。
+    ContextIdx: 0
+
+19. わたしはまいばんこどもが _______ あとで本を読みます。
+    1) ねる - sleep
+    2) ねた - after slept (past plain + ato de) ([寝]->ね)
+    3) ねて - sleeping
+    4) ねます - sleeps
+    English: Every night, after my child goes to sleep ( [寝]->ね ), I read books.
+    Reading: わたしはまいばんこどもがねたあとでほんをよみます。
+    ContextIdx: 0
+
+20. さいふはどこ _______ ありませんでした。
+    1) にも - anywhere / nowhere (with negative)
+    2) へも - to nowhere
+    3) にか - (incorrect)
+    4) へか - (incorrect)
+    English: The wallet ( [財]->ざい[布]->ふ ) was nowhere to be found.
+    Reading: さいふはどこにもありませんでした。
+    ContextIdx: 0
+
+21. きのうはあたたかかったですが、きょうは _______ 。
+    1) あたたかかったです - was warm
+    2) あたたかいでした - (incorrect form)
+    3) あたたかくないです - is not warm ([暖]->あたた)
+    4) あたたかくではありません - (incorrect)
+    English: Yesterday was warm, but today is not warm ( [暖]->あたた ).
+    Reading: きのうはあたたかかったですが、きょうはあたたかくないです。
+    ContextIdx: 0
+
+22. 田中さん _______ 来る日は火よう日です。
+    1) を - object
+    2) へ - towards
+    3) で - at
+    4) の - possessive/subject marker in clause
+    English: The day Tanaka-san comes ( [来]->く ) is Tuesday ( [火]->か[曜]->よう[日]->び ).
+    Reading: たなかさんのくるひはかようびです。
+    ContextIdx: 0
+
+23. あした雨がふるかふらない _______ わかりません。
+    1) か - whether or not particle
+    2) が - subject
+    3) も - also
+    4) は - topic
+    English: I don't know whether or not it will rain ( [雨]->あめ ) tomorrow.
+    Reading: あしたあめがふるかふらないかわかりません。
+    ContextIdx: 0
+
+24. どこ _______ 来ましたか。
+    1) から - from
+    2) だけ - only
+    3) など - etc.
+    4) しか - only
+    English: Where did you come ( [来]->き ) from?
+    Reading: どこからきましたか。
+    ContextIdx: 0
+
+25. テニスをしました。それから、ピンポン _______ しました。
+    1) は - topic
+    2) が - subject
+    3) も - also
+    4) と - with
+    English: I played tennis. And then, I also played ping pong.
+    Reading: てにすをしました。それから、ぴんぽんもしました。
+    ContextIdx: 0
+
+26. わたしのケーキを _______ ください。
+    1) 食べなくて - (incorrect)
+    2) 食べないで - please do not eat ([食]->たべ)
+    3) 食べません - do not eat
+    4) 食べない - do not eat
+    English: Please do not eat ( [食]->たべ ) my cake.
+    Reading: わたしのけーきをたべないでください。
+    ContextIdx: 0
+
+27. 外国にりょこう _______ 行きます。
+    1) が - subject
+    2) を - object
+    3) の - of
+    4) に - target purpose marker
+    English: I will go on a trip ( [旅]->りょ[行]->こう ) to a foreign country ( [外]->がい[国]->こく ).
+    Reading: がいこくにりょこうにいきます。
+    ContextIdx: 0
+
+28. テストが _______ あとでパ－ティ－をします。
+    1) おわった - finished (past plain + ato de) ([終]->おわ)
+    2) おわって - finishing
+    3) おわる - to finish
+    4) おわります - finishes
+    English: We will have a party after the test finishes ( [終]->おわ ).
+    Reading: てすとがおわったあとでぱーてぃーをします。
+    ContextIdx: 0
+
+29. その大きいにもつはわたし _______ です。
+    1) が - subject
+    2) の - possessive (mine)
+    3) や - and
+    4) を - object
+    English: That large luggage ( [荷]->に[物]->もつ ) is mine.
+    Reading: そのおおきいにもつはわたしのです。
+    ContextIdx: 0
+
+30. コーヒーを _______ いかがですか。
+    1) いっぱいが - (incorrect)
+    2) いっぱい - one cup ([一]->いっ[杯]->ぱい)
+    3) いっぱいか - (incorrect)
+    4) いっぱいを - (incorrect)
+    English: How about a cup ( [一]->いっ[杯]->ぱい ) of coffee?
+    Reading: こーひーをいっぱいいかがですか。
+    ContextIdx: 0
+
+31. おとうとはいしゃ _______ なりました。
+    1) を - object
+    2) に - target of change particle (to become)
+    3) で - at
+    4) の - of
+    English: My younger brother ( [弟]->おとうと ) became a doctor ( [医]->い[者]->しゃ ).
+    Reading: おとうとはいしゃになりました。
+    ContextIdx: 0
+
+32. 雨がふっている _______ 、きょうは出かけません。
+    1) から - because / since
+    2) など - etc.
+    3) では - as for
+    4) まで - until
+    English: Because it is raining ( [雨]->あめ ), I will not go out today.
+    Reading: あめがふっているから、きょうはでかけません。
+    ContextIdx: 0
+
+33. きょうは、午後ゆうびんきょくへ行きますが、ぎんこう _______ 行きません。
+    1) へは - to (contrastive)
+    2) へも - to also
+    3) へと - to with
+    4) へに - (incorrect double particle)
+    English: Today in the afternoon ( [午]->ご[後]->ご ), I will go to the post office, but I won't go to the bank ( [銀]->ぎん[行]->こう ).
+    Reading: きょうは、ごごゆうびんきょくへいきますが、ぎんこうへはいきません。
+    ContextIdx: 0
+
+34. からだが _______ なりました。
+    1) じょうぶな - healthy
+    2) じょうぶに - healthy (adverbial with naru) ([丈]->じょう[夫]->ぶ)
+    3) じょうぶく - (incorrect)
+    4) じょうぶで - healthy (te-form)
+    English: My body ( [体]->からだ ) has become strong and healthy ( [丈]->じょう[夫]->ぶ ).
+    Reading: からだがじょうぶになりました。
+    ContextIdx: 0
+
+35. いもうとは17さい _______ 、学生です。
+    1) に - to
+    2) と - with
+    3) で - state/age context marker (is 17 and...)
+    4) な - na-adj
+    English: My younger sister ( [妹]->いもうと ) is 17 years old and is a student.
+    Reading: いもうとはじゅうななさいで、がくせいです。
+    ContextIdx: 0
+
+36. きょうのテストは _______ なかったです。
+    1) むずかし - (stem)
+    2) むずかしい - difficult
+    3) むずかしくて - (te-form)
+    4) むずかしく - difficult (adverbial negative form) ([難]->むずか)
+    English: Today's test was not difficult ( [難]->むずか ).
+    Reading: きょうのてすとはむずかしくなかったです。
+    ContextIdx: 0
+
+37. みんながたくさん飲みましたから、 _______ おさけはありません。
+    1) もう - no longer / anymore (with negative)
+    2) まだ - still
+    3) よく - well
+    4) とても - very
+    English: Since everyone drank a lot, there is no longer any alcohol ( [酒]->さけ ).
+    Reading: みんながたくさんのみましたから、もうおさけはありません。
+    ContextIdx: 0
+
+38. ドアが _______ 。
+    1) しめます - close (transitive)
+    2) しめています - closing (transitive)
+    3) しまっています - is closed (intransitive state) ([閉]->しま)
+    4) しまってあります - has been closed
+    English: The door is closed ( [閉]->しま ).
+    Reading: どあがしまっています。
+    ContextIdx: 0
+
+39. きょうはとてもあついです _______ 。
+    1) や - and
+    2) は - topic
+    3) と - with
+    4) ね - sentence-ending agreement particle
+    English: It is very hot today, isn't it?
+    Reading: きょうはとてもあついですね。
+    ContextIdx: 0
+
+40. A「そのへやに入らないでください。」B「 _______ 。」
+    1) すみませんが - Excuse me, but...
+    2) わかりました - Understood / I see
+    3) ごめんください - May I come in?
+    4) しつれいします - Excuse me (leaving/entering)
+    English: A: "Please do not enter that room." B: "Understood."
+    Reading: あそのへやにはいらないでください。わかりました。
+    ContextIdx: 0
+
+41. きょねんのふゆはゆきが１かい _______ ふりませんでした。
+    1) は - topic
+    2) に - in
+    3) しか - only (with negative = only once)
+    4) だけ - only
+    English: Last winter ( [冬]->ふゆ ), it only snowed ( [雪]->ゆき ) once.
+    Reading: きょねんのふゆはゆきがいっかいしかふりませんでした。
+    ContextIdx: 0
+
+42. ぎんこう _______ デパ－ト _______ 行きませんでした。
+    1) へも/へも - neither to ... nor to ...
+    2) もへ/もへ - (incorrect order)
+    3) へは/へは - to ... but ...
+    4) はへ/はへ - (incorrect order)
+    English: I went neither to the bank nor to the department store.
+    Reading: ぎんこうへもでぱーとへもいきませんでした。
+    ContextIdx: 0
+
+43. まいあさ会社に _______ まえにスポーツをします。
+    1) 行く - to go (plain before mae) ([行]->い)
+    2) 行きます - go
+    3) 行った - went
+    4) 行って - going
+    English: Every morning before going ( [行]->い ) to the company ( [会]->かい[社]->しゃ ), I play sports.
+    Reading: まいあさかいしゃにいくまえにすぽーつをします。
+    ContextIdx: 0
+
+44. りょうりはじぶん _______ つくりますか。
+    1) へ - towards
+    2) か - or
+    3) で - by oneself marker
+    4) を - object
+    English: Do you make meals by yourself ( [自]->じ[分]->ぶん )?
+    Reading: りょうりはじぶんにつくりますか。
+    ContextIdx: 0
+
+45. すみません、ちょっと _______ ください。
+    1) まち - wait (stem)
+    2) まって - please wait (te-form) ([待]->ま)
+    3) まった - waited
+    4) またない - do not wait
+    English: Excuse me, please wait a moment.
+    Reading: すみません、ちょっとまってください。
+    ContextIdx: 0
+
+46. びょうきに _______ 時は、びょういんへ行きます。
+    1) ならない - do not become
+    2) なるの - becoming
+    3) なって - becoming
+    4) なった - when sick (past plain + toki) ([病]->びょう[気]->き)
+    English: When I get sick ( [病]->びょう[気]->き ), I go to the hospital ( [病]->びょう[院]->いん ).
+    Reading: びょうきになったときは、びょういんへいきます。
+    ContextIdx: 0
+
+47. へやにはだれ _______ いません。
+    1) が - subject
+    2) か - someone
+    3) も - nobody (with negative)
+    4) は - topic
+    English: There is nobody in the room ( [部]->へ[屋]->や ).
+    Reading: へやにはだれもいません。
+    ContextIdx: 0
+
+48. わたしはなつにうみで _______ たいです。
+    1) およぐ - to swim
+    2) およい - (incorrect stem)
+    3) およが - (negative stem)
+    4) およぎ - swim (stem form for -tai) ([泳]->およ)
+    English: I want to swim ( [泳]->およ ) in the sea ( [海]->うみ ) in summer ( [夏]->なつ ).
+    Reading: わたしはなつにうみでおよぎたいです。
+    ContextIdx: 0
+
+49. 山田さんはテニスはしますが、ゴルフ _______ しません。
+    1) は - contrastive particle
+    2) と - with
+    3) が - subject
+    4) も - also
+    English: Yamada-san plays tennis, but he does not play golf.
+    Reading: やまださんはてにすはしますが、ごるふはしません。
+    ContextIdx: 0
+
+50. あしたのパーディーはたぶん _______ でしょう。
+    1) にぎやかに - lively (adverbial)
+    2) にぎやかだ - lively (plain)
+    3) にぎやかな - lively (pre-noun)
+    4) にぎやか - lively (na-adj stem before deshou) ([賑]->にぎ[力]->やか)
+    English: Tomorrow's party will probably be lively.
+    Reading: あしたのぱーてぃーはたぶんにぎやかでしょう。
+    ContextIdx: 0
+
+Answer Key:
+1. 2, 2. 1, 3. 1, 4. 2, 5. 3, 6. 1, 7. 2, 8. 4, 9. 4, 10. 1, 11. 4, 12. 2, 13. 1, 14. 3, 15. 3, 16. 4, 17. 2, 18. 3, 19. 2, 20. 1, 21. 3, 22. 4, 23. 1, 24. 1, 25. 3, 26. 2, 27. 4, 28. 1, 29. 2, 30. 2, 31. 2, 32. 1, 33. 1, 34. 2, 35. 3, 36. 4, 37. 1, 38. 3, 39. 4, 40. 2, 41. 3, 42. 1, 43. 1, 44. 3, 45. 2, 46. 4, 47. 3, 48. 4, 49. 1, 50. 4
+
+Vocab:
+お願い ( [願]->ねが-い ) [onegai] - request / please (noun, suru-verb, n5)
+来週 ( [来]->らい[週]->しゅう ) [raishuu] - next week (noun, time, n5)
+富士山 ( [富]->ふ[士]->じ[山]->さん ) [fujisan] - Mt. Fuji (noun, place, n5)
+山 ( [山]->やま ) [yama] - mountain (noun, nature, n5)
+多 ( [多]->おお-い ) [ooi] - many / numerous (i-adjective, n5)
+天気 ( [天]->てん[気]->き ) [tenki] - weather (noun, weather, n5)
+寒い ( [寒]->さむ-い ) [samui] - cold (weather) (i-adjective, weather, n5)
+疲れる ( [疲]->つか-れる ) [tsukareru] - to get tired (verb, ichidan-verb, intransitive, n5)
+楽しい ( [楽]->たの-しい ) [tanoshii] - enjoyable / fun (i-adjective, n5)
+電話 ( [電]->でん[話]->わ ) [denwa] - telephone call (noun, suru-verb, n5)
+土曜日 ( [土]->ど[曜]->よう[日]->び ) [doyoubi] - Saturday (noun, days-of-week, n5)
+散歩 ( [散]->さん[歩]->ぽ ) [sanpo] - walk / stroll (noun, suru-verb, n5)
+練習 ( [練]->れん[習]->しゅう ) [renshuu] - practice (noun, suru-verb, school, n5)
+全部 ( [全]->ぜん[部]->ぶ ) [zenbu] - all / whole (noun, n5)
+酒 ( [酒]->さけ ) [sake] - alcohol / sake (noun, drink, n5)
+紙 ( [紙]->かみ ) [kami] - paper (noun, n5)
+借りる ( [借]->か-りる ) [kariru] - to borrow (verb, ichidan-verb, transitive, n5)
+財布 ( [財]->ざい[布]->ふ ) [saifu] - wallet (noun, daily-life, n5)
+暖かい ( [暖]->あたた-かい ) [atatakai] - warm (i-adjective, weather, n5)
+火曜日 ( [火]->か[曜]->よう[日]->び ) [kayoubi] - Tuesday (noun, days-of-week, n5)
+雨 ( [雨]->あめ ) [ame] - rain (noun, weather, n5)
+外国 ( [外]->がい[国]->こく ) [gaikoku] - foreign country (noun, place, n5)
+終わる ( [終]->おわ-る ) [owaru] - to finish / end (verb, godan-verb, intransitive, n5)
+荷物 ( [荷]->に[物]->もつ ) [nimotsu] - luggage / baggage (noun, daily-life, n5)
+一杯 ( [一]->いっ[杯]->ぱい ) [ippai] - one cup / full (noun, counter, n5)
+弟 ( [弟]->おとうと ) [otouto] - younger brother (noun, family, n5)
+医者 ( [医]->い[者]->しゃ ) [isha] - medical doctor (noun, work, n5)
+午後 ( [午]->ご[後]->ご ) [gogo] - afternoon / p.m. (noun, time, n5)
+銀行 ( [銀]->ぎん[行]->こう ) [ginkou] - bank (noun, place, n5)
+体 ( [体]->からだ ) [karada] - body (noun, body-part, n5)
+丈夫 ( [丈]->じょう[夫]->ぶ ) [joubu] - strong / healthy (na-adjective, n5)
+妹 ( [妹]->いもうと ) [imouto] - younger sister (noun, family, n5)
+難しい ( [難]->むずか-しい ) [muzukashii] - difficult (i-adjective, n5)
+閉まる ( [閉]->しま-る ) [shimaru] - to close (verb, godan-verb, intransitive, n5)
+冬 ( [冬]->ふゆ ) [fuyu] - winter (noun, season, n5)
+雪 ( [雪]->ゆき ) [yuki] - snow (noun, weather, n5)
+会社 ( [会]->かい[社]->しゃ ) [kaisha] - company (noun, work, place, n5)
+自分 ( [自]->じ[分]->ぶん ) [jibun] - oneself (pronoun, n5)
+待つ ( [待]->ま-つ ) [matsu] - to wait (verb, godan-verb, transitive, n5)
+病院 ( [病]->びょう[院]->いん ) [byouin] - hospital (noun, place, n5)
+海 ( [海]->うみ ) [umi] - sea / ocean (noun, nature, place, n5)
+夏 ( [夏]->なつ ) [natsu] - summer (noun, season, n5)
+賑やか ( [賑]->にぎ-やか ) [nigiyaka] - lively / bustling (na-adjective, n5)
+---
+SetId: set-jtest-ex-04
+Title: JTEST Grammar Practice Set 4 (Q151-200)
+Category: grammar
+PackTitle: JTEST_EX
+Tags: n5, grammar, jtest, beginner, sentence-structure
+ContextPassages: 文[ぶん]の組み立て[くみたて]や文法[ぶんぽう]規則[きそく]の総合[そうごう]練習[れんしゅう]です。 | 正しい[ただしい]順番[じゅんばん]と言葉[ことば]を身につけましょう[みにつけましょう]。
+ContextEnglish: Comprehensive practice on sentence structure and grammar rules. | Let's master the correct word order and vocabulary.
+
+1. 月よう日 _______ 火よう日にテストがあります。
+   1) で - in / at
+   2) に - on
+   3) を - object
+   4) か - or (Monday or Tuesday)
+   English: There is a test on Monday ( [月]->げつ[曜]->よう[日]->び ) or Tuesday ( [火]->か[曜]->よう[日]->び ).
+   Reading: げつようびにかようびにてすとがあります。
+   ContextIdx: 0
+
+2. これは先週友だちのいえで _______ しゃしんです。
+   1) とる - take
+   2) とるの - taking
+   3) とった - took (past plain photo modifier) ([撮]->と)
+   4) とります - takes
+   English: This is a photo ( [写]->しゃ[真]->しん ) I took at my friend's house last week ( [先]->せん[週]->しゅう ).
+   Reading: これはおとといともだちのいえでとったしゃしんです。
+   ContextIdx: 0
+
+3. くだものが _______ です。
+   1) 食べて - eating
+   2) 食べる - to eat
+   3) 食べない - do not eat
+   4) 食べたい - want to eat ([食]->たべ)
+   English: I want to eat ( [食]->たべ ) fruit ( [果]->くだ[物]->もの ).
+   Reading: くだものがたべたいです。
+   ContextIdx: 0
+
+4. えき _______ むこうにびょういんがあります。
+   1) の - possessive/location marker
+   2) に - at
+   3) で - in
+   4) が - subject
+   English: There is a hospital on the other side of the station ( [駅]->えき ).
+   Reading: えきのむこうにびょういんがあります。
+   ContextIdx: 0
+
+5. 本を _______ とき、じしょをつかいます。
+   1) 読む - to read (plain form before toki) ([読]->よ)
+   2) 読み - read (stem)
+   3) 読んで - reading
+   4) 読んだ - read (past)
+   English: When I read ( [読]->よ ) books, I use a dictionary.
+   Reading: ほんをよむとき、じしょをつかいます。
+   ContextIdx: 0
+
+6. 魚がたくさん _______ います。
+   1) およぎて - (incorrect)
+   2) およぐて - (incorrect)
+   3) およいで - swimming (te-form of oyogu) ([泳]->およ)
+   4) およんで - (incorrect)
+   English: Many fish ( [魚]->さかな ) are swimming ( [泳]->およ ).
+   Reading: さかながたくさんおよいでいます。
+   ContextIdx: 0
+
+7. A「すみませんが、そのしおをとってください。」B「 _______ 。」
+   1) いいえ、どうも - No, thank you
+   2) はい、ください - Yes, please
+   3) はい、どうぞ - Yes, here you go
+   4) いいえ、とります - No, I'll take it
+   English: A: "Excuse me, please pass me the salt." B: "Yes, here you go."
+   Reading: すみませんが、そのしおをとってください。はい、どうぞ。
+   ContextIdx: 0
+
+8. いもうとが _______ とき、父は外国にいました。
+   1) 生まれ - (stem)
+   2) 生まれた - was born (past plain before toki) ([生]->うま)
+   3) 生まれて - being born
+   4) 生まれるの - being born
+   English: When my younger sister was born ( [生]->うま ), my father was abroad.
+   Reading: いもうとがうまれたとき、ちちはがいこくにいました。
+   ContextIdx: 0
+
+9. いっしょに _______ ましょう。
+   1) うたい - sing (masu stem + mashou) ([歌]->うた)
+   2) うたう - to sing
+   3) うたって - singing
+   4) うたいて - (incorrect)
+   English: Let's sing ( [歌]->うた ) together.
+   Reading: いっしょにうたいましょう。
+   ContextIdx: 0
+
+10. としょかんへ本をかえし _______ 行きます。
+    1) へ - towards
+    2) で - at
+    3) に - purpose of motion particle
+    4) を - object
+    English: I am going to the library ( [図]->と[書]->しょ[館]->かん ) to return books.
+    Reading: としょかんへほんをかえしにいきます。
+    ContextIdx: 0
+
+11. きのうは、6時間 _______ ねました。
+    1) まで - until
+    2) ごろ - around (time point)
+    3) じゅう - throughout
+    4) ぐらい - about / approximately (duration)
+    English: Yesterday, I slept for about 6 hours ( [時]->じ[間]->かん ).
+    Reading: きのうは、ろくじかんぐらいねました。
+    ContextIdx: 0
+
+12. お金が _______ 、こまっています。
+    1) なくて - do not have (te-form of nai) ([金]->かね)
+    2) ないで - without having
+    3) ないて - (incorrect)
+    4) なって - becoming
+    English: I don't have money ( [金]->かね ), so I am troubled.
+    Reading: おかねがなくて、こまっています。
+    ContextIdx: 0
+
+13. 日よう日にそうじ _______ せんたくをします。
+    1) を - object
+    2) や - and (non-exhaustive listing)
+    3) も - also
+    4) で - at
+    English: On Sundays ( [日]->にち[曜]->よう[日]->び ), I do things like cleaning and laundry.
+    Reading: にちようびにそうじやせんたくをします。
+    ContextIdx: 0
+
+14. あにの新しいカメラは _______ かるい。
+    1) 小さいくて - (incorrect)
+    2) 小さいで - (incorrect)
+    3) 小さいと - (incorrect)
+    4) 小さくて - small and... (te-form of i-adj) ([小]->ちい)
+    English: My older brother's new camera is small ( [小]->ちい ) and light.
+    Reading: あにのあたらしいかめらはちいさくてかるい。
+    ContextIdx: 0
+
+15. 来週 _______ 人は だれですか。
+    1) 休み - rest (stem)
+    2) 休む - person who will be absent (plain relative clause) ([休]->やす)
+    3) 休んで - resting
+    4) 休んだ - rested
+    English: Who is the person taking off ( [休]->やす ) next week ( [来]->らい[週]->しゅう )?
+    Reading: らいしゅうやすむひとはだれですか。
+    ContextIdx: 0
+
+16. わたしはかぞく _______ てがみをもらいました。
+    1) を - object
+    2) が - subject
+    3) や - and
+    4) から - from
+    English: I received a letter from my family ( [家]->か[族]->ぞく ).
+    Reading: わたしはかぞくからてがみをはもらいました。
+    ContextIdx: 0
+
+17. おかしはあまりすき _______ 。
+    1) ではありません - is not (like)
+    2) です - is
+    3) でした - was
+    4) くありません - (incorrect for na-adj)
+    English: I do not like sweets very much.
+    Reading: おかしはあまりすきではありません。
+    ContextIdx: 0
+
+18. じしょを _______ からかんじを書きます。
+    1) 見る - see
+    2) 見て - looking (te-form + kara = after looking) ([見]->み)
+    3) 見に - to see
+    4) 見ない - not look
+    English: After looking at the dictionary, I write kanji ( [漢]->かん[字]->じ ).
+    Reading: じしょをみてからかんじをかきます。
+    ContextIdx: 0
+
+19. まだゆうびんきょくは _______ 。早く行きましょう。
+    1) あきません - doesn't open
+    2) あきました - opened
+    3) あいています - is open (state) ([開]->あ)
+    4) あきます - will open
+    English: The post office is still open ( [開]->あ ). Let's go quickly!
+    Reading: まだゆうびんきょくはあいています。はやくいきましょう。
+    ContextIdx: 0
+
+20. このりょうりはあまり _______ よ。
+    1) からくないです - is not spicy ([辛]->から)
+    2) からいです - is spicy
+    3) からかったです - was spicy
+    4) からいではあまりませんでした - (incorrect)
+    English: This dish is not very spicy ( [辛]->から ).
+    Reading: このりょうりはあまりからくないですよ。
+    ContextIdx: 0
+
+21. 母は１か月 _______ １かいびょういんへ行きます。
+    1) も - also
+    2) と - with
+    3) に - per (frequency per period)
+    4) へ - to
+    English: My mother goes to the hospital once per month ( [月]->げつ ).
+    Reading: はははいっか月にいっかいびょういんへいきます。
+    ContextIdx: 0
+
+22. しゅくだいを _______ あとで、てがみを書きます。
+    1) した - after doing homework (past plain + ato de) ([宿]->しゅく[題]->だい)
+    2) する - to do
+    3) して - doing
+    4) しない - not do
+    English: After doing homework ( [宿]->しゅく[題]->だい ), I will write a letter.
+    Reading: しゅくだいをしたあとで、てがみをかきます。
+    ContextIdx: 0
+
+23. きのうは雨が _______ かぜが _______ しました。
+    1) ふって/ふいて - raining / blowing
+    2) ふりて/ふきて - (incorrect)
+    3) ふりたり/ふきたり - (incorrect)
+    4) ふったり/ふいたり - did things like rain and blow wind ([降]->ふ / [吹]->ふ)
+    English: Yesterday it did things like rain and blow wind.
+    Reading: きのうはあめがふったりかぜがふいたりしました。
+    ContextIdx: 0
+
+24. このりょうりはぎゅうにく _______ ぶたにくをつかいます。
+    1) が - subject
+    2) か - or (beef or pork)
+    3) も - also
+    4) で - with
+    English: This dish uses beef ( [牛]->ぎゅう[肉]->にく ) or pork ( [豚]->ぶた[肉]->にく ).
+    Reading: このりょうりはぎゅうにくかぶたにくをつかいます。
+    ContextIdx: 0
+
+25. きょねんのふゆは _______ 。
+    1) あたたかいです - is warm
+    2) あたたかいだった - (incorrect)
+    3) あたたかかったです - was warm ([暖]->あたた)
+    4) あたたかくでした - (incorrect)
+    English: Last year's winter was warm ( [暖]->あたた ).
+    Reading: きょねんのふゆはあたたかかったです。
+    ContextIdx: 0
+
+26. あしたはかぜが _______ でしょう。
+    1) つよかった - was strong
+    2) つよくて - strong and
+    3) つよい - strong (plain i-adj before deshou) ([強]->つよ)
+    4) つよく - strongly
+    English: Tomorrow the wind will probably be strong ( [強]->つよ ).
+    Reading: あしたはかぜがつよいでしょう。
+    ContextIdx: 0
+
+27. あしたは _______ から、あそびに行きませんか。
+    1) ひま - free (stem)
+    2) ひまな - free (pre-noun)
+    3) ひまの - free
+    4) ひまだ - free (plain state before kara) ([暇]->ひま)
+    English: Since tomorrow I am free ( [暇]->ひま ), why don't we go out to play?
+    Reading: あしたはひまだから、あそびにいきませんか。
+    ContextIdx: 0
+
+28. ここはとてもしずか _______ いいところです。
+    1) だ - plain is
+    2) で - te-form of na-adj (quiet and...) ([静]->しず)
+    3) に - adverbial
+    4) と - with
+    English: This is a very quiet ( [静]->しず ) and nice place.
+    Reading: ここはとてもしずかでいいところです。
+    ContextIdx: 0
+
+29. どんないろ _______ すきですか。
+    1) は - topic
+    2) が - subject (preference object marker)
+    3) で - at
+    4) に - to
+    English: What kind of color ( [色]->いろ ) do you like?
+    Reading: どんないろがすきですか。
+    ContextIdx: 0
+
+30. 会社へ _______ まえに、ぎんこうへ行きました。
+    1) 行きます - go
+    2) 行った - went
+    3) 行って - going
+    4) 行く - to go (plain before mae) ([行]->い)
+    English: Before going ( [行]->い ) to the company, I went to the bank.
+    Reading: かいしゃへいくまえに、ぎんこうへいきました。
+    ContextIdx: 0
+
+31. きょうはあまり _______ ありません。
+    1) いそがしく - busy (adverbial negative with arimasen) ([忙]->いそが)
+    2) いそがしいでは - (incorrect)
+    3) いそがしいく - (incorrect)
+    4) いそがしいは - (incorrect)
+    English: I am not very busy ( [忙]->いそが ) today.
+    Reading: きょうはあまりいそがしくありません。
+    ContextIdx: 0
+
+32. 山川さんと _______ ながら、ごはんを食べました。
+    1) 話す - to speak
+    2) 話し - speak (masu stem + nagara) ([話]->はなし)
+    3) 話して - speaking
+    4) 話した - spoke
+    English: I ate a meal while talking ( [話]->はなし ) with Yamakawa-san.
+    Reading: やまかわさんとはなしながら、ごはんをたべました。
+    ContextIdx: 0
+
+33. へやをもっと _______ してください。
+    1) あかるい - bright
+    2) あかるく - bright (adverbial with shite kudasai) ([明]->あかる)
+    3) あかるくて - bright (te-form)
+    4) あかるいに - (incorrect)
+    English: Please make the room brighter ( [明]->あかる ).
+    Reading: へやをもっとあかるくしてください。
+    ContextIdx: 0
+
+34. 先生のへやは _______ です。
+    1) その - that
+    2) どんな - what kind
+    3) こちら - this way / here ([此]->こ[方]->ちら)
+    4) どうして - why
+    English: The teacher's room is this way ( [此]->こ[方]->ちら ).
+    Reading: せんせいのへやはこちらです。
+    ContextIdx: 0
+
+35. このたまごは６こ _______ ３００円です。
+    1) と - and
+    2) に - to
+    3) で - total/extent marker (for 6 items)
+    4) を - object
+    English: These eggs ( [卵]->たまご ) are 300 yen for 6 pieces.
+    Reading: このたまごはろっこでさんびゃくえんです。
+    ContextIdx: 0
+
+36. 休みの日はえいがを _______ たり買いものをしたりします。
+    1) みる - see
+    2) みた - saw
+    3) みっ - (incorrect)
+    4) み - watch (stem for -tari) ([見]->み)
+    English: On holidays I do things like watching ( [見]->み ) movies and shopping.
+    Reading: やすみのひはえいがをみたりかいものをしたりします。
+    ContextIdx: 0
+
+37. えいがは何時 _______ おわりますか。
+    1) など - etc.
+    2) ごろ - around (approximate time)
+    3) じゅう - throughout
+    4) か - question
+    English: Around what time does the movie end?
+    Reading: えいがはなんじごろおわりますか。
+    ContextIdx: 0
+
+38. 山へはぼうしを _______ 行きましょう。
+    1) かぶると - when wear
+    2) かぶりて - (incorrect)
+    3) かぶりに - to wear
+    4) かぶって - wearing (te-form) ([被]->かぶ)
+    English: Let's go to the mountain wearing ( [被]->かぶ ) hats ( [帽]->ぼう[子]->し ).
+    Reading: やまへはぼうしをかぶっていきましょう。
+    ContextIdx: 0
+
+39. パーティーはまだ _______ 。
+    1) はじまります - begins
+    2) はじまりません - has not started yet (with mada) ([始]->はじ)
+    3) はじまりました - began
+    4) はじまっています - is starting
+    English: The party has not started yet.
+    Reading: ぱーてぃーはまだはじまりません。
+    ContextIdx: 0
+
+40. A「先週のにちようびにどこかへ行きましたか。」 B「いいえ、雨がふったから、 _______ 。」
+    1) どこかへ行きました - went somewhere
+    2) どこへも行きました - (incorrect grammar)
+    3) どこへへ行きませんでした - (double particle error)
+    4) どこへも行きませんでした - didn't go anywhere
+    English: A: "Did you go anywhere last Sunday?" B: "No, because it rained, I didn't go anywhere."
+    Reading: せんしゅうのにちようびにどこかへいきましたか。いいえ、あめがふったから、どこへもいきませんでした。
+    ContextIdx: 0
+
+41. りんご _______ みかんを買いました。
+    1) が - subject
+    2) や - and (non-exhaustive listing)
+    3) は - topic
+    4) へ - towards
+    English: I bought apples and mandarins (among other things).
+    Reading: りんごやみかんをかいをました。
+    ContextIdx: 0
+
+42. あなたはいま、お金を _______ か。
+    1) もってです - (incorrect)
+    2) もってあります - (incorrect for living possessor)
+    3) もっています - possess / have ([持]->も)
+    4) もってください - please hold
+    English: Do you have money ( [金]->かね ) right now?
+    Reading: あなたはいま、おかねをもっていますか。
+    ContextIdx: 0
+
+43. はる休みは _______ ありますか。
+    1) どれ - which
+    2) いくら - how much
+    3) どちら - which direction
+    4) どのぐらい - about how long / how much
+    English: About how long is spring break ( [春]->はる[休]->やすみ )?
+    Reading: はるやすみはどのぐらいありますか。
+    ContextIdx: 0
+
+44. ここにかばんを _______ ないでください。
+    1) おか - put (nai-stem of oku) ([置]->お)
+    2) おき - (masu stem)
+    3) おく - to put
+    4) おけ - (potential stem)
+    English: Please do not put ( [置]->お ) your bag here.
+    Reading: ここにかばんをおかないでください。
+    ContextIdx: 0
+
+45. ゆきが、たくさんふったから、一人しか _______ 。
+    1) 来ませんでした - didn't come (shika + negative) ([来]->き)
+    2) 来ました - came
+    3) 来てください - please come
+    4) 来るでしょう - will probably come
+    English: Because it snowed a lot, only one person ( [一]->ひと[人]->り ) came.
+    Reading: ゆきが、たくさんふったから、ひとりしかきませんでした。
+    ContextIdx: 0
+
+46. きのうは _______ 早くかえりましたか。
+    1) いかが - how about
+    2) いくつ - how many
+    3) どうして - why
+    4) どちら - which
+    English: Why did you go home early yesterday?
+    Reading: きのうはどうしてはやくかえりましたか。
+    ContextIdx: 0
+
+47. きのうのよるは６時に _______ 、ごはんをつくりました。
+    1) かえる - return
+    2) かえった - returned
+    3) かえって - returning home and then... (te-form) ([帰]->かえ)
+    4) かえったり - doing returning
+    English: Yesterday evening I returned home at 6 o'clock and made a meal.
+    Reading: きのうのよるはろくじにかえって、ごはんをつくりました。
+    ContextIdx: 0
+
+48. A［マリーさんのかさはどれですか。」 B［あれです。 _______ 。」
+    1) あれはかさです - That is an umbrella
+    2) あのあおいのです - That blue one ([青]->あお)
+    3) あれはマリーさんです - That is Marie-san
+    4) あのかさはあおいです - That umbrella is blue
+    English: A: "Which one is Marie-san's umbrella?" B: "That one. That blue one over there."
+    Reading: まりーさんのかさはどれですか。あれです。あのあおいのです。
+    ContextIdx: 0
+
+49. もしもし、山本です _______ 、木下さんはいますか。
+    1) が - sentence connector (excuse me but...)
+    2) と - with
+    3) て - te-form
+    4) で - at
+    English: Hello, this is Yamamoto speaking, is Kinoshita-san there?
+    Reading: もしもし、やまもとですが、きのしたさんはいますか。
+    ContextIdx: 0
+
+50. _______ うんどうをしていますか。
+    1) どれ - which
+    2) だれ - who
+    3) いかが - how about
+    4) 何か - any / some ([何]->なに)
+    English: Are you doing any exercise ( [運]->うん[動]->どう )?
+    Reading: なにかうんどうをしていますか。
+    ContextIdx: 0
+
+Answer Key:
+1. 4, 2. 3, 3. 4, 4. 1, 5. 1, 6. 3, 7. 3, 8. 2, 9. 1, 10. 3, 11. 4, 12. 1, 13. 2, 14. 4, 15. 2, 16. 4, 17. 1, 18. 2, 19. 3, 20. 1, 21. 3, 22. 1, 23. 4, 24. 2, 25. 3, 26. 3, 27. 4, 28. 2, 29. 2, 30. 4, 31. 1, 32. 2, 33. 2, 34. 3, 35. 3, 36. 4, 37. 2, 38. 4, 39. 2, 40. 4, 41. 2, 42. 3, 43. 4, 44. 1, 45. 1, 46. 3, 47. 3, 48. 2, 49. 1, 50. 4
+
+Vocab:
+月曜日 ( [月]->げつ[曜]->よう[日]->び ) [getsuyoubi] - Monday (noun, days-of-week, n5)
+先週 ( [先]->せん[週]->しゅう ) [senshuu] - last week (noun, time, n5)
+写真 ( [写]->しゃ[真]->しん ) [shashin] - photograph (noun, hobby, n5)
+撮る ( [撮]->と-る ) [toru] - to take a photo (verb, godan-verb, transitive, n5)
+果物 ( [果]->くだ[物]->もの ) [kudamono] - fruit (noun, food, n5)
+食べる ( [食]->たべ-る ) [taberu] - to eat (verb, ichidan-verb, transitive, n5)
+向こう ( [向]->む-こう ) [mukou] - opposite side / over there (noun, direction, n5)
+魚 ( [魚]->さかな ) [sakana] - fish (noun, animal, food, n5)
+塩 ( [塩]->しお ) [shio] - salt (noun, food, n5)
+生まれる ( [生]->うま-れる ) [umareru] - to be born (verb, ichidan-verb, intransitive, n5)
+父 ( [父]->ちち ) [chichi] - father (own) (noun, family, n5)
+歌う ( [歌]->うた-う ) [utau] - to sing (verb, godan-verb, transitive, n5)
+図書館 ( [図]->と[書]->しょ[館]->かん ) [toshokan] - library (noun, place, school, n5)
+返す ( [返]->かえ-す ) [kaesu] - to return something (verb, godan-verb, transitive, n5)
+困る ( [困]->こま-る ) [komaru] - to be troubled (verb, godan-verb, intransitive, n5)
+掃除 ( [掃]->そう[除]->じ ) [souji] - cleaning (noun, suru-verb, daily-life, n5)
+小さい ( [小]->ちい-さい ) [chiisai] - small (i-adjective, n5)
+軽い ( [軽]->かる-い ) [karui] - light in weight (i-adjective, n5)
+家族 ( [家]->か[族]->ぞく ) [kazoku] - family (noun, family, n5)
+見る ( [見]->み-る ) [miru] - to see / look (verb, ichidan-verb, transitive, n5)
+漢字 ( [漢]->かん[字]->じ ) [kanji] - kanji characters (noun, school, n5)
+開く ( [開]->あ-く ) [aku] - to open (verb, godan-verb, intransitive, n5)
+辛い ( [辛]->から-い ) [karai] - spicy (i-adjective, food, n5)
+宿題 ( [宿]->しゅく[題]->だい ) [shukudai] - homework (noun, school, n5)
+風 ( [風]->かぜ ) [kaze] - wind (noun, weather, n5)
+吹く ( [吹]->ふ-く ) [fuku] - to blow (verb, godan-verb, intransitive, n5)
+牛肉 ( [牛]->ぎゅう[肉]->にく ) [gyuuniku] - beef (noun, food, n5)
+豚肉 ( [豚]->ぶた[肉]->にく ) [butaniku] - pork (noun, food, n5)
+強い ( [強]->つよ-い ) [tsuyoi] - strong (i-adjective, n5)
+暇 ( [暇]->ひま ) [hima] - free time (na-adjective, n5)
+色 ( [色]->いろ ) [iro] - color (noun, n5)
+好き ( [好]->す-き ) [suki] - liked / favorite (na-adjective, n5)
+明るい ( [明]->あかる-い ) [akarui] - bright (i-adjective, n5)
+此方 ( [此]->こ[方]->ちら ) [kochira] - this direction / here (pronoun, direction, n5)
+卵 ( [卵]->たまご ) [tamago] - egg (noun, food, n5)
+帽子 ( [帽]->ぼう[子]->し ) [boushi] - hat / cap (noun, clothing, n5)
+被る ( [被]->かぶ-る ) [kaburu] - to wear on head (verb, godan-verb, transitive, n5)
+持つ ( [持]->も-つ ) [motsu] - to hold / possess (verb, godan-verb, transitive, n5)
+春休み ( [春]->はる[休]->やすみ ) [haruyasumi] - spring break (noun, time, n5)
+青い ( [青]->あお-い ) [aoi] - blue (i-adjective, colour, n5)
+運動 ( [運]->うん[動]->どう ) [undou] - exercise (noun, suru-verb, hobby, n5)
+---
+SetId: set-jtest-ex-05
+Title: JTEST Grammar Practice Set 5 (Q201-250)
+Category: grammar
+PackTitle: JTEST_EX
+Tags: n5, grammar, jtest, beginner, dialogue
+ContextPassages: 順序[じゅんじょ]並べ替え[ならべかえ]や対話[たいわ]文[ぶん]の応用[おうよう]問題[もんだい]です。 | 正しい[ただしい]文脈[ぶんみゃく]を把握[はあく]して回答[かいとう]しましょう。
+ContextEnglish: Advanced practice with sentence ordering and dialogical contexts. | Understand the correct flow of context to select answers.
+
+1. ヤンさんはこのつくえを [ 買った / １０００円 / で / んです ] …★… よ。
+   1) 買った - bought
+   2) １００0円 - 1000 yen
+   3) で - for / at
+   4) んです - explanatory predicate
+   English: Yan-san bought ( [買]->か ) this desk for 1000 yen ( [円]->えん ). [Order: １０００円 で 買った んです]
+   Reading: やんさんはこのつくえをせんえんでかったんですよ。
+   ContextIdx: 0
+
+2. ここに [ 書いて / ボールペンで / あかい / 名前を ] …★… ください。
+   1) 書いて - write
+   2) ボールペンで - with ballpoint pen
+   3) あかい - red ([赤]->あか)
+   4) 名前を - name ([名]->な[前]->まえ)
+   English: Please write your name ( [名]->な[前]->まえ ) here with a red ballpoint pen. [Order: あかい ボールペンで 名前を 書いて]
+   Reading: ここにあかいぼーるぺんでなまえをかいてください。
+   ContextIdx: 0
+
+3. わたしは [ 魚が / 魚を / たべません / きらいですから ] …★… 。
+   1) 魚が - fish ([魚]->さかな)
+   2) 魚を - fish
+   3) たべません - do not eat
+   4) きらいですから - because I dislike
+   English: I do not eat fish because I dislike fish ( [魚]->さかな ). [Order: 魚が きらいですから 魚を たべません]
+   Reading: わたしはさかながきらいですからさかなをたべません。
+   ContextIdx: 0
+
+4. 日本の [ ちょっと / 高い / おいしいですが / たべものは ] …★… です。
+   1) ちょっと - a little bit
+   2) 高い - expensive ([高]->たか)
+   3) おいしいですが - is delicious, but...
+   4) たべものは - food ([食]->たべ[物]->もの)
+   English: Japanese food ( [食]->たべ[物]->もの ) is delicious, but a bit expensive ( [高]->たか ). [Order: たべものは おいしいですが ちょっと 高い]
+   Reading: にほんのたべものはおいしいですがちょっとたかいです。
+   ContextIdx: 0
+
+5. 女１「すみません、えき [ が / んです / 行きたい / へ ] …★… 。みちをおしえてくださいませんか。」
+   1) が - conjunction (excuse me, but)
+   2) んです - explanation state
+   3) 行きたい - want to go ([行]->い)
+   4) へ - to / towards
+   English: Woman 1: "Excuse me, I want to go to the station ( [駅]->えき ). Could you please tell me the way?" [Order: へ 行きたい んです が]
+   Reading: すみません、えきへいきたいんですが。みちをおしえてくださいませんか。
+   ContextIdx: 0
+
+6. たいていひるに仕事をしていますが、「２」よるもします。
+   1) ときどき - sometimes
+   2) いつも - always
+   3) だいたい - mostly
+   4) はじめて - for the first time
+   English: I usually work during the daytime, but sometimes ( [時]->とき[々]->どき ) I also work at night ( [夜]->よる ).
+   Reading: たいていひるにしごとをしていますが、ときどきよるもします。
+   ContextIdx: 0
+
+7. 「３」パンをつくってうっています。
+   1) いろいろに - (incorrect)
+   2) いろいろな - various (pre-noun modifier)
+   3) いろいろで - (te-form)
+   4) いろいろく - (incorrect)
+   English: I make and sell various ( [色]->いろ[々]->いろな ) breads.
+   Reading: いろいろなぱんをつくってうっています。
+   ContextIdx: 0
+
+8. じぶん「４」あたらしいパンをかんがえてつくります。
+   1) で - by oneself marker
+   2) は - topic
+   3) も - also
+   4) でも - even
+   English: I think up and make new bread by myself ( [自]->じ[分]->ぶん ).
+   Reading: じぶんであたらしいぱんをかんがえてつくります。
+   ContextIdx: 0
+
+9. ずっとパソコンをつかっています「５」、目がつかれます。
+   1) が - but / so
+   2) けど - but
+   3) から - because / so
+   4) し - and besides
+   English: Because ( [由]->か[来]->ら ) I use the computer continuously, my eyes get tired ( [疲]->つか ).
+   Reading: ずっとぱそこんをつかっていますから、めがつかれます。
+   ContextIdx: 0
+
+10. 明日としょかんへ本を _______ に行きます。
+    1) かりる - borrow
+    2) かりて - borrowing
+    3) かり - borrow (masu stem + ni ikimasu) ([借]->か)
+    4) かりた - borrowed
+    English: Tomorrow I am going to the library to borrow ( [借]->か ) books.
+    Reading: あしたとしょかんへほんをかりにいきます。
+    ContextIdx: 0
+
+11. 子どもはかみ _______ ふれをつくっています。
+    1) で - made from / using (material)
+    2) か - or
+    3) に - to
+    4) は - topic
+    English: The child is making a boat out of paper ( [紙]->かみ ).
+    Reading: こどもはかみでふねをつくっています。
+    ContextIdx: 0
+
+12. あなたは今じしょを _______ か。
+    1) もってあります - (incorrect for animate)
+    2) もっています - possess / holding ([持]->も)
+    3) もってです - (incorrect)
+    4) もってします - (incorrect)
+    English: Do you have a dictionary right now?
+    Reading: あなたはいまじしょをもっていますか。
+    ContextIdx: 0
+
+13. きのうはあまり _______ です。
+    1) さむかった - was cold
+    2) さむい - is cold
+    3) さむくなかった - was not cold ([寒]->さむ)
+    4) さむくない - is not cold
+    English: Yesterday was not very cold ( [寒]->さむ ).
+    Reading: きのうはあまりさむくなかったです。
+    ContextIdx: 0
+
+14. 長江はちゅうごく _______ ながれています。
+    1) を - space through which motion occurs
+    2) で - at
+    3) に - to
+    4) へ - towards
+    English: The Yangtze River flows through China ( [中]->ちゅう[国]->ごく ).
+    Reading: ちょうこうはちゅうごくをながれています。
+    ContextIdx: 0
+
+15. まいあさ８時ごろいえを _______ かいしゃへ行きます。
+    1) でた - left
+    2) でる - leave
+    3) でたり - doing leaving
+    4) でて - leave and then... (te-form) ([出]->で)
+    English: Every morning around 8 o'clock I leave ( [出]->で ) home and go to work.
+    Reading: まいあさはちじごろいえをでてかいしゃへいきます。
+    ContextIdx: 0
+
+16. 日本りょうりはあまりすき _______ 。
+    1) です - like
+    2) でした - liked
+    3) ではありません - do not like
+    4) くありません - (incorrect)
+    English: I do not like Japanese cuisine ( [日]->に[本]->ほん[料]->りょう[理]->り ) very much.
+    Reading: にほんりょうりはあまりすきではありません。
+    ContextIdx: 0
+
+17. きのう母 _______ マフラーをあげました。
+    1) から - from
+    2) を - object
+    3) は - topic
+    4) に - recipient marker (to mother)
+    English: Yesterday I gave a scarf to my mother ( [母]->はは ).
+    Reading: きのうははにまふらーをあげました。
+    ContextIdx: 0
+
+18. 日本語のべんきょうは何時 _______ ですか。
+    1) だけ - only
+    2) から - from (what time)
+    3) には - at
+    4) では - in
+    English: From what time is the Japanese study?
+    Reading: にほんごのべんきょうはなんじからですか。
+    ContextIdx: 0
+
+19. そのちいさいとけい _______ ください。
+    1) が - subject
+    2) を - direct object marker
+    3) に - to
+    4) へ - towards
+    English: Please give me that small watch ( [時]->と[計]->けい ).
+    Reading: そのちいさいとけいをください。
+    ContextIdx: 0
+
+20. わたしの旅行中、[ の / 花に / やる / 水を ] …★… を忘れないでください。
+    1) の - nominalizer
+    2) 花に - to flowers ([花]->はな)
+    3) やる - to give/water
+    4) 水を - water ([水]->みず)
+    English: While I am traveling ( [旅]->りょ[行]->こう ), please don't forget to water the flowers. [Order: 花に 水を やる の]
+    Reading: わたしのりょこうちゅう、はなにみずをやつのをわすれないでください。
+    ContextIdx: 0
+
+21. いまは [ おなかが / いたいですから / たべたくない / 何も ] …★… です。
+    1) おなかが - stomach
+    2) いたいですから - because it hurts ([痛]->いた)
+    3) たべたくない - do not want to eat ([食]->たべ)
+    4) 何も - anything / nothing ([何]->なに)
+    English: Because my stomach hurts, I don't want to eat anything right now. [Order: おなかが いたいですから 何も たべたくない]
+    Reading: いまはおなかがいたいですからなにもたべたくないです。
+    ContextIdx: 0
+
+22. [ かいしゃまで / バスで / うちから / ３０分ぐらい ] …★… かかります。
+    1) かいしゃまで - to company ([会]->かい[社]->しゃ)
+    2) バスで - by bus
+    3) うちから - from home
+    4) ３０分ぐらい - about 30 minutes ([分]->ふん)
+    English: It takes about 30 minutes by bus from home to the company. [Order: うちから かいしゃまで バスで ３０分ぐらい]
+    Reading: うちからかいしゃまでばすでさんじゅっぷんぐらいかかります。
+    ContextIdx: 0
+
+23. ここは [ 入る / でも / だれ / ことが ] …★… できます。
+    1) 入る - enter ([入]->はい)
+    2) でも - anyone / even
+    3) だれ - who
+    4) ことが - nominalizer
+    English: Anyone can enter here. [Order: だれ でも 入る ことが]
+    Reading: ここはだれでもはいることができます。
+    ContextIdx: 0
+
+24. 男１「これ、使ってもいいですか。」男２「どうぞ。でもあまりきれいじゃないですか、[ 使って / 洗って / ください / から ] …★… 。」
+    1) 使って - use ([使]->つか)
+    2) 洗って - wash ([洗]->あら)
+    3) ください - please
+    4) から - because / after
+    English: Man 1: "May I use this?" Man 2: "Go ahead. But it's not very clean, so please wash it before using it." [Order: 洗って から 使って ください]
+    Reading: これ、つかってもいいですか。どうぞ。でもあまりきれいじゃないから、あらってからつかってください。
+    ContextIdx: 0
+
+25. 今日はあさから雨が「１」。
+    1) ふっています - is raining ([降]->ふ)
+    2) ふります - rains
+    3) ふっていました - was raining
+    4) ふりました - rained
+    English: It has been raining ( [降]->ふ ) since this morning.
+    Reading: きょうにあさからあめがふっています。
+    ContextIdx: 0
+
+26. 「２」テレビを見ています。
+    1) だから - therefore
+    2) しかし - however
+    3) そして - and then / also
+    4) けれど - although
+    English: And ( [而]->そ[理]->して ) I am watching television.
+    Reading: そしててれびをみています。
+    ContextIdx: 0
+
+27. わたしはまいあさ「３」。
+    1) ８時からテレビを見ます - watch TV from 8
+    2) ７時からテレビを見ます - watch TV from 7 ([時]->じ)
+    3) ８時からテレビを見ています - am watching TV from 8
+    4) ７時からテレビを見ました - watched TV from 7
+    English: Every morning I watch television from 7 o'clock ( [時]->じ ).
+    Reading: わたしはまいあさしちじからてれびをみます。
+    ContextIdx: 0
+
+28. キムさんはまどの近く「４」日本語をべんきょうしています。
+    1) に - static location
+    2) へ - towards
+    3) で - action location particle
+    4) の - possessive
+    English: Kim-san is studying Japanese near ( [近]->ちか ) the window ( [窓]->まど ).
+    Reading: きむさんはまどのちかくでにほんごをべんきょうしています。
+    ContextIdx: 0
+
+29. まいあさ９時からしけんがあります。キムさんは「５」。
+    1) いつもべんきょうしません - never studies
+    2) いつもよくべんきょうします - always studies well
+    3) ときどきべんきょうしません - sometimes doesn't study
+    4) ときどきよくべんきょうします - sometimes studies well
+    English: Kim-san always studies hard.
+    Reading: まいあさくじからしけんがあります。きむさんはいつもよくべんきょうします。
+    ContextIdx: 0
+
+30. なつやすみに一人 _______ 祖母のいえに行きます。
+    1) と - with
+    2) で - state marker (by oneself) ([一]->ひと[人]->りで)
+    3) は - topic
+    4) が - subject
+    English: During summer vacation ( [夏]->なつ[休]->やすみ ), I will go to my grandmother's house alone ( [一]->ひと[人]->りで ).
+    Reading: なつやすみにひとりでおばのいえにいきます。
+    ContextIdx: 0
+
+31. テーブルの上にナイフとフォークが _______ 。
+    1) おいてあります - placed (resulting state) ([置]->お)
+    2) おいています - placing
+    3) おきます - will place
+    4) おきました - placed
+    English: A knife and fork are set/placed ( [置]->お ) on the table.
+    Reading: てーぶるのうえのないふとふぉーくがおいてあります。
+    ContextIdx: 0
+
+32. もう少し _______ 食べてください。
+    1) はやい - fast
+    2) はやくて - fast (te-form)
+    3) はやく - quickly (adverbial) ([早]->はや)
+    4) はやかった - was fast
+    English: Please eat a little more quickly ( [早]->はや ).
+    Reading: もうすこしはやくたべてください。
+    ContextIdx: 0
+
+33. いつも母 _______ いっしょにしょくじをします。
+    1) へ - towards
+    2) と - with
+    3) の - of
+    4) で - at
+    English: I always have meals ( [食]->しょく[事]->じ ) together with my mother ( [母]->はは ).
+    Reading: いつもははといっしょにしょくじをします。
+    ContextIdx: 0
+
+34. しゅくだいを _______ あとで、テレビを見ます。
+    1) して - doing
+    2) した - after doing (past plain + ato de) ([宿]->しゅく[題]->だい)
+    3) する - to do
+    4) しに - to do
+    English: After doing my homework ( [宿]->しゅく[題]->だい ), I watch TV.
+    Reading: しゅくだいをしたあとで、てれびをみます。
+    ContextIdx: 0
+
+35. 今日は _______ ねましょう。
+    1) はやい - early
+    2) はやくて - early
+    3) はやく - early (adverbial form) ([早]->はや)
+    4) はやかった - was early
+    English: Let's go to sleep early ( [早]->はや ) today.
+    Reading: きょうははやくねましょう。
+    ContextIdx: 0
+
+36. わたしはよくラジオ _______ おんがくを聞きます。
+    1) で - by means of (on the radio)
+    2) に - on
+    3) は - topic
+    4) を - object
+    English: I often listen to music on the radio.
+    Reading: わたしはよくらじおでおんがくをききます。
+    ContextIdx: 0
+
+37. ばんごはんを _______ あとで、さんぽします。
+    1) たべる - to eat
+    2) たべた - after eating (past plain + ato de) ([食]->たべ)
+    3) たべて - eating
+    4) たべ - eat
+    English: After eating dinner ( [晩]->ばん[御]->ご[飯]->はん ), I take a walk ( [散]->さん[歩]->ぽ ).
+    Reading: ばんごはんをたべたあとで、さんぽします。
+    ContextIdx: 0
+
+38. わたしはさくぶんを _______ とき、いつもじしょをつかいます。
+    1) かいた - wrote
+    2) かいて - writing
+    3) かきに - to write
+    4) かく - to write (plain form before toki) ([書]->か)
+    English: When I write compositions ( [作]->さく[文]->ぶん ), I always use a dictionary.
+    Reading: わたしはさくぶんをかくとき、いつもじしょをつかいます。
+    ContextIdx: 0
+
+39. わたしはたなかさんを３時間 _______ まっていました。
+    1) も - as much as / for as long as
+    2) を - object
+    3) が - subject
+    4) で - at
+    English: I waited for Tanaka-san for as long as 3 hours ( [時]->じ[間]->かん ).
+    Reading: わたしはたなかさんをさんじかんもまっていました。
+    ContextIdx: 0
+
+40. 妹さんは [ べんきょうして / います / だいがくで / どこの ] …★… か。
+    1) べんきょうして - studying ([勉]->べん[強]->きょう)
+    2) います - is
+    3) だいがくで - at university ([大]->だい[学]->がく)
+    4) どこの - which
+    English: At which university is your younger sister studying? [Order: どこの だいがくで べんきょうして います]
+    Reading: いもうとさんはどこのだいがくでべんきょうしていますか。
+    ContextIdx: 0
+
+41. 時間が [ から / 行きましょう / タクシーで / ありません ] …★… 。
+    1) から - because
+    2) 行きましょう - let's go ([行]->い)
+    3) タクシーで - by taxi
+    4) ありません - there is no ([時]->じ[間]->かん)
+    English: Because there is no time, let's go by taxi! [Order: ありません から タクシーで 行きましょう]
+    Reading: じかんがありませんからたくしーでいきましょう。
+    ContextIdx: 0
+
+42. しけんは [ から / ぜんぜん / むずかしかった / できません ] …★… でした。
+    1) から - because
+    2) ぜんぜん - not at all
+    3) むずかしかった - was difficult ([難]->むずか)
+    4) できません - could not do
+    English: Because the exam was difficult, I couldn't do it at all. [Order: むずかしかった から ぜんぜん できません]
+    Reading: しけんはむずかしかったからぜんぜんできませんでした。
+    ContextIdx: 0
+
+43. まっすぐいくと [ スーパーが / 左側に / から / あります ] …★… そこ肉を買ってください。
+    1) スーパーが - supermarket
+    2) 左側に - on the left side ([左]->ひだり[側]->がわ)
+    3) から - because / so
+    4) あります - there is
+    English: If you go straight, there is a supermarket on the left side, so please buy meat there. [Order: 左側に スーパーが あります から]
+    Reading: まっすぐいくとひだりがわにすーぱーがありますからそこでにくをかってください。
+    ContextIdx: 0
+
+44. 男１「これから、田中さん [ 飲みに / お店へ / 近くの / と ] …★… 行きます。キムさんもいっしょにどうですか。」男２「えっ、いいですか。お願いします。」
+    1) 飲みに - to drink ([飲]->の)
+    2) お店へ - to the store ([店]->みせ)
+    3) 近くの - nearby ([近]->ちか)
+    4) と - with
+    English: Man 1: "We are going to drink with Tanaka-san at a nearby store now. How about joining us, Kim-san?" Man 2: "Oh, is it okay? Yes, please." [Order: と 近くの お店へ 飲みに]
+    Reading: これから、たなかさんとちかくのおみせへのみにいきます。きむさんもいっしょにどうですか。
+    ContextIdx: 0
+
+45. が、きれいです。
+    1) ちいさいです - is small
+    2) ひろいです - is spacious
+    3) あかるいです - is bright
+    4) にぎやかです - is lively
+    English: It is small ( [小]->ちい ), but clean.
+    Reading: ちいさいですが、きれいです。
+    ContextIdx: 0
+
+46. わたしはまいにちセンターの「２」ごはんを食べます。
+    1) しょくどうに - to cafeteria
+    2) しょくどうは - cafeteria as for
+    3) しょくどうで - at the cafeteria ([食]->しょく[堂]->どう)
+    4) しょくどうへ - towards cafeteria
+    English: Every day I eat meals at the center's cafeteria ( [食]->しょく[堂]->どう ).
+    Reading: わたしはまいにちせんたーのしょくどうでごはんをたべます。
+    ContextIdx: 0
+
+47. とても「３」。
+    1) おもしろいです - is interesting
+    2) さむいです - is cold
+    3) つまらないです - is boring
+    4) おいしいです - is delicious
+    English: It is very delicious.
+    Reading: とてもおいしいです。
+    ContextIdx: 0
+
+48. センターから駅まで「４」１０分です。
+    1) あるき - walking (stem)
+    2) あるいて - walking (on foot) ([歩]->ある)
+    3) あるいた - walked
+    4) あるく - to walk
+    English: It is 10 minutes on foot ( [歩]->ある ) from the center to the station.
+    Reading: せんたーからえきまであるいてじゅっぷんです。
+    ContextIdx: 0
+
+49. えきの近くに「５」あります。たいへんにぎやかです。
+    1) デパートやスーパーや - (incorrect listing structure)
+    2) デパートなどスーパーなど - (incorrect structure)
+    3) デパートがスーパーが - (double subject error)
+    4) デパートやスーパーなどが - department stores, supermarkets, etc.
+    English: Near the station, there are department stores, supermarkets, and so on.
+    Reading: えきのちかくにでぱーとやすーぱーなどがあります。たいへんにぎやかです。
+    ContextIdx: 0
+
+50. わたしの母は５０さいです。父は５５さいです。母は父 _______ ５さいわかいです。
+    1) から - from
+    2) まで - until
+    3) より - than (comparison marker)
+    4) のほうが - side of
+    English: My mother is 50. My father is 55. My mother is 5 years younger ( [若]->わか ) than my father.
+    Reading: わたしのははをごじゅっさいです。ちちはごじゅうごさいです。はははちちよりごさいわかいです。
+    ContextIdx: 0
+
+Answer Key:
+1. 1, 2. 4, 3. 2, 4. 1, 5. 2, 6. 1, 7. 2, 8. 1, 9. 3, 10. 3, 11. 1, 12. 2, 13. 3, 14. 1, 15. 4, 16. 3, 17. 4, 18. 2, 19. 2, 20. 1, 21. 4, 22. 2, 23. 1, 24. 1, 25. 1, 26. 3, 27. 2, 28. 3, 29. 2, 30. 2, 31. 1, 32. 3, 33. 2, 34. 2, 35. 3, 36. 1, 37. 2, 38. 4, 39. 1, 40. 1, 41. 3, 42. 2, 43. 4, 44. 1, 45. 1, 46. 3, 47. 4, 48. 2, 49. 4, 50. 3
+
+Vocab:
+赤 ( [赤]->あか ) [aka] - red (noun, colour, n5)
+高 ( [高]->たか-い ) [takai] - expensive / tall (i-adjective, n5)
+食べ物 ( [食]->たべ[物]->もの ) [tabemono] - food (noun, food, n5)
+時々 ( [時]->とき[々]->どき ) [tokidoki] - sometimes (adverb, time, n5)
+色々 ( [色]->いろ[々]->いろ ) [iroiro] - various (na-adjective, n5)
+船 ( [船]->ふね ) [fune] - ship / boat (noun, transportation, n5)
+中国 ( [中]->ちゅう[国]->ごく ) [chuugoku] - China (noun, place, n5)
+流れる ( [流]->なが-れる ) [nagareru] - to flow (verb, ichidan-verb, intransitive, n5)
+出る ( [出]->で-る ) [deru] - to leave / exit (verb, ichidan-verb, intransitive, n5)
+料理 ( [料]->りょう[理]->り ) [ryouri] - cooking / cuisine (noun, food, n5)
+時計 ( [時]->と[計]->けい ) [tokei] - watch / clock (noun, daily-life, n5)
+水 ( [水]->みず ) [mizu] - water (noun, drink, n5)
+窓 ( [窓]->まど ) [mado] - window (noun, house, n5)
+近く ( [近]->ちか-く ) [chikaku] - near / vicinity (noun, direction, n5)
+祖母 ( [祖]->そ[母]->ぼ ) [sobo] - grandmother (noun, family, n5)
+食事 ( [食]->しょく[事]->じ ) [shokuji] - meal (noun, suru-verb, food, n5)
+作文 ( [作]->さく[文]->ぶん ) [sakubun] - composition / essay (noun, school, n5)
+左側 ( [左]->ひだり[側]->がわ ) [hidarigawa] - left side (noun, direction, n5)
+食堂 ( [食]->しょく[堂]->どう ) [shokudou] - cafeteria / dining hall (noun, place, school, n5)
+若い ( [若]->わか-い ) [wakai] - young (i-adjective, n5)
+---
+SetId: set-jtest-ex-06
+Title: JTEST Grammar Practice Set 6 (Q251-260)
+Category: grammar
+PackTitle: JTEST_EX
+Tags: n5, grammar, jtest, beginner, short-set
+ContextPassages: 文法[ぶんぽう]問題[もんだい]の最終[さいしゅう]確認[かくにん]セットです。 | これまでの復習[ふくしゅう]をしっかり行いましょう[おこないましょう]。
+ContextEnglish: Final review set for grammar questions. | Let's review everything we have learned so far.
+
+1. わたしのうちはがっこうの隣 _______ あります。
+   1) は - topic
+   2) を - object
+   3) に - at (existence location)
+   4) で - in
+   English: My home is next to ( [隣]->となり ) the school.
+   Reading: わたしのうちはがっこうのとなりにあります。
+   ContextIdx: 0
+
+2. こんげつは雨が１回 _______ ふりませんでした。
+   1) しか - only (with negative)
+   2) だけ - only
+   3) ぐらい - about
+   4) など - etc.
+   English: This month ( [今]->こん[月]->げつ ) it only rained once.
+   Reading: こんげつはあめがいっかいしかふりませんでした。
+   ContextIdx: 0
+
+3. 子供「いただきます。」 母「あ、食べる _______ 手をあらいましょう。」
+   1) まえに - before (doing x) ([前]->まえ)
+   2) のまえに - before noun
+   3) あとに - after doing
+   4) のあとに - after noun
+   English: Child: "Thank you for the meal." Mother: "Ah, let's wash our hands ( [手]->て ) before eating ( [食]->たべ )."
+   Reading: こども「いただきます。」はは「あ、たべるまえにてをあらいましょう。」
+   ContextIdx: 0
+
+4. 父はへや _______ でて会社へ行きました。
+   1) まで - until
+   2) より - than
+   3) だけ - only
+   4) から - out of / from (starting location)
+   English: My father left the room and went to the company ( [会]->かい[社]->しゃ ).
+   Reading: ちちはへやからでてかいしゃへいきました。
+   ContextIdx: 0
+
+5. 男１「あの [ いる / を / サングラス / かけて ] …★… 人はどなたですか。」 男２「ああ、あの赤いシャツを着た人ね。あれはリーさんですよ。」
+   1) いる - is
+   2) を - object
+   3) サングラス - sunglasses
+   4) かけて - wearing glasses ([掛]->か)
+   English: Man 1: "Who is that person wearing sunglasses?" Man 2: "Ah, the person in the red shirt, right? That is Lee-san." [Order: サングラス を かけて いる]
+   Reading: あのかけているひとはどなたですか。ああ、あのあかいしゃつをきたひとね。あれはりーさんですよ。
+   ContextIdx: 0
+
+6. 佐藤さんは [ 飲んで / お茶を / いま / きっさてんで ] …★… います。
+   1) 飲んで - drinking ([飲]->の)
+   2) お茶を - tea ([茶]->ちゃ)
+   3) いま - now ([今]->いま)
+   4) きっさてんで - at coffee shop ([喫]->きっ[茶]->さ[店]->てん)
+   English: Satou-san is drinking tea ( [茶]->ちゃ ) at the coffee shop right now. [Order: いま きっさてんで お茶を 飲んで]
+   Reading: さとうさんはいまきっさてんでおちゃをのんでいます。
+   ContextIdx: 0
+
+7. ここは車を [ いちばん大きい / つくっている / 日本で / こうじょうで ] …★… こうじょうです。
+   1) いちばん大きい - biggest ([大]->おお)
+   2) つくっている - making ([作]->つく)
+   3) 日本で - in Japan ([日]->に[本]->ほん)
+   4) こうじょうで - at the factory
+   English: This is the factory that makes cars, the largest in Japan. [Order: 日本で いちばん大きい 車を つくっている]
+   Reading: ここはにほんでいちばんおおきいくるまをつくっているこうじょうです。
+   ContextIdx: 0
+
+8. ６時におきて [ それから / たべて / かいしゃへ / ごはんを ] …★… 行きます。
+   1) それから - and then
+   2) たべて - eating ([食]->たべ)
+   3) かいしゃへ - to company ([会]->かい[社]->しゃ)
+   4) ごはんを - meal
+   English: I wake up at 6, eat a meal, and then go to work. [Order: ごはんを たべて それから かいしゃへ]
+   Reading: ろくじにおきてごはんをたべてそれからかいしゃへいきます。
+   ContextIdx: 0
+
+9. とうきょうえきで [ おりて / よこはまえきで / のって / でんしゃに ] …★… ください。
+   1) おりて - get off ([降]->お)
+   2) よこはまえきで - at Yokohama station ([駅]->えき)
+   3) のって - board / get on ([乗]->の)
+   4) でんしゃに - on the train ([電]->でん[車]->しゃ)
+   English: Please board the train at Yokohama Station and get off at Tokyo Station. [Order: でんしゃに のって とうきょうえきで おりて]
+   Reading: よこはまえきででんしゃにのってとうきょうえきでおりてください。
+   ContextIdx: 0
+
+10. 今月は雨が _______ ふりませんでした。
+    1) しか - only (with negative)
+    2) だけ - only
+    3) ぐらい - about
+    4) など - etc.
+    English: This month ( [今]->こん[月]->げつ ) it only rained once.
+    Reading: こんげつはあめがいっかいしかふりませんでした。
+    ContextIdx: 0
+
+Answer Key:
+1. 3, 2. 1, 3. 1, 4. 4, 5. 4, 6. 2, 7. 3, 8. 1, 9. 2, 10. 1
+
+Vocab:
+隣 ( [隣]->となり ) [tonari] - next door / neighbor (noun, place, n5)
+今月 ( [今]->こん[月]->げつ ) [kongetsu] - this month (noun, time, n5)
+手 ( [手]->て ) [te] - hand (noun, body-part, n5)
+かける ( [掛]->か-ける ) [kakeru] - to wear glasses (verb, ichidan-verb, transitive, n5)
+お茶 ( [茶]->お[茶]->ちゃ ) [ocha] - tea (noun, drink, n5)
+喫茶店 ( [喫]->きっ[茶]->さ[店]->てん ) [kissaten] - coffee shop (noun, place, n5)
+工場 ( [工]->こう[場]->じょう ) [koujou] - factory (noun, place, work, n5)
+起きる ( [起]->お-きる ) [okiru] - to wake up / get up (verb, ichidan-verb, intransitive, n5)
+下りる ( [降]->お-りる ) [oriru] - to get off / descend (verb, ichidan-verb, intransitive, n5)
+乗る ( [乗]->の-る ) [noru] - to board / ride (verb, godan-verb, intransitive, n5)

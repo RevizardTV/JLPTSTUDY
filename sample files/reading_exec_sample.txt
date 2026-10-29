@@ -1,0 +1,1202 @@
+---
+SetId: set-jtest-ex-reading-01
+Title: JTEST_EX Reading Exercise Set 1
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: きのうかさを買いました。きょねん買ったのは高くておもかったですが、このかさはかるくていいです。 | わたしたちはまいあさうたのれんしゅうをします。けさのれんしゅうは９時２０分から１時間でした。山川さんと大山さんは来ませんでした。高木さんは３０分おそく来ました。 | パクさんはお店で日本語の本を探しています。
+ContextEnglish: Yesterday I bought an umbrella. The one I bought last year was expensive and heavy, but this umbrella is light and nice. | We practice singing every morning. This morning's practice was from 9:20 for one hour. Yamakawa-san and Oyama-san did not come. Takagi-san came 30 minutes late. | Park-san is looking for a Japanese book at the store.
+
+1. きのう買ったかさはどんなかさですか。
+   1) 高くておもいです。 - It is expensive and heavy.
+   2) 安いですが、おもいです。 - It is cheap, but heavy.
+   3) かるくてきれいです。 - It is light and pretty.
+   4) きれいですが、高いです。 - It is pretty, but expensive.
+   English: What kind of umbrella was bought yesterday? [_____]
+   ContextIdx: 0
+
+2. ただしいものはどれですか。
+   1) れんしゅうを休んだ人は３人です。 - Three people were absent from practice.
+   2) れんしゅうは９時２０分から１時までです。 - Practice is from 9:20 until 1:00.
+   3) 高木さんは１時間れんしゅうしました。 - Takagi-san practiced for one hour.
+   4) 高木さんは９時５０分にれんしゅうに来ました。 - Takagi-san came to practice at 9:50.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 1
+
+3. （ア）には何を入れますか。
+   1) とりますか - Will you take?
+   2) とりましょうか - Shall I take?
+   3) とっていますか - Are you taking?
+   4) とってくださいませんか - Could you please take / hand over?
+   English: What should be inserted into (A)? [_____]
+   ContextIdx: 2
+
+4. （イ）には何を入れますか。
+   1) どの本ですか - Which book is it?
+   2) どれが本ですか - Which one is the book?
+   3) これは本ですか - Is this a book?
+   4) この本はありませんか - Do you not have this book?
+   English: What should be inserted into (B)? [_____]
+   ContextIdx: 2
+
+5. （ウ）には何を入れますか。
+   1) じゃ、それです - Well then, it's that.
+   2) じゃ、いいです - Well then, that's alright / no thank you.
+   3) じゃ、それにします - Well then, I'll go with that.
+   4) じゃ、そうしましょう - Well then, let's do that.
+   English: What should be inserted into (C)? [_____]
+   ContextIdx: 2
+
+Answer Key:
+1. 3, 2. 4, 3. 4, 4. 1, 5. 2
+
+Vocab:
+昨日 ( [昨]->きの[日]->う ) [kinou] - yesterday (noun, time, n5, kanji)
+傘 ( [傘]->かさ ) [kasa] - umbrella (noun, daily-life, n5, kanji)
+買う ( [買]->か・う ) [kau] - to buy (verb, godan-verb, transitive, n5, kanji)
+きれい [kirei] - pretty, beautiful (na-adjective, n5)
+高い ( [高]->たか・い ) [takai] - expensive, tall (i-adjective, n5, kanji)
+去年 ( [去]->きょ[年]->ねん ) [kyonen] - last year (noun, time, n5, kanji)
+重い ( [重]->おも・い ) [omoi] - heavy (i-adjective, n5, kanji)
+軽い ( [軽]->かる・い ) [karui] - light (i-adjective, n5, kanji)
+毎朝 ( [毎]->まい[朝]->あさ ) [maiasa] - every morning (noun, time, n5, kanji)
+歌 ( [歌]->うた ) [uta] - song (noun, hobby, n5, kanji)
+練習 ( [練]->れん[習]->しゅう ) [renshuu] - practice (noun, suru-verb, school, n5, kanji)
+今朝 ( [今]->け[朝]->さ ) [kesa] - this morning (noun, time, n5, kanji)
+時間 ( [時]->じ[間]->かん ) [jikan] - time, hours (noun, time, n5, kanji)
+来る ( [来]->く・る ) [kuru] - to come (verb, kuru-verb, intransitive, n5, kanji)
+遅い ( [遅]->おそ・い ) [osoi] - late (i-adjective, n5, kanji)
+正しい ( [正]->ただ・しい ) [tadashii] - correct (i-adjective, n5, kanji)
+上 ( [上]->うえ ) [ue] - above, top (noun, direction, n5, kanji)
+本 ( [本]->ほん ) [hon] - book (noun, n5, kanji)
+見る ( [見]->み・る ) [miru] - to see, look (verb, ichidan-verb, transitive, n5, kanji)
+分かる ( [分]->わか・る ) [wakaru] - to understand (verb, godan-verb, intransitive, n5, kanji)
+日本語 ( [日]->に[本]->ほん[語]->ご ) [nihongo] - Japanese language (noun, n5, kanji)
+書く ( [書]->か・く ) [kaku] - to write (verb, godan-verb, transitive, n5, kanji)
+いくら [ikura] - how much (pronoun, n5)
+ちょっと [chotto] - a little (adverb, n5)
+
+---
+SetId: set-jtest-ex-reading-02
+Title: JTEST_EX Reading Exercise Set 2
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: アパートの皆さんへ。来週の月曜日と火曜日の午前１０時から午後５時までエレベーターを使わないでください。 | きのうのよる１０時に友だちのうちに電話をしましたが、友だちはいませんでした。 | 先月わたしは学校の友達といっしょに、おきなわへ旅行に行きました。
+ContextEnglish: To everyone in the apartment. Please do not use the elevator next week on Monday and Tuesday from 10:00 AM to 5:00 PM. | Last night at 10:00 PM I called my friend's house, but my friend wasn't there. | Last month, I went on a trip to Okinawa together with my school friend.
+
+1. アパートの人は、来週の月曜日と火曜日には、外に出る時、どうしますか。
+   1) 来週の月曜日の午前１１時には、階段を使います。 - Use the stairs at 11 AM next Monday.
+   2) 来週の月曜日の午後３時には、エレベーターを使います。 - Use the elevator at 3 PM next Monday.
+   3) 来週の火曜日の午前１１時には、エレベーターを使います。 - Use the elevator at 11 AM next Tuesday.
+   4) 来週の火曜日の午後３時には、階段を使いません。 - Do not use the stairs at 3 PM next Tuesday.
+   English: What will apartment residents do when going outside next Monday and Tuesday? [_____]
+   ContextIdx: 0
+
+2. Question 2
+   1) わたしはきのうのよる友だちと話したあとでねました。 - I slept after talking with my friend last night.
+   2) わたしはきのうのよる友だちに１かいしか電話しませんでした。 - I only called my friend once last night.
+   3) わたしはきのうのよる友だちと２かい電話で話しました。 - I talked with my friend on the phone twice last night.
+   4) わたしはきのうのよる友だちと電話で話しませんでした。 - I did not talk with my friend on the phone last night.
+   English: Which description fits the telephone call event? [_____]
+   ContextIdx: 1
+
+3. （ア）には何を入れますか。
+   1) 話しました - talked
+   2) 答えました - answered
+   3) 呼びました - called
+   4) 聞きました - asked / listened
+   English: What should be inserted into (A)? [_____]
+   ContextIdx: 2
+
+4. （イ）には何を入れますか。
+   1) だから - therefore
+   2) それから - and then
+   3) すると - thereupon
+   4) だけど - however
+   English: What should be inserted into (B)? [_____]
+   ContextIdx: 2
+
+5. （ウ）には何を入れますか。
+   1) そうすると - doing so
+   2) ところが - even so
+   3) それで - because of that / so
+   4) それに - besides
+   English: What should be inserted into (C)? [_____]
+   ContextIdx: 2
+
+Answer Key:
+1. 1, 2. 4, 3. 4, 4. 1, 5. 3
+
+Vocab:
+アパート [apaato] - apartment (noun, place, loan-word, katakana, n5)
+皆さん ( [皆]->みな[さ]->さん[ん]->ん ) [minasan] - everyone (pronoun, n5, kanji)
+来週 ( [来]->らい[週]->しゅう ) [raishuu] - next week (noun, time, n5, kanji)
+月曜日 ( [月]->げつ[曜]->よう[日]->び ) [getsuyoubi] - Monday (noun, days-of-week, n5, kanji)
+火曜日 ( [火]->か[曜]->よう[日]->び ) [kayoubi] - Tuesday (noun, days-of-week, n5, kanji)
+午前 ( [午]->ご[前]->ぜん ) [gozen] - morning, a.m. (noun, time, n5, kanji)
+午後 ( [午]->ご[後]->ご ) [gogo] - afternoon, p.m. (noun, time, n5, kanji)
+使う ( [使]->つか・う ) [tsukau] - to use (verb, godan-verb, transitive, n5, kanji)
+エレベーター [erebeetaa] - elevator (noun, loan-word, katakana, n5)
+階段 ( [階]->かい[段]->だん ) [kaidan] - stairs (noun, house, n5, kanji)
+外 ( [外]->そと ) [soto] - outside (noun, direction, n5, kanji)
+出る ( [出]->で・る ) [deru] - to go out (verb, ichidan-verb, intransitive, n5, kanji)
+夜 ( [夜]->よる ) [yoru] - night (noun, time, n5, kanji)
+友達 ( [友]->とも[達]->だち ) [tomodachi] - friend (noun, family, n5, kanji)
+家 ( [家]->うち ) [uchi] - house, home (noun, house, n5, kanji)
+電話 ( [電]->でん[話]->わ ) [denwa] - telephone (noun, daily-life, n5, kanji)
+もう一度 ( [一]->いち[度]->ど ) [mou ichido] - once more (adverb, n5, kanji)
+帰る ( [帰]->かえ・る ) [kaeru] - to return home (verb, godan-verb, intransitive, n5, kanji)
+寝る ( [寝]->ね・る ) [neru] - to sleep (verb, ichidan-verb, intransitive, n5, kanji)
+先月 ( [先]->せん[月]->げつ ) [sengetsu] - last month (noun, time, n5, kanji)
+学校 ( [学]->がっ[校]->こう ) [gakkou] - school (noun, school, n5, kanji)
+一緒に ( [一]->いっ[緒]->しょ ) [issho ni] - together (adverb, n5, kanji)
+旅行 ( [旅]->りょ[行]->こう ) [ryokou] - travel, trip (noun, suru-verb, hobby, n5, kanji)
+行く ( [行]->い・く ) [iku] - to go (verb, godan-verb, intransitive, n5, kanji)
+日本人 ( [日]->に[本]->ほん[人]->じん ) [nihonjin] - Japanese person (noun, n5, kanji)
+話す ( [話]->はな・す ) [hanasu] - to speak (verb, godan-verb, transitive, n5, kanji)
+答える ( [答]->こた・える ) [kotaeru] - to answer (verb, ichidan-verb, intransitive, n5, kanji)
+呼ぶ ( [呼]->よ・ぶ ) [yobu] - to call (verb, godan-verb, transitive, n5, kanji)
+聞く ( [聞]->き・く ) [kiku] - to listen, ask (verb, godan-verb, transitive, n5, kanji)
+暑い ( [暑]->あつ・い ) [atsui] - hot weather (i-adjective, weather, n5, kanji)
+夏 ( [夏]->なつ ) [natsu] - summer (noun, season, n5, kanji)
+服 ( [服]->ふく ) [fuku] - clothes (noun, clothing, n5, kanji)
+持つ ( [持]->も・つ ) [motsu] - to hold, carry (verb, godan-verb, transitive, n5, kanji)
+言う ( [言]->い・う ) [iu] - to say (verb, godan-verb, transitive, n5, kanji)
+四月 ( [四]->し[月]->がつ ) [shigatsu] - April (noun, calendar, n5, kanji)
+気温 ( [気]->き[温]->おん ) [kion] - temperature (noun, weather, n5, kanji)
+度 ( [度]->ど ) [do] - degree (counter, n5, kanji)
+
+---
+SetId: set-jtest-ex-reading-03
+Title: JTEST_EX Reading Exercise Set 3
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: 学生: すみません。この本をかりたいです。図書館の人: この学校の学生ですか。 | リン「むらたさん、ちょっといいですか。」むらた「はい、なんですか。」 | 新しいパン屋です！私たちがまいあさこの店でパンを作ります。
+ContextEnglish: Student: Excuse me. I want to borrow this book. Library staff: Are you a student of this school? | Rin: Murata-san, do you have a moment? Murata: Yes, what is it? | It's a new bakery! We make bread at this shop every morning.
+
+1. [_______] には何を入れますか。
+   1) 本は２９日、ざっしは２２日です。 - Books are the 29th, magazines are the 22nd.
+   2) 本は２２日、ざっしは２９日です。 - Books are the 22nd, magazines are the 29th.
+   3) 本もざっしも２９日です。 - Both books and magazines are the 29th.
+   4) 本もざっしも２２日です。 - Both books and magazines are the 22nd.
+   English: What should be inserted into the blank? [_____]
+   ContextIdx: 0
+
+2. この学生は何さつかりましたか。
+   1) ３さつ - 3 books
+   2) ４さつ - 4 books
+   3) ５さつ - 5 books
+   4) ６さつ - 6 books
+   English: How many books did this student borrow? [_____]
+   ContextIdx: 0
+
+3. この学生はとしょかんで何をしましたか。
+   1) 本に名前を書きました。 - Wrote name on the book.
+   2) かみに本の名前を書きました。 - Wrote book name on paper.
+   3) じしょをかりました。 - Borrowed a dictionary.
+   4) 本とざっしをかりました。 - Borrowed books and magazines.
+   English: What did this student do at the library? [_____]
+   ContextIdx: 0
+
+4. このとしょかんで学生ができることは何ですか。
+   1) ざっしを２しゅうかんかりること - Borrowing magazines for 2 weeks.
+   2) 本を５さつかりること - Borrowing 5 books.
+   3) 本やざっしを４さつまでかりること - Borrowing up to 4 books or magazines.
+   4) 本とじしょを１しゅうかんかりること - Borrowing books and dictionaries for 1 week.
+   English: What can students do at this library? [_____]
+   ContextIdx: 0
+
+5. ただしいものはどれですか。
+   1) むらたさんはきょうしゅくだいをおしえます。 - Murata-san teaches homework today.
+   2) りんさんはきょうじゅぎょうを休みます。 - Rin-san is absent from class today.
+   3) むらたさんはあしたびょういんへ行きます。 - Murata-san goes to the hospital tomorrow.
+   4) りんさんはむらたさんに電話します。 - Rin-san will call Murata-san.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 1
+
+Answer Key:
+1. 1, 2. 2, 3. 4, 4. 3, 5. 4
+
+Vocab:
+学生 ( [学]->がく[生]->せい ) [gakusei] - student (noun, school, n5, kanji)
+図書館 ( [図]->と[書]->しょ[館]->かん ) [toshokan] - library (noun, place, n5, kanji)
+借りる ( [借]->かり・る ) [kariru] - to borrow (verb, ichidan-verb, transitive, n5, kanji)
+学校 ( [学]->がっ[校]->こう ) [gakkou] - school (noun, school, n5, kanji)
+紙 ( [紙]->かみ ) [kami] - paper (noun, daily-life, n5, kanji)
+名前 ( [名]->な[前]->まえ ) [namae] - name (noun, n5, kanji)
+住所 ( [住]->じゅう[所]->しょ ) [juusho] - address (noun, place, n5, kanji)
+電話番号 ( [電]->でん[話]->わ[番]->ばん[号]->ごう ) [denwa bangou] - phone number (noun, daily-life, n5, kanji)
+辞書 ( [辞]->じ[書]->しょ ) [jisho] - dictionary (noun, school, n5, kanji)
+中 ( [中]->なか ) [naka] - inside (noun, direction, n5, kanji)
+冊 ( [冊]->さつ ) [satsu] - counter for books (counter, n5, kanji)
+貸す ( [貸]->かす ) [kasu] - to lend (verb, godan-verb, transitive, n5, kanji)
+週間 ( [週]->しゅう[間]->かん ) [shuukan] - week (noun, time, n5, kanji)
+雑誌 ( [雑]->ざっ[誌]->し ) [zasshi] - magazine (noun, daily-life, n5, kanji)
+返す ( [返]->かえ・す ) [kaesu] - to return something (verb, godan-verb, transitive, n5, kanji)
+今日 ( [今]->きょう ) [kyou] - today (noun, time, n5, kanji)
+明日 ( [明]->あした ) [ashita] - tomorrow (noun, time, n5, kanji)
+病院 ( [病]->びょう[院]->いん ) [byouin] - hospital (noun, place, n5, kanji)
+授業 ( [授]->じゅ[業]->ぎょう ) [jugyou] - class (noun, school, n5, kanji)
+出る ( [出]->で・る ) [deru] - to appear, attend (verb, ichidan-verb, intransitive, n5, kanji)
+宿題 ( [宿]->しゅく[題]->だい ) [shukudai] - homework (noun, school, n5, kanji)
+教える ( [教]->おし・える ) [oshieru] - to teach (verb, ichidan-verb, transitive, n5, kanji)
+休む ( [休]->やす・む ) [yasumu] - to rest, be absent (verb, godan-verb, intransitive, n5, kanji)
+
+---
+SetId: set-jtest-ex-kanji-04
+Title: JTEST_EX Reading Exercise Set 4
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: 新しいパン屋です！私たちがまいあさこの店でパンを作ります。 | わたしのうちにくろいねことちゃいろのいぬがいます。どちらもとてもかわいいです。 | 田中さんは絵を見るのが好きです。一人でゆっくりと好きな絵を見るために、今年は５月の休みに外国へ行くことにしました。
+ContextEnglish: It's a new bakery! We make bread at this shop every morning. | At my house, there is a black cat and a light brown dog. Both are very cute. | Tanaka-san likes looking at paintings. In order to leisurely look at favorite paintings alone, this year during the May holidays, I decided to go abroad.
+
+1. ただしいものはどれですか。
+   1) 毎週月曜日はパンが安いです。 - Bread is cheap every Monday.
+   2) パンはまいばん店で作ります。 - Bread is made at the shop every night.
+   3) １０月３日からいろいろなパンを売ります。 - Various breads will be sold from October 3rd.
+   4) 野菜が入っているパンは甘いです。 - Bread containing vegetables is sweet.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 0
+
+2. ただしいものはどれですか。
+   1) ねこもいぬもくろいです。 - Both the cat and dog are black.
+   2) ねこもいぬもかわいいです。 - Both the cat and dog are cute.
+   3) ねこは外であそびますが、いぬはあそびません。 - The cat plays outside, but the dog doesn't.
+   4) ねこはくろくないですが、いぬはくろいです。 - The cat is not black, but the dog is.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 1
+
+3. 田中さんはどんなことが好きですか。
+   1) 友達と美術館に行くこと - Going to an art museum with friends.
+   2) 一人でゆっくり絵を見ること - Leisurely looking at paintings alone.
+   3) ５月の休みに旅行に行くこと - Going on a trip during the May holidays.
+   4) 外国に行って友達に手紙を書くこと - Going abroad and writing letters to friends.
+   English: What kind of thing does Tanaka-san like? [_____]
+   ContextIdx: 2
+
+4. 田中さんは旅行に行く前にどんなことが心配でしたか。
+   1) はじめて一人で飛行機に乗ること - Riding an airplane alone for the first time.
+   2) 食べ物がからくて水を飲みすぎること - Food being spicy and drinking too much water.
+   3) 旅行した国でねむくなってしまうこと - Becoming sleepy in the traveled country.
+   4) 水を飲みすぎてお腹が痛くなること - Drinking too much water and getting a stomachache.
+   English: What was Tanaka-san worried about before going on the trip? [_____]
+   ContextIdx: 2
+
+5. ただしいものはどれですか。
+   1) この人はいつもバスに乗る - This person always rides the bus.
+   2) この人はいつもちかてつに乗る - This person always rides the subway.
+   3) この人は雨の日はバスに乗る - This person rides the bus on rainy days.
+   4) この人は雨の日はちかてつに乗る - This person rides the subway on rainy days.
+   English: Which of the following is correct? [_____]
+
+Answer Key:
+1. 3, 2. 2, 3. 2, 4. 1, 5. 4
+
+Vocab:
+新しい ( [新]->あたら・しい ) [atarashii] - new (i-adjective, n5, kanji)
+パン屋 ( [屋]->や ) [pan'ya] - bakery (noun, food, n5, kanji)
+店 ( [店]->みせ ) [mise] - shop (noun, place, n5, kanji)
+作る ( [作]->つく・る ) [tsukuru] - to make (verb, godan-verb, transitive, n5, kanji)
+野菜 ( [野]->や[菜]->さい ) [yasai] - vegetable (noun, food, n5, kanji)
+入る ( [入]->はい・る ) [hairu] - to enter, contain (verb, godan-verb, intransitive, n5, kanji)
+甘い ( [甘]->あま・い ) [amai] - sweet (i-adjective, food, n5, kanji)
+月曜日 ( [月]->げつ[曜]->よう[日]->び ) [getsuyoubi] - Monday (noun, days-of-week, n5, kanji)
+安い ( [安]->やす・い ) [yasui] - cheap (i-adjective, n5, kanji)
+売る ( [売]->う・る ) [uru] - to sell (verb, godan-verb, transitive, n5, kanji)
+黒い ( [黒]->くろ・い ) [kuroi] - black (i-adjective, colour, n5, kanji)
+猫 ( [猫]->ねこ ) [neko] - cat (noun, animal, n5, kanji)
+犬 ( [犬]->いぬ ) [inu] - dog (noun, animal, n5, kanji)
+可愛い ( [可]->か[愛]->わ・いい ) [kawaii] - cute (i-adjective, n5, kanji)
+遊ぶ ( [遊]->あそ・ぶ ) [asobu] - to play (verb, godan-verb, intransitive, n5, kanji)
+絵 ( [絵]->え ) [e] - picture, painting (noun, hobby, n5, kanji)
+好き ( [好]->す・き ) [suki] - liking, love (na-adjective, emotion, n5, kanji)
+一人で ( [一]->ひと[人]->り・で ) [hitori de] - alone (adverb, n5, kanji)
+ゆっくり [yukkuri] - slowly, leisurely (adverb, n5)
+五月 ( [五]->ご[月]->gatsu ) [gogatsu] - May (noun, calendar, n5, kanji)
+休み ( [休]->やす・み ) [yasumi] - vacation, holiday (noun, time, n5, kanji)
+外国 ( [外]->がい[国]->こく ) [gaikoku] - foreign country (noun, place, n5, kanji)
+飛行機 ( [飛]->ひ[行]->こう[機]->き ) [hikouki] - airplane (noun, transportation, n5, kanji)
+乗る ( [乗]->の・る ) [noru] - to ride, board (verb, godan-verb, intransitive, n5, kanji)
+初めて ( [初]->はじ・めて ) [hajimete] - for the first time (adverb, n5, kanji)
+心配 ( [心]->しん[配]->ぱい ) [shinpai] - worry, concern (noun, suru-verb, emotion, n5, kanji)
+国 ( [国]->くに ) [kuni] - country (noun, place, n5, kanji)
+眠い ( [眠]->ねむ・い ) [nemui] - sleepy (i-adjective, n5, kanji)
+食べ物 ( [食]->た・べ[物]->もの ) [tabemono] - food (noun, food, n5, kanji)
+辛い ( [辛]->から・い ) [karai] - spicy (i-adjective, food, n5, kanji)
+水 ( [水]->みず ) [mizu] - water (noun, drink, n5, kanji)
+お腹 ( [腹]->なか ) [onaka] - stomach (noun, body-part, n5, kanji)
+痛い ( [痛]->いた・い ) [itai] - painful (i-adjective, body-part, n5, kanji)
+忘れる ( [忘]->わす・れる ) [wasureru] - to forget (verb, ichidan-verb, transitive, n5, kanji)
+手紙 ( [手]->て[紙]->がみ ) [tegami] - letter (noun, daily-life, n5, kanji)
+美術館 ( [美]->び[術]->じゅつ[館]->かん ) [bijutsukan] - art museum (noun, place, n5, kanji)
+地下鉄 ( [地]->ち[下]->か[鉄]->てつ ) [chikatetsu] - subway (noun, transportation, n5, kanji)
+遠い ( [遠]->とお・い ) [tooi] - far (i-adjective, n5, kanji)
+長い ( [長]->なが・い ) [nagai] - long (i-adjective, n5, kanji)
+待つ ( [待]->ま・つ ) [matsu] - to wait (verb, godan-verb, transitive, n5, kanji)
+駅 ( [駅]->えき ) [eki] - station (noun, place, n5, kanji)
+運動 ( [運]->うん[動]->どう ) [undou] - exercise (noun, suru-verb, n5, kanji)
+天気 ( [天]->てん[気]->き ) [tenki] - weather (noun, weather, n5, kanji)
+歩く ( [歩]->ある・く ) [aruku] - to walk (verb, godan-verb, intransitive, n5, kanji)
+雨 ( [雨]->あめ ) [ame] - rain (noun, weather, n5, kanji)
+
+---
+SetId: set-jtest-ex-kanji-05
+Title: JTEST_EX Reading Exercise Set 5
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: すずき「あのう、すみません。きのう電車にかさをわすれました。」 | 王さんの日記: 昨日なおこさんと銀座のデパートに行った。 | まち子さんは４年前におんがくをべんきょうしに外国へ行きました。
+ContextEnglish: Suzuki: Um, excuse me. Yesterday I forgot my umbrella on the train. | Wang's Diary: Yesterday I went to the Ginza department store with Naoko-san. | Machiko-san went abroad 4 years ago to study music.
+
+1. _______ には何を入れますか。
+   1) けっこうです - No thank you / That's fine
+   2) こちらこそ - It's me who should say so / Likewise
+   3) いいですね - Sounds good
+   4) よかった - Thank goodness / Great
+   English: What should be inserted into the blank? [_____]
+   ContextIdx: 0
+
+2. 今日すずきさんはどうして駅の人と話しましたか。
+   1) かさに名前を書いたから - Because they wrote their name on the umbrella.
+   2) かさをわすれたから - Because they forgot their umbrella.
+   3) 電車にのりたかったから - Because they wanted to ride the train.
+   4) さくら駅に行きたかったから - Because they wanted to go to Sakura Station.
+   English: Why did Suzuki-san talk to the station staff today? [_____]
+   ContextIdx: 0
+
+3. すずきさんのかさはつぎのどれですか。
+   1) みじかいかさで、名前が書いてあります。 - Short umbrella with a name written on it.
+   2) くろいかさで、名前が書いてあります。 - Black umbrella with a name written on it.
+   3) 長いかさで、名前は書いてありません。 - Long umbrella without a name written on it.
+   4) 大きいかさで、名前は書いてありません。 - Big umbrella without a name written on it.
+   English: Which of the following is Suzuki-san's umbrella? [_____]
+   ContextIdx: 0
+
+4. 王さんはどうしてなおこさんと１０時に会うことができなかったのですか。
+   1) 王さんが西口と東口をまちがえていたからです。 - Because Wang-san mistook the west and east exits.
+   2) 王さんが１０時と１１時をまちがえていたからです。 - Because Wang-san mistook 10 o'clock and 11 o'clock.
+   3) なおこさんが西口と東口をまちがえていたからです。 - Because Naoko-san mistook the west and east exits.
+   4) なおこさんが１０時と１２時をまちがえていたからです。 - Because Naoko-san mistook 10 o'clock and 12 o'clock.
+   English: Why wasn't Wang-san able to meet Naoko-san at 10 o'clock? [_____]
+   ContextIdx: 1
+
+5. まち子さんは今何をしていますか。
+   1) 日本でぎんこうにつとめています。 - Working at a bank in Japan.
+   2) 外国でぎんこうにつとめています。 - Working at a bank abroad.
+   3) 日本でギタ－をおしえています。 - Teaching the guitar in Japan.
+   4) 外国でギタ－をおしえています。 - Teaching the guitar abroad.
+   English: What is Machiko-san doing now? [_____]
+   ContextIdx: 2
+
+Answer Key:
+1. 4, 2. 2, 3. 2, 4. 4, 5. 3
+
+Vocab:
+昨日 ( [昨]->きの[日]->う ) [kinou] - yesterday (noun, time, n5, kanji)
+電車 ( [電]->でん[車]->しゃ ) [densha] - train (noun, transportation, n5, kanji)
+傘 ( [傘]->かさ ) [kasa] - umbrella (noun, daily-life, n5, kanji)
+忘れる ( [忘]->わす・れる ) [wasureru] - to forget (verb, ichidan-verb, transitive, n5, kanji)
+駅 ( [駅]->えき ) [eki] - station (noun, place, n5, kanji)
+降りる ( [降]->お・りる ) [oriru] - to get off (verb, ichidan-verb, intransitive, n5, kanji)
+色 ( [色]->いろ ) [iro] - color (noun, colour, n5, kanji)
+黒 ( [黒]->くろ ) [kuro] - black (noun, colour, n5, kanji)
+短い ( [短]->みじか・い ) [mijikai] - short (i-adjective, n5, kanji)
+日記 ( [日]->にっ[記]->き ) [nikki] - diary (noun, hobby, n5, kanji)
+デパート [depaato] - department store (noun, place, loan-word, katakana, n5)
+西口 ( [西]->にし[口]->ぐち ) [nishiguchi] - west exit (noun, place, n5, kanji)
+会う ( [会]->あ・う ) [au] - to meet (verb, godan-verb, intransitive, n5, kanji)
+約束 ( [約]->やく[束]->そく ) [yakusoku] - promise, appointment (noun, suru-verb, n5, kanji)
+時半 ( [時]->じ[半]->はん ) [jihan] - half past the hour (noun, time, n5, kanji)
+東口 ( [東]->ひがし[口]->ぐち ) [higashiguchi] - east exit (noun, place, n5, kanji)
+間違える ( [間]->ま[違]->ちが・える ) [machigaeru] - to make a mistake (verb, ichidan-verb, transitive, n5, kanji)
+思う ( [思]->おも・う ) [omou] - to think (verb, godan-verb, transitive, n5, kanji)
+すぐ [sugu] - immediately (adverb, n5)
+どうして [doushite] - why (adverb, n5)
+音楽 ( [音]->おん[楽]->がく ) [ongaku] - music (noun, hobby, n5, kanji)
+銀行 ( [銀]->ぎん[行]->こう ) [ginkou] - bank (noun, place, n5, kanji)
+勤める ( [勤]->つと・める ) [tsutomeru] - to work for (verb, ichidan-verb, intransitive, n5, kanji)
+ギター [gitaa] - guitar (noun, hobby, loan-word, katakana, n5)
+
+---
+SetId: set-jtest-ex-kanji-06
+Title: JTEST_EX Reading Exercise Set 6
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: 土曜日と日曜日は忙しくないです。わたしは１０時ごろ起きます。 | Ａ 「このおんがくはとてもいいですよ。いっしょに聞きましょう。テープレコーダーはありますか。」Ｂ 「ええ。後ろに ありますよ。」
+ContextEnglish: Saturdays and Sundays are not busy. I wake up around 10 o'clock. | A: This music is very nice. Let's listen together. Do you have a tape recorder? B: Yes. It's behind us.
+
+1. この人のせいかつとあわないものはどれですか。
+   1) しゅうまつはひまではありません。 - The weekend is not free (busy).
+   2) 朝ごはんを食べたあと、うんどうをします。 - After eating breakfast, I exercise.
+   3) ちかくのスーパーでやさいやミルクなどを買います。 - Buy vegetables, milk, etc., at a nearby supermarket.
+   4) 友達といっしょに料理を作ったり、宿題をしたりします。 - Make food and do homework together with friends.
+   English: Which does not match this person's daily life? [_____]
+   ContextIdx: 0
+
+2. （ア）には何を入れますか。
+   1) なぜ - why
+   2) どう - how
+   3) どんなに - how much / in what way
+   4) ななにが - what
+   English: What should be inserted into (A)? [_____]
+   ContextIdx: 1
+
+3. （イ）には何を入れますか。
+   1) これですね - This one right?
+   2) どれですか - Which one is it?
+   3) あおいボタンですね - The blue button right?
+   4) ええ、そうです - Yes, that's right.
+   English: What should be inserted into (B)? [_____]
+   ContextIdx: 1
+
+4. （ウ）には何を入れますか。
+   1) それは - As for that
+   2) つぎから - From next
+   3) つぎに - Next / then
+   4) それでは - Well then
+   English: What should be inserted into (C)? [_____]
+   ContextIdx: 1
+
+5. ただしいものはどれですか。
+   1) 白いボタンをおしてから、テープを入れます。 - Press the white button, then insert the tape.
+   2) 白いボタンをおしてから、あおいボタンをおします。 - Press the white button, then press the blue button.
+   3) テープを入れてから、あおいボタンをおします。 - Insert the tape, then press the blue button.
+   4) あおいボタンをおしてから、テープを入れます。 - Press the blue button, then insert the tape.
+   English: Which of the following is correct according to the conversation? [_____]
+   ContextIdx: 1
+
+Answer Key:
+1. 1, 2. 2, 3. 1, 4. 3, 5. 4
+
+Vocab:
+土曜日 ( [土]->ど[曜]->よう[日]->び ) [doyoubi] - Saturday (noun, days-of-week, n5, kanji)
+日曜日 ( [日]->にち[曜]->よう[日]->び ) [nichiyoubi] - Sunday (noun, days-of-week, n5, kanji)
+忙しい ( [忙]->いそが・しい ) [isogashii] - busy (i-adjective, n5, kanji)
+起きる ( [起]->お・きる ) [okiru] - to wake up (verb, ichidan-verb, intransitive, n5, kanji)
+朝ご飯 ( [朝]->あさ[飯]->ごはん ) [asagohan] - breakfast (noun, food, n5, kanji)
+食べる ( [食]->た・べる ) [taberu] - to eat (verb, ichidan-verb, transitive, n5, kanji)
+体育館 ( [体]->たい[育]->いく[館]->かん ) [taiikukan] - gymnasium (noun, school, n5, kanji)
+運動 ( [運]->うん[動]->どう ) [undou] - exercise (noun, suru-verb, n5, kanji)
+夕方 ( [夕]->ゆう[方]->かた ) [yuugata] - evening (noun, time, n5, kanji)
+近く ( [近]->ちか・く ) [chikaku] - near (noun, direction, n5, kanji)
+肉 ( [肉]->にく ) [niku] - meat (noun, food, n5, kanji)
+牛乳 ( [牛]->ぎゅう[乳]->にゅう ) [gyuunyuu] - milk (noun, drink, n5, kanji)
+料理 ( [料]->りょう[理]->り ) [ryouri] - cooking, cuisine (noun, food, n5, kanji)
+作る ( [作]->つく・る ) [tsukuru] - to make (verb, godan-verb, transitive, n5, kanji)
+宿題 ( [宿]->しゅく[題]->だい ) [shukudai] - homework (noun, school, n5, kanji)
+一週間 ( [一]->いっ[週]->しゅう[間]->かん ) [isshuukan] - one week (noun, time, n5, kanji)
+毎日 ( [毎]->まい[日]->にち ) [mainichi] - every day (noun, time, n5, kanji)
+同じ ( [同]->おな・じ ) [onaji] - same (na-adjective, n5, kanji)
+生活 ( [生]->せい[活]->かつ ) [seikatsu] - life (noun, suru-verb, daily-life, n5, kanji)
+楽しい ( [楽]->たの・しい ) [tanoshii] - enjoyable (i-adjective, emotion, n5, kanji)
+合う ( [合]->あ・う ) [au] - to match (verb, godan-verb, intransitive, n5, kanji)
+週末 ( [週]->しゅう[末]->まつ ) [shuumatsu] - weekend (noun, time, n5, kanji)
+暇 ( [暇]->ひま ) [hima] - free time (na-adjective, n5, kanji)
+テープレコーダー [teepurekoodaa] - tape recorder (noun, loan-word, katakana, n5)
+後ろ ( [後]->うしろ ) [ushiro] - behind (noun, direction, n5, kanji)
+ボタン [botan] - button (noun, loan-word, katakana, n5)
+押す ( [押]->お・す ) [osu] - to push (verb, godan-verb, transitive, n5, kanji)
+青い ( [青]->あお・い ) [aoi] - blue (i-adjective, colour, n5, kanji)
+白い ( [白]->しろ・い ) [shiroi] - white (i-adjective, colour, n5, kanji)
+テープ [teepu] - tape (noun, loan-word, katakana, n5)
+入れる ( [入]->い・れる ) [ireru] - to put in (verb, ichidan-verb, transitive, n5, kanji)
+次 ( [次]->つぎ ) [tsugi] - next (noun, n5, kanji)
+
+---
+SetId: set-jtest-ex-kanji-07
+Title: JTEST_EX Reading Exercise Set 7
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: ａ「すみません、こうばんはどこですか。」ｂ「こうばんですか。そこにはしがありますね。」 | すずき「もしもす、ヤンさんですか。すずきです。あした、いっしょに東山こうえんへ行きませんか。」
+ContextEnglish: A: Excuse me, where is the police box? B: The police box? There is a bridge there right? | Suzuki: Hello, is this Yang-san? It's Suzuki. Would you like to go to Higashiyama Park together tomorrow?
+
+1. ただしいものはどれですか。
+   1) はしはこうばんの左にあります。 - The bridge is to the left of the police box.
+   2) こうばんははしのよこにあります。 - The police box is beside the bridge.
+   3) こうばんははしのむこうにあります。 - The police box is on the other side of the bridge.
+   4) はしはここから５分ぐらいかかります。 - The bridge takes about 5 minutes from here.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 0
+
+2. やんさんとすずきさんははじめて東山こうえんへ行きますか。
+   1) ヤンさんもすずきさんもはじめてです。 - Both Yang-san and Suzuki-san are going for the first time.
+   2) ヤンさんもすずきさんも前に行きました。 - Both Yang-san and Suzuki-san went before.
+   3) ヤンさんははじめてですが、すずきさんは前に行きました。 - Yang-san is going for the first time, but Suzuki-san went before.
+   4) すずきさんははじめてですが、やんさんは前に行きました。 - Suzuki-san is going for the first time, but Yang-san went before.
+   English: Are Yang-san and Suzuki-san going to Higashiyama Park for the first time? [_____]
+   ContextIdx: 1
+
+3. （ ア ）には何を入れますか。
+   1) １０時に行きましょう。 - Let's go at 10.
+   2) １０時はちょっと・・・ - 10 o'clock is a bit...
+   3) １０時がいいですね。 - 10 o'clock is good.
+   4) １０時はおそいです。 - 10 o'clock is late.
+   English: What should be inserted into (A)? [_____]
+   ContextIdx: 1
+
+4. （ イ ）には何を入れますか。
+   1) まっています - am/will be waiting
+   2) まつでしょう - will probably wait
+   3) まちました - waited
+   4) まちません - will not wait
+   English: What should be inserted into (B)? [_____]
+   ContextIdx: 1
+
+5. ひるごはんはどこで食べますか。
+   1) 駅の前のきっさてんで食べます。 - Eat at the coffee shop in front of the station.
+   2) こうえんの中のきっさてんで食べます。 - Eat at the coffee shop inside the park.
+   3) 駅のちかくのレストランで食べます。 - Eat at the restaurant near the station.
+   4) こうえんのちかくのレストランで食べます。 - Eat at the restaurant near the park.
+   English: Where will they eat lunch? [_____]
+   ContextIdx: 1
+
+Answer Key:
+1. 3, 2. 3, 3. 2, 4. 1, 5. 4
+
+Vocab:
+交番 ( [交]->こう[番]->ばん ) [kouban] - police box (noun, place, n5, kanji)
+橋 ( [橋]->はし ) [hashi] - bridge (noun, place, n5, kanji)
+渡る ( [渡]->わた・る ) [wataru] - to cross over (verb, godan-verb, intransitive, n5, kanji)
+左側 ( [左]->ひだり[側]->がわ ) [hidarigawa] - left side (noun, direction, n5, kanji)
+左 ( [左]->ひだり ) [hidari] - left (noun, direction, n5, kanji)
+横 ( [横]->よこ ) [yoko] - beside (noun, direction, n5, kanji)
+向こう ( [向]->むこう ) [mukou] - opposite side (noun, direction, n5, kanji)
+散歩 ( [散]->さん[歩]->ぽ ) [sanpo] - walk, stroll (noun, suru-verb, n5, kanji)
+広い ( [広]->ひろ・い ) [hiroi] - spacious (i-adjective, n5, kanji)
+何時 ( [何]->なん[時]->じ ) [nanji] - what time (noun, time, n5, kanji)
+喫茶店 ( [喫]->きっ[茶]->さ[店]->てん ) [kissaten] - coffee shop (noun, place, n5, kanji)
+昼ごはん ( [昼]->ひる ) [hirugohan] - lunch (noun, food, n5, kanji)
+レストラン [resutoran] - restaurant (noun, place, loan-word, katakana, n5)
+美味しい ( [美]->おい・しい ) [oishii] - delicious (i-adjective, food, n5, kanji)
+
+---
+SetId: set-jtest-ex-kanji-08
+Title: JTEST_EX Reading Exercise Set 8
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: 土よう日に会社の人と山へあそびに行きました。２時間あるいて山の上につきました。 | わたしはきょねんの１０月に日本へ来ました。今、とうきょうのアパートにひとりですんでいます。 | 明日車で中山へ行く。うちから山までふつうは３時間ぐらいかかる。
+ContextEnglish: On Saturday, I went to play at the mountain with company people. Walking for 2 hours, I arrived at the top of the mountain. | Last year in October, I came to Japan. Now, I live alone in an apartment in Tokyo. | Tomorrow I'll go to Nakayama by car. From my house to the mountain usually takes about 3 hours.
+
+1. ただしいものはどれですか。
+   1) 山の上まで２時間あるきました。 - Walked for 2 hours up to the top of the mountain.
+   2) ひるごはんをつくってつかれました。 - Made lunch and got tired.
+   3) ２時間休んでひるごはんを食べました。 - Rested for 2 hours and ate lunch.
+   4) つかれたからもう山へ行きたくないです。 - Don't want to go to the mountain anymore because I got tired.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 0
+
+2. ただしいものはどれですか。
+   1) わたしのへやは駅からとおいですが、ひろいです。 - My room is far from the station, but spacious.
+   2) わたしのへやは駅にちかいですが、少し高いです。 - My room is close to the station, but a bit expensive.
+   3) わたしのへやは駅にちかいですが、ひとくありません。 - My room is close to the station, but...
+   4) わたしのへやは駅から少しとおいですが、べんりです。 - My room is a bit far from the station, but convenient.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 1
+
+3. 明日この人はどうして早く出かけますか。
+   1) 土曜日で車が多いから - Because it's Saturday and there are many cars.
+   2) 美しい湖があるから - Because there is a beautiful lake.
+   3) めずらしい花や鳥がいるから - Because there are rare flowers and birds.
+   4) あまり天気がよくないから - Because the weather is not very good.
+   English: Why does this person leave early tomorrow? [_____]
+   ContextIdx: 2
+
+4. この人は明日天気がよかったら、何をしますか。
+   1) 花や鳥を見ます - See flowers and birds.
+   2) 湖で泳ぎます - Swim in the lake.
+   3) ふねに乗ります - Ride a boat.
+   4) 魚をつります - Fish.
+   English: What will this person do tomorrow if the weather is good? [_____]
+   ContextIdx: 2
+
+5. この人は美術館に行きますか。
+   1) 行かないつもりです - Intend not to go.
+   2) 行くかもしれません - Might go.
+   3) 行きません - Will not go.
+   4) 行きたくないです - Don't want to go.
+   English: Will this person go to the art museum? [_____]
+   ContextIdx: 2
+
+Answer Key:
+1. 1, 2. 1, 3. 1, 4. 4, 5. 2
+
+Vocab:
+山 ( [山]->やま ) [yama] - mountain (noun, nature, n5, kanji)
+着く ( [着]->つ・く ) [tsuku] - to arrive (verb, godan-verb, intransitive, n5, kanji)
+疲れる ( [疲]->つか・れる ) [tsukareru] - to get tired (verb, ichidan-verb, intransitive, n5, kanji)
+楽しい ( [楽]->たの・しい ) [tanoshii] - enjoyable (i-adjective, emotion, n5, kanji)
+住む ( [住]->す・む ) [sumu] - to live (verb, godan-verb, intransitive, n5, kanji)
+部屋 ( [部]->へ[屋]->や ) [heya] - room (noun, house, n5, kanji)
+広い ( [広]->ひろ・い ) [hiroi] - spacious (i-adjective, n5, kanji)
+遠い ( [遠]->とお・い ) [tooi] - far (i-adjective, n5, kanji)
+便利 ( [便]->べん[利]->り ) [benri] - convenient (na-adjective, n5, kanji)
+近い ( [近]->ちか・い ) [chikai] - near (i-adjective, n5, kanji)
+車 ( [車]->くるま ) [kuruma] - car (noun, transportation, n5, kanji)
+普通 ( [普]->ふ[通]->つう ) [futsuu] - ordinary (noun, na-adjective, n5, kanji)
+道 ( [道]->みち ) [michi] - road (noun, place, n5, kanji)
+混む ( [混]->こ・む ) [komu] - to be crowded (verb, godan-verb, intransitive, n5, kanji)
+
+---
+SetId: set-jtest-ex-kanji-09
+Title: JTEST_EX Reading Exercise Set 9
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: きのうは友だちのいえへ行って、友だちがつくったりょうりを食べました。 | 田中さんへ。おとといはどうもありがとう。雨がたくさん降りましたから、田中さんに傘を借りてよかったです。 | このたてものの中ではしずかにえを見てください。しゃしんをとらないでください。
+ContextEnglish: Yesterday I went to my friend's house and ate food made by my friend. | To Tanaka-san. Thank you very much for the other day. Since it rained a lot, it was great to borrow an umbrella from you. | Please look at the paintings quietly inside this building. Please do not take photos.
+
+1. ただしいものはどれですか。
+   1) わたしはりょうりをつくりました。 - I made the food.
+   2) 友だちはりょうりがじょうずです。 - My friend is good at cooking.
+   3) りょうりはおいしくありませんでした。 - The food was not delicious.
+   4) 友だちはあまり食べませんでした。 - My friend didn't eat much.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 0
+
+2. 鈴木さんは９月１０日に何をしましたか。
+   1) お菓子を買いました。 - Bought sweets.
+   2) 傘を借りました。 - Borrowed an umbrella.
+   3) 傘を返しました。 - Returned an umbrella.
+   4) お菓子を作りました。 - Made sweets.
+   English: What did Suzuki-san do on September 10th? [_____]
+   ContextIdx: 1
+
+3. あなたはこのたてものの中で何をしますか。
+   1) えを見ます。 - Look at paintings.
+   2) たばこをすいます。 - Smoke tobacco.
+   3) ごはんを食べます。 - Eat a meal.
+   4) しゃしんをとります。 - Take photos.
+   English: What will you do inside this building? [_____]
+   ContextIdx: 2
+
+4. ただしいものはどれですか。
+   1) あさごはんのあとでテレビを見ました。 - Watched TV after breakfast.
+   2) あさごはんをたべながら新聞を読みました。 - Read the newspaper while eating breakfast.
+   3) テレビを見る前にあさごはんを食べました。 - Ate breakfast before watching TV.
+   4) シャワーをあびたあとであさごはんを食べました。 - Ate breakfast after taking a shower.
+   English: Which of the following is correct? [_____]
+
+5. さくらさんは明日何をすると書いてありますか。
+   1) 本を読みます。 - Read a book.
+   2) ノートを借ります。 - Borrow a notebook.
+   3) ノートを返します。 - Return a notebook.
+   4) 本とノートを使います。 - Use a book and notebook.
+   English: What is written that Sakura-san will do tomorrow? [_____]
+
+Answer Key:
+1. 2, 2. 3, 3. 1, 4. 4, 5. 3
+
+Vocab:
+一昨日 ( [一]->おと[日]->と・い ) [ototoi] - day before yesterday (noun, time, n5, kanji)
+雨 ( [雨]->あめ ) [ame] - rain (noun, weather, n5, kanji)
+降る ( [降]->ふ・る ) [furu] - to fall (rain) (verb, godan-verb, intransitive, n5, kanji)
+傘 ( [傘]->かさ ) [kasa] - umbrella (noun, daily-life, n5, kanji)
+借りる ( [借]->かり・る ) [kariru] - to borrow (verb, ichidan-verb, transitive, n5, kanji)
+ドア [doa] - door (noun, house, loan-word, katakana, n5)
+置く ( [置]->お・く ) [oku] - to put (verb, godan-verb, transitive, n5, kanji)
+お菓子 ( [菓]->か[子]->し ) [okashi] - sweets (noun, food, n5, kanji)
+返す ( [返]->かえ・す ) [kaesu] - to return something (verb, godan-verb, transitive, n5, kanji)
+建物 ( [建]->たて[物]->もの ) [tatemono] - building (noun, place, n5, kanji)
+静か ( [静]->しず・か ) [shizuka] - quiet (na-adjective, n5, kanji)
+写真 ( [写]->しゃ[真]->しん ) [shashin] - photograph (noun, n5, kanji)
+撮る ( [撮]->と・る ) [toru] - to take a photo (verb, godan-verb, transitive, n5, kanji)
+煙草 ( [煙]->た[草]->ばこ ) [tabako] - tobacco (noun, daily-life, n5)
+吸う ( [吸]->す・う ) [suu] - to smoke (verb, godan-verb, transitive, n5, kanji)
+今朝 ( [今]->け[朝]->さ ) [kesa] - this morning (noun, time, n5, kanji)
+朝ご飯 ( [朝]->あさ[飯]->ごはん ) [asagohan] - breakfast (noun, food, n5, kanji)
+新聞 ( [新]->しん[聞]->ぶん ) [shinbun] - newspaper (noun, daily-life, n5, kanji)
+先に ( [先]->さき・に ) [saki ni] - ahead, earlier (adverb, time, n5, kanji)
+ゆっくり [yukkuri] - slowly (adverb, n5)
+
+---
+SetId: set-jtest-ex-kanji-10
+Title: JTEST_EX Reading Exercise Set 10
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: かぜですね。くすりを出しますから、きょうから３日飲んでください。 | 駅の前の道をまっすぐ行って橋を渡ります。そこから５分歩きます。右に病院があります。 | しずかさん、お元気ですか。この前の同窓会で会ってから会っていませんね。
+ContextEnglish: It's a cold. I'll prescribe medicine, so please take it for 3 days starting today. | Go straight down the road in front of the station and cross the bridge. Walk 5 minutes from there. There is a hospital on the right. | Shizuka-san, how are you? We haven't met since we saw each other at the last class reunion.
+
+1. ただしいものはどれですか。
+   1) くすりは３日飲みます。１日３かいごはんの前に飲みます。 - Take medicine 3 days, 3 times a day before meals.
+   2) くすりは３日飲みます。１日３かいごはんの後で飲みます。 - Take medicine 3 days, 3 times a day after meals.
+   3) くすりは１日４かい、ごはんの前とよるねる前に飲みます。 - Take medicine 4 times a day, before meals and before sleeping at night.
+   4) くすりは１日４かい、ごはんの後とよるねる前に飲みます。 - Take medicine 4 times a day, after meals and before sleeping at night.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 0
+
+2. ただしいいものはどれですか。
+   1) 学校は駅から歩いて５分です。 - The school is a 5-minute walk from the station.
+   2) 学校は橋から歩いて１０分です。 - The school is a 10-minute walk from the bridge.
+   3) 学校は駅の横の建物です。 - The school is the building next to the station.
+   4) 学校は病院の横の建物です。 - The school is the building next to the hospital.
+   English: Which of the following is correct? [_____]
+   ContextIdx: 1
+
+3. （ア）には何を入れますか。
+   1) しつれいします - Excuse me
+   2) ごめんください - Hello / May I come in
+   3) ごぶさたしています - It's been a long time
+   4) ようこそ - Welcome
+   English: What should be inserted into (A)? [_____]
+   ContextIdx: 2
+
+4. （イ）には何を入れますか。
+   1) あまり - not much
+   2) ほとんど - almost / hardly
+   3) よくは - well
+   4) たくさん - a lot
+   English: What should be inserted into (B)? [_____]
+   ContextIdx: 2
+
+5. （ウ）には何を入れますか。
+   1) ところが - however
+   2) ところで - by the way
+   3) じつは - as a matter of fact
+   4) これは - this is
+   English: What should be inserted into (C)? [_____]
+   ContextIdx: 2
+
+Answer Key:
+1. 4, 2. 4, 3. 3, 4. 2, 5. 3
+
+Vocab:
+風邪 ( [風]->かぜ ) [kaze] - cold (illness) (noun, health, n5, kanji)
+薬 ( [薬]->くすり ) [kusuri] - medicine (noun, health, n5, kanji)
+出す ( [出]->だ・す ) [dasu] - to take out, prescribe (verb, godan-verb, transitive, n5, kanji)
+今日 ( [今]->きょう ) [kyou] - today (noun, time, n5, kanji)
+三日 ( [三]->みっ[日]->か ) [mikka] - 3 days (noun, calendar, n5, kanji)
+朝 ( [朝]->あさ ) [asa] - morning (noun, time, n5, kanji)
+昼 ( [昼]->ひる ) [hiru] - noon (noun, time, n5, kanji)
+晩 ( [晩]->ばん ) [ban] - evening (noun, time, n5, kanji)
+寝る ( [寝]->ね・る ) [neru] - to sleep (verb, ichidan-verb, intransitive, n5, kanji)
+ご飯 ( [飯]->ごはん ) [gohan] - meal (noun, food, n5, kanji)
+病院 ( [病]->びょう[院]->いん ) [byouin] - hospital (noun, place, n5, kanji)
+学校 ( [学]->がっ[校]->こう ) [gakkou] - school (noun, school, n5, kanji)
+隣 ( [隣]->となり ) [tonari] - next to (noun, place, n5, kanji)
+建物 ( [建]->たて[物]->もの ) [tatemono] - building (noun, place, n5, kanji)
+同窓会 ( [同]->どう[窓]->そう[会]->かい ) [dousoukai] - class reunion (noun, school, n5, kanji)
+誕生日 ( [誕]->たん[生]->じょう[日]->び ) [tanjoubi] - birthday (noun, calendar, n5, kanji)
+開く ( [開]->ひら・く ) [hiraku] - to hold a party (verb, godan-verb, transitive, n5, kanji)
+狭い ( [狭]->せま・い ) [semai] - narrow (i-adjective, n5, kanji)
+予約 ( [予]->よ[約]->やく ) [yoyaku] - reservation (noun, suru-verb, n5, kanji)
+招待 ( [招]->しょう[待]->たい ) [shoutai] - invitation (noun, suru-verb, n5, kanji)
+知る ( [知]->し・る ) [shiru] - to know (verb, godan-verb, transitive, n5, kanji)
+会費 ( [会]->かい[費]->ひ ) [kaihi] - membership fee (noun, daily-life, n5, kanji)
+プレゼント [purezento] - present (noun, loan-word, katakana, n5)
+場所 ( [場]->ば[所]->しょ ) [basho] - place (noun, place, n5, kanji)
+地図 ( [地]->ち[図]->ず ) [chizu] - map (noun, n5, kanji)
+入れる ( [入]->い・れる ) [ireru] - to put in (verb, ichidan-verb, transitive, n5, kanji)
+都合が悪い ( [都]->つ[合]->ごう[悪]->わる・い ) [tsugou ga warui] - inconvenient (expression, n5, kanji)
+場合 ( [場]->ば[合]->あい ) [baai] - case, situation (noun, n5, kanji)
+お手数 ( [手]->て[数]->すう ) [otesuu] - trouble (noun, n5, kanji)
+ぜひ [zehi] - by all means (adverb, n5)
+ところが [tokoro ga] - however (conjunction, n5)
+ところで [tokoro de] - by the way (conjunction, n5)
+じつは [jitsu wa] - as a matter of fact (adverb, n5)
+
+---
+SetId: set-jtest-ex-kanji-11
+Title: JTEST_EX Reading Exercise Set 11
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: ａ「すみません、こうばんはどこですか。」ｂ「こうばんですか。そこにはしがありますね。」 | 先生「つくえの上に本をおかないでください。」学生「あ、すみません。つくえの中に入れますか。」 | ヤン「もしもす、大山さんですか。ヤンです。」大山「アメリカにいるヤンさん？おげんきですか。」
+ContextEnglish: A: Excuse me, where is the police box? B: The police box? There is a bridge right over there. | Teacher: Please don't put books on top of the desk. Student: Oh, sorry. Should I put them inside the desk? | Yang: Hello, is this Oyama-san? It's Yang. Oyama: Yang-san in America? How are you?
+
+1. 『しつもん』 ただしいものはどれですか。
+   1) はしはこうばんの左にあります。 - The bridge is to the left of the police box.
+   2) こうばんははしのよこにあります。 - The police box is beside the bridge.
+   3) こうばんははしのむこうにあります。 - The police box is on the other side of the bridge.
+   4) はしはここから５分ぐらいかかります。 - The bridge takes about 5 minutes from here.
+   English: Question: Which of the following is correct? [_____]
+   ContextIdx: 0
+
+2. 『しつもん』 テストのとき本はどこにおきますか。
+   1) かばんの中です。 - Inside the bag.
+   2) つくえの中です。 - Inside the desk.
+   3) つくえの上です。 - On top of the desk.
+   4) かばんの上です。 - On top of the bag.
+   English: Question: Where should books be placed during a test? [_____]
+   ContextIdx: 1
+
+3. 『しつもん』 （ア）には何を入れますか。
+   1) そうでした - That was so
+   2) そうですか - Is that so / I see
+   3) そうしましょう - Let's do that
+   4) そうします - I will do so
+   English: Question: What should be inserted into (A)? [_____]
+   ContextIdx: 2
+
+4. 『しつもん』 （イ）には何を入れますか。
+   1) じゃあ - Well then
+   2) たぶん - perhaps
+   3) どうも - thanks
+   4) あれから - since then
+   English: Question: What should be inserted into (B)? [_____]
+   ContextIdx: 2
+
+5. 『しつもん』 ヤンさんはどうして大山に電話をしましたか。
+   1) 大山さんにあいたいから電話しまあした - Called because he wanted to see Oyama-san.
+   2) 大山さんがアメリカに行くから電話しました - Called because Oyama-san is going to America.
+   3) 大山さんがパーティーをするから電話しました - Called because Oyama-san is throwing a party.
+   4) 大山さんのたんじょうびから電話しました - Called because of Oyama-san's birthday.
+   English: Question: Why did Yang-san call Oyama-san? [_____]
+   ContextIdx: 2
+
+6. 『しつもん』 ただしいものはどれですか。
+   1) 大山さんはあしたかいしゃのともだちとパーティーをします。 - Oyama-san will have a party with company friends tomorrow.
+   2) 大山さんはきのうかいしゃのともだちとパーティーをしました。 - Oyama-san had a party with company friends yesterday.
+   3) 大山さんはあしたたんじょうびからともだちとレストランへ行きます。 - Oyama-san goes to a restaurant with friends because of birthday tomorrow.
+   4) 大山さんはきのうたんじょうびだったからかぞくとパーティーをしました。 - Oyama-san had a party with family yesterday because it was a birthday.
+   English: Question: Which of the following is correct? [_____]
+   ContextIdx: 2
+
+Answer Key:
+1. 3, 2. 1, 3. 2, 4. 1, 5. 4, 6. 2
+
+Vocab:
+交番 ( [交]->こう[番]->ばん ) [kouban] - police box (noun, place, n5, kanji)
+橋 ( [橋]->はし ) [hashi] - bridge (noun, place, n5, kanji)
+渡る ( [渡]->わた・る ) [wataru] - to cross (verb, godan-verb, intransitive, n5, kanji)
+行く ( [行]->い・く ) [iku] - to go (verb, godan-verb, intransitive, n5, kanji)
+左側 ( [左]->ひだり[側]->がわ ) [hidarigawa] - left side (noun, direction, n5, kanji)
+分 ( [分]->ふん ) [fun] - minute (counter, n5, kanji)
+かかる [kakaru] - to take time/money (verb, godan-verb, intransitive, n5)
+正しい ( [正]->ただ・しい ) [tadashii] - correct (i-adjective, n5, kanji)
+横 ( [横]->よこ ) [yoko] - beside (noun, direction, n5, kanji)
+向こう ( [向]->むこう ) [mukou] - opposite side (noun, direction, n5, kanji)
+机 ( [机]->つくえ ) [tsukue] - desk (noun, furniture, n5, kanji)
+上 ( [上]->うえ ) [ue] - on top (noun, direction, n5, kanji)
+本 ( [本]->ほん ) [hon] - book (noun, n5, kanji)
+置く ( [置]->お・く ) [oku] - to put (verb, godan-verb, transitive, n5, kanji)
+中 ( [中]->なか ) [naka] - inside (noun, direction, n5, kanji)
+入れる ( [入]->い・れる ) [ireru] - to put in (verb, ichidan-verb, transitive, n5, kanji)
+鞄 ( [鞄]->かばん ) [kaban] - bag (noun, clothing, n5, kanji)
+鉛筆 ( [鉛]->えん[筆]->ぴつ ) [enpitsu] - pencil (noun, school, n5, kanji)
+テスト [tesuto] - test (noun, school, loan-word, katakana, n5)
+誕生日 ( [誕]->たん[生]->じょう[日]->び ) [tanjoubi] - birthday (noun, calendar, n5, kanji)
+覚える ( [覚]->おぼ・える ) [oboeru] - to remember (verb, ichidan-verb, transitive, n5, kanji)
+もちろん [mochiron] - of course (adverb, n5)
+今年 ( [今]->こ[年]->とし ) [kotoshi] - this year (noun, time, n5, kanji)
+一緒 ( [一]->いっ[緒]->しょ ) [issho] - together (noun, n5, kanji)
+パーティー [paatii] - party (noun, hobby, loan-word, katakana, n5)
+昨日 ( [昨]->きのう ) [kinou] - yesterday (noun, time, n5, kanji)
+会社 ( [会]->かい[社]->しゃ ) [kaisha] - company (noun, work, n5, kanji)
+友達 ( [友]->とも[達]->だち ) [tomodachi] - friend (noun, family, n5, kanji)
+ケーキ [keeki] - cake (noun, food, loan-word, katakana, n5)
+食べる ( [食]->た・べる ) [taberu] - to eat (verb, ichidan-verb, transitive, n5, kanji)
+ダンス [dansu] - dance (noun, suru-verb, hobby, loan-word, katakana, n5)
+楽しい ( [楽]->たの・しい ) [tanoshii] - fun (i-adjective, emotion, n5, kanji)
+明日 ( [明]->あした ) [ashita] - tomorrow (noun, time, n5, kanji)
+家族 ( [家]->か[族]->ぞく ) [kazoku] - family (noun, family, n5, kanji)
+レストラン [resutoran] - restaurant (noun, place, loan-word, katakana, n5)
+来月 ( [来]->らい[月]->げつ ) [raigetsu] - next month (noun, time, n5, kanji)
+仕事 ( [仕]->し[事]->ごと ) [shigoto] - job (noun, work, n5, kanji)
+本当 ( [本]->ほん[当]->とう ) [hontou] - really (noun, n5, kanji)
+電話 ( [電]->でん[話]->わ ) [denwa] - phone (noun, daily-life, n5, kanji)
+どうして [doushite] - why (adverb, n5)
+
+---
+SetId: set-jtest-ex-kanji-12
+Title: JTEST_EX Reading Exercise Set 12
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: Ａ「ねこは、どこへ行きましたか。」Ｂ「ねこ…。あ、いすの上でねていますよ。」 | Ａ「このくつはいくらですか。」Ｂ「３５００円です。」 | かんじのしけんをしました。Ａ（１００てん～８０てん）は１０人で、Ｂは１５人でした。
+ContextEnglish: A: Where did the cat go? B: The cat... Ah, it's sleeping on top of the chair. | A: How much are these shoes? B: They are 3,500 yen. | We took a Kanji test. Group A scored 100-80 points with 10 people, and Group B had 15 people.
+
+1. 「しつもん」ねこは、いまどこにいますか。
+   1) いすの上 - On top of the chair
+   2) いすの下 - Under the chair
+   3) つくえの上 - On top of the desk
+   4) つくえの下 - Under the desk
+   English: Question: Where is the cat right now? [_____]
+   ContextIdx: 0
+
+2. 「しつもん」どのえがいいですか。
+   1) 安いくつ - Cheap shoes
+   2) 高いくつ - Expensive shoes
+   3) くろいくつ - Black shoes
+   4) 白いくつ - White shoes
+   English: Question: Which picture is correct based on the shoe price discussion? [_____]
+   ContextIdx: 1
+
+3. 「しつもん」どのグラフがいいですか。
+   1) Graph 1
+   2) Graph 2
+   3) Graph 3
+   4) Graph 4
+   English: Question: Which graph represents the Kanji test score distribution? [_____]
+   ContextIdx: 2
+
+4. 「しつもん」どのえがいいですか。
+   1) Map route 1
+   2) Map route 2
+   3) Map route 3
+   4) Map route 4
+   English: Question: Which map route corresponds to the directions? [_____]
+
+5. 「しつもん」どのえがいいですか。
+   1) Family photo arrangement 1
+   2) Family photo arrangement 2
+   3) Family photo arrangement 3
+   4) Family photo arrangement 4
+   English: Question: Which photo arrangement represents the family positions? [_____]
+
+Answer Key:
+1. 1, 2. 3, 3. 4, 4. 1, 5. 3
+
+Vocab:
+猫 ( [猫]->ねこ ) [neko] - cat (noun, animal, n5, kanji)
+椅子 ( [椅]->い[子]->す ) [isu] - chair (noun, furniture, n5, kanji)
+寝る ( [寝]->ね・る ) [neru] - to sleep (verb, ichidan-verb, intransitive, n5, kanji)
+少し ( [少]->すこ・し ) [sukoshi] - a little (adverb, n5, kanji)
+前 ( [前]->まえ ) [mae] - before (noun, direction, n5, kanji)
+靴 ( [靴]->くつ ) [kutsu] - shoes (noun, clothing, n5, kanji)
+隣 ( [隣]->となり ) [tonari] - next to (noun, place, n5, kanji)
+黒い ( [黒]->くろ・い ) [kuroi] - black (i-adjective, colour, n5, kanji)
+今日 ( [今]->きょう ) [kyou] - today (noun, time, n5, kanji)
+安い ( [安]->やす・い ) [yasui] - cheap (i-adjective, n5, kanji)
+漢字 ( [漢]->かん[字]->じ ) [kanji] - kanji (noun, school, n5, kanji)
+試験 ( [試]->し[験]->けん ) [shiken] - exam (noun, school, n5, kanji)
+点 ( [点]->てん ) [ten] - point (counter, school, n5, kanji)
+グラフ [gurafu] - graph (noun, school, loan-word, katakana, n5)
+道 ( [道]->みち ) [michi] - road (noun, place, n5, kanji)
+右 ( [右]->みぎ ) [migi] - right (noun, direction, n5, kanji)
+歩く ( [歩]->ある・く ) [aruku] - to walk (verb, godan-verb, intransitive, n5, kanji)
+もう一度 ( [一]->いち[度]->ど ) [mou ichido] - once more (adverb, n5, kanji)
+曲がる ( [曲]->ま・がる ) [magaru] - to turn (verb, godan-verb, intransitive, n5, kanji)
+銀行 ( [銀]->ぎん[行]->こう ) [ginkou] - bank (noun, place, n5, kanji)
+女の人 ( [女]->おんな[の]->の[人]->ひと ) [onna no hito] - woman (noun, n5, kanji)
+お母さん ( [母]->かあ ) [okaasan] - mother (noun, family, n5, kanji)
+母 ( [母]->はは ) [haha] - mother (noun, family, n5, kanji)
+お父さん ( [父]->とう ) [otousan] - father (noun, family, n5, kanji)
+おじいさん [ojiisan] - grandfather (noun, family, n5)
+後ろ ( [後]->うしろ ) [ushiro] - behind (noun, direction, n5, kanji)
+
+---
+SetId: set-jtest-ex-kanji-13
+Title: JTEST_EX Reading Exercise Set 13
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: わたしはかいしゃにつとめています。かいしゃの休みは、日よう日だけですから、することがたくさんあります。 | きのう、本をかって、よる３時間ぐらい読みました。 | きのうケーキを１０こかった。ばんごはんのあといもうととふたりで２こずつたべた。
+ContextEnglish: I work at a company. My company holiday is only Sunday, so I have a lot of things to do. | Yesterday I bought a book and read it for about 3 hours at night. | Yesterday I bought 10 cakes. After dinner, my younger sister and I ate 2 each.
+
+1. 「１」にはなにをいれますか。
+   1) きのう - yesterday
+   2) よる - night
+   3) かいしゃ - company
+   4) 日よう日 - Sunday
+   English: What should be inserted into [1]? [_____]
+   ContextIdx: 0
+
+2. 「２」にはなにをいれますか。
+   1) しかし - however
+   2) それでは - well then
+   3) ちょうど - exactly
+   4) じゃあ - then
+   English: What should be inserted into [2]? [_____]
+   ContextIdx: 0
+
+3. 「３」にはなにをいれますか。
+   1) まで - until
+   2) から - because / since
+   3) でも - but
+   4) ながら - while
+   English: What should be inserted into [3]? [_____]
+   ContextIdx: 0
+
+4. 「４」にはなにをいれますか。
+   1) とおく - far
+   2) ちかく - near
+   3) とおい - far (adj)
+   4) ちかい - near (adj)
+   English: What should be inserted into [4]? [_____]
+   ContextIdx: 0
+
+5. 「しつもん」この人は、何ページ読みましたか。
+   1) ５０ページぐらい - About 50 pages
+   2) １５０ページぐらい - About 150 pages
+   3) ２００ページぐらい - About 200 pages
+   4) ２５０ページぐらい - About 250 pages
+   English: Question: How many pages did this person read? [_____]
+   ContextIdx: 1
+
+6. 「しつもん」ケーキはいまいくつありますか。
+   1) ２こ - 2 cakes
+   2) ４こ - 4 cakes
+   3) ６こ - 6 cakes
+   4) ８こ - 8 cakes
+   English: Question: How many cakes are there now? [_____]
+   ContextIdx: 2
+
+7. 「しつもん」この人のアパートはどれですか。
+   1) Apartment 1
+   2) Apartment 2
+   3) Apartment 3
+   4) Apartment 4
+   English: Question: Which apartment corresponds to this person's description? [_____]
+
+Answer Key:
+1. 4, 2. 1, 3. 2, 4. 3, 5. 2, 6. 3, 7. 4
+
+Vocab:
+会社 ( [会社]->かいしゃ ) [kaisha] - company (noun, work, n5, kanji)
+務める ( [務]->つと・める ) [tsutomeru] - to work for (verb, ichidan-verb, intransitive, n5, kanji)
+休み ( [休]->やす・み ) [yasumi] - holiday (noun, time, n5, kanji)
+日曜日 ( [日]->にち[曜]->よう[日]->び ) [nichiyoubi] - Sunday (noun, days-of-week, n5, kanji)
+掃除 ( [掃]->そう[除]->じ ) [souji] - cleaning (noun, suru-verb, daily-life, n5, kanji)
+洗濯 ( [洗]->せん[タク]->たく ) [sentaku] - laundry (noun, suru-verb, daily-life, n5, kanji)
+買い物 ( [買]->かい[物]->もの ) [kaimono] - shopping (noun, suru-verb, daily-life, n5, kanji)
+すぐ [sugu] - immediately (adverb, n5)
+終わる ( [終]->お・わる ) [owaru] - to finish (verb, godan-verb, intransitive, n5, kanji)
+時間 ( [時]->じ[間]->かん ) [jikan] - time (noun, time, n5, kanji)
+かかる [kakaru] - to take time (verb, godan-verb, intransitive, n5)
+朝 ( [朝]->あさ ) [asa] - morning (noun, time, n5, kanji)
+買う ( [買]->か・う ) [kau] - to buy (verb, godan-verb, transitive, n5, kanji)
+物 ( [物]->もの ) [mono] - thing (noun, n5, kanji)
+店 ( [店]->みせ ) [mise] - store (noun, place, n5, kanji)
+野菜 ( [野]->や[菜]->さい ) [yasai] - vegetable (noun, food, n5, kanji)
+果物 ( [果]->く[物]->もの ) [kudamono] - fruit (noun, food, n5, kanji)
+重い ( [重]->おも・い ) [omoi] - heavy (i-adjective, n5, kanji)
+帰る ( [帰]->かえ・る ) [kaeru] - to return home (verb, godan-verb, intransitive, n5, kanji)
+次 ( [次]->つぎ ) [tsugi] - next (noun, n5, kanji)
+軽い ( [軽]->かる・い ) [karui] - light (i-adjective, n5, kanji)
+夜 ( [夜]->よる ) [yoru] - night (noun, time, n5, kanji)
+読む ( [読]->よ・む ) [yomu] - to read (verb, godan-verb, transitive, n5, kanji)
+ページ [peeji] - page (noun, school, loan-word, katakana, n5)
+晩ご飯 ( [晩]->ばん[御]->ご[飯]->はん ) [bangohan] - dinner (noun, food, n5, kanji)
+妹 ( [妹]->いもうと ) [imouto] - younger sister (noun, family, n5, kanji)
+美味しい ( [美]->おい・しい ) [oishii] - delicious (i-adjective, food, n5, kanji)
+先週 ( [先]->せん[週]->しゅう ) [senshuu] - last week (noun, time, n5, kanji)
+新しい ( [新]->あたら・しい ) [atarashii] - new (i-adjective, n5, kanji)
+アパート [apaato] - apartment (noun, place, loan-word, katakana, n5)
+入る ( [入]->はい・る ) [hairu] - to enter (verb, godan-verb, intransitive, n5, kanji)
+部屋 ( [部]->へ[屋]->や ) [heya] - room (noun, house, n5, kanji)
+階 ( [階]->かい ) [kai] - floor (counter, n5, kanji)
+おばあさん [obaasan] - grandmother (noun, family, n5)
+大学生 ( [大]->だい[学]->がく[生]->せい ) [daigakusei] - college student (noun, school, n5, kanji)
+誰か ( [誰]->だれ・か ) [dareka] - someone (pronoun, n5, kanji)
+どんな [donna] - what kind of (pronoun, n5)
+
+---
+SetId: set-jtest-ex-kanji-14
+Title: JTEST_EX Reading Exercise Set 14
+Category: reading
+PackTitle: JTEST_EX
+Tags: n5, reading, beginner, test, exercise
+ContextPassages: 「うちでこの本をよんでください。すこしむずかしいですが、とても「１」ですから、がんばってください。」 | サングラスというのはふつうなつのてんきのいい日にかけるめがねだが、わたしはふゆによくつかう。 | こんしゅうのもくよう日のパーティーに出る人は、まえの日にキムさんに６００円はらってください。
+ContextEnglish: Please read this book at home. It's a bit difficult, but since it's very [1], please do your best. | Sunglasses are usually glasses worn on sunny summer days, but I often use them in winter. | People attending this week's Thursday party, please pay 600 yen to Kim-san the day before.
+
+1. 「１」にはなにをいれますか。
+   1) おもしろい - interesting
+   2) つまらない - boring
+   3) やさしい - easy / kind
+   4) むずかしい - difficult
+   English: What should be inserted into [1]? [_____]
+   ContextIdx: 0
+
+2. 「２」にはなにをいれますか。
+   1) 本 - book
+   2) ことば - word
+   3) じしょ - dictionary
+   4) 人 - person
+   English: What should be inserted into [2]? [_____]
+   ContextIdx: 0
+
+3. 「３」にはなにをいれますか。
+   1) はなして - talk
+   2) よんで - read
+   3) ひいて - look up / pull
+   4) はいって - enter
+   English: What should be inserted into [3]? [_____]
+   ContextIdx: 0
+
+4. 「４」にはなにをいれますか。
+   1) いっさつ - one book
+   2) ひとり - one person / alone
+   3) いっぽん - one long item
+   4) いちど - once
+   English: What should be inserted into [4]? [_____]
+   ContextIdx: 0
+
+5. この人がサングラスをかけるのはどうしてですか。
+   1) 風がつよいからです - Because the wind is strong.
+   2) さむいからです - Because it is cold.
+   3) てんきがいいからです - Because the weather is good.
+   4) あついからです - Because it is hot.
+   English: Why does this person wear sunglasses? [_____]
+   ContextIdx: 1
+
+6. 「しつもん」リンさんはおかねをはらいましたが、パーティーに行きませんでした。キムさんはリンさんにいついくらかえしますか。
+   1) もくよう日に６００円かえします - Returns 600 yen on Thursday.
+   2) もくよう日に３０0円かえします - Returns 300 yen on Thursday.
+   3) きんよう日に６０0円かえします - Returns 600 yen on Friday.
+   4) きんよう日に３０0円かえします - Returns 300 yen on Friday.
+   English: Question: Rin paid the money but didn't go to the party. When and how much will Kim return to Rin? [_____]
+   ContextIdx: 2
+
+7. 「１」にはなにをいれますか。
+   1) ふたり - two people
+   2) ににん - two people miswriting
+   3) ににち - two days miswriting
+   4) にかい - twice
+   English: What should be inserted into [1]? [_____]
+
+8. 「２」にはなにをいれますか。
+   1) いた - was
+   2) した - did
+   3) なった - became
+   4) たべた - ate
+   English: What should be inserted into [2]? [_____]
+
+9. 「３」にはなにをいれますか。
+   1) それでは - Well then
+   2) そのまえ - Before that
+   3) そのうち - Before long
+   4) それから - And then / after that
+   English: What should be inserted into [3]? [_____]
+
+10. 「４」にはなにをいれますか。
+    1) わるい - bad
+    2) たのしい - fun / enjoyable
+    3) きたない - dirty
+    4) むずかしい - difficult
+    English: What should be inserted into [4]? [_____]
+
+Answer Key:
+1. 1, 2. 2, 3. 2, 4. 4, 5. 1, 6. 4, 7. 1, 8. 3, 9. 4, 10. 2
+
+Vocab:
+難しい ( [難]->むずか・しい ) [muzukashii] - difficult (i-adjective, n5, kanji)
+とても [totemo] - very (adverb, n5)
+頑張る ( [張]->がん・ばる ) [ganbaru] - to do one's best (verb, godan-verb, intransitive, n5, kanji)
+知る ( [知]->し・る ) [shiru] - to know (verb, godan-verb, transitive, n5, kanji)
+全部 ( [全]->ぜん[部]->ぶ ) [zenbu] - all (noun, n5, kanji)
+面白い ( [面白]->おもしろ・い ) [omoshiroi] - interesting (i-adjective, n5, kanji)
+言葉 ( [言]->こと[葉]->ば ) [kotoba] - word (noun, school, n5, kanji)
+読む ( [読]->よ・む ) [yomu] - to read (verb, godan-verb, transitive, n5, kanji)
+サングラス [sangurasu] - sunglasses (noun, clothing, loan-word, katakana, n5)
+普通 ( [普]->ふ[通]->つう ) [futsuu] - ordinary (noun, na-adjective, n5, kanji)
+夏 ( [夏]->なつ ) [natsu] - summer (noun, season, n5, kanji)
+天気 ( [天]->てん[気]->き ) [tenki] - weather (noun, weather, n5, kanji)
+冬 ( [冬]->ふゆ ) [fuyu] - winter (noun, season, n5, kanji)
+使う ( [使]->つか・う ) [tsukau] - to use (verb, godan-verb, transitive, n5, kanji)
+日本 ( [日]->に[本]->ほん ) [nihon] - Japan (noun, place, n5, kanji)
+強い ( [強]->つよ・い ) [tsuyoi] - strong (i-adjective, n5, kanji)
+風 ( [風]->かぜ ) [kaze] - wind (noun, weather, n5, kanji)
+吹く ( [吹]->ふ・く ) [fuku] - to blow (verb, godan-verb, intransitive, n5, kanji)
+今週 ( [今]->こん[週]->しゅう ) [konshuu] - this week (noun, time, n5, kanji)
+木曜日 ( [木]->もく[曜]->よう[日]->び ) [mokuyoubi] - Thursday (noun, days-of-week, n5, kanji)
+払う ( [払]->はら・う ) [harau] - to pay (verb, godan-verb, transitive, n5, kanji)
+お金 ( [金]->かね ) [okane] - money (noun, daily-life, n5, kanji)
+半分 ( [半]->はん[分]->ぶん ) [hanbun] - half (noun, number, n5, kanji)
+返す ( [返]->かえ・す ) [kaesu] - to return something (verb, godan-verb, transitive, n5, kanji)

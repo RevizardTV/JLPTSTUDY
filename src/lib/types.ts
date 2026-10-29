@@ -15,6 +15,7 @@ export interface Question {
 	answer: number;
 	kanji?: string;
 	reading?: string;
+	kanjiReading?: string;
 	setId?: string;
 	setTitle?: string;
 	contextText?: string;

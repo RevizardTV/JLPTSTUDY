@@ -147,6 +147,8 @@ export function parseGrammarTextToSets(content: string): QuestionSet[] {
 				if (currentQ !== null) {
 					if (/^kanji:/i.test(stripped)) {
 						currentQ.kanji = stripped.split(':', 2)[1].trim();
+					} else if (/^kanjireading:/i.test(stripped)) {
+						currentQ.kanjiReading = stripped.split(':', 2)[1].trim();
 					} else if (/^reading:/i.test(stripped)) {
 						currentQ.reading = stripped.split(':', 2)[1].trim();
 					} else if (/^english:/i.test(stripped)) {
@@ -155,7 +157,7 @@ export function parseGrammarTextToSets(content: string): QuestionSet[] {
 						try {
 							currentQ.contextIdx = parseInt(stripped.split(':', 2)[1].trim(), 10);
 						} catch {
-							// Ignore parsing errors for malformed indices and keep default
+							// Ignore parsing errors
 						}
 					}
 				}
@@ -164,7 +166,7 @@ export function parseGrammarTextToSets(content: string): QuestionSet[] {
 
 		if (currentQ) questions.push(currentQ);
 
-		// Apply answer mappings and ensure prompt english meaning is populated
+		// Apply answer mappings and default English sentence definitions
 		for (const q of questions) {
 			if (answerKeyMap[q.qNum] !== undefined) {
 				q.answer = answerKeyMap[q.qNum];
