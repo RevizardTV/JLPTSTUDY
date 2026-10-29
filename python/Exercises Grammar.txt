@@ -1,0 +1,57 @@
+---
+SetId: set-multiset-vol1-n5
+Title: JLPT N5 Core Vocabulary & Kanji Set
+Category: kanji
+PackTitle: Master Batch Pack A
+Tags: kanji, n5, core
+ContextPassages: あしたは日曜日です。朝七時に起きます。 | としょかんへ行って本を読みます。
+ContextEnglish: Tomorrow is Sunday. I wake up at 7:00 in the morning. | I go to the library and read books.
+
+1. 日
+   1) げつ - moon
+   2) にち - sun / day
+   3) すい - water
+   4) もく - tree
+   Kanji: 日
+   Reading: にち
+   ContextIdx: 0
+
+4. 図書館
+   1) びょういん - hospital
+   2) ぎんこう - bank
+   3) としょかん - library
+   4) ゆうびんきょく - post office
+   Kanji: 図書館
+   Reading: としょかん
+   ContextIdx: 1
+
+Answer Key:
+1. 2, 4. 3
+
+Vocab:
+日曜日 (にちようび) [nichiyoubi] - Sunday (noun, n5)
+朝 (あさ) [asa] - morning (noun, n5)
+
+---
+SetId: set-multiset-vol2-grammar
+Title: JLPT N5 Particles & Grammar Set
+Category: grammar
+PackTitle: Master Batch Pack B
+Tags: grammar, n5, particles
+ContextPassages: りんごを食べます。 | ペンで手紙を書きます。
+ContextEnglish: I eat an apple. | I write a letter with a pen.
+
+1. りんご ___ 食べる。
+   1) を - object marker
+   2) に - target marker
+   3) で - tool marker
+   4) が - subject marker
+   Kanji: りんごを食べます
+   Reading: りんごをたべる
+   ContextIdx: 0
+
+Answer Key:
+1. 1
+
+Vocab:
+食べる (たべる) [taberu] - to eat (verb, n5)

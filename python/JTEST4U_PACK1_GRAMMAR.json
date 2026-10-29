@@ -1,0 +1,1905 @@
+[
+	{
+		"id": "set-pack1-003",
+		"title": "Pack 1 Set 3 (Q101–150)",
+		"category": "grammar",
+		"packTitle": "JTEST4U_PACK1_GRAMMAR",
+		"tags": ["n5", "grammar", "particles", "beginner"],
+		"contextPassages": [
+			"これは何という花ですか。",
+			"えきまでタクシーで１０００円ぐらいです。",
+			"はい、本田です。あ、北山花子です。すみません、ひろこさんをおねがいします。",
+			"日本のラーメンはおいしいです。",
+			"さようなら。また来週。",
+			"きのうわたしはふじさんへ行きました。ふじさんは日本でいちばん高い山です。３，７７６メートルです。わたしはいちばん上まで行きました。人がたいへんおおかったです。てんきがよかったですから、とてもきれいでした。でも、すこしさむかったです。ちょっとつかれましたが、とてもたのしかったです。",
+			"これは何という花ですか。",
+			"えきまでタクシーで１０００円ぐらいです。",
+			"はい、本田です。あ、北山花子です。すみません、ひろこさんをおねがいします。",
+			"日本のラーメンはおいしいです。",
+			"さようなら。また来週。",
+			"まいにちおふろに入ってからねます。",
+			"きのう友達に電話をしましたが、いませんでした。",
+			"土よう日はさんぽしたりギターをれんしゅうしたりします。",
+			"このみかんはぜんぶでいくらですか。",
+			"おさけを飲みますか？",
+			"きょうははやくねます。",
+			"本をかりる前に、このかみに名前を書いてください。",
+			"わたしは音楽を聞きながらべんきょうをします。",
+			"わたしはまいばんこどもがねたあとで本を読みます。",
+			"さいふはどこにもありませんでした。",
+			"きのうはあたたかかったですが、きょうはあたたかくないです。",
+			"田中さんの来る日は火よう日です。",
+			"あした雨がふるかふらないかわかりません。",
+			"どこから来ましたか。",
+			"テニスをしました。それから、ピンポンもしました。",
+			"わたしのケーキを食べないでください。",
+			"外国にりょこうに行きます。",
+			"テストがおわったあとでパ－ティ－をします。",
+			"その大きいにもつはわたしのです。",
+			"コーヒーをいっぱいいかがですか。",
+			"きょねんのふゆはゆきが１かいしかふりませんでした。",
+			"ぎんこうへもデパ－トへも行きませんでした。",
+			"まいあさ会社に行くまえにスポーツをします。",
+			"りょうりはじぶんでつくりますか。",
+			"すみません、ちょっとまってください。",
+			"びょうきになった時は、びょういんへ行きます。",
+			"へやにはだれもいません。",
+			"わたしはなつにうみでおよぎたいです。",
+			"山田さんはテニスはしますが、ゴルフはしません。",
+			"あしたのパーディーはたぶんにぎやかでしょう。"
+		],
+		"contextEnglish": [
+			"What is this flower called?",
+			"It is about 1000 yen by taxi to the station.",
+			"Yes, this is Honda. Ah, this is Hanako Kitayama. Excuse me, may I speak to Hiroko?",
+			"Japanese ramen is delicious.",
+			"Goodbye. See you next week.",
+			"Yesterday I went to Mt. Fuji. Mt. Fuji is the highest mountain in Japan. It is 3,776 meters. I went to the very top. There were very many people. Because the weather was good, it was very beautiful. However, it was a little cold. I was a little tired, but it was very enjoyable.",
+			"What is this flower called?",
+			"It is about 1000 yen by taxi to the station.",
+			"Yes, this is Honda. Ah, this is Hanako Kitayama. Excuse me, may I speak to Hiroko?",
+			"Japanese ramen is delicious.",
+			"Goodbye. See you next week.",
+			"Every day I take a bath and then sleep.",
+			"I called my friend yesterday, but he was not there.",
+			"On Saturdays I take walks and practice guitar.",
+			"How much are these mandarin oranges in total?",
+			"Do you drink alcohol?",
+			"I will go to bed early today.",
+			"Before borrowing the book, please write your name on this paper.",
+			"I study while listening to music.",
+			"Every night I read books after my child goes to sleep.",
+			"My wallet was nowhere to be found.",
+			"Yesterday was warm, but today is not warm.",
+			"The day Tanaka-san comes is Tuesday.",
+			"I don't know whether it will rain tomorrow or not.",
+			"Where did you come from?",
+			"I played tennis. And then I also played ping-pong.",
+			"Please do not eat my cake.",
+			"I will go on a trip to a foreign country.",
+			"We will have a party after the test is over.",
+			"That big luggage is mine.",
+			"How about a cup of coffee?",
+			"Last winter it snowed only once.",
+			"I went to neither the bank nor the department store.",
+			"Every morning I exercise before going to the company.",
+			"Do you cook by yourself?",
+			"Excuse me, please wait a moment.",
+			"When I get sick, I go to the hospital.",
+			"There is no one in the room.",
+			"I want to swim in the sea in summer.",
+			"Yamada-san plays tennis, but does not play golf.",
+			"Tomorrow's party will probably be lively."
+		],
+		"questions": [
+			{
+				"qNum": 1,
+				"prompt": "これは何　_______ いう花ですか。",
+				"contextIdx": 0,
+				"options": [
+					{
+						"text": "と",
+						"kana": "と",
+						"english": "quotation particle"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "to/at"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "by means"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 2,
+				"prompt": "えきまでタクシーで１０００円　_______ です。",
+				"contextIdx": 1,
+				"options": [
+					{
+						"text": "ぐらい",
+						"kana": "ぐらい",
+						"english": "about"
+					},
+					{
+						"text": "など",
+						"kana": "など",
+						"english": "etc."
+					},
+					{
+						"text": "ごろ",
+						"kana": "ごろ",
+						"english": "around (time)"
+					},
+					{
+						"text": "も",
+						"kana": "も",
+						"english": "also"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 3,
+				"prompt": "はい、本田です。あ、北山花子です。すみません、　_______ 。",
+				"contextIdx": 2,
+				"options": [
+					{
+						"text": "ひろこさんをおねがいします",
+						"kana": "ひろこさんをおねがいします",
+						"english": "may I speak to Hiroko"
+					},
+					{
+						"text": "ひろこさんをください",
+						"kana": "ひろこさんをください",
+						"english": "please give Hiroko"
+					},
+					{
+						"text": "ひろこさんと話しますか",
+						"kana": "ひろこさんと話しますか",
+						"english": "will you talk to Hiroko"
+					},
+					{
+						"text": "ひろこさんと話しませんか",
+						"kana": "ひろこさんと話しませんか",
+						"english": "won't you talk to Hiroko"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 4,
+				"prompt": "日本　_______ ラーメンはおいしいです。",
+				"contextIdx": 3,
+				"options": [
+					{
+						"text": "の",
+						"kana": "の",
+						"english": "possessive"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "to/at"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "へ",
+						"kana": "へ",
+						"english": "to direction"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 5,
+				"prompt": "さようなら。また　_______ 。",
+				"contextIdx": 4,
+				"options": [
+					{
+						"text": "来週",
+						"kana": "来週",
+						"english": "next week"
+					},
+					{
+						"text": "おととい",
+						"kana": "おととい",
+						"english": "day before yesterday"
+					},
+					{
+						"text": "今日",
+						"kana": "今日",
+						"english": "today"
+					},
+					{
+						"text": "今月",
+						"kana": "今月",
+						"english": "this month"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 6,
+				"prompt": "きのうわたしはふじさんへ行きました。ふじさんは　_______ いちばん高い山です。",
+				"contextIdx": 5,
+				"options": [
+					{
+						"text": "日本で",
+						"kana": "日本で",
+						"english": "in Japan"
+					},
+					{
+						"text": "日本に",
+						"kana": "日本に",
+						"english": "to Japan"
+					},
+					{
+						"text": "日本は",
+						"kana": "日本は",
+						"english": "topic Japan"
+					},
+					{
+						"text": "日本へ",
+						"kana": "日本へ",
+						"english": "to Japan"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 7,
+				"prompt": "きのうわたしはふじさんへ行きました。人がたいへん　_______ 。",
+				"contextIdx": 6,
+				"options": [
+					{
+						"text": "おおかったです",
+						"kana": "おおかったです",
+						"english": "were many"
+					},
+					{
+						"text": "おおいでした",
+						"kana": "おおいでした",
+						"english": "incorrect form"
+					},
+					{
+						"text": "おおいです",
+						"kana": "おおいです",
+						"english": "are many"
+					},
+					{
+						"text": "おおくないです",
+						"kana": "おおくないです",
+						"english": "are not many"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 8,
+				"prompt": "きのうわたしはふじさんへ行きました。てんきがよかったですから、とても　_______ 。",
+				"contextIdx": 7,
+				"options": [
+					{
+						"text": "きれいでした",
+						"kana": "きれいでした",
+						"english": "were beautiful"
+					},
+					{
+						"text": "きれいです",
+						"kana": "きれいです",
+						"english": "are beautiful"
+					},
+					{
+						"text": "きれかったです",
+						"kana": "きれかったです",
+						"english": "incorrect form"
+					},
+					{
+						"text": "きれくでした",
+						"kana": "きれくでした",
+						"english": "incorrect form"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 9,
+				"prompt": "きのうわたしはふじさんへ行きました。　_______ 、すこしさむかったです。",
+				"contextIdx": 8,
+				"options": [
+					{
+						"text": "でも",
+						"kana": "でも",
+						"english": "but"
+					},
+					{
+						"text": "では",
+						"kana": "では",
+						"english": "then"
+					},
+					{
+						"text": "じゃ",
+						"kana": "じゃ",
+						"english": "well"
+					},
+					{
+						"text": "それで",
+						"kana": "それで",
+						"english": "and so"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 10,
+				"prompt": "きのうわたしはふじさんへ行きました。　_______ 、とてもたのしかったです。",
+				"contextIdx": 9,
+				"options": [
+					{
+						"text": "ちょっとつかれましたが",
+						"kana": "ちょっとつかれましたが",
+						"english": "a little tired but"
+					},
+					{
+						"text": "ちょっとつまらかったですが",
+						"kana": "ちょっとつまらかったですが",
+						"english": "was a little boring but"
+					},
+					{
+						"text": "ちょっとつかいましたが",
+						"kana": "ちょっとつかいましたが",
+						"english": "used a little but"
+					},
+					{
+						"text": "ちょっとつめたかったですが",
+						"kana": "ちょっとつめたかったですが",
+						"english": "was a little cold but"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 11,
+				"prompt": "まいにちおふろに　_______ からねます。",
+				"contextIdx": 10,
+				"options": [
+					{
+						"text": "入って",
+						"kana": "入って",
+						"english": "enter (te-form)"
+					},
+					{
+						"text": "入り",
+						"kana": "入り",
+						"english": "enter (stem)"
+					},
+					{
+						"text": "入る",
+						"kana": "入る",
+						"english": "to enter (dict.)"
+					},
+					{
+						"text": "入った",
+						"kana": "入った",
+						"english": "entered (past)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 12,
+				"prompt": "きのう友達に電話を　_______ が、いませんでした。",
+				"contextIdx": 11,
+				"options": [
+					{
+						"text": "しました",
+						"kana": "しました",
+						"english": "did (polite past)"
+					},
+					{
+						"text": "します",
+						"kana": "します",
+						"english": "do (polite)"
+					},
+					{
+						"text": "して",
+						"kana": "して",
+						"english": "do (te-form)"
+					},
+					{
+						"text": "する",
+						"kana": "する",
+						"english": "do (dict.)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 13,
+				"prompt": "土よう日はさんぽ　_______ ギターをれんしゅう　_______ します。",
+				"contextIdx": 12,
+				"options": [
+					{
+						"text": "したり/したり",
+						"kana": "したり/したり",
+						"english": "doing things like"
+					},
+					{
+						"text": "しったり/しったり",
+						"kana": "しったり/しったり",
+						"english": "incorrect form"
+					},
+					{
+						"text": "して/して",
+						"kana": "して/して",
+						"english": "do and do"
+					},
+					{
+						"text": "しいて/しいて",
+						"kana": "しいて/しいて",
+						"english": "incorrect form"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 14,
+				"prompt": "このみかんはぜんぶ　_______ いくらですか。",
+				"contextIdx": 13,
+				"options": [
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "for/in total"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "の",
+						"kana": "の",
+						"english": "possessive"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "to/at"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 15,
+				"prompt": "おさけを飲みます　_______ ？",
+				"contextIdx": 14,
+				"options": [
+					{
+						"text": "か",
+						"kana": "か",
+						"english": "question particle"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "to/at"
+					},
+					{
+						"text": "と",
+						"kana": "と",
+						"english": "and/with"
+					},
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 16,
+				"prompt": "きょうは　_______ ねます。",
+				"contextIdx": 15,
+				"options": [
+					{
+						"text": "はやく",
+						"kana": "はやく",
+						"english": "early (adverbial)"
+					},
+					{
+						"text": "はやい",
+						"kana": "はやい",
+						"english": "early (plain)"
+					},
+					{
+						"text": "はやくない",
+						"kana": "はやくない",
+						"english": "not early"
+					},
+					{
+						"text": "はやいに",
+						"kana": "はやいに",
+						"english": "incorrect form"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 17,
+				"prompt": "本を　_______ 前に、このかみに名前を書いてください。",
+				"contextIdx": 16,
+				"options": [
+					{
+						"text": "かりる",
+						"kana": "かりる",
+						"english": "to borrow (dict.)"
+					},
+					{
+						"text": "かりて",
+						"kana": "かりて",
+						"english": "borrow (te-form)"
+					},
+					{
+						"text": "かりた",
+						"kana": "かりた",
+						"english": "borrowed (past)"
+					},
+					{
+						"text": "かりない",
+						"kana": "かりない",
+						"english": "not borrow (neg.)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 18,
+				"prompt": "わたしは音楽を　_______ ながらべんきょうをします。",
+				"contextIdx": 17,
+				"options": [
+					{
+						"text": "聞き",
+						"kana": "聞き",
+						"english": "listen (stem)"
+					},
+					{
+						"text": "聞く",
+						"kana": "聞く",
+						"english": "to listen (dict.)"
+					},
+					{
+						"text": "聞か",
+						"kana": "聞か",
+						"english": "negative stem"
+					},
+					{
+						"text": "聞いて",
+						"kana": "聞いて",
+						"english": "listened (te-form)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 19,
+				"prompt": "わたしはまいばんこどもが　_______ あとで本を読みます。",
+				"contextIdx": 18,
+				"options": [
+					{
+						"text": "ねた",
+						"kana": "ねた",
+						"english": "slept (past)"
+					},
+					{
+						"text": "ねる",
+						"kana": "ねる",
+						"english": "to sleep (dict.)"
+					},
+					{
+						"text": "ねて",
+						"kana": "ねて",
+						"english": "sleep (te-form)"
+					},
+					{
+						"text": "ねます",
+						"kana": "ねます",
+						"english": "sleep (polite)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 20,
+				"prompt": "さいふはどこ　_______ ありませんでした。",
+				"contextIdx": 19,
+				"options": [
+					{
+						"text": "にも",
+						"kana": "にも",
+						"english": "nowhere (with neg.)"
+					},
+					{
+						"text": "へも",
+						"kana": "へも",
+						"english": "to even"
+					},
+					{
+						"text": "にか",
+						"kana": "にか",
+						"english": "somewhere"
+					},
+					{
+						"text": "へか",
+						"kana": "へか",
+						"english": "to somewhere"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 21,
+				"prompt": "きのうはあたたかかったですが、きょうは　_______ 。",
+				"contextIdx": 20,
+				"options": [
+					{
+						"text": "あたたかくないです",
+						"kana": "あたたかくないです",
+						"english": "not warm"
+					},
+					{
+						"text": "あたたかかったです",
+						"kana": "あたたかかったです",
+						"english": "was warm"
+					},
+					{
+						"text": "あたたかいでした",
+						"kana": "あたたかいでした",
+						"english": "incorrect form"
+					},
+					{
+						"text": "あたたかくではありません",
+						"kana": "あたたかくではありません",
+						"english": "incorrect form"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 22,
+				"prompt": "田中さん　_______ 来る日は火よう日です。",
+				"contextIdx": 21,
+				"options": [
+					{
+						"text": "の",
+						"kana": "の",
+						"english": "possessive"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "へ",
+						"kana": "へ",
+						"english": "to direction"
+					},
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "by means"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 23,
+				"prompt": "あした雨がふるかふらない　_______ わかりません。",
+				"contextIdx": 22,
+				"options": [
+					{
+						"text": "か",
+						"kana": "か",
+						"english": "question nominalizer"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "も",
+						"kana": "も",
+						"english": "also"
+					},
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 24,
+				"prompt": "どこ　_______ 来ましたか。",
+				"contextIdx": 23,
+				"options": [
+					{
+						"text": "から",
+						"kana": "から",
+						"english": "from"
+					},
+					{
+						"text": "だけ",
+						"kana": "だけ",
+						"english": "only"
+					},
+					{
+						"text": "など",
+						"kana": "など",
+						"english": "etc."
+					},
+					{
+						"text": "しか",
+						"kana": "しか",
+						"english": "only"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 25,
+				"prompt": "テニスをしました。それから、ピンポン　_______ しました。",
+				"contextIdx": 24,
+				"options": [
+					{
+						"text": "も",
+						"kana": "も",
+						"english": "also"
+					},
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "と",
+						"kana": "と",
+						"english": "and/with"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 26,
+				"prompt": "わたしのケーキを　_______ ください。",
+				"contextIdx": 25,
+				"options": [
+					{
+						"text": "食べないで",
+						"kana": "食べないで",
+						"english": "please don't eat"
+					},
+					{
+						"text": "食べなくて",
+						"kana": "食べなくて",
+						"english": "not eat (te-form)"
+					},
+					{
+						"text": "食べません",
+						"kana": "食べません",
+						"english": "not eat (polite)"
+					},
+					{
+						"text": "食べない",
+						"kana": "食べない",
+						"english": "not eat (plain)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 27,
+				"prompt": "外国にりょこう　_______ 行きます。",
+				"contextIdx": 26,
+				"options": [
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "purpose marker"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					},
+					{
+						"text": "の",
+						"kana": "の",
+						"english": "possessive"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 28,
+				"prompt": "テストが　_______ あとでパ－ティ－をします。",
+				"contextIdx": 27,
+				"options": [
+					{
+						"text": "おわった",
+						"kana": "おわった",
+						"english": "finished (past)"
+					},
+					{
+						"text": "おわって",
+						"kana": "おわって",
+						"english": "finish (te-form)"
+					},
+					{
+						"text": "おわる",
+						"kana": "おわる",
+						"english": "to finish (dict.)"
+					},
+					{
+						"text": "おわります",
+						"kana": "おわります",
+						"english": "finish (polite)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 29,
+				"prompt": "その大きいにもつはわたし　_______ です。",
+				"contextIdx": 28,
+				"options": [
+					{
+						"text": "の",
+						"kana": "の",
+						"english": "possessive"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "や",
+						"kana": "や",
+						"english": "and"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 30,
+				"prompt": "コーヒーを　_______ いかがですか。",
+				"contextIdx": 29,
+				"options": [
+					{
+						"text": "いっぱい",
+						"kana": "いっぱい",
+						"english": "a cup of"
+					},
+					{
+						"text": "いっぱいが",
+						"kana": "いっぱいが",
+						"english": "incorrect form"
+					},
+					{
+						"text": "いっぱいか",
+						"kana": "いっぱいか",
+						"english": "incorrect form"
+					},
+					{
+						"text": "いっぱいを",
+						"kana": "いっぱいを",
+						"english": "incorrect form"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 31,
+				"prompt": "きょねんのふゆはゆきが１かい　_______ ふりませんでした。",
+				"contextIdx": 30,
+				"options": [
+					{
+						"text": "しか",
+						"kana": "しか",
+						"english": "only (with neg.)"
+					},
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					},
+					{
+						"text": "に",
+						"kana": "に",
+						"english": "to/at"
+					},
+					{
+						"text": "だけ",
+						"kana": "だけ",
+						"english": "only"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 32,
+				"prompt": "ぎんこう　_______ デパ－ト　_______ 行きませんでした。",
+				"contextIdx": 31,
+				"options": [
+					{
+						"text": "へも/へも",
+						"kana": "へも/へも",
+						"english": "neither...nor"
+					},
+					{
+						"text": "もへ/もへ",
+						"kana": "もへ/もへ",
+						"english": "incorrect form"
+					},
+					{
+						"text": "へは/へは",
+						"kana": "へは/へは",
+						"english": "as for"
+					},
+					{
+						"text": "はへ/はへ",
+						"kana": "はへ/はへ",
+						"english": "incorrect form"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 33,
+				"prompt": "まいあさ会社に　_______ まえにスポーツをします。",
+				"contextIdx": 32,
+				"options": [
+					{
+						"text": "行く",
+						"kana": "行く",
+						"english": "to go (dict.)"
+					},
+					{
+						"text": "行きます",
+						"kana": "行きます",
+						"english": "go (polite)"
+					},
+					{
+						"text": "行った",
+						"kana": "行った",
+						"english": "went (past)"
+					},
+					{
+						"text": "行って",
+						"kana": "行って",
+						"english": "go (te-form)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 34,
+				"prompt": "りょうりはじぶん　_______ つくりますか。",
+				"contextIdx": 33,
+				"options": [
+					{
+						"text": "で",
+						"kana": "で",
+						"english": "by oneself"
+					},
+					{
+						"text": "へ",
+						"kana": "へ",
+						"english": "to direction"
+					},
+					{
+						"text": "か",
+						"kana": "か",
+						"english": "question particle"
+					},
+					{
+						"text": "を",
+						"kana": "を",
+						"english": "object marker"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 35,
+				"prompt": "すみません、ちょっと　_______ ください。",
+				"contextIdx": 34,
+				"options": [
+					{
+						"text": "まって",
+						"kana": "まって",
+						"english": "please wait"
+					},
+					{
+						"text": "まち",
+						"kana": "まち",
+						"english": "wait (stem)"
+					},
+					{
+						"text": "まった",
+						"kana": "まった",
+						"english": "waited (past)"
+					},
+					{
+						"text": "またない",
+						"kana": "またない",
+						"english": "not wait (neg.)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 36,
+				"prompt": "びょうきに　_______ 時は、びょういんへ行きます。",
+				"contextIdx": 35,
+				"options": [
+					{
+						"text": "なった",
+						"kana": "なった",
+						"english": "became (past)"
+					},
+					{
+						"text": "ならない",
+						"kana": "ならない",
+						"english": "not become"
+					},
+					{
+						"text": "なるの",
+						"kana": "なるの",
+						"english": "become (nominalized)"
+					},
+					{
+						"text": "なって",
+						"kana": "なって",
+						"english": "become (te-form)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 37,
+				"prompt": "へやにはだれ　_______ いません。",
+				"contextIdx": 36,
+				"options": [
+					{
+						"text": "も",
+						"kana": "も",
+						"english": "no one (with neg.)"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "か",
+						"kana": "か",
+						"english": "some"
+					},
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 38,
+				"prompt": "わたしはなつにうみで　_______ たいです。",
+				"contextIdx": 37,
+				"options": [
+					{
+						"text": "およぎ",
+						"kana": "およぎ",
+						"english": "swim (stem)"
+					},
+					{
+						"text": "およぐ",
+						"kana": "およぐ",
+						"english": "to swim (dict.)"
+					},
+					{
+						"text": "およが",
+						"kana": "およが",
+						"english": "negative stem"
+					},
+					{
+						"text": "およい",
+						"kana": "およい",
+						"english": "swim (alt stem)"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 39,
+				"prompt": "山田さんはテニスはしますが、ゴルフ　_______ しません。",
+				"contextIdx": 38,
+				"options": [
+					{
+						"text": "は",
+						"kana": "は",
+						"english": "topic marker"
+					},
+					{
+						"text": "と",
+						"kana": "と",
+						"english": "and/with"
+					},
+					{
+						"text": "が",
+						"kana": "が",
+						"english": "subject marker"
+					},
+					{
+						"text": "も",
+						"kana": "も",
+						"english": "also"
+					}
+				],
+				"answer": 0
+			},
+			{
+				"qNum": 40,
+				"prompt": "あしたのパーディーはたぶん　_______ でしょう。",
+				"contextIdx": 39,
+				"options": [
+					{
+						"text": "にぎやか",
+						"kana": "にぎやか",
+						"english": "lively"
+					},
+					{
+						"text": "にぎやかに",
+						"kana": "にぎやかに",
+						"english": "lively (adverbial)"
+					},
+					{
+						"text": "にぎやかだ",
+						"kana": "にぎやかだ",
+						"english": "lively (plain)"
+					},
+					{
+						"text": "にぎやかな",
+						"kana": "にぎやかな",
+						"english": "lively (attributive)"
+					}
+				],
+				"answer": 0
+			}
+		],
+		"vocab": [
+			{
+				"word": "花",
+				"meaning": "flower",
+				"kana": "はな",
+				"romaji": "hana",
+				"vocabTags": ["noun", "nature", "n5"]
+			},
+			{
+				"word": "タクシー",
+				"meaning": "taxi",
+				"kana": "タクシー",
+				"romaji": "takushii",
+				"vocabTags": ["noun", "transportation", "katakana", "n5"]
+			},
+			{
+				"word": "円",
+				"meaning": "yen",
+				"kana": "えん",
+				"romaji": "en",
+				"vocabTags": ["noun", "counter", "n5"]
+			},
+			{
+				"word": "本田",
+				"meaning": "Honda (surname)",
+				"kana": "ほんだ",
+				"romaji": "honda",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "北山",
+				"meaning": "Kitayama (surname)",
+				"kana": "きたやま",
+				"romaji": "kitayama",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "花子",
+				"meaning": "Hanako (given name)",
+				"kana": "はなこ",
+				"romaji": "hanako",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "ひろこ",
+				"meaning": "Hiroko (given name)",
+				"kana": "ひろこ",
+				"romaji": "hiroko",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "日本",
+				"meaning": "Japan",
+				"kana": "にほん",
+				"romaji": "nihon",
+				"vocabTags": ["noun", "place", "n5"]
+			},
+			{
+				"word": "ラーメン",
+				"meaning": "ramen",
+				"kana": "ラーメン",
+				"romaji": "raamen",
+				"vocabTags": ["noun", "food", "katakana", "n5"]
+			},
+			{
+				"word": "美味しい",
+				"meaning": "delicious",
+				"kana": "おいしい",
+				"romaji": "oishii",
+				"vocabTags": ["i-adjective", "n5"]
+			},
+			{
+				"word": "来週",
+				"meaning": "next week",
+				"kana": "らいしゅう",
+				"romaji": "raishuu",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "今月",
+				"meaning": "this month",
+				"kana": "こんげつ",
+				"romaji": "kongetsu",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "富士山",
+				"meaning": "Mt. Fuji",
+				"kana": "ふじさん",
+				"romaji": "fujisan",
+				"vocabTags": ["noun", "place", "nature", "n5"]
+			},
+			{
+				"word": "高い",
+				"meaning": "high/tall/expensive",
+				"kana": "たかい",
+				"romaji": "takai",
+				"vocabTags": ["i-adjective", "n5"]
+			},
+			{
+				"word": "山",
+				"meaning": "mountain",
+				"kana": "やま",
+				"romaji": "yama",
+				"vocabTags": ["noun", "nature", "n5"]
+			},
+			{
+				"word": "メートル",
+				"meaning": "meter",
+				"kana": "メートル",
+				"romaji": "meetoru",
+				"vocabTags": ["noun", "counter", "katakana", "n5"]
+			},
+			{
+				"word": "上",
+				"meaning": "above/top",
+				"kana": "うえ",
+				"romaji": "ue",
+				"vocabTags": ["noun", "direction", "n5"]
+			},
+			{
+				"word": "多い",
+				"meaning": "many",
+				"kana": "おおい",
+				"romaji": "ooi",
+				"vocabTags": ["i-adjective", "n5"]
+			},
+			{
+				"word": "天気",
+				"meaning": "weather",
+				"kana": "てんき",
+				"romaji": "tenki",
+				"vocabTags": ["noun", "weather", "n5"]
+			},
+			{
+				"word": "良い",
+				"meaning": "good",
+				"kana": "よい",
+				"romaji": "yoi",
+				"vocabTags": ["i-adjective", "n5"]
+			},
+			{
+				"word": "少し",
+				"meaning": "a little",
+				"kana": "すこし",
+				"romaji": "sukoshi",
+				"vocabTags": ["adverb", "n5"]
+			},
+			{
+				"word": "寒い",
+				"meaning": "cold (weather)",
+				"kana": "さむい",
+				"romaji": "samui",
+				"vocabTags": ["i-adjective", "weather", "n5"]
+			},
+			{
+				"word": "でも",
+				"meaning": "but",
+				"kana": "でも",
+				"romaji": "demo",
+				"vocabTags": ["conjunction", "n5"]
+			},
+			{
+				"word": "では",
+				"meaning": "then",
+				"kana": "では",
+				"romaji": "dewa",
+				"vocabTags": ["conjunction", "n5"]
+			},
+			{
+				"word": "じゃ",
+				"meaning": "then/well",
+				"kana": "じゃ",
+				"romaji": "ja",
+				"vocabTags": ["conjunction", "n5"]
+			},
+			{
+				"word": "それで",
+				"meaning": "and so",
+				"kana": "それで",
+				"romaji": "sorede",
+				"vocabTags": ["conjunction", "n5"]
+			},
+			{
+				"word": "疲れる",
+				"meaning": "to get tired",
+				"kana": "つかれる",
+				"romaji": "tsukareru",
+				"vocabTags": ["verb", "ichidan-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "楽しい",
+				"meaning": "enjoyable",
+				"kana": "たのしい",
+				"romaji": "tanoshii",
+				"vocabTags": ["i-adjective", "emotion", "n5"]
+			},
+			{
+				"word": "お風呂",
+				"meaning": "bath",
+				"kana": "おふろ",
+				"romaji": "ofuro",
+				"vocabTags": ["noun", "house", "n5"]
+			},
+			{
+				"word": "入る",
+				"meaning": "to enter",
+				"kana": "はいる",
+				"romaji": "hairu",
+				"vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "寝る",
+				"meaning": "to sleep",
+				"kana": "ねる",
+				"romaji": "neru",
+				"vocabTags": ["verb", "ichidan-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "友達",
+				"meaning": "friend",
+				"kana": "ともだち",
+				"romaji": "tomodachi",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "電話",
+				"meaning": "telephone",
+				"kana": "でんわ",
+				"romaji": "denwa",
+				"vocabTags": ["noun", "suru-verb", "technology", "n5"]
+			},
+			{
+				"word": "土曜日",
+				"meaning": "Saturday",
+				"kana": "どようび",
+				"romaji": "doyoubi",
+				"vocabTags": ["noun", "days-of-week", "time", "n5"]
+			},
+			{
+				"word": "散歩",
+				"meaning": "walk",
+				"kana": "さんぽ",
+				"romaji": "sanpo",
+				"vocabTags": ["noun", "suru-verb", "hobby", "n5"]
+			},
+			{
+				"word": "練習",
+				"meaning": "practice",
+				"kana": "れんしゅう",
+				"romaji": "renshuu",
+				"vocabTags": ["noun", "suru-verb", "hobby", "n5"]
+			},
+			{
+				"word": "みかん",
+				"meaning": "mandarin orange",
+				"kana": "みかん",
+				"romaji": "mikan",
+				"vocabTags": ["noun", "food", "n5"]
+			},
+			{
+				"word": "全部",
+				"meaning": "all",
+				"kana": "ぜんぶ",
+				"romaji": "zenbu",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "いくら",
+				"meaning": "how much",
+				"kana": "いくら",
+				"romaji": "ikura",
+				"vocabTags": ["pronoun", "n5"]
+			},
+			{
+				"word": "お酒",
+				"meaning": "alcohol",
+				"kana": "おさけ",
+				"romaji": "osake",
+				"vocabTags": ["noun", "drink", "n5"]
+			},
+			{
+				"word": "早く",
+				"meaning": "early/quickly",
+				"kana": "はやく",
+				"romaji": "hayaku",
+				"vocabTags": ["adverb", "n5"]
+			},
+			{
+				"word": "借りる",
+				"meaning": "to borrow",
+				"kana": "かりる",
+				"romaji": "kariru",
+				"vocabTags": ["verb", "ichidan-verb", "transitive", "n5"]
+			},
+			{
+				"word": "紙",
+				"meaning": "paper",
+				"kana": "かみ",
+				"romaji": "kami",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "名前",
+				"meaning": "name",
+				"kana": "なまえ",
+				"romaji": "namae",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "音楽",
+				"meaning": "music",
+				"kana": "おんがく",
+				"romaji": "ongaku",
+				"vocabTags": ["noun", "hobby", "n5"]
+			},
+			{
+				"word": "聞く",
+				"meaning": "to listen",
+				"kana": "きく",
+				"romaji": "kiku",
+				"vocabTags": ["verb", "godan-verb", "transitive", "n5"]
+			},
+			{
+				"word": "毎晩",
+				"meaning": "every night",
+				"kana": "まいばん",
+				"romaji": "maiban",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "子供",
+				"meaning": "child",
+				"kana": "こども",
+				"romaji": "kodomo",
+				"vocabTags": ["noun", "family", "n5"]
+			},
+			{
+				"word": "本",
+				"meaning": "book",
+				"kana": "ほん",
+				"romaji": "hon",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "読む",
+				"meaning": "to read",
+				"kana": "よむ",
+				"romaji": "yomu",
+				"vocabTags": ["verb", "godan-verb", "transitive", "n5"]
+			},
+			{
+				"word": "財布",
+				"meaning": "wallet",
+				"kana": "さいふ",
+				"romaji": "saifu",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "暖かい",
+				"meaning": "warm",
+				"kana": "あたたかい",
+				"romaji": "atatakai",
+				"vocabTags": ["i-adjective", "weather", "n5"]
+			},
+			{
+				"word": "田中",
+				"meaning": "Tanaka (surname)",
+				"kana": "たなか",
+				"romaji": "tanaka",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "来る",
+				"meaning": "to come",
+				"kana": "くる",
+				"romaji": "kuru",
+				"vocabTags": ["verb", "kuru-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "日",
+				"meaning": "day",
+				"kana": "ひ",
+				"romaji": "hi",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "火曜日",
+				"meaning": "Tuesday",
+				"kana": "かようび",
+				"romaji": "kayoubi",
+				"vocabTags": ["noun", "days-of-week", "time", "n5"]
+			},
+			{
+				"word": "明日",
+				"meaning": "tomorrow",
+				"kana": "あした",
+				"romaji": "ashita",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "雨",
+				"meaning": "rain",
+				"kana": "あめ",
+				"romaji": "ame",
+				"vocabTags": ["noun", "weather", "n5"]
+			},
+			{
+				"word": "降る",
+				"meaning": "to fall (rain)",
+				"kana": "ふる",
+				"romaji": "furu",
+				"vocabTags": ["verb", "godan-verb", "intransitive", "weather", "n5"]
+			},
+			{
+				"word": "分かる",
+				"meaning": "to understand",
+				"kana": "わかる",
+				"romaji": "wakaru",
+				"vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "テニス",
+				"meaning": "tennis",
+				"kana": "テニス",
+				"romaji": "tenisu",
+				"vocabTags": ["noun", "hobby", "katakana", "n5"]
+			},
+			{
+				"word": "それから",
+				"meaning": "and then",
+				"kana": "それから",
+				"romaji": "sorekara",
+				"vocabTags": ["conjunction", "n5"]
+			},
+			{
+				"word": "ピンポン",
+				"meaning": "ping-pong",
+				"kana": "ピンポン",
+				"romaji": "pinpon",
+				"vocabTags": ["noun", "hobby", "katakana", "n5"]
+			},
+			{
+				"word": "ケーキ",
+				"meaning": "cake",
+				"kana": "ケーキ",
+				"romaji": "keeki",
+				"vocabTags": ["noun", "food", "katakana", "n5"]
+			},
+			{
+				"word": "食べる",
+				"meaning": "to eat",
+				"kana": "たべる",
+				"romaji": "taberu",
+				"vocabTags": ["verb", "ichidan-verb", "transitive", "n5"]
+			},
+			{
+				"word": "外国",
+				"meaning": "foreign country",
+				"kana": "がいこく",
+				"romaji": "gaikoku",
+				"vocabTags": ["noun", "place", "n5"]
+			},
+			{
+				"word": "旅行",
+				"meaning": "travel",
+				"kana": "りょこう",
+				"romaji": "ryokou",
+				"vocabTags": ["noun", "suru-verb", "n4"]
+			},
+			{
+				"word": "テスト",
+				"meaning": "test",
+				"kana": "テスト",
+				"romaji": "tesuto",
+				"vocabTags": ["noun", "school", "katakana", "n5"]
+			},
+			{
+				"word": "終わる",
+				"meaning": "to finish",
+				"kana": "おわる",
+				"romaji": "owaru",
+				"vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "大きい",
+				"meaning": "big",
+				"kana": "おおきい",
+				"romaji": "ookii",
+				"vocabTags": ["i-adjective", "n5"]
+			},
+			{
+				"word": "荷物",
+				"meaning": "luggage",
+				"kana": "にもつ",
+				"romaji": "nimotsu",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "コーヒー",
+				"meaning": "coffee",
+				"kana": "コーヒー",
+				"romaji": "koohii",
+				"vocabTags": ["noun", "drink", "katakana", "n5"]
+			},
+			{
+				"word": "いっぱい",
+				"meaning": "a cup of",
+				"kana": "いっぱい",
+				"romaji": "ippai",
+				"vocabTags": ["noun", "counter", "n5"]
+			},
+			{
+				"word": "去年",
+				"meaning": "last year",
+				"kana": "きょねん",
+				"romaji": "kyonen",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "冬",
+				"meaning": "winter",
+				"kana": "ふゆ",
+				"romaji": "fuyu",
+				"vocabTags": ["noun", "season", "time", "n5"]
+			},
+			{
+				"word": "雪",
+				"meaning": "snow",
+				"kana": "ゆき",
+				"romaji": "yuki",
+				"vocabTags": ["noun", "weather", "n5"]
+			},
+			{
+				"word": "一回",
+				"meaning": "once",
+				"kana": "いっかい",
+				"romaji": "ikkai",
+				"vocabTags": ["noun", "counter", "n5"]
+			},
+			{
+				"word": "銀行",
+				"meaning": "bank",
+				"kana": "ぎんこう",
+				"romaji": "ginkou",
+				"vocabTags": ["noun", "place", "n5"]
+			},
+			{
+				"word": "デパート",
+				"meaning": "department store",
+				"kana": "デパート",
+				"romaji": "depaato",
+				"vocabTags": ["noun", "place", "shopping", "katakana", "n5"]
+			},
+			{
+				"word": "毎朝",
+				"meaning": "every morning",
+				"kana": "まいあさ",
+				"romaji": "maiasa",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "会社",
+				"meaning": "company",
+				"kana": "かいしゃ",
+				"romaji": "kaisha",
+				"vocabTags": ["noun", "work", "n5"]
+			},
+			{
+				"word": "行く",
+				"meaning": "to go",
+				"kana": "いく",
+				"romaji": "iku",
+				"vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "スポーツ",
+				"meaning": "sport",
+				"kana": "スポーツ",
+				"romaji": "supootsu",
+				"vocabTags": ["noun", "hobby", "katakana", "n5"]
+			},
+			{
+				"word": "料理",
+				"meaning": "cooking",
+				"kana": "りょうり",
+				"romaji": "ryouri",
+				"vocabTags": ["noun", "food", "n5"]
+			},
+			{
+				"word": "自分",
+				"meaning": "oneself",
+				"kana": "じぶん",
+				"romaji": "jibun",
+				"vocabTags": ["pronoun", "n5"]
+			},
+			{
+				"word": "作る",
+				"meaning": "to make",
+				"kana": "つくる",
+				"romaji": "tsukuru",
+				"vocabTags": ["verb", "godan-verb", "transitive", "n5"]
+			},
+			{
+				"word": "待つ",
+				"meaning": "to wait",
+				"kana": "まつ",
+				"romaji": "matsu",
+				"vocabTags": ["verb", "godan-verb", "transitive", "n5"]
+			},
+			{
+				"word": "病気",
+				"meaning": "illness",
+				"kana": "びょうき",
+				"romaji": "byouki",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "時",
+				"meaning": "when/time",
+				"kana": "とき",
+				"romaji": "toki",
+				"vocabTags": ["noun", "time", "n5"]
+			},
+			{
+				"word": "病院",
+				"meaning": "hospital",
+				"kana": "びょういん",
+				"romaji": "byouin",
+				"vocabTags": ["noun", "place", "n5"]
+			},
+			{
+				"word": "部屋",
+				"meaning": "room",
+				"kana": "へや",
+				"romaji": "heya",
+				"vocabTags": ["noun", "house", "n5"]
+			},
+			{
+				"word": "夏",
+				"meaning": "summer",
+				"kana": "なつ",
+				"romaji": "natsu",
+				"vocabTags": ["noun", "season", "time", "n5"]
+			},
+			{
+				"word": "海",
+				"meaning": "sea",
+				"kana": "うみ",
+				"romaji": "umi",
+				"vocabTags": ["noun", "nature", "n5"]
+			},
+			{
+				"word": "泳ぐ",
+				"meaning": "to swim",
+				"kana": "およぐ",
+				"romaji": "oyogu",
+				"vocabTags": ["verb", "godan-verb", "intransitive", "n5"]
+			},
+			{
+				"word": "山田",
+				"meaning": "Yamada (surname)",
+				"kana": "やまだ",
+				"romaji": "yamada",
+				"vocabTags": ["noun", "n5"]
+			},
+			{
+				"word": "ゴルフ",
+				"meaning": "golf",
+				"kana": "ゴルフ",
+				"romaji": "gorufu",
+				"vocabTags": ["noun", "hobby", "katakana", "n5"]
+			},
+			{
+				"word": "たぶん",
+				"meaning": "perhaps",
+				"kana": "たぶん",
+				"romaji": "tabun",
+				"vocabTags": ["adverb", "n5"]
+			},
+			{
+				"word": "賑やか",
+				"meaning": "lively",
+				"kana": "にぎやか",
+				"romaji": "nigiyaka",
+				"vocabTags": ["na-adjective", "n5"]
+			}
+		]
+	}
+]

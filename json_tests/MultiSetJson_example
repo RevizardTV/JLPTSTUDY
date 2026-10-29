@@ -13,6 +13,10 @@
 			"あしたは日曜日です。朝七時に起きます。",
 			"としょかんへ行って本を読みます。"
 		],
+		"contextEnglish": [
+			"Tomorrow is Sunday. I wake up at 7:00 in the morning.",
+			"I am going to read at the library"
+		],
 		"questions": [
 			{
 				"qNum": 1,

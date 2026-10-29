@@ -1,0 +1,168 @@
+[
+  {
+    "id": "set-multiset-vol1-n5",
+    "title": "JLPT N5 Core Vocabulary & Kanji Set",
+    "category": "kanji",
+    "packTitle": "Master Batch Pack A",
+    "tags": [
+      "kanji",
+      "n5",
+      "core"
+    ],
+    "contextPassages": [
+      "あしたは日曜日です。朝七時に起きます。",
+      "としょかんへ行って本を読みます。"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "日",
+        "contextIdx": 0,
+        "options": [
+          {
+            "text": "げつ",
+            "kana": "げつ",
+            "english": "moon"
+          },
+          {
+            "text": "にち",
+            "kana": "にち",
+            "english": "sun / day"
+          },
+          {
+            "text": "すい",
+            "kana": "すい",
+            "english": "water"
+          },
+          {
+            "text": "もく",
+            "kana": "もく",
+            "english": "tree"
+          }
+        ],
+        "answer": 1,
+        "kanji": "日",
+        "reading": "にち"
+      },
+      {
+        "qNum": 4,
+        "prompt": "図書館",
+        "contextIdx": 1,
+        "options": [
+          {
+            "text": "びょういん",
+            "kana": "びょういん",
+            "english": "hospital"
+          },
+          {
+            "text": "ぎんこう",
+            "kana": "ぎんこう",
+            "english": "bank"
+          },
+          {
+            "text": "としょかん",
+            "kana": "としょかん",
+            "english": "library"
+          },
+          {
+            "text": "ゆうびんきょく",
+            "kana": "ゆうびんきょく",
+            "english": "post office"
+          }
+        ],
+        "answer": 2,
+        "kanji": "図書館",
+        "reading": "としょかん"
+      }
+    ],
+    "contextEnglish": [
+      "Tomorrow is Sunday. I wake up at 7:00 in the morning.",
+      "I go to the library and read books."
+    ],
+    "vocab": [
+      {
+        "word": "日曜日",
+        "kana": "にちようび",
+        "romaji": "nichiyoubi",
+        "meaning": "Sunday",
+        "vocabTags": [
+          "noun",
+          "n5"
+        ]
+      },
+      {
+        "word": "朝",
+        "kana": "あさ",
+        "romaji": "asa",
+        "meaning": "morning",
+        "vocabTags": [
+          "noun",
+          "n5"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set-multiset-vol2-grammar",
+    "title": "JLPT N5 Particles & Grammar Set",
+    "category": "grammar",
+    "packTitle": "Master Batch Pack B",
+    "tags": [
+      "grammar",
+      "n5",
+      "particles"
+    ],
+    "contextPassages": [
+      "りんごを食べます。",
+      "ペンで手紙を書きます。"
+    ],
+    "questions": [
+      {
+        "qNum": 1,
+        "prompt": "りんご ___ 食べる。",
+        "contextIdx": 0,
+        "options": [
+          {
+            "text": "を",
+            "kana": "を",
+            "english": "object marker"
+          },
+          {
+            "text": "に",
+            "kana": "に",
+            "english": "target marker"
+          },
+          {
+            "text": "で",
+            "kana": "で",
+            "english": "tool marker"
+          },
+          {
+            "text": "が",
+            "kana": "が",
+            "english": "subject marker"
+          }
+        ],
+        "answer": 0,
+        "kanji": "りんごを食べます",
+        "reading": "りんごをたべる"
+      }
+    ],
+    "contextEnglish": [
+      "I eat an apple.",
+      "I write a letter with a pen."
+    ],
+    "vocab": [
+      {
+        "word": "食べる",
+        "kana": "たべる",
+        "romaji": "taberu",
+        "meaning": "to eat",
+        "vocabTags": [
+          "verb",
+          "n5"
+        ]
+      }
+    ]
+  }
+]
