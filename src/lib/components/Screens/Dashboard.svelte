@@ -324,27 +324,17 @@
 	<DataWiper />
 
 	<!-- Exercise Grid with Checkbox Selection -->
+	<!-- Exercise Grid with Clean Interactive Cards -->
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 		{#each filteredSets as set (set.id)}
-			<div class="relative">
-				<!-- Checkbox overlay for batch operations -->
-				<div class="absolute top-3 left-3 z-20">
-					<input
-						type="checkbox"
-						checked={selectedSetIds.has(set.id)}
-						onchange={() => toggleSetSelection(set.id)}
-						class="rounded border-slate-300 dark:border-slate-600 text-brand-600 focus:ring-brand-500 w-4 h-4 cursor-pointer shadow-sm"
-					/>
-				</div>
-				<div class={selectedSetIds.has(set.id) ? 'ring-2 ring-brand-500 rounded-2xl' : ''}>
-					<SetCard
-						{set}
-						progress={$userProgress.completedSets[set.id]}
-						onstart={startQuiz}
-						ondelete={handleDelete}
-					/>
-				</div>
-			</div>
+			<SetCard
+				{set}
+				progress={$userProgress.completedSets[set.id]}
+				isSelected={selectedSetIds.has(set.id)}
+				onselect={() => toggleSetSelection(set.id)}
+				onstart={startQuiz}
+				ondelete={handleDelete}
+			/>
 		{:else}
 			<div
 				class="col-span-full py-12 text-center text-slate-400 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700"

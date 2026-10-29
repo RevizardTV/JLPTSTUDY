@@ -149,6 +149,8 @@ export function parseGrammarTextToSets(content: string): QuestionSet[] {
 						currentQ.kanji = stripped.split(':', 2)[1].trim();
 					} else if (/^reading:/i.test(stripped)) {
 						currentQ.reading = stripped.split(':', 2)[1].trim();
+					} else if (/^english:/i.test(stripped)) {
+						currentQ.english = stripped.split(':', 2)[1].trim();
 					} else if (/^contextidx:/i.test(stripped)) {
 						try {
 							currentQ.contextIdx = parseInt(stripped.split(':', 2)[1].trim(), 10);
@@ -162,10 +164,13 @@ export function parseGrammarTextToSets(content: string): QuestionSet[] {
 
 		if (currentQ) questions.push(currentQ);
 
-		// Apply answer mappings
+		// Apply answer mappings and ensure prompt english meaning is populated
 		for (const q of questions) {
 			if (answerKeyMap[q.qNum] !== undefined) {
 				q.answer = answerKeyMap[q.qNum];
+			}
+			if (!q.english && q.options.length > 0 && q.options[q.answer]) {
+				q.english = q.options[q.answer].english;
 			}
 		}
 

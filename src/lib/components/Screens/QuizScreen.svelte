@@ -8,7 +8,8 @@
 		UserAnswer,
 		FinishEventData,
 		Option,
-		SetProgress
+		SetProgress,
+		VocabItem
 	} from '#lib/types.js';
 
 	let {
@@ -23,6 +24,7 @@
 
 	type ExtendedQuestion = Question & {
 		contextEnglishText?: string;
+		setVocab?: VocabItem[];
 	};
 
 	let questions = $state<ExtendedQuestion[]>([]);
@@ -60,7 +62,8 @@
 					setId: setObj.id,
 					setTitle: setObj.title,
 					contextText: setObj.contextPassages[q.contextIdx] || '',
-					contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || ''
+					contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || '',
+					setVocab: setObj.vocab || []
 				}));
 
 				const progressData = $userProgress.completedSets[setObj.id];
@@ -96,7 +99,8 @@
 						setId: setObj.id,
 						setTitle: setObj.title,
 						contextText: setObj.contextPassages[q.contextIdx] || '',
-						contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || ''
+						contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || '',
+						setVocab: setObj.vocab || []
 					});
 				});
 			});
@@ -307,16 +311,23 @@
 				{/if}
 			</div>
 
-			<!-- Prompt -->
-			<div>
-				<span class="inline-block text-xs uppercase font-bold text-slate-400 tracking-wider mb-1"
+			<!-- Prompt / Target Word with Installed Meaning Stacked Below -->
+			<div class="space-y-2">
+				<span class="inline-block text-xs uppercase font-bold text-slate-400 tracking-wider"
 					>Target Word</span
 				>
 				<div
-					class="text-2xl sm:text-3xl font-bold font-japanese text-brand-600 dark:text-brand-500"
+					class="text-2xl sm:text-3xl font-bold font-japanese text-brand-600 dark:text-brand-500 leading-relaxed"
 				>
 					{q.prompt}
 				</div>
+				{#if isAnswered && q.english}
+					<div
+						class="text-sm italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-2 animate-fadeIn"
+					>
+						{q.english}
+					</div>
+				{/if}
 			</div>
 
 			<!-- Multiple Choice Options -->
