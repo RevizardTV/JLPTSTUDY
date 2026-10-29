@@ -9,6 +9,7 @@
 	import CustomBuilderModal from '#lib/components/modals/CustomBuilderModal.svelte';
 	import DataWiper from '#lib/components/buttons/DataWiper.svelte';
 	import type { QuizConfig, SetProgress } from '#lib/types.js';
+	import { exportVisibleMissedQuestionsAsText } from '#lib/utils/wrongGiver.ts';
 	import { SvelteSet } from 'svelte/reactivity';
 
 	let {
@@ -295,6 +296,19 @@
 			</div>
 
 			{#if selectedSetIds.size > 0}
+				<div class="flex items-center space-x-2">
+					<button
+						onclick={() => {
+							const textOutput = exportVisibleMissedQuestionsAsText(filteredSets);
+							navigator.clipboard.writeText(textOutput);
+							alert('Missed questions from visible sets copied to clipboard as text!');
+						}}
+						class="px-3 py-1 bg-brand-500/10 hover:bg-brand-500/25 text-brand-600 dark:text-brand-400 font-semibold rounded-lg border border-brand-500/20 transition flex items-center space-x-1"
+					>
+						<span>📋</span>
+						<span>Export Visible Mistakes (Text)</span>
+					</button>
+				</div>
 				<div class="flex items-center space-x-2">
 					<button
 						onclick={handleBatchReset}
