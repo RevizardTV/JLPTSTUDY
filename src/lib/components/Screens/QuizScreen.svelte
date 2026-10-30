@@ -369,7 +369,7 @@
 									<span class="text-xs uppercase font-bold text-slate-400">Kana</span>
 									<strong class="font-japanese text-base sm:text-lg">{details.kana}</strong>
 								</div>
-								<div class="break-words text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+								<div class="wrap-break-word text-xs sm:text-sm text-slate-600 dark:text-slate-300">
 									<span>Meaning: </span><strong
 										class="font-medium text-slate-800 dark:text-slate-100">{details.english}</strong
 									>
