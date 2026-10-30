@@ -30,13 +30,21 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 			if (!trimmed) continue;
 
 			if (/^Answer Key:/i.test(trimmed)) {
+				// Safety: Push the final active question before leaving the question section
+				if (currentQ) {
+					questions.push(currentQ);
+					currentQ = null;
+				}
 				parsingSection = 'answerKey';
-				currentQ = null;
 				continue;
 			}
 			if (/^Vocab:/i.test(trimmed)) {
+				// Safety: Push the final active question just in case Answer Key was missing
+				if (currentQ) {
+					questions.push(currentQ);
+					currentQ = null;
+				}
 				parsingSection = 'vocab';
-				currentQ = null;
 				continue;
 			}
 
@@ -81,7 +89,6 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 					continue;
 				}
 
-				// Fixed: Removed unnecessary escape characters
 				const optMatch = trimmed.match(/^(\d+[).])\s+(.*)$/);
 				if (optMatch && currentQ) {
 					const optionContent = optMatch[2].trim();
@@ -93,7 +100,6 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 							kana: dashSplit[0].trim()
 						});
 					} else {
-						// Fixed: Push object instead of plain string to satisfy Option type contract
 						currentQ.options.push({
 							text: optionContent,
 							kana: optionContent,
@@ -140,7 +146,6 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 					}
 				}
 			} else if (parsingSection === 'vocab') {
-				// Fixed: Cleaned up escape characters in vocab regex
 				const vocabMatch = trimmed.match(/^([^()]+)\(([^)]+)\)(?:\s*\[([^\]]+)\])?\s*-\s*(.+)$/);
 				if (vocabMatch) {
 					const word = vocabMatch[1].trim();
@@ -166,6 +171,7 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 			}
 		}
 
+		// Catch any trailing active question at the end of the block
 		if (currentQ) {
 			questions.push(currentQ);
 		}
