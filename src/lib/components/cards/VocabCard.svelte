@@ -18,16 +18,17 @@
 		<!-- Vocabulary Word (shrinks/wraps gracefully without touching tags) -->
 		<div class="min-w-0 flex-1 space-y-2">
 			<div
-				class="text-2xl font-bold font-japanese text-brand-600 dark:text-brand-400 wrap-break-word leading-tight"
+				class="text-3xl font-bold font-japanese text-brand-600 dark:text-brand-400 wrap-break-word leading-tight"
 			>
 				{item.kanji}
 			</div>
 
+			<!-- Enlarged Kana breakdown badge -->
 			<div
-				class="inline-flex items-center space-x-1 px-2.5 py-1 bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-200 font-japanese text-xs rounded-lg border border-slate-200 dark:border-slate-600"
+				class="inline-flex items-center space-x-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-200 font-japanese text-sm sm:text-base rounded-lg border border-slate-200 dark:border-slate-600"
 			>
-				<span class="text-slate-400 text-[10px] font-sans">Kana:</span>
-				<span class="font-bold text-brand-500">{item.kana}</span>
+				<span class="text-slate-400 text-xs font-sans">Kana:</span>
+				<span class="font-bold text-brand-500 text-base sm:text-lg">{item.kana}</span>
 			</div>
 		</div>
 
@@ -50,7 +51,7 @@
 		class="pt-3 border-t border-slate-100 dark:border-slate-700/50 flex justify-between items-center text-xs"
 	>
 		<span class="text-slate-400 uppercase tracking-wider font-bold text-[10px]">Meaning</span>
-		<span class="font-semibold text-slate-700 dark:text-slate-200 text-right">
+		<span class="font-semibold text-slate-700 dark:text-slate-200 text-right text-sm">
 			{item.meaning}
 			{#if item.romaji}
 				<span class="text-slate-400 font-normal ml-1">({item.romaji})</span>
