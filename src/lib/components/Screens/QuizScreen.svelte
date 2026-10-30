@@ -340,6 +340,7 @@
 			</div>
 
 			<!-- Multiple Choice Options (Enlarged for readability) -->
+			<!-- Multiple Choice Options -->
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 				{#each q.options as opt, idx (idx)}
 					{@const details = getOptionDetails(opt)}
@@ -360,11 +361,19 @@
 						</div>
 
 						{#if isAnswered}
+							<!-- Enlarged revealed details for maximum readability -->
 							<div
-								class="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 flex justify-between border-t border-slate-200/60 dark:border-slate-700 pt-2"
+								class="mt-3 text-sm sm:text-base text-slate-700 dark:text-slate-200 border-t border-slate-200/60 dark:border-slate-700 pt-3 space-y-2"
 							>
-								<span>Kana: <strong class="font-japanese text-sm">{details.kana}</strong></span>
-								<span>Eng: <strong class="font-medium">{details.english}</strong></span>
+								<div class="flex items-center justify-between">
+									<span class="text-xs uppercase font-bold text-slate-400">Kana</span>
+									<strong class="font-japanese text-base sm:text-lg">{details.kana}</strong>
+								</div>
+								<div class="break-words text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+									<span>Meaning: </span><strong
+										class="font-medium text-slate-800 dark:text-slate-100">{details.english}</strong
+									>
+								</div>
 							</div>
 						{/if}
 					</button>
