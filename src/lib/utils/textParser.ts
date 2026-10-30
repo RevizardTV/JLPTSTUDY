@@ -1,202 +1,189 @@
-// src/lib/utils/grammarTextParser.ts
-import type { QuestionSet, Question, VocabItem } from '#lib/types.js';
+import type { Question, QuestionSet, VocabItem } from '#lib/types.ts';
 
-export function parseGrammarTextToSets(content: string): QuestionSet[] {
-	const rawBlocks = content.split(/\n\s*---\s*\n/);
-	const allSets: QuestionSet[] = [];
+export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
+	const blocks = rawText
+		.split(/^---/m)
+		.map((b) => b.trim())
+		.filter(Boolean);
+	const sets: QuestionSet[] = [];
 
-	for (let blockIdx = 0; blockIdx < rawBlocks.length; blockIdx++) {
-		const block = rawBlocks[blockIdx];
-		if (!block.trim()) continue;
-
+	for (const block of blocks) {
 		const lines = block.split(/\r?\n/);
 
-		let setId = `set-multiset-vol${blockIdx + 1}-n5`;
-		let title = `Grammar & Kanji Set ${blockIdx + 1}`;
+		let setId = '';
+		let title = '';
 		let category = 'grammar';
-		let packTitle = 'Master Batch Pack';
-		let tags = ['n5', 'grammar'];
+		let packTitle = '';
+		let tags: string[] = [];
 		let contextPassages: string[] = [];
 		let contextEnglish: string[] = [];
+
 		const questions: Question[] = [];
 		const vocab: VocabItem[] = [];
-		const answerKeyMap: Record<number, number> = {};
 
 		let currentQ: Question | null = null;
-		let mode: 'META' | 'ANSWERS' | 'VOCAB' | 'QUESTIONS' = 'META';
+		let parsingSection = 'metadata'; // metadata, questions, answerKey, vocab
 
-		for (const line of lines) {
-			const stripped = line.trim();
-			if (!stripped) continue;
+		for (let i = 0; i < lines.length; i++) {
+			const line = lines[i];
+			const trimmed = line.trim();
+			if (!trimmed) continue;
 
-			// Answer Key Switcher
-			const answerHeaderRegex = new RegExp('^Answer\\s*Key[:\\s]*', 'i');
-			if (answerHeaderRegex.test(stripped)) {
-				if (currentQ) {
-					questions.push(currentQ);
-					currentQ = null;
-				}
-				mode = 'ANSWERS';
-				const ansText = stripped.replace(answerHeaderRegex, '').trim();
-				if (ansText) {
-					const matches = [...ansText.matchAll(/(\d+)[:.]\s*([1-4])/g)];
-					for (const m of matches) {
-						answerKeyMap[parseInt(m[1], 10)] = parseInt(m[2], 10) - 1;
-					}
-				}
+			if (/^Answer Key:/i.test(trimmed)) {
+				parsingSection = 'answerKey';
+				currentQ = null;
+				continue;
+			}
+			if (/^Vocab:/i.test(trimmed)) {
+				parsingSection = 'vocab';
+				currentQ = null;
 				continue;
 			}
 
-			// Vocab Switcher
-			const vocabHeaderRegex = new RegExp('^(Vocab(abulary)?|New\\s*Words)[:\\s]*', 'i');
-			if (vocabHeaderRegex.test(stripped)) {
-				if (currentQ) {
-					questions.push(currentQ);
-					currentQ = null;
-				}
-				mode = 'VOCAB';
-				continue;
-			}
-
-			if (mode === 'META') {
-				if (/^setid:/i.test(stripped)) {
-					setId = stripped.split(':', 2)[1].trim();
-				} else if (/^title:/i.test(stripped)) {
-					title = stripped.split(':', 2)[1].trim();
-				} else if (/^category:/i.test(stripped)) {
-					category = stripped.split(':', 2)[1].trim();
-				} else if (/^packtitle:/i.test(stripped)) {
-					packTitle = stripped.split(':', 2)[1].trim();
-				} else if (/^tags:/i.test(stripped)) {
-					tags = stripped
-						.split(':', 2)[1]
+			if (parsingSection === 'metadata') {
+				if (/^SetId:/i.test(trimmed)) {
+					setId = trimmed.replace(/^SetId:\s*/i, '').trim();
+				} else if (/^Title:/i.test(trimmed)) {
+					title = trimmed.replace(/^Title:\s*/i, '').trim();
+				} else if (/^Category:/i.test(trimmed)) {
+					category = trimmed.replace(/^Category:\s*/i, '').trim();
+				} else if (/^PackTitle:/i.test(trimmed)) {
+					packTitle = trimmed.replace(/^PackTitle:\s*/i, '').trim();
+				} else if (/^Tags:/i.test(trimmed)) {
+					tags = trimmed
+						.replace(/^Tags:\s*/i, '')
 						.split(',')
-						.map((t) => t.trim());
-				} else if (/^contextpassages:/i.test(stripped)) {
-					contextPassages = stripped
-						.split(':', 2)[1]
-						.split('|')
-						.map((p) => p.trim());
-				} else if (/^contextenglish:/i.test(stripped)) {
-					contextEnglish = stripped
-						.split(':', 2)[1]
-						.split('|')
-						.map((e) => e.trim());
-				} else if (/^\d+\.\s+/.test(stripped)) {
-					mode = 'QUESTIONS';
+						.map((t) => t.trim())
+						.filter(Boolean);
+				} else if (/^ContextPassages:/i.test(trimmed)) {
+					const val = trimmed.replace(/^ContextPassages:\s*/i, '').trim();
+					contextPassages = val ? [val] : [];
+				} else if (/^ContextEnglish:/i.test(trimmed)) {
+					const val = trimmed.replace(/^ContextEnglish:\s*/i, '').trim();
+					contextEnglish = val ? [val] : [];
+				} else if (/^\d+\./.test(trimmed)) {
+					parsingSection = 'questions';
+					i--;
 				}
-			}
-
-			if (mode === 'ANSWERS') {
-				const matches = [...stripped.matchAll(/(\d+)[:.]\s*([1-4])/g)];
-				for (const m of matches) {
-					answerKeyMap[parseInt(m[1], 10)] = parseInt(m[2], 10) - 1;
-				}
-				continue;
-			}
-
-			if (mode === 'VOCAB') {
-				const vocabMatch = stripped.match(
-					/^([^\s（(]+)\s*[（(]([^）)]+)[）)]\s*(?:\[([^\]]+)\])?\s*[-–—:]\s*(.+?)(?:\s*\(([^)]+)\))?$/
-				);
-				if (vocabMatch) {
-					const [, w, k, r, m, tagsStr] = vocabMatch;
-					const vTags = tagsStr ? tagsStr.split(',').map((t) => t.trim()) : ['n5'];
-					vocab.push({
-						word: w.trim(),
-						kana: k.trim(),
-						romaji: r ? r.trim() : '',
-						meaning: m.trim(),
-						vocabTags: vTags
-					});
-				}
-				continue;
-			}
-
-			if (mode === 'META' || mode === 'QUESTIONS') {
-				const qMatch = stripped.match(/^(\d+)\.\s+(.*)$/);
+			} else if (parsingSection === 'questions') {
+				const qMatch = trimmed.match(/^(\d+)\.\s+(.*)$/);
 				if (qMatch) {
-					if (currentQ) questions.push(currentQ);
-					mode = 'QUESTIONS';
+					if (currentQ) {
+						questions.push(currentQ);
+					}
 					currentQ = {
 						qNum: parseInt(qMatch[1], 10),
 						prompt: qMatch[2].trim(),
-						contextIdx: 0,
 						options: [],
-						answer: 0
+						answer: 0,
+						contextIdx: 0
 					};
 					continue;
 				}
 
-				const optMatch = stripped.match(/^([1-4①②③④])\)\s*(.*)$/);
-				if (currentQ !== null && optMatch) {
-					const optContent = optMatch[2].trim();
-					let text = optContent;
-					let kana = optContent;
-					let english = 'definition needed';
-					if (optContent.includes(' - ')) {
-						const parts = optContent.split(' - ', 2);
-						text = parts[0].trim();
-						kana = text;
-						english = parts[1].trim();
+				// Fixed: Removed unnecessary escape characters
+				const optMatch = trimmed.match(/^(\d+[).])\s+(.*)$/);
+				if (optMatch && currentQ) {
+					const optionContent = optMatch[2].trim();
+					const dashSplit = optionContent.split(/\s*-\s*/);
+					if (dashSplit.length >= 2) {
+						currentQ.options.push({
+							text: dashSplit[0].trim(),
+							english: dashSplit.slice(1).join(' - ').trim(),
+							kana: dashSplit[0].trim()
+						});
+					} else {
+						// Fixed: Push object instead of plain string to satisfy Option type contract
+						currentQ.options.push({
+							text: optionContent,
+							kana: optionContent,
+							english: 'N/A'
+						});
 					}
-					currentQ.options.push({ text, kana, english });
 					continue;
 				}
 
-				if (currentQ !== null) {
-					if (/^kanji:/i.test(stripped)) {
-						currentQ.kanji = stripped.split(':', 2)[1].trim();
-					} else if (/^kanjireading:/i.test(stripped)) {
-						currentQ.kanjiReading = stripped.split(':', 2)[1].trim();
-					} else if (/^reading:/i.test(stripped)) {
-						currentQ.reading = stripped.split(':', 2)[1].trim();
-					} else if (/^english:/i.test(stripped)) {
-						currentQ.english = stripped.split(':', 2)[1].trim();
-					} else if (/^contextidx:/i.test(stripped)) {
-						try {
-							currentQ.contextIdx = parseInt(stripped.split(':', 2)[1].trim(), 10);
-						} catch {
-							// Ignore parsing errors
+				if (currentQ) {
+					const kvMatch = trimmed.match(/^([a-zA-Z]+):\s*(.*)$/);
+					if (kvMatch) {
+						const key = kvMatch[1].toLowerCase();
+						const value = kvMatch[2].trim();
+
+						if (key === 'english') {
+							currentQ.english = value;
+						} else if (key === 'kanji') {
+							currentQ.kanji = value;
+						} else if (key === 'reading') {
+							currentQ.reading = value;
+						} else if (key === 'kanjireading') {
+							currentQ.kanjiReading = value;
+						} else if (key === 'contextidx') {
+							currentQ.contextIdx = parseInt(value, 10) || 0;
 						}
 					}
+				}
+			} else if (parsingSection === 'answerKey') {
+				const pairs = trimmed.split(/,|\s+/);
+				for (let p = 0; p < pairs.length; p++) {
+					const token = pairs[p].replace('.', '').trim();
+					const nextToken = pairs[p + 1]?.trim();
+
+					const qNum = parseInt(token, 10);
+					const ansNum = parseInt(nextToken, 10);
+
+					if (!isNaN(qNum) && !isNaN(ansNum)) {
+						const targetQ = questions.find((q) => q.qNum === qNum);
+						if (targetQ) {
+							targetQ.answer = ansNum - 1;
+						}
+						p++;
+					}
+				}
+			} else if (parsingSection === 'vocab') {
+				// Fixed: Cleaned up escape characters in vocab regex
+				const vocabMatch = trimmed.match(/^([^()]+)\(([^)]+)\)(?:\s*\[([^\]]+)\])?\s*-\s*(.+)$/);
+				if (vocabMatch) {
+					const word = vocabMatch[1].trim();
+					const kana = vocabMatch[2].trim();
+					const romaji = vocabMatch[3] ? vocabMatch[3].trim() : '';
+					let rest = vocabMatch[4].trim();
+
+					let vocabTags: string[] = [];
+					const tagMatch = rest.match(/\(([^)]+)\)$/);
+					if (tagMatch) {
+						vocabTags = tagMatch[1].split(',').map((t) => t.trim());
+						rest = rest.replace(/\([^)]+\)$/, '').trim();
+					}
+
+					vocab.push({
+						word,
+						kana,
+						romaji,
+						meaning: rest,
+						vocabTags
+					});
 				}
 			}
 		}
 
-		if (currentQ) questions.push(currentQ);
-
-		// Apply answer mappings and default English sentence definitions
-		for (const q of questions) {
-			if (answerKeyMap[q.qNum] !== undefined) {
-				q.answer = answerKeyMap[q.qNum];
-			}
-			if (!q.english && q.options.length > 0 && q.options[q.answer]) {
-				q.english = q.options[q.answer].english;
-			}
+		if (currentQ) {
+			questions.push(currentQ);
 		}
 
-		if (contextPassages.length === 0) {
-			contextPassages = ['Sample reading passage.'];
+		if (questions.length > 0) {
+			sets.push({
+				id: setId || `set-${Math.random().toString(36).substring(2, 9)}`,
+				title: title || 'Untitled Set',
+				category: category || 'grammar',
+				packTitle: packTitle || undefined,
+				tags: tags.length > 0 ? tags : ['general'],
+				contextPassages: contextPassages.length > 0 ? contextPassages : [''],
+				contextEnglish: contextEnglish.length > 0 ? contextEnglish : undefined,
+				questions,
+				vocab: vocab.length > 0 ? vocab : undefined
+			});
 		}
-
-		const setObj: QuestionSet = {
-			id: setId,
-			title,
-			category: category as QuestionSet['category'],
-			packTitle,
-			tags,
-			contextPassages,
-			questions,
-			vocab: vocab.length > 0 ? vocab : undefined
-		};
-
-		if (contextEnglish.length > 0) {
-			setObj.contextEnglish = contextEnglish;
-		}
-
-		allSets.push(setObj);
 	}
 
-	return allSets;
+	return sets;
 }
