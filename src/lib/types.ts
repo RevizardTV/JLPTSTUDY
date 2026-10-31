@@ -19,6 +19,7 @@ export interface Question {
 	setId?: string;
 	setTitle?: string;
 	contextText?: string;
+	contextEnglishText?: string;
 }
 
 export interface VocabItem {

@@ -3,8 +3,9 @@
 	import type { QuestionSet, VocabItem, Question } from '#lib/types.js';
 	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import VocabUploadModal from '#lib/components/modals/VocabUploadModal.svelte';
+	import KanaFilterModal from '#lib/components/modals/KanaFilterModal.svelte';
 	import ExportVocabButton from '#lib/components/buttons/ExportVocabButton.svelte';
-	import VocabCard from '#lib/components/cards/VocabCard.svelte'; // <-- Import component
+	import VocabCard from '#lib/components/cards/VocabCard.svelte';
 
 	let kanjiQuery = $state<string>('');
 	let kanaQuery = $state<string>('');
@@ -12,6 +13,10 @@
 	let tagSearchQuery = $state<string>('');
 	let selectedTags = $state<SvelteSet<string>>();
 	let showVocabModal = $state<boolean>(false);
+
+	// New Kana Grid Modal state variables
+	let isKanaModalOpen = $state<boolean>(false);
+	let selectedStartingKana = $state<string>('');
 
 	const questionReadingMap = $derived.by(() => {
 		const map = new SvelteMap<string, string>();
@@ -91,9 +96,21 @@
 			kana = kanji;
 		}
 
+		// Compute a clean phonetic version strictly for filtering purposes,
+		// while leaving 'kana' untouched so your UI cards display the pointing notation.
+		let cleanKana = kana;
+		if (kana.includes('->')) {
+			const matches = kana.match(/->\s*([^\s]+)/g);
+			if (matches) {
+				cleanKana = matches.map((m) => m.replace(/->\s*/, '').trim()).join('');
+			}
+		}
+		cleanKana = cleanKana.replace(/\[.*?\]/g, '').trim();
+
 		return {
 			kanji,
-			kana,
+			kana, // Keeps original chunk pointing notation for the UI card
+			cleanKana, // Used for kana chart filtering
 			romaji: explicitRomaji || '',
 			meaning,
 			vocabTags
@@ -110,8 +127,12 @@
 
 				const matchesKanji =
 					!qKanji.trim() || item.kanji.toLowerCase().includes(qKanji.toLowerCase().trim());
+
+				// Checks cleanKana for the Gojūon modal selection while keeping original card display intact
 				const matchesKana =
-					!qKana.trim() || item.kana.toLowerCase().includes(qKana.toLowerCase().trim());
+					(!qKana.trim() || item.kana.toLowerCase().includes(qKana.toLowerCase().trim())) &&
+					(!selectedStartingKana || item.cleanKana.startsWith(selectedStartingKana));
+
 				const matchesRomaji =
 					!qRomaji.trim() ||
 					item.meaning.toLowerCase().includes(qRomaji.toLowerCase().trim()) ||
@@ -138,6 +159,7 @@
 		kanaQuery = '';
 		romajiQuery = '';
 		tagSearchQuery = '';
+		selectedStartingKana = '';
 		if (selectedTags) {
 			selectedTags.clear();
 		} else {
@@ -150,6 +172,7 @@
 			kanaQuery.trim().length > 0 ||
 			romajiQuery.trim().length > 0 ||
 			tagSearchQuery.trim().length > 0 ||
+			selectedStartingKana.length > 0 ||
 			(selectedTags ? selectedTags.size > 0 : false)
 	);
 </script>
@@ -163,7 +186,16 @@
 			</p>
 		</div>
 
-		<div class="flex items-center space-x-2">
+		<div class="flex items-center space-x-2 flex-wrap gap-y-2">
+			<!-- Gojūon Kana Filter Button -->
+			<button
+				onclick={() => (isKanaModalOpen = true)}
+				class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-brand-500 flex items-center space-x-1 shadow-xs transition"
+			>
+				<span>あ Kana:</span>
+				<strong class="font-japanese text-brand-500">{selectedStartingKana || 'All'}</strong>
+			</button>
+
 			<ExportVocabButton vocabItems={filteredVocab} />
 
 			<button
@@ -296,3 +328,11 @@
 {#if showVocabModal}
 	<VocabUploadModal onclose={() => (showVocabModal = false)} />
 {/if}
+
+<!-- Kana Chart Filter Modal Integration -->
+<KanaFilterModal
+	isOpen={isKanaModalOpen}
+	selectedKana={selectedStartingKana}
+	onSelect={(kana: string) => (selectedStartingKana = kana)}
+	onClose={() => (isKanaModalOpen = false)}
+/>

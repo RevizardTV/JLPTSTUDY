@@ -8,8 +8,10 @@
 	import SingleUploadModal from '#lib/components/modals/SingleUploadModal.svelte';
 	import CustomBuilderModal from '#lib/components/modals/CustomBuilderModal.svelte';
 	import DataWiper from '#lib/components/buttons/DataWiper.svelte';
-	import type { QuizConfig, SetProgress } from '#lib/types.js';
+	import type { QuizConfig, SetProgress, UserAnswer } from '#lib/types.js';
 	import { exportVisibleMissedQuestionsAsText } from '#lib/utils/wrongGiver.ts';
+	import { exportAllQuestionsAsText } from '#lib/utils/exportUtils.ts';
+	import { exportAttemptedQuestionsAsText } from '#lib/utils/exportAnsweredUtils.js';
 	import { SvelteSet } from 'svelte/reactivity';
 
 	let {
@@ -183,6 +185,26 @@
 			deleteQuestionSet(setId);
 		}
 	}
+	function handleExportAll() {
+		exportAllQuestionsAsText($questionSets);
+	}
+	function handleExportAttempted() {
+		const completedSets = $userProgress.completedSets;
+
+		const allAnswers: UserAnswer[] = Object.values(completedSets).flatMap((val) => {
+			if (
+				typeof val === 'object' &&
+				val !== null &&
+				'userAnswers' in val &&
+				Array.isArray(val.userAnswers)
+			) {
+				return val.userAnswers;
+			}
+			return [];
+		});
+
+		exportAttemptedQuestionsAsText(allAnswers);
+	}
 </script>
 
 <section class="space-y-6">
@@ -275,11 +297,14 @@
 			{/each}
 		</div>
 
-		<!-- Batch Selection Controls Bar for Visible Sets -->
-		<div class="flex items-center justify-between pt-1 text-xs">
-			<div class="flex items-center space-x-3">
+		<!-- Clean Responsive Batch Selection Controls Bar -->
+		<div
+			class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 pt-2 text-xs"
+		>
+			<!-- Left: Checkbox & Selection Counter -->
+			<div class="flex items-center space-x-3 shrink-0">
 				<label
-					class="flex items-center space-x-2 font-bold cursor-pointer text-slate-700 dark:text-slate-200"
+					class="flex items-center space-x-2 font-bold cursor-pointer text-slate-700 dark:text-slate-200 select-none"
 				>
 					<input
 						type="checkbox"
@@ -291,39 +316,81 @@
 				</label>
 
 				{#if selectedSetIds.size > 0}
-					<span class="text-slate-400 font-medium">• {selectedSetIds.size} selected</span>
+					<span
+						class="px-2.5 py-0.5 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-semibold rounded-full"
+					>
+						{selectedSetIds.size} selected
+					</span>
 				{/if}
 			</div>
 
+			<!-- Right: Action Buttons Group (Only active when selection > 0) -->
 			{#if selectedSetIds.size > 0}
-				<div class="flex items-center space-x-2">
+				<div class="flex flex-wrap items-center gap-2 w-full lg:w-auto justify-end">
+					<!-- Export Mistakes -->
 					<button
 						onclick={() => {
 							const textOutput = exportVisibleMissedQuestionsAsText(filteredSets);
 							navigator.clipboard.writeText(textOutput);
 							alert('Missed questions from visible sets copied to clipboard as text!');
 						}}
-						class="px-3 py-1 bg-brand-500/10 hover:bg-brand-500/25 text-brand-600 dark:text-brand-400 font-semibold rounded-lg border border-brand-500/20 transition flex items-center space-x-1"
+						class="px-3 py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 font-semibold rounded-xl border border-amber-500/20 transition flex items-center space-x-1.5 shadow-xs"
 					>
 						<span>📋</span>
-						<span>Export Visible Mistakes (Text)</span>
-					</button>
-				</div>
-				<div class="flex items-center space-x-2">
-					<button
-						onclick={handleBatchReset}
-						class="px-3 py-1 bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 font-semibold rounded-lg border border-amber-500/20 transition flex items-center space-x-1"
-					>
-						<span>🔄</span>
-						<span>Reset Selected ({selectedSetIds.size})</span>
+						<span>Export Mistakes</span>
 					</button>
 
+					<!-- Export All -->
+					<button
+						onclick={handleExportAll}
+						class="px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-xs transition flex items-center space-x-1.5"
+					>
+						<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+							></path>
+						</svg>
+						<span>Export All</span>
+					</button>
+
+					<!-- Export Attempted -->
+					<button
+						onclick={handleExportAttempted}
+						class="px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-xs transition flex items-center space-x-1.5"
+					>
+						<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+							></path>
+						</svg>
+						<span>Export Attempted</span>
+					</button>
+
+					<!-- Separator Line -->
+					<div class="hidden lg:block w-px h-5 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+
+					<!-- Reset Selected -->
+					<button
+						onclick={handleBatchReset}
+						class="px-3 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl transition flex items-center space-x-1.5 shadow-xs"
+					>
+						<span>🔄</span>
+						<span>Reset</span>
+					</button>
+
+					<!-- Delete Selected -->
 					<button
 						onclick={handleBatchDelete}
-						class="px-3 py-1 bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 font-semibold rounded-lg border border-rose-500/20 transition flex items-center space-x-1"
+						class="px-3 py-2 bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 font-semibold rounded-xl border border-rose-500/20 transition flex items-center space-x-1.5 shadow-xs"
 					>
 						<span>🗑️</span>
-						<span>Delete Selected ({selectedSetIds.size})</span>
+						<span>Delete</span>
 					</button>
 				</div>
 			{/if}
@@ -337,7 +404,6 @@
 
 	<DataWiper />
 
-	<!-- Exercise Grid with Checkbox Selection -->
 	<!-- Exercise Grid with Clean Interactive Cards -->
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 		{#each filteredSets as set (set.id)}

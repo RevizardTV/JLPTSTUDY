@@ -1,5 +1,5 @@
 import { get } from 'svelte/store';
-import { userProgress } from '#lib/stores.js';
+import { userProgress } from '#lib/stores.ts';
 import type { QuestionSet, Question, UserAnswer, SetProgress } from '#lib/types.js';
 
 export function exportVisibleMissedQuestionsAsText(filteredSets: QuestionSet[]): string {
