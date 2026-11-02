@@ -52,7 +52,11 @@
 
 	function loadQuestions() {
 		if (config.customQuestions) {
-			questions = config.customQuestions as ExtendedQuestion[];
+			questions = (config.customQuestions as ExtendedQuestion[]).map((q) => ({
+				...q,
+				contextText: (q.contextText || '').replace(/\\n/g, '\n'),
+				contextEnglishText: (q.contextEnglishText || '').replace(/\\n/g, '\n')
+			}));
 		} else if (config.mode === 'exercise' && config.setId) {
 			const sets: QuestionSet[] = $questionSets;
 			const setObj = sets.find((s) => s.id === config.setId);
@@ -61,8 +65,8 @@
 					...q,
 					setId: setObj.id,
 					setTitle: setObj.title,
-					contextText: setObj.contextPassages[q.contextIdx] || '',
-					contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || '',
+					contextText: (setObj.contextPassages[q.contextIdx] || '').replace(/\\n/g, '\n'),
+					contextEnglishText: (setObj.contextEnglish?.[q.contextIdx] || '').replace(/\\n/g, '\n'),
 					setVocab: setObj.vocab || []
 				}));
 
@@ -76,8 +80,15 @@
 						userAnswers = [...savedProgress.userAnswers];
 					}
 
+					// Uniquely track completion status across shared prompts using setId, qNum, and prompt
 					const firstIncompleteIdx = questions.findIndex(
-						(q) => !userAnswers.some((ans) => ans.question.prompt === q.prompt)
+						(q) =>
+							!userAnswers.some(
+								(ans) =>
+									ans.question.qNum === q.qNum &&
+									ans.question.prompt === q.prompt &&
+									(ans.question.setId || setObj.id) === q.setId
+							)
 					);
 					if (firstIncompleteIdx !== -1) {
 						currentIndex = firstIncompleteIdx;
@@ -98,8 +109,8 @@
 						...q,
 						setId: setObj.id,
 						setTitle: setObj.title,
-						contextText: setObj.contextPassages[q.contextIdx] || '',
-						contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || '',
+						contextText: (setObj.contextPassages[q.contextIdx] || '').replace(/\\n/g, '\n'),
+						contextEnglishText: (setObj.contextEnglish?.[q.contextIdx] || '').replace(/\\n/g, '\n'),
 						setVocab: setObj.vocab || []
 					});
 				});
@@ -113,7 +124,13 @@
 	function syncCurrentQuestionState() {
 		if (questions.length === 0) return;
 		const q = questions[currentIndex];
-		const existingAns = userAnswers.find((ans) => ans.question.prompt === q.prompt);
+		// Uniquely identify the answer using setId, qNum, and prompt to prevent shared generic prompt overlaps
+		const existingAns = userAnswers.find(
+			(ans) =>
+				ans.question.qNum === q.qNum &&
+				ans.question.prompt === q.prompt &&
+				(ans.question.setId || q.setId) === q.setId
+		);
 		if (existingAns) {
 			selectedOption = existingAns.selected;
 			isAnswered = true;
@@ -133,13 +150,25 @@
 
 		if (isCorrect) score++;
 
+		// Remove any existing entry for this specific unique question before pushing
+		userAnswers = userAnswers.filter(
+			(ans) =>
+				!(
+					ans.question.qNum === q.qNum &&
+					ans.question.prompt === q.prompt &&
+					(ans.question.setId || q.setId) === q.setId
+				)
+		);
+
 		userAnswers.push({
 			question: q,
 			selected: idx,
 			isCorrect
 		});
 
-		const attemptedCount = new Set(userAnswers.map((a) => a.question.prompt)).size;
+		const attemptedCount = new Set(
+			userAnswers.map((a) => `${a.question.setId || 'set'}-${a.question.qNum}-${a.question.prompt}`)
+		).size;
 
 		if (config.setId) {
 			updateSetProgressIndex(
@@ -165,7 +194,11 @@
 			currentIndex++;
 			syncCurrentQuestionState();
 
-			const attemptedCount = new Set(userAnswers.map((a) => a.question.prompt)).size;
+			const attemptedCount = new Set(
+				userAnswers.map(
+					(a) => `${a.question.setId || 'set'}-${a.question.qNum}-${a.question.prompt}`
+				)
+			).size;
 			if (config.setId) {
 				updateSetProgressIndex(
 					config.setId,
@@ -183,7 +216,11 @@
 
 	function handleCustomExit() {
 		if (config.setId && questions.length > 0) {
-			const attemptedCount = new Set(userAnswers.map((a) => a.question.prompt)).size;
+			const attemptedCount = new Set(
+				userAnswers.map(
+					(a) => `${a.question.setId || 'set'}-${a.question.qNum}-${a.question.prompt}`
+				)
+			).size;
 			updateSetProgressIndex(
 				config.setId,
 				currentIndex,
@@ -298,13 +335,13 @@
 				class="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200/80 dark:border-slate-800 space-y-2"
 			>
 				<div
-					class="text-xl sm:text-2xl font-japanese leading-relaxed text-slate-800 dark:text-slate-200"
+					class="text-xl sm:text-2xl font-japanese leading-relaxed text-slate-800 dark:text-slate-200 whitespace-pre-line"
 				>
 					{q.contextText}
 				</div>
 				{#if isAnswered && q.contextEnglishText}
 					<div
-						class="text-sm sm:text-base italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-2"
+						class="text-sm sm:text-base italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-2 whitespace-pre-line"
 					>
 						{q.contextEnglishText}
 					</div>
@@ -326,20 +363,19 @@
 					{/if}
 				</div>
 				<div
-					class="text-3xl sm:text-4xl font-bold font-japanese text-brand-600 dark:text-brand-500 leading-relaxed tracking-wide"
+					class="text-3xl sm:text-4xl font-bold font-japanese text-brand-600 dark:text-brand-500 leading-relaxed tracking-wide whitespace-pre-line"
 				>
 					{q.prompt}
 				</div>
 				{#if isAnswered && q.english}
 					<div
-						class="text-base sm:text-lg italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-3 animate-fadeIn font-medium"
+						class="text-base sm:text-lg italic text-amber-500/90 dark:text-amber-400/80 font-sans border-t border-slate-200/40 dark:border-slate-800 pt-3 animate-fadeIn font-medium whitespace-pre-line"
 					>
 						{q.english}
 					</div>
 				{/if}
 			</div>
 
-			<!-- Multiple Choice Options (Enlarged for readability) -->
 			<!-- Multiple Choice Options -->
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 				{#each q.options as opt, idx (idx)}
@@ -361,7 +397,6 @@
 						</div>
 
 						{#if isAnswered}
-							<!-- Enlarged revealed details for maximum readability -->
 							<div
 								class="mt-3 text-sm sm:text-base text-slate-700 dark:text-slate-200 border-t border-slate-200/60 dark:border-slate-700 pt-3 space-y-2"
 							>
@@ -444,6 +479,15 @@
 					{#if !isAnswered}
 						<button
 							onclick={() => {
+								// Remove any existing entry for this specific unique question before pushing skip
+								userAnswers = userAnswers.filter(
+									(ans) =>
+										!(
+											ans.question.qNum === q.qNum &&
+											ans.question.prompt === q.prompt &&
+											(ans.question.setId || q.setId) === q.setId
+										)
+								);
 								userAnswers.push({ question: q, selected: -1, isCorrect: false });
 								nextQuestion();
 							}}

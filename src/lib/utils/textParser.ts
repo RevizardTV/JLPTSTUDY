@@ -65,10 +65,20 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 						.filter(Boolean);
 				} else if (/^ContextPassages:/i.test(trimmed)) {
 					const val = trimmed.replace(/^ContextPassages:\s*/i, '').trim();
-					contextPassages = val ? [val] : [];
+					contextPassages = val
+						? val
+								.split(/\s*\|\s*/)
+								.map((s) => s.trim())
+								.filter(Boolean)
+						: [];
 				} else if (/^ContextEnglish:/i.test(trimmed)) {
 					const val = trimmed.replace(/^ContextEnglish:\s*/i, '').trim();
-					contextEnglish = val ? [val] : [];
+					contextEnglish = val
+						? val
+								.split(/\s*\|\s*/)
+								.map((s) => s.trim())
+								.filter(Boolean)
+						: [];
 				} else if (/^\d+\./.test(trimmed)) {
 					parsingSection = 'questions';
 					i--;

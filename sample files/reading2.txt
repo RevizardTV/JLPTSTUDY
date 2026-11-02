@@ -1,0 +1,1605 @@
+---
+
+SetId: set-jtest-ex-read-01
+
+Title: JTEST_EX Reading Practice Set 1 (EX-1 ~ EX-2)
+
+Category: reading
+
+PackTitle: JTEST_EX
+
+Tags: n5, reading, beginner, comprehension, jtest
+
+ContextPassages: Ａ「きのうかさを買いました。」\nＢ「あ、そのかさですか。きれいなかさですね。高かったですか。」\nＡ「いいえ。きょねん買ったのは高くておもかったですが、このかさはかるくていいです。」 || わたしたちはまいあさうたのれんしゅうをします。けさのれんしゅうは９時２０分から１時間でした。山川さんと大山さんは来ませんでした。高木さんは３０分おそく来ました。 || パク: すみません、あの上にある本を見たいです。（ ア ）。\n店の人: はい、わかりました。（ イ ）。\nパク: あれです。あの『にほんご』と書いてある本です。\n店の人: これですか。\nパク: いいえ、かんじじゃなくてひらがなで『にほんご』と書いてある本です。\n店の人: ああ、これですか。\nパク: はい、それです。それはいくらですか。\n店の人: ３０００円です。\nパク: ３０００円ですか。ちょっと高いですね。（ウ）すみません。\n店の人: いいえ。またどうぞ。 || アパートの皆さんへ\n来週の月曜日と火曜日の午前１０時から午後５時までエレベーターを使わないでください。階段を使ってください。 || きのうのよる１０時に友だちのうちに電話をしましたが、友だちはいませんでした。１時間あとでもういちどかけました。でも友だちはまだかえっていませんでした。わたしは１１時ごろねました。 || 先月わたしは学校の友達といっしょに、おきなわへ旅行に行きました。わたしたちは、旅行の前に、おきなわから来た日本人の友達にいろいろ（ア）。友達は、「おきなわはとうきょうよりずっと南だから、とても暑いよ。（イ）、夏の服をたくさん持っていったほうがいい」と言いました。そのころとうきょうはまだ４月だったので、きおんが１４どぐらいでした。（ウ）、わたしはおしいれのおくから、夏の洋服を出して、かばんにいっぱい入れて出かけることにしました。２はく３日の旅行ですが、一日中、おきなわの町をけんぶつしたり、海で泳いだりするので、ようふくはたくさんあったほうがいいと思ったのです。
+
+ContextEnglish: A: "I bought ( [買いました]->かいしました ) an umbrella ( [傘]->かさ ) yesterday ( [昨日]->きのう )."\nB: "Ah, is it that umbrella? It's pretty ( [綺麗]->きれい ). Was it expensive ( [高かった]->たかかった )?"\nA: "No. The one I bought last year ( [去年]->きょねん ) was expensive and heavy ( [重かった]->おもかった ), but this umbrella is light ( [軽くて]->かるくて ) and nice." || We practice ( [練習]->れんしゅう ) singing ( [歌]->うた ) every morning ( [毎朝]->まいあさ ). This morning's ( [今朝]->けさ ) practice was 1 hour ( [1時間]->いちじかん ) starting from 9:20 ( [9時20分]->くじにじゅっぷん ). Yamakawa-san ( [山川さん]->やまかわさん ) and Ooyama-san ( [大山さん]->おおやまさん ) didn't come ( [来ませんでした]->きませんでした ). Takagi-san ( [高木さん]->たかぎさん ) came 30 minutes ( [30分]->さんじゅっぷん ) late ( [遅く]->おそく ). || Park: "Excuse me, I want to see ( [見たい]->みたい ) that book ( [本]->ほん ) on top ( [上]->うえ ). ( A )."\nClerk ( [店の人]->みせのひと ): "Yes, understood ( [分かりました]->わかりました ). ( B )."\nPark: "That one. The book written ( [書いてある]->かいてある ) with 'Nihongo'.'\nClerk: "This one?"\nPark: "No, not kanji ( [漢字]->かんじ ), the book written in hiragana with 'Nihongo'."\nClerk: "Ah, this one?"\nPark: "Yes, that's it. How much is it?"\nClerk: "It's 3000 yen ( [3000円]->さんぜんえん )."\nPark: "3000 yen? That's a bit expensive ( [高い]->たかい ). ( C ), sorry."\nClerk: "Not at all. Please come again." || To all ( [皆さん]->みなさん ) apartment residents:\nPlease do not use ( [使わないで]->つかわないで ) the elevator on Monday ( [月曜日]->げつようび ) and Tuesday ( [火曜日]->かようび ) next week ( [来週]->らいしゅう ) from 10:00 a.m. ( [午前10時]->ごぜんじゅうじ ) to 5:00 p.m. ( [午後5時]->ごごごじ ). Please use stairs ( [階段]->かいだん ). || Yesterday ( [昨日]->きのう ) at 10 p.m. ( [夜10時]->よるじゅうじ ) I called ( [電話をしました]->でんわをしました ) my friend's ( [友達]->ともだち ) house, but my friend wasn't there. I called once more ( [もう一度]->もういちど ) 1 hour later ( [1時間後]->いちじかんご ). But my friend hadn't returned home ( [帰っていませんでした]->かえっていませんでした ) yet. I went to bed ( [寝ました]->ねました ) around 11 o'clock ( [11時ごろ]->じゅういちじごろ ). || Last month ( [先月]->せんげつ ) I went on a trip ( [旅行]->りょうこう ) to Okinawa with my school ( [学校]->がっこう ) friends ( [友達]->ともだち ). Before the trip, we ( A ) Japanese ( [日本人]->にほんじん ) friends who came from Okinawa various things. The friend said, "Okinawa is much further south ( [南]->みなみ ) than Tokyo, so it's very hot ( [暑い]->あつい ). ( B ), you should bring lots of summer ( [夏]->なつ ) clothes ( [服]->ふく )." At that time Tokyo was still April ( [4月]->しがつ ), so temperature ( [気温]->きおん ) was around 14 degrees ( [14度]->じゅうよんど ). ( C ), I took out summer clothes from the closet, packed them into my bag, and decided to depart ( [出かける]->でかける ). It was a 2-night 3-day ( [2泊3日]->にはくみっか ) trip, but since we were sightseeing in Okinawa town all day and swimming in the sea ( [海]->うみ ), I thought it would be better to have plenty of clothes.
+
+
+
+1. きのう買ったかさはどんなかさですか。
+
+   1) 高くておもいです。 - Expensive ( [高い]->たかい ) and heavy ( [重い]->おもい ).
+
+   2) 安いですが、おもいです。 - Cheap ( [安い]->やすい ), but heavy.
+
+   3) かるくてきれいです。 - Light ( [軽い]->かるい ) and pretty.
+
+   4) きれいですが、高いです。 - Pretty, but expensive.
+
+   English: What kind of umbrella ( [傘]->かさ ) is the one bought ( [買った]->かった ) yesterday ( [昨日]->きのう )?
+
+   Reading: かるくてきれいです。
+
+   ContextIdx: 0
+
+
+
+2. ただしいものはどれですか。
+
+   1) れんしゅうを休んだ人は３人です。 - 3 people ( [3人]->さんにかい ) were absent ( [休んだ]->やすんだ ) from practice ( [練習]->れんしゅう ).
+
+   2) れんしゅうは９時２０分から１時までです。 - Practice was from 9:20 ( [9時20分]->くじにじゅっぷん ) to 1 o'clock ( [1時]->いちじ ).
+
+   3) 高木さんは１時間れんしゅうしました。 - Takagi-san ( [高木さん]->たかぎさん ) practiced for 1 hour ( [1時間]->いちじかん ).
+
+   4) 高木さんは９時５０分にれんしゅうに来ました。 - Takagi-san came ( [来ました]->きました ) to practice at 9:50 ( [9時50分]->くじごじゅっぷん ).
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: 高木さんは９時５０分にれんしゅうに来ました。
+
+   ContextIdx: 1
+
+
+
+3. （ア）には何を入れますか。
+
+   1) とりますか - Will you pass/take ( [取りますか]->とりますか ) it?
+
+   2) とりましょうか - Shall I pass/take it?
+
+   3) とっていますか - Are you passing/taking it?
+
+   4) とってくださいませんか - Could you please pass/take ( [取ってください]->とってください ) it for me?
+
+   English: What goes into ( [入れますか]->いれますか ) (ア)?
+
+   Reading: とってくださいませんか
+
+   ContextIdx: 2
+
+
+
+4. （イ）には何を入れますか。
+
+   1) どの本ですか - Which book ( [本]->ほん ) is it?
+
+   2) どれが本ですか - Which one is a book?
+
+   3) これは本ですか - Is this a book?
+
+   4) この本はありませんか - Is this book unavailable?
+
+   English: What goes into ( [入れますか]->いれますか ) (イ)?
+
+   Reading: どの本ですか
+
+   ContextIdx: 2
+
+
+
+5. （ウ）には何を入れますか。
+
+   1) じゃ、それです - Well then, it's that one.
+
+   2) じゃ、いいです - Well then, I'll pass / no thank you.
+
+   3) じゃ、それにします - Well then, I'll take that one.
+
+   4) じゃ、そうしましょう - Well then, let's do that.
+
+   English: What goes into ( [入れますか]->いれますか ) (ウ)?
+
+   Reading: じゃ、いいです
+
+   ContextIdx: 2
+
+
+
+6. アパートの人は、来週の月曜日と火曜日には、外に出る時、どうしますか。
+
+   1) 来週の月曜日の午前１１時には、階段を使います。 - On Monday ( [月曜日]->げつようび ) next week ( [来週]->らいしゅう ) at 11:00 AM ( [午前11時]->ごぜんじゅういちじ ), they use ( [使います]->つかいます ) the stairs ( [階段]->かいだん ).
+
+   2) 来週の月曜日の午後３時には、エレベーターを使います。 - On Monday next week at 3:00 PM ( [午後3時]->ごごさんじ ), they use the elevator.
+
+   3) 来週の火曜日の午前１１時には、エレベーターを使います。 - On Tuesday ( [火曜日]->かようび ) next week at 11:00 AM, they use the elevator.
+
+   4) 来週の火曜日の午後３時には、階段を使いません。 - On Tuesday next week at 3:00 PM, they don't use the stairs.
+
+   English: What will the apartment residents do when going outside ( [外に出る時]->そとにでるとき ) on Monday and Tuesday next week?
+
+   Reading: 来週の月曜日の午前１１時には、階段を使います。
+
+   ContextIdx: 3
+
+
+
+7. ただしいものはどれですか。
+
+   1) わたしはきのうのよる友だちと話したあとでねました。 - I slept ( [寝ました]->ねました ) yesterday night ( [昨日の夜]->きのうのよる ) after talking ( [話した]->はなした ) with my friend ( [友達]->ともだち ).
+
+   2) わたしはきのうのよる友だちに１かいしか電話しませんでした。 - I only called ( [電話しませんでした]->でんわしませんでした ) my friend once yesterday night.
+
+   3) わたしはきのうのよる友だちと２かい電話で話しました。 - I spoke twice with my friend on the phone yesterday night.
+
+   4) わたしはきのうのよる友だちと電話で話しませんでした。 - I did not speak with my friend on the phone yesterday night.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: わたしはきのうのよる友だちと電話で話しませんでした。
+
+   ContextIdx: 4
+
+
+
+8. （ア）には何を入れますか。
+
+   1) 話しました - Spoke ( [話しました]->はなしました )
+
+   2) 答えました - Answered ( [答えました]->こたえました )
+
+   3) 呼びました - Called ( [呼びました]->よびました )
+
+   4) 聞きました - Asked / Listened ( [聞きました]->ききました )
+
+   English: What goes into ( [入れますか]->いれますか ) (ア)?
+
+   Reading: 聞きました
+
+   ContextIdx: 5
+
+
+
+9. （イ）には何を入れますか。
+
+   1) だから - So / Therefore
+
+   2) それから - And then
+
+   3) すると - Thereupon
+
+   4) だけど - However
+
+   English: What goes into ( [入れますか]->いれますか ) (イ)?
+
+   Reading: だから
+
+   ContextIdx: 5
+
+
+
+10. （ウ）には何を入れますか。
+
+    1) そうすると - Having done so
+
+    2) ところが - However / Even so
+
+    3) それで - Because of that / So
+
+    4) それに - Besides / Moreover
+
+    English: What goes into ( [入れますか]->いれますか ) (ウ)?
+
+    Reading: それで
+
+    ContextIdx: 5
+
+
+
+Answer Key:
+
+1. 3, 2. 4, 3. 4, 4. 1, 5. 2, 6. 1, 7. 4, 8. 4, 9. 1, 10. 3
+
+
+
+Vocab:
+
+昨日 ( [昨]->きのう[日]->きのう ) [kinou] - yesterday (noun, time, n5)
+
+傘 ( [傘]->かさ ) [kasa] - umbrella (noun, daily-life, n5)
+
+買う ( [買]->か-う ) [kau] - to buy (verb, godan-verb, transitive, n5)
+
+高い ( [高]->たか-い ) [takai] - expensive (i-adjective, n5)
+
+去年 ( [去]->きょ[年]->ねん ) [kyonen] - last year (noun, time, n5)
+
+重い ( [重]->おも-い ) [omoi] - heavy (i-adjective, n5)
+
+軽い ( [軽]->かる-い ) [karui] - light (i-adjective, n5)
+
+毎朝 ( [毎]->まい[朝]->あさ ) [maiasa] - every morning (noun, time, n5)
+
+歌 ( [歌]->うた ) [uta] - song (noun, hobby, n5)
+
+練習 ( [練]->れん[習]->しゅう ) [renshuu] - practice (noun, suru-verb, school, n5)
+
+遅く ( [遅]->おそ-く ) [osoku] - late (adverb, n5)
+
+日本語 ( [日]->に[本]->ほん[語]->ご ) [nihongo] - Japanese language (noun, school, n5)
+
+階段 ( [階]->かい[段]->だん ) [kaidan] - stairs (noun, house, place, n5)
+
+旅行 ( [旅]->りょ[行]->こう ) [ryokou] - travel (noun, suru-verb, hobby, n5)
+
+---
+
+SetId: set-jtest-ex-read-02
+
+Title: JTEST_EX Reading Practice Set 2 (EX-3 ~ EX-5)
+
+Category: reading
+
+PackTitle: JTEST_EX
+
+Tags: n5, reading, beginner, comprehension, jtest
+
+ContextPassages: 学生: すみません。この本をかりたいです。\nとしょかんの人: この学校の学生ですか。\n学生: はい。\nとしょかんの人: では、はじめにこのかみに名前とじゅうしょと電話ばんごうを書いてぐださい。\n学生: はい。\nとしょかんの人: 書きましたか。\n学生: はい。\nとしょかんの人: これはじしょですね。としょかんの中でつかってぐださい。\n学生: はい、わかりました。では、この７さつをかしてぐださい。\nとしょかんの人: ああ、学生は４さつまでです。\n学生: そうですか。では、この３さつはかりません。\nとしょかんの人: わかりました。では、こちらの本は２しゅうかん、ざっしは1しゅうかんでかえしてぐださい。きょうは１５日ですから、[_______]\n学生: はい、わかりました。 || リン「むらたさん、ちょっといいですか。」\nむらた「はい、なんですか。」\nリン「明日病院へ行きますから、じゅぎょうに出ません。明日の夜電話しますから、宿題をおしえてください。」\nむらた「はい、わかりました。」 || 新しいパン屋です！\n私たちがまいあさこの店でパンを作ります。野菜は入っているパンもあります。ほかに、甘いパンもあります。\n１０月３日の月曜日からです。\n１０月５日まで甘いパンを安く売ります。\n皆さん、どうぞ来てください。 || わたしのうちにくろいねことちゃいろのいぬがいます。どちらもとてもかわいいです。いつも外であそんでいます。 || 田中さんは絵を見るのが好きです。一人でゆっくりと好きな絵を見るために、今年は５月の休みに外国へ行くことにしました。でも、一人で飛行機に乗るのははじめてで、少し心配でした。旅行した国では、日本と時間が違うので、はじめは少しねむくなりました。また食べ物もからかったので、水をたくさん飲みすぎて、お腹が痛くなってしまいました。でも、見たかった絵をゆっくり見ることができたので、そんなことはすぐ忘れてしまいました。田中さんは、旅行中に友達になった人は、今でも手紙を書いています。 || わたしの家から会社までちかてつでもバスでも行ける。バスはやすいが、乗るところまで遠いし、長い時間待たなければならない。ちかてつはバスにくらべると高いが、駅は近い。さいきんは運動のために天気のいい日だけは遠くまで歩いてバスに乗ることにしている。 || すずき「あのう、すみません。きのう電車にかさをわすれました。」\n駅の人「どこに行く電車ですか。」\nすずき「さくら駅に行く電車です。９時１５分につばき駅でのって、あやめ駅でおりました。」\n駅の人「そうですか。どんなかさですか。」\nすずき「長くて大きいかさです。いろはくろです。」\n駅の人「長くてくろいかさですね。」\nすずき「はい。」\n駅の人「ちょっとまってください…これはみじかいですね…あ、ありました。え-、２本あります。かさには名前が書いてありますか。」\nすずき「はい、すずきと書いてあります。」\n駅の人「すずき……。ああ、こちらですね。」\nすずき「そうです。 [_______] ！ありがとうございました。」 || 王さんの日記\n昨日なおこさんと銀座のデパートに行った。なおこさんと１０時に駅の西口で会う約束をしていたが、１０時半になっても、なおこさんは来なかった。東口とまちがえたかもしれないと思って、東口のほうへ行ってみたが、やはりなおこさんはいなかった。おかしいと思ってなおこさんの家に電話をしたら、なおこさんはまだ家にいて、１２時の約束だと思っていたと言った。なおこさんがすぐ出てきてくれたので、１１時には会うことができた。 || まち子さんは４年前におんがくをべんきょうしに外国へ行きました。それまでぎんこうにつとめていました。２年前に日本にかえってきました。それからずっとギタ－をおしえています。
+
+ContextEnglish: Student ( [学生]->がくせい ): "Excuse me, I want to borrow ( [借りたい]->かりたい ) this book ( [本]->ほん )."\nLibrarian ( [図書館の人]->としょかんのひと ): "Are you a student at this school ( [学校]->がっこう )?"\nStudent: "Yes."\nLibrarian: "Well then, first please write ( [書いて]->かいて ) your name ( [名前]->なまえ ), address ( [住所]->じゅうしょ ), and telephone number ( [電話番号]->でんわばんごう ) on this paper ( [紙]->かみ )."\nStudent: "Okay."\nLibrarian: "Have you written it?"\nStudent: "Yes."\nLibrarian: "This is a dictionary ( [辞書]->じしょ ). Please use ( [使って]->つかって ) it inside ( [中]->なか ) the library."\nStudent: "Okay, understood. Then please lend ( [貸して]->かして ) me these 7 books ( [7冊]->ななさつ )."\nLibrarian: "Ah, students can borrow up to 4 books ( [4冊]->よんさつ )."\nStudent: "Is that so? Then I won't borrow these 3."\nLibrarian: "Understood. Then please return ( [返して]->かえして ) these books in 2 weeks ( [2週間]->にしゅうかん ), and magazines ( [雑誌]->ざっし ) in 1 week ( [1週間]->いっしゅうかん ). Today is the 15th ( [15日]->じゅうごにち ), so [_______]."\nStudent: "Okay, understood." || Rin: "Murata-san, do you have a moment?"\nMurata: "Yes, what is it?"\nRin: "Tomorrow ( [明日]->あした ) I am going to the hospital ( [病院]->びょういん ), so I won't attend ( [出ません]->でません ) class ( [授業]->じゅぎょう ). I will call tomorrow night ( [明日の夜]->あしたのよる ), so please teach ( [教えて]->おしえて ) me the homework ( [宿題]->しゅくだい )."\nMurata: "Yes, understood." || New ( [新しい]->あたらしい ) Bakery ( [パン屋]->ぱんや )!\nWe make ( [作ります]->つくります ) bread at this store ( [店]->みせ ) every morning ( [毎朝]->まいあさ ). Some bread contains ( [入っている]->はいっている ) vegetables ( [野菜]->やさい ). In addition, there is also sweet ( [甘い]->あまい ) bread.\nStarting from Monday ( [月曜日]->げつようび ), October 3rd ( [10月3日]->じゅうがつみっか ).\nUntil October 5th ( [10月5日]->じゅうがついつか ), sweet bread will be sold cheaply ( [安く売ります]->やすくうります ).\nEveryone ( [皆さん]->みなさん ), please come.\n || At my house, there is a black ( [黒い]->くろい ) cat ( [猫]->ねこ ) and a brown ( [茶色]->ちゃいろ ) dog ( [犬]->いぬ ). Both are very cute. They are always playing outside ( [外]->そと ). || Tanaka-san ( [田中さん]->たなかさん ) likes looking at paintings ( [絵を見る]->えをみる ). In order to look at favorite paintings alone ( [一人で]->ひとり で ) and slowly, Tanaka decided to go abroad ( [外国]->がいこく ) during the May ( [5月]->ごがつ ) holidays ( [休み]->やすみ ) this year ( [今年]->ことし ). However, riding an airplane ( [飛行機に乗る]->ひこうきにのる ) alone for the first time ( [初めて]->はじめて ) made Tanaka a little worried ( [心配]->しんぱい ). In the country ( [国]->くに ) visited, time was different from Japan ( [日本]->にほん ), so at first Tanaka became a bit sleepy ( [眠く]->ねむく ). Also, since food ( [食べ物]->たべもの ) was spicy ( [辛かった]->からかった ), Tanaka drank too much water ( [水]->みず ) and got a stomachache ( [お腹が痛く]->おなかがいたく ). But because Tanaka was able to view desired paintings slowly, those things were forgotten ( [忘れて]->わすれて ) right away. Tanaka still writes letters ( [手紙を書いている]->てがみをかいている ) to people befriended during the trip ( [旅行中]->りょうこうちゅう ). || From my house ( [家]->うち ) to company ( [会社]->かいしゃ ), I can go by either subway ( [地下鉄]->ちかてつ ) or bus. The bus is cheap ( [安い]->やすい ), but it's far ( [遠い]->とおい ) to the bus stop and I have to wait a long time ( [長い時間]->ながいじかん ). The subway is expensive ( [高い]->たかい ) compared ( [比べると]->くらべると ) to the bus, but the station ( [駅]->えき ) is near ( [近い]->ちかい ). Recently ( [最近]->さいきん ), for exercise ( [運動]->うんどう ), I decided to walk far ( [遠くまで歩く]->とおくまであるく ) and take the bus only on sunny days ( [天気のいい日]->てんきのいいひ ). || Suzuki: "Um, excuse me. Yesterday ( [昨日]->きのう ) I forgot ( [忘れました]->わすれました ) my umbrella ( [傘]->かさ ) on the train ( [電車]->でんしゃ )."\nStation staff ( [駅の人]->えきのひと ): "Which train was it?"\nSuzuki: "It was the train going to Sakura Station ( [さくら駅]->さくらえき ). I boarded at Tsubaki Station ( [つばき駅]->つばきえき ) at 9:15 ( [9時15分]->くじじゅうごふん ) and got off ( [降りました]->おりました ) at Ayame Station."\nStation staff: "I see. What kind of umbrella is it?"\nSuzuki: "It's a long ( [長い]->ながい ) and large ( [大きい]->おおきい ) umbrella. The color ( [色]->いろ ) is black ( [黒]->くろ )."\nStation staff: "A long and black umbrella."\nSuzuki: "Yes."\nStation staff: "Please wait a moment... This one is short ( [短い]->みじかい )... Ah, here it is. Well, there are 2. Is your name written on the umbrella?"\nSuzuki: "Yes, Suzuki is written on it."\nStation staff: "Suzuki... Ah, this one."\nSuzuki: "That's it. [_______] ! Thank you very much." || Wang's Diary ( [王さんの日記]->おうさんのにっき )\nYesterday ( [昨日]->きのう ) I went to Ginza Department Store with Naoko. I made a promise ( [約束]->やくそく ) to meet Naoko at the station's West exit ( [西口]->にしぐち ) at 10, but even at 10:30 ( [10時半]->じゅうじはん ), Naoko didn't come. Thinking she might have mistaken it for the East exit ( [東口]->ひがしぐち ), I tried going to the East exit, but as expected Naoko wasn't there. Thinking it strange, I called Naoko's house, and Naoko was still at home, saying she thought the appointment was at 12. Since Naoko came out right away, we were able to meet at 11. || Machiko-san went abroad ( [外国]->がいこく ) to study music ( [音楽を勉強しに]->おんがくをべんきょうしに ) 4 years ago ( [4年前]->よねんまえ ). Until then she was working at a bank ( [銀行に務めていました]->ぎんこうにつとめていました ). She returned to Japan ( [日本に帰ってきました]->にほんにかえってきました ) 2 years ago ( [2年前]->にねんまえ ). Since then, she has been teaching guitar ( [ギターを教えています]->ぎたーをおしえています ) continuously.
+
+
+
+1. [_______] には何を入れますか。
+
+   1) 本は２９日、ざっしは２２日です。 - Books ( [本]->ほん ) are on the 29th ( [29日]->にじゅうくにち ), magazines ( [雑誌]->ざっし ) on the 22nd ( [22日]->にじゅうににち ).
+
+   2) 本は２２日、ざっしは２９日です。 - Books are on the 22nd, magazines on the 29th.
+
+   3) 本もざっしも２９日です。 - Both books and magazines are on the 29th.
+
+   4) 本もざっしも２２日です。 - Both books and magazines are on the 22nd.
+
+   English: What goes into the blank [_______]?
+
+   Reading: 本は２９日、ざっしは２２日です。
+
+   ContextIdx: 0
+
+
+
+2. この学生は何さつかりましたか。
+
+   1) ３さつ - 3 volumes ( [3冊]->さんさつ )
+
+   2) ４さつ - 4 volumes ( [4冊]->よんさつ )
+
+   3) ５さつ - 5 volumes ( [5冊]->ごさつ )
+
+   4) ６さつ - 6 volumes ( [6冊]->ろくさつ )
+
+   English: How many books did this student ( [学生]->がくせい ) borrow ( [かりましたか]->かりましたか )?
+
+   Reading: ４さつ
+
+   ContextIdx: 0
+
+
+
+3. この学生はとしょかんで何をしましたか。
+
+   1) 本に名前を書きました。 - Wrote ( [書きました]->かきました ) name ( [名前]->なまえ ) on the book ( [本]->ほん ).
+
+   2) かみに本の名前を書きました。 - Wrote the book's name on paper ( [紙]->かみ ).
+
+   3) じしょをかりました。 - Borrowed ( [かりました]->かりました ) a dictionary ( [辞書]->じしょ ).
+
+   4) 本とざっしをかりました。 - Borrowed books and magazines ( [雑誌]->ざっし ).
+
+   English: What did the student do at the library ( [図書館]->としょかん )?
+
+   Reading: 本とざっしをかりました。
+
+   ContextIdx: 0
+
+
+
+4. このとしょかんで学生ができることは何ですか。
+
+   1) ざっしを２しゅうかんかりること - Borrowing magazines for 2 weeks ( [2週間]->にしゅうかん )
+
+   2) 本を５さつかりること - Borrowing 5 books ( [5冊]->ごさつ )
+
+   3) 本やざっしを４さつまでかりること - Borrowing up to 4 books or magazines
+
+   4) 本とじしょを１しゅうかんかりること - Borrowing books and dictionaries for 1 week ( [1週間]->いっしゅうかん )
+
+   English: What can a student do at this library?
+
+   Reading: 本やざっしを４さつまでかりること
+
+   ContextIdx: 0
+
+
+
+5. ただしいものはどれですか。
+
+   1) むらたさんはきょうしゅくだいをおしえます。 - Murata-san teaches ( [教えます]->おしえます ) homework ( [宿題]->しゅくだい ) today ( [今日]->きょう ).
+
+   2) りんさんはきょうじゅぎょうを休みます。 - Rin-san rests ( [休みます]->やすみます ) from class ( [授業]->じゅぎょう ) today.
+
+   3) むらたさんはあしたびょういんへ行きます。 - Murata-san goes ( [行きます]->いきます ) to hospital ( [病院]->びょういん ) tomorrow ( [明日]->あした ).
+
+   4) りんさんはむらたさんに電話します。 - Rin-san calls ( [電話します]->でんわします ) Murata-san.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: りんさんはむらたさんに電話します。
+
+   ContextIdx: 1
+
+
+
+6. ただしいものはどれですか。
+
+   1) 毎週月曜日はパンが安いです。 - Bread is cheap ( [安い]->やすい ) every Monday ( [毎週月曜日]->まいしゅうげつようび ).
+
+   2) パンはまいばん店で作ります。 - Bread is made ( [作ります]->つくります ) in shop ( [店]->みせ ) every night ( [毎晩]->まいばん ).
+
+   3) １０月３日からいろいろなパンを売ります。 - Sells ( [売ります]->うります ) various bread starting October 3rd ( [10月3日]->じゅうがつみっか ).
+
+   4) 野菜が入っているパンは甘いです。 - Bread containing vegetables ( [野菜]->やさい ) is sweet ( [甘い]->あまい ).
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: １０月３日からいろいろなパンを売ります。
+
+   ContextIdx: 2
+
+
+
+7. ただしいものはどれですか。
+
+   1) ねこもいぬもくろいです。 - Both cat ( [猫]->ねこ ) and dog ( [犬]->いぬ ) are black ( [黒い]->くろい ).
+
+   2) ねこもいぬもかわいいです。 - Both cat and dog are cute.
+
+   3) ねこは外であそびますが、いぬはあそびません。 - Cat plays outside ( [外]->そと ), but dog doesn't.
+
+   4) ねこはくろくないですが、いぬはくろいです。 - Cat isn't black, but dog is black.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: ねこもいぬもかわいいです。
+
+   ContextIdx: 3
+
+
+
+8. 田中さんはどんなことが好きですか。
+
+   1) 友達と美術館に行くこと - Going to art museum ( [美術館]->びじゅつかん ) with friends ( [友達]->ともだち )
+
+   2) 一人でゆっくり絵を見ること - Viewing paintings ( [絵を見る]->えをみる ) slowly alone ( [一人で]->ひとり で )
+
+   3) ５月の休みに旅行に行くこと - Going on a trip ( [旅行に行く]->りょうこうにいく ) during May ( [5月]->ごがつ ) holidays ( [休み]->やすみ )
+
+   4) 外国に行って友達に手紙を書くこと - Going abroad ( [外国]->がいこく ) and writing letters ( [手紙を書く]->てがみをかく ) to friends
+
+   English: What does Tanaka-san ( [田中さん]->たなかさん ) like ( [好き]->すき )?
+
+   Reading: 一人でゆっくり絵を見ること
+
+   ContextIdx: 4
+
+
+
+9. 田中さんは旅行に行く前にどんなことが心配でしたか。
+
+   1) はじめて一人で飛行機に乗ること - Riding an airplane ( [飛行機に乗る]->ひこうきにのる ) alone for the first time ( [初めて]->はじめて )
+
+   2) 食べ物がからくて水を飲みすぎること - Food being spicy ( [辛い]->からい ) and drinking too much water ( [水を飲みすぎる]->みずをのみすぎる )
+
+   3) 旅行した国でねむくなってしまうこと - Becoming sleepy in the country visited
+
+   4) 水を飲みすぎてお腹が痛くなること - Getting a stomachache ( [お腹が痛く]->おなかがいたく ) from drinking too much water
+
+   English: What was Tanaka-san worried ( [心配]->しんぱい ) about before traveling?
+
+   Reading: はじめて一人で飛行機に乗ること
+
+   ContextIdx: 4
+
+
+
+10. ただしいものはどれですか。
+
+    1) この人はいつもバスに乗る - This person always takes ( [乗る]->のる ) the bus
+
+    2) この人はいつもちかてつに乗る - This person always takes the subway ( [地下鉄]->ちかてつ )
+
+    3) この人は雨の日はバスに乗る - This person takes the bus on rainy days ( [雨の日]->あめのひ )
+
+    4) この人は雨の日はちかてつに乗る - This person takes the subway on rainy days
+
+    English: Which statement is correct ( [正しい]->ただしい )?
+
+    Reading: この人は雨の日はちかてつに乗る
+
+    ContextIdx: 5
+
+
+
+11. [_______] には何を入れますか。
+
+    1) けっこうです - No thank you / That's fine
+
+    2) こちらこそ - Same here / Likewise
+
+    3) いいですね - That's nice
+
+    4) よかった - Thank goodness / What a relief
+
+    English: What goes into the blank [_______]?
+
+    Reading: よかった
+
+    ContextIdx: 6
+
+
+
+12. 今日すずきさんはどうして駅の人と話しましたか。
+
+    1) かさに名前を書いたから - Because written name ( [名前]->なまえ ) on umbrella ( [傘]->かさ )
+
+    2) かさをわすれたから - Because forgot ( [忘れました]->わすれました ) umbrella
+
+    3) 電車にのりたかったから - Because wanted to ride ( [乗りたかった]->のりたかった ) train ( [電車]->でんしゃ )
+
+    4) さくら駅に行きたかったから - Because wanted to go to Sakura station ( [さくら駅]->さくらえき )
+
+    English: Why did Suzuki-san speak ( [話しましたか]->はなしましたか ) with the station staff ( [駅の人]->えきのひと ) today ( [今日]->きょう )?
+
+    Reading: かさをわすれたから
+
+    ContextIdx: 6
+
+
+
+13. すずきさんのかさはつぎのどれですか。
+
+    1) みじかいかさで、名前が書いてあります。 - Short umbrella ( [短い傘]->みじかいかさ ) with name written.
+
+    2) くろいかさで、名前が書いてあります。 - Black umbrella ( [黒い傘]->くろにかさ ) with name written.
+
+    3) 長いかさで、名前は書いてありません。 - Long umbrella ( [長い傘]->ながいかさ ) without name written.
+
+    4) 大きいかさで、名前は書いてありません。 - Large umbrella ( [大きい傘]->おおきにかさ ) without name written.
+
+    English: Which one is Suzuki-san's umbrella?
+
+    Reading: くろいかさで、名前が書いてあります。
+
+    ContextIdx: 6
+
+
+
+14. 王さんはどうしてなおこさんと１０時に会うことができなかったのですか。
+
+    1) 王さんが西口と東口をまちがえていたからです。 - Because Wang mistook West exit ( [西口]->にしぐち ) for East exit ( [東口]->ひがしぐち ).
+
+    2) 王さんが１０時と１１時をまちがえていたからです。 - Because Wang mistook 10 o'clock ( [10時]->じゅうじ ) for 11 o'clock ( [11時]->じゅういちじ ).
+
+    3) なおこさんが西口と東口をまちがえていたからです。 - Because Naoko mistook West exit for East exit.
+
+    4) なおこさんが１０時と１２時をまちがえていたからです。 - Because Naoko mistook 10 o'clock for 12 o'clock ( [12時]->じゅうにじ ).
+
+    English: Why couldn't Wang-san meet ( [会う]->あう ) Naoko-san at 10 o'clock?
+
+    Reading: なおこさんが１０時と１２時をまちがえていたからです。
+
+    ContextIdx: 7
+
+
+
+15. まち子さんは今何をしていますか。
+
+    1) 日本でぎんこうにつとめています。 - Working at a bank ( [銀行]->ぎんこう ) in Japan ( [日本]->にほん ).
+
+    2) 外国でぎんこうにつとめています。 - Working at a bank abroad ( [外国]->がいこく ).
+
+    3) 日本でギタ－をおしえています。 - Teaching ( [教えています]->おしえています ) guitar in Japan.
+
+    4) 外国でギタ－をおしえています。 - Teaching guitar abroad.
+
+    English: What is Machiko-san doing now ( [今]->いま )?
+
+    Reading: 日本でギタ－をおしえています。
+
+    ContextIdx: 8
+
+
+
+Answer Key:
+
+1. 1, 2. 2, 3. 4, 4. 3, 5. 4, 6. 3, 7. 2, 8. 2, 9. 1, 10. 4, 11. 4, 12. 2, 13. 2, 14. 4, 15. 3
+
+
+
+Vocab:
+
+図書館 ( [図]->と[書]->しょ[館]->かん ) [toshokan] - library (noun, place, n5)
+
+借りる ( [借]->か-りる ) [kariru] - to borrow (verb, ichidan-verb, transitive, n5)
+
+宿題 ( [宿]->しゅく[題]->だい ) [shukudai] - homework (noun, school, n5)
+
+野菜 ( [野]->や[菜]->さい ) [yasai] - vegetable (noun, food, n5)
+
+飛行機 ( [飛]->ひ[行]->こう[機]->き ) [hikouki] - airplane (noun, transportation, n5)
+
+地下鉄 ( [地]->ち[下]->か[鉄]->てつ ) [chikatetsu] - subway (noun, transportation, n5)
+
+日記 ( [日]->にっ[記]->き ) [nikki] - diary (noun, daily-life, n5)
+
+約束 ( [約]->やく[束]->そく ) [yakusoku] - promise (noun, suru-verb, n5)
+
+銀行 ( [銀]->ぎん[行]->こう ) [ginkou] - bank (noun, place, n5)
+
+---
+
+SetId: set-jtest-ex-read-03
+
+Title: JTEST_EX Reading Practice Set 3 (EX-6 ~ EX-8)
+
+Category: reading
+
+PackTitle: JTEST_EX
+
+Tags: n5, reading, beginner, comprehension, jtest
+
+ContextPassages: 土曜日と日曜日は忙しくないです。わたしは１０時ごろ起きます。そして、朝ごはんを食べます。それから、区のたいいくかんでうんどうをします。ゆうがた近くのスーパーへ行きます。肉や野菜や牛乳などを買います。ときどき友達といっしょに国の料理を作ります。そして、いっしょに宿題をします。\n一週間はとてもはやいです。毎日同じせいかつです。しかし、このせいかつはたのしいです。 || Ａ 「このおんがくはとてもいいですよ。いっしょに聞きましょう。テープレコーダーはありますか。」\nＢ 「ええ。後ろに ありますよ。」\nＡ 「これは（ ア ）つかいますか。おしえてください。」\nＢ 「はじめに、そのボタンをおしてください。」\nＡ 「（ イ ）。」\nＢ 「いいえ、あおいボタンです。」\nＡ 「ああ、わかりました。（ ウ ）白いボタンですか。」\nＢ 「いいえ、その前に、ここにテープを入れてください。」\nＡ 「はい、入れました。これでいいですか。」 || ａ「すみません、こうばんはどこですか。」\nｂ「こうばんですか。そこにはしがありますね。そのはしをわたってまっすぐ行ってください。左側にありますよ。」\nａ「そうですか。ここからどれぐらいかかりますか。」\nｂ「そうですね。５分ぐらいでしょう。」 || すずき「もしもす、ヤンさんですか。すずきです。あした、いっしょに東山こうえんへ行きませんか。わたしはよくさんぽをしますが、ひろくてきれいですよ。」\nヤン 「いいですね。でも、東山こうえんへどう行きますか。わたしはわかりません。」\nすずき 「じゃ、あした東山駅で会いましょう。」\nヤン 「何時にしますか。」\nすずき 「１０時はどうですか。」\nヤン 「（ ア ）。９時半はどうですか。」\nすずき 「いいですよ。駅の前にきっさてんがあるから、その前で（ イ ）。」\nヤン 「わかりました。ひるごはんをもって行きますか。」\nすずき 「こうえんのちかくにいいレストランがあるから、そこでいっしょに食べませんが。駅の前のきっさてんは高いですが、こうえんのちかくのレスロランは安くておいしいですよ。」\nヤン 「それはいいですね。じゃ、そうしましょう。」 || 土よう日に会社の人と山へあそびに行きました。２時間あるいて山の上につきました。そこでひるごはんを食べて１時間休みました。ちょっとつかれましたが、たのしかったです。山で食べたごはんはとてもおいしかったです。また行きたいです。 || わたしはきょねんの１０月に日本へ来ました。今、とうきょうのアパートにひとりですんでいます。へやはひろいですが、駅からとおいからべんりじゃありません。もっと駅にちかいへやにすみたいです。でも、駅にちかいへやは高いです。 || 明日車で中山へ行く。うちから山までふつうは３時間ぐらいかかる。でも、明日は土曜日で、道がこむから、少し早く家を出たほうがいいだろう。１１時までには山に着きたい。着いたら、すぐ昼ごはんを食べるつもりだ。\n中山には美しい湖があって、たくさんの人が遊びに来る。天気がよければ、泳いだり、魚をつったりすることができる。ふねにも乗れる。わたしは、魚がつりたい。でも、天気があまりよくなかったら、つりはやめて、山でめずらしい花や鳥を見ようと思う。\n湖のそばににんぎょうの美術館がある。日本のだけでなく、世界中のにんぎょうがかざってあるらしい。時間があったら、見てみたい。帰りにいなかの家によって、両親と一緒に晩ご飯を食べるつもりだ。母の料理はひさしぶりなので、とてもたのしみだ。
+
+ContextEnglish: Saturdays ( [土曜日]->どようび ) and Sundays ( [日曜日]->にちようび ) are not busy ( [忙しくない]->いそがしくない ). I get up ( [起きます]->おきます ) around 10 o'clock ( [10時]->じゅうじ ). And then, I eat ( [食べます]->たべます ) breakfast ( [朝ごはん]->あさごはん ). After that, I exercise ( [運動]->うんどう ) at the ward ( [区]->く ) gymnasium ( [体育館]->たいいくかん ). In the evening ( [夕方]->ゆうがた ), I go ( [行きます]->いきます ) to a nearby ( [近く]->ちかく ) supermarket. I buy ( [買います]->かいします ) meat ( [肉]->にく ), vegetables ( [野菜]->やさい ), milk ( [牛乳]->ぎゅうにゅう ), etc. Sometimes I make ( [作ります]->つくります ) dishes ( [料理]->りょうり ) from my home country ( [国]->くに ) with my friends ( [友達]->ともだち ). And we do homework ( [宿題]->しゅくだい ) together ( [一緒]->いっしょ ).\nOne week ( [一週間]->いっしゅうかん ) goes by very fast ( [早い]->はやい ). Every day ( [毎日]->まいにち ) is the same ( [同じ]->おなじ ) routine ( [生活]->せいかつ ). However, this life ( [生活]->せいかつ ) is enjoyable ( [楽しい]->たのしい ). || A: "This music ( [音楽]->おんがく ) is very good. Let's listen ( [聞き]->きき ) together. Do you have a tape recorder?"\nB: "Yes. It's behind ( [後ろ]->うしろ ) you."\nA: "How ( [どう]->どう ) do you use ( [使います]->つかいます ) this? Please teach ( [教えて]->おしえて ) me."\nB: "First, press ( [押して]->おして ) that button."\nA: "( Is it this one? )."\nB: "No, the blue ( [青い]->あおい ) button."\nA: "Ah, I see ( [分かりました]->わかりました ). Next ( [次に]->つぎに ), is it the white ( [白い]->しろい ) button?"\nB: "No, before ( [前]->まえ ) that, please put in ( [入れて]->いれて ) the tape here."\nA: "Okay, I put it in. Is this fine?" || A: "Excuse me, where is the police box ( [交番]->こうばん )?"\nB: "The police box? There is a bridge ( [橋]->はし ) over there, right? Cross ( [渡って]->わたって ) that bridge and go ( [行って]->いって ) straight. It's on the left side ( [左側]->ひだりがわ )."\nA: "I see. How long does it take ( [かかります]->かかります ) from here?"\nB: "Let me see. About 5 minutes ( [5分]->ごふん )." || Suzuki: "Hello, is this Yan-san? This is Suzuki. Tomorrow ( [明日]->あした ), why don't we go to Higashiyama Park ( [東山公園]->ひがしやまこうえん ) together? I often take walks ( [散歩]->さんぽ ) there, and it's spacious ( [広い]->ひろい ) and pretty."\nYan: "Sounds nice. But how do I go ( [行きます]->いきます ) to Higashiyama Park? I don't know ( [分かりません]->わかりません )."\nSuzuki: "Well, let's meet ( [会いましょう]->あいましょう ) at Higashiyama Station ( [東山駅]->ひがしやまえき ) tomorrow."\nYan: "What time ( [何時]->なんじ ) shall we make it?"\nSuzuki: "How about 10 o'clock ( [10時]->じゅうじ )?"\nYan: "( 10 o'clock is a bit... ). How about 9:30 ( [9時半]->くじはん )?"\nSuzuki: "That's fine. There's a coffee shop ( [喫茶店]->きっさてん ) in front ( [前]->まえ ) of the station, so I'll be waiting ( [待っています]->まっています ) in front of it."\nYan: "Got it. Shall I bring lunch ( [昼ごはん]->ひるごはん )?"\nSuzuki: "There's a nice restaurant near the park, so why don't we eat ( [食べません]->たべません ) together there? The coffee shop in front of the station is expensive ( [高い]->たかい ), but the restaurant near the park is cheap ( [安い]->やすい ) and delicious."\nYan: "That's great. Let's do that." || On Saturday ( [土曜日]->どようび ) I went to play ( [遊びに]->あそびに ) in the mountain ( [山]->やま ) with colleagues from my company ( [会社]->かいしゃ ). We walked ( [歩いて]->あるいて ) for 2 hours ( [2時間]->にじかん ) and reached ( [着きました]->つきした ) the top of the mountain. We ate lunch ( [昼ごはん]->ひるごはん ) there and rested ( [休みました]->やすみました ) for 1 hour. We were a little tired ( [疲れました]->つかれました ), but it was fun ( [楽しかった]->たのしかった ). The meal eaten in the mountain was very delicious. I want to go ( [行きたい]->いきたい ) again. || I came ( [来ました]->きました ) to Japan ( [日本]->にほん ) in October ( [10月]->じゅうがつ ) last year ( [去年]->きょねん ). Right now ( [今]->いま ), I live ( [住んでいます]->すんでいます ) alone in an apartment in Tokyo ( [東京]->とうきょう ). The room ( [部屋]->へや ) is spacious ( [広い]->ひろい ), but it's far ( [遠い]->とおい ) from the station ( [駅]->えき ) so it's not convenient ( [便利]->べんり ). I want to live in a room closer ( [制限/近い]->ちかい ) to the station. However, rooms close to the station are expensive ( [高い]->たかい ). || Tomorrow ( [明日]->あした ) I'll go to Nakayama by car ( [車]->くるま ). From my home ( [家]->うち ) to the mountain ( [山]->やま ) usually ( [普通]->ふつう ) takes about 3 hours ( [3時間]->さんじかん ). But tomorrow is Saturday ( [土曜日]->どようび ) and the road ( [道]->みち ) will be crowded ( [混む]->こむ ), so it's better to leave ( [出る]->でる ) home a bit early ( [早く]->はやく ). I want to arrive ( [着きたい]->つきたい ) at the mountain by 11 o'clock ( [11時]->じゅういちじ ). Once I arrive, I intend to eat lunch ( [昼ごはん]->ひるごはん ) right away.\nThere is a beautiful ( [美しい]->うつくしい ) lake ( [湖]->みずうみ ) in Nakayama, and many ( [たくさん]->たくさん ) people ( [人]->ひと ) come to play ( [遊びに]->あそびに ). If the weather ( [天気]->てんき ) is good, you can swim ( [泳いだり]->およいだり ) or catch ( [釣ったり]->つったり ) fish ( [魚]->さかな ). You can also ride ( [乗れる]->のれる ) a boat ( [船]->ふね ). I want to catch fish. But if the weather is not so good, I think I'll give up fishing and look at rare ( [珍しい]->めずらしい ) flowers ( [花]->はな ) and birds ( [鳥]->とり ) in the mountain.\nNext to the lake there is a doll ( [人形]->にんぎょう ) art museum ( [美術館]->びじゅつかん ). It seems dolls from not only Japan ( [日本]->にほん ) but all over the world ( [世界中]->せかいじゅう ) are displayed ( [飾って]->かざって ). If there is time ( [時間]->じかん ), I'd like to check it out. On the way back ( [帰り]->かえり ), I intend to drop by my hometown house and eat dinner ( [晩ご飯]->ばんごはん ) together with my parents ( [両親]->りょうしん ). It's been a long time since I ate my mother's ( [母]->はは ) cooking ( [料理]->りょうり ), so I'm really looking forward to it.
+
+
+
+1. この人のせいかつとあわないものはどれですか。
+
+   1) しゅうまつはひまではありません。 - The weekend ( [週末]->しゅうまつ ) is not free time ( [暇]->ひま ).
+
+   2) 朝ごはんを食べたあと、うんどうをします。 - After eating ( [食べた]->たべた ) breakfast ( [朝ごはん]->あさごはん ), does exercise ( [運動]->うんどう ).
+
+   3) ちかくのスーパーでやさいやミルクなどを買います。 - Buys ( [買います]->かいします ) vegetables ( [野菜]->やさい ), milk, etc. at nearby ( [近く]->ちかく ) supermarket.
+
+   4) 友達といっしょに料理を作ったり、宿題をしたりします。 - Makes ( [作ったり]->つくったり ) food ( [料理]->りょうり ) and does homework ( [宿題]->しゅくだい ) together with friends ( [友達]->ともだち ).
+
+   English: Which item does NOT match ( [合わない]->あわない ) this person's lifestyle ( [生活]->せいかつ )?
+
+   Reading: しゅうまつはひまではありません。
+
+   ContextIdx: 0
+
+
+
+2. （ア）には何を入れますか。
+
+   1) なぜ - Why
+
+   2) どう - How
+
+   3) どんなに - How much
+
+   4) なにが - What (subject)
+
+   English: What goes into ( [入れますか]->いれますか ) (ア)?
+
+   Reading: どう
+
+   ContextIdx: 1
+
+
+
+3. （イ）には何を入れますか。
+
+   1) これですね - It's this one, right?
+
+   2) どれですか - Which one is it?
+
+   3) あおいボタンですね - It's the blue ( [青い]->あおい ) button, right?
+
+   4) ええ、そうです - Yes, that's right.
+
+   English: What goes into ( [入れますか]->いれますか ) (イ)?
+
+   Reading: これですね
+
+   ContextIdx: 1
+
+
+
+4. （ウ）には何を入れますか。
+
+   1) それは - As for that
+
+   2) つぎから - From next
+
+   3) つぎに - Next / Secondly
+
+   4) それでは - Well then
+
+   English: What goes into ( [入れますか]->いれますか ) (ウ)?
+
+   Reading: つぎに
+
+   ContextIdx: 1
+
+
+
+5. ただしいものはどれですか。
+
+   1) 白いボタンをおしてから、テープを入れます。 - Put in ( [入れます]->いれます ) the tape after pressing ( [押してから]->おしてから ) the white ( [白い]->しろい ) button.
+
+   2) 白いボタンをおしてから、あおいボタンをおします。 - Press ( [押します]->おします ) the blue ( [青い]->あおい ) button after pressing the white button.
+
+   3) テープを入れてから、あおいボタンをおします。 - Press the blue button after putting in ( [入れてから]->いれてから ) the tape.
+
+   4) あおいボタンをおしてから、テープを入れます。 - Put in the tape after pressing the blue button.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: あおいボタンをおしてから、テープを入れます。
+
+   ContextIdx: 1
+
+
+
+6. ただしいものはどれですか。
+
+   1) はしはこうばんの左にあります。 - The bridge ( [橋]->はし ) is to the left ( [左]->ひだり ) of the police box ( [交番]->こうばん ).
+
+   2) こうばんははしのよこにあります。 - The police box is beside ( [横]->よこ ) the bridge.
+
+   3) こうばんははしのむこうにあります。 - The police box is beyond ( [向こう]->むこう ) the bridge.
+
+   4) はしはここから５分ぐらいかかります。 - The bridge takes about 5 minutes ( [5分]->ごふん ) from here.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: こうばんははしのむこうにあります。
+
+   ContextIdx: 2
+
+
+
+7. やんさんとすずきさんははじめて東山こうえんへ行きますか。
+
+   1) ヤンさんもすずきさんもはじめてです。 - Both Yan and Suzuki are visiting for the first time ( [初めて]->はじめて ).
+
+   2) ヤンさんもすずきさんも前に行きました。 - Both Yan and Suzuki have gone ( [行きました]->いきした ) before ( [前]->まえ ).
+
+   3) ヤンさんははじめてですが、すずきさんは前に行きました。 - Yan is visiting for the first time, but Suzuki has gone before.
+
+   4) すずきさんははじめてですが、やんさんは前に行きました。 - Suzuki is visiting for the first time, but Yan has gone before.
+
+   English: Are Yan-san and Suzuki-san going ( [行きますか]->いきますか ) to Higashiyama Park ( [東山公園]->ひがしやまこうえん ) for the first time?
+
+   Reading: ヤンさんははじめてですが、すずきさんは前に行きました。
+
+   ContextIdx: 3
+
+
+
+8. （ ア ）には何を入れますか。
+
+   1) １０時に行きましょう。 - Let's go ( [行きましょう]->いきましょう ) at 10 o'clock ( [10時]->じゅうじ ).
+
+   2) １０時はちょっと・・・ - 10 o'clock is a bit... (inconvenient)
+
+   3) １０時がいいですね。 - 10 o'clock is good.
+
+   4) １０時はおそいです。 - 10 o'clock is late ( [遅い]->おそい ).
+
+   English: What goes into ( [入れますか]->いれますか ) (ア)?
+
+   Reading: １０時はちょっと・・・
+
+   ContextIdx: 3
+
+
+
+9. （ イ ）には何を入れますか。
+
+   1) まっています - Will be waiting ( [待っています]->まっています )
+
+   2) まつでしょう - Will probably wait ( [待つでしょう]->まつでしょう )
+
+   3) まちました - Waited ( [待ちました]->まちました )
+
+   4) まちません - Will not wait ( [待ちません]->まちません )
+
+   English: What goes into ( [入れますか]->いれますか ) (イ)?
+
+   Reading: まっています
+
+   ContextIdx: 3
+
+
+
+10. ひるごはんはどこで食べますか。
+
+    1) 駅の前のきっさてんで食べます。 - Eat ( [食べます]->たべます ) at the coffee shop ( [喫茶店]->きっさてん ) in front ( [前]->まえ ) of the station ( [駅]->えき ).
+
+    2) こうえんの中のきっさてんで食べます。 - Eat at the coffee shop inside ( [中]->なか ) the park ( [公園]->こうえん ).
+
+    3) 駅のちかくのレストランで食べます。 - Eat at the restaurant near ( [近く]->ちかく ) the station.
+
+    4) こうえんのちかくのレストランで食べます。 - Eat at the restaurant near the park.
+
+    English: Where will they eat ( [食べますか]->たべますか ) lunch ( [昼ごはん]->ひるごはん )?
+
+    Reading: こうえんのちかくのレストランで食べます。
+
+    ContextIdx: 3
+
+
+
+11. ただしいものはどれですか。
+
+    1) 山の上まで２時間あるきました。 - Walked ( [歩きました]->あるきました ) 2 hours ( [2時間]->にじかん ) to the top ( [上]->うえ ) of the mountain ( [山]->やま ).
+
+    2) ひるごはんをつくってつかれました。 - Got tired ( [疲れました]->つかれました ) from making ( [作って]->つくって ) lunch ( [昼ごはん]->ひるごはん ).
+
+    3) ２時間休んでひるごはんを食べました。 - Rested ( [休んで]->やすんで ) 2 hours and ate lunch.
+
+    4) つかれたからもう山へ行きたくないです。 - Don't want to go to the mountain anymore because tired.
+
+    English: Which statement is correct ( [正しい]->ただしい )?
+
+    Reading: 山の上まで２時間あるきました。
+
+    ContextIdx: 4
+
+
+
+12. ただしいものはどれですか。
+
+    1) わたしのへやは駅からとおいですが、ひろいです。 - My room ( [部屋]->へや ) is far ( [遠い]->とおい ) from the station ( [駅]->えき ), but spacious ( [広い]->ひろい ).
+
+    2) わたしのへやは駅にちかいですが、少し高いです。 - My room is close ( [近い]->ちかい ) to the station, but a bit ( [少し]->すこし ) expensive ( [高い]->たかい ).
+
+    3) わたしのへやは駅にちかいですが、ひろくありません。 - My room is close to the station, but not spacious.
+
+    4) わたしのへやは駅から少しとおいですが、べんりです。 - My room is a bit far from the station, but convenient ( [便利]->べんり ).
+
+    English: Which statement is correct ( [正しい]->ただしい )?
+
+    Reading: わたしのへやは駅からとおいですが、ひろいです。
+
+    ContextIdx: 5
+
+
+
+13. 明日この人はどうして早く出かけますか。
+
+    1) 土曜日で車が多いから - Because it's Saturday ( [土曜日]->どようび ) and there are many ( [多い]->おおい ) cars ( [車]->くるま )
+
+    2) 美しい湖があるから - Because there is a beautiful ( [美しい]->うつくしい ) lake ( [湖]->みずうみ )
+
+    3) めずらしい花や鳥がいるから - Because there are rare ( [珍しい]->めずらしい ) flowers ( [花]->はな ) and birds ( [鳥]->とり )
+
+    4) あまり天気がよくないから - Because the weather ( [天気]->てんき ) is not so good
+
+    English: Why is this person leaving early ( [早く]->はやく ) tomorrow ( [明日]->あした )?
+
+    Reading: 土曜日で車が多いから
+
+    ContextIdx: 6
+
+
+
+14. この人は明日天気がよかったら、何をしますか。
+
+    1) 花や鳥を見ます - Look ( [見ます]->みます ) at flowers ( [花]->はな ) and birds ( [鳥]->とり )
+
+    2) 湖で泳ぎます - Swim ( [泳ぎます]->およぎます ) in the lake ( [湖]->みずうみ )
+
+    3) ふねに乗ります - Ride ( [乗ります]->のります ) a boat ( [船]->ふね )
+
+    4) 魚をつります - Catch ( [釣ります]->つります ) fish ( [魚]->さかな )
+
+    English: If the weather ( [天気]->てんき ) is good tomorrow, what will this person do?
+
+    Reading: 魚をつります
+
+    ContextIdx: 6
+
+
+
+15. この人は美術館に行きますか。
+
+    1) 行かないつもりです - Intends not to go ( [行かない]->いかない )
+
+    2) 行くかもしれません - Might go ( [行く]->いく )
+
+    3) 行きません - Will not go
+
+    4) 行きたくないです - Does not want to go ( [行きたくない]->いきたくない )
+
+    English: Will this person go to the art museum ( [美術館]->びじゅつかん )?
+
+    Reading: 行くかもしれません
+
+    ContextIdx: 6
+
+
+
+Answer Key:
+
+1. 1, 2. 2, 3. 1, 4. 3, 5. 4, 6. 3, 7. 3, 8. 2, 9. 1, 10. 4, 11. 1, 12. 1, 13. 1, 14. 4, 15. 2
+
+
+
+Vocab:
+
+体育館 ( [体]->たい[育]->いく[館]->かん ) [taiikukan] - gymnasium (noun, place, n5)
+
+交番 ( [交]->こう[番]->ばん ) [kouban] - police box (noun, place, n5)
+
+散歩 ( [散]->さん[歩]->ぽ ) [sanpo] - stroll / walk (noun, suru-verb, n5)
+
+喫茶店 ( [喫]->きっ[茶]->さ[店]->てん ) [kissaten] - coffee shop (noun, place, n5)
+
+美術館 ( [美]->び[術]->じゅつ[館]->かん ) [bijutsukan] - art museum (noun, place, n5)
+
+---
+
+SetId: set-jtest-ex-read-04
+
+Title: JTEST_EX Reading Practice Set 4 (EX-9 ~ EX-11)
+
+Category: reading
+
+PackTitle: JTEST_EX
+
+Tags: n5, reading, beginner, comprehension, jtest
+
+ContextPassages: きのうは友だちのいえへ行って、友だちがつくったりょうりを食べました。すこしからかったです。でも、とてもおいしかったです。わたしも友だちもたくさん食べました。また食べたいです。 || 田中さんへ\nおとといはどうもありがとう。雨がたくさん降りましたから、田中さんに傘を借りてよかったです。借りた傘はドアのところに置きます。それから昨日作ったお菓子も置きます。どうぞ食べてください。\n９月１０日 午後７時 鈴木より || このたてものの中ではしずかにえを見てください。しゃしんをとらないでください。たばこもこまります。たばこは外ですってください。えを見ながら食べたり飲んだりしないでください。 || けさ、山川さんは７時におきました。あさごはんを食べる前にシャワーをあびました。あさごはんを食べながらテレビを見ました。あさごはんを食べたあとで、新聞を読みました。それから会社へ行きました。 || リンさんへ\n今日は先に帰ります。リンさんに借りたノートは明日持ってきます。\nそれから私の本は、まだ使いませんから、どうぞゆっくり読んでください。\nさくらより || かぜですね。くすりを出しますから、きょうから３日飲んでください。あさ、ひる、ばんのごはんの後とねる前に飲んでください。 || 駅から学校まで\n駅の前の道をまっすぐ行って橋を渡ります。そこから５分歩きます。右に病院があります。学校は病院のとなりです。駅から学校まで１０分ぐらいです。 || しずかさん、お元気ですか。（ア）。この前の同窓会で会ってから（イ）会っていませんね。\n（ウ）６月１８日金曜日は、わたしの誕生日なんです。みんなに会いたいので、誕生パーティーをひらくことにしました。わたしの家はアパートだし、せまいので、近くのお店をよやくしました。しょうたいした人は、なおみさんやひろみさんなど、しずかさんが知っている人ばかりです。かいひを２千５百円いただきますから、プレゼントなどのご心配はいりません。場所は地図を入れておいたので、来てください。\nつごうがわるいばあいは、おてすうですが、前の日までにわたしのところにお電話をお願いします。それでは、ぜひ来てください。待っています。\n明子より || ａ「すみません、こうばんはどこですか。」\nｂ「こうばんですか。そこにはしがありますね。そのはしをわたってまっすぐ行ってください。左側にありますよ。」\nａ「そうですか。ここからどれぐらいかかりますか。」\nｂ「そうですね。５分ぐらいでしょう。」 || 先生「つくえの上に本をおかないでください。」\n学生 「あ、すみません。つくえの中に入れますか。」\n先生 「いいえ、本はかばんの中に入れてください。つくえの上にはえんぴつだけおいてください。では、テストをします。」 || ヤン 「もそもし、大山さんですか。ヤンです。」\n大山 「アメリカにいるヤンさん？おげんきですか。」\nヤン 「はい。げんきです。大山さん、おたんじょうび、おめでとうございます。」\n大山 「ああ、ヤンさん、わたしのたんじょうびをまだおぼえていましたか。ありがとうございます。」\nヤン 「もちろんです。でもことしはいっしょにたんじょうびのパーティーができませんでしたね。もうパーティーをしましたか。」\n大山 「ええ。きのうかいしゃのともだちとケーキを食べたり、ダンスをしたりしてたのしかったですよ。あしたはかぞくとレストランへ行きます。」\nヤン 「（ア）」\n大山 「来月しごとでアメリカへ行きますからヤンさんにもいちどあいたいですね。」\nヤン 「ほんとうですか。（イ）そのときは電話をください。」
+
+ContextEnglish: Yesterday ( [昨日]->きのう ) I went ( [行って]->いって ) to a friend's ( [友達]->ともだち ) house ( [家]->いえ ) and ate ( [食べました]->たべました ) food ( [料理]->りょうり ) my friend made ( [作りました]->つくりました ). It was a bit ( [少し]->すこし ) spicy ( [辛かった]->からかった ). But it was very delicious. Both my friend and I ate a lot. I want to eat it again. || Dear Tanaka-san ( [田中さん]->たなかさん ),\nThank you very much for the day before yesterday ( [一昨日]->おととい ). Because it rained ( [雨]->あめ ) a lot ( [降りました]->ふりました ), I'm glad I borrowed ( [借りて]->かりて ) an umbrella ( [傘]->かさ ) from you. I will leave ( [置きます]->おきます ) the borrowed umbrella at the door. Also, I'll leave the sweets ( [お菓子]->おかし ) I made yesterday ( [昨日]->きのう ). Please go ahead and eat them.\nSept 10th ( [9月10日]->くがつとおか ), 7:00 p.m. ( [午後7時]->ごごしちじ ). From Suzuki ( [鈴木]->すずき ) || Inside ( [中]->なか ) this building ( [建物]->たてもの ), please look at ( [見て]->みて ) paintings ( [絵]->え ) quietly ( [静かに]->しずかに ). Please do not take ( [撮らないで]->とらないで ) photos ( [写真]->しゃしん ). Smoking is also problematic. Please smoke cigarettes outside ( [外]->そと ). Please do not eat or drink while looking at paintings. || This morning ( [今朝]->けさ ), Yamakawa-san ( [山川さん]->やまかわさん ) woke up ( [起きまた]->おきました ) at 7 o'clock ( [7時]->しちじ ). Took a shower before eating ( [食べる前]->たべるまえ ) breakfast ( [朝ご飯]->あさごはん ). Watched TV while eating breakfast. Read ( [読みました]->よみました ) the newspaper ( [新聞]->しんぶん ) after eating breakfast. Then went to the company ( [会社]->かいしゃ ). || Dear Rin-san,\nI'm leaving early ( [先に帰ります]->さきにかえります ) today ( [今日]->きょう ). I will bring ( [持ってきます]->もってきます ) the notebook I borrowed ( [借りた]->かりた ) from you tomorrow ( [明日]->あした ).\nAlso, my book ( [本]->ほん ) is not in use yet, so please take your time ( [ゆっくり]->ゆっくり ) reading it.\nFrom Sakura || It's a cold ( [風邪]->かぜ ). I will prescribe medicine ( [薬]->くすり ), so please take it for 3 days ( [3日]->みっか ) starting today. Please take it after morning ( [朝]->あさ ), noon ( [昼]->ひる ), and evening ( [晩]->ばん ) meals, and before sleeping ( [寝る前]->ねるまえ ). || From station ( [駅]->えき ) to school ( [学校]->がっこう )\nGo straight on the road ( [道]->みち ) in front ( [前]->まえ ) of the station and cross ( [渡ります]->わたります ) the bridge ( [橋]->はし ). Walk ( [歩きます]->あるきます ) 5 minutes ( [5分]->ごふん ) from there. There is a hospital ( [病院]->びょういん ) on the right ( [右]->みぎ ). The school is next to ( [隣]->となり ) the hospital. It takes about 10 minutes ( [10分]->じゅっぷん ) from station to school. || Dear Shizuka-san, how are you ( [お元気]->おげんき )? ( Long time no see ). We haven't met ( [会っていません]->あっていません ) since we met at the previous class reunion ( [同窓会]->どうそうかい ).\n( Actually ), Friday ( [金曜日]->きんようび ) June 18th ( [6月18日]->ろくがつじゅうはちにち ) is my birthday ( [誕生日]->たんじょうび ). Since I want to see everyone, I decided to hold a birthday party ( [誕生パーティー]->たんじょうぱーてぃー ). My house is an apartment and small ( [狭い]->せまい ), so I reserved ( [予約しました]->よやくしました ) a nearby shop. The invited people are all people Shizuka knows ( [知っている]->しっている ), like Naomi and Hiromi. We will collect 2,500 yen for fee ( [会費]->かいひ ), so no need to worry about presents. I included a map ( [地図]->ちず ) of the location ( [場所]->ばしょ ), so please come.\nIf it's inconvenient ( [都合が悪い]->つごうがわるい ), sorry for the trouble, but please call my place by the day before ( [前の日]->まえのひ ). Well then, please come by all means. Waiting ( [待っています]->まっています ) for you.\nFrom Akiko ( [明子]->あきこ ) || A: "Excuse me, where is the police box ( [交番]->こうばん )?"\nB: "The police box? There is a bridge ( [橋]->はし ) over there. Cross ( [渡って]->わたって ) that bridge and go straight. It's on the left side ( [左側]->ひだりがわ )."\nA: "I see. How long does it take from here?"\nB: "Let's see. About 5 minutes ( [5分]->ごふん )." || Teacher ( [先生]->せんせい ): "Please don't put books ( [本]->ほん ) on the desk ( [机]->つくえ )."\nStudent ( [学生]->がくせい ): "Ah, sorry. Shall I put them inside ( [中]->なか ) the desk?"\nTeacher: "No, put books inside your bag ( [鞄]->かばん ). Put only pencils on top of the desk. Now, let's start the test." || Yan: "Hello, is this Ooyama-san ( [大山さん]->おおやまさん )? It's Yan."\nOoyama: "Yan in America? How are you?"\nYan: "Yes, doing fine. Ooyama-san, happy birthday ( [お誕生日]->おたんじょうび )!"\nOoyama: "Ah, Yan-san, you still remembered ( [覚えていました]->おぼえていました ) my birthday? Thank you."\nYan: "Of course. But we couldn't have a birthday party together this year ( [今年]->ことし ). Have you had a party already?"\nOoyama: "Yes. Yesterday ( [昨日]->きのう ) I ate cake and danced with friends from work ( [会社]->かいしゃ ), it was fun ( [楽しかった]->たのしかった ). Tomorrow ( [明日]->あした ) I'm going to a restaurant with my family ( [家族]->かぞく )."\nYan: "( Is that so? )"\nOoyama: "Next month ( [来月]->らいげつ ) I'm going to America for work ( [仕事]->しごと ), so I'd like to meet you again."\nYan: "Really ( [本当]->ほんとう )? ( Well then ) in that case, please call me."
+
+
+
+1. ただしいものはどれですか。
+
+   1) わたしはりょうりをつくりました。 - I made ( [作りました]->つくりました ) the cooking ( [料理]->りょうり ).
+
+   2) 友だちはりょうりがじょうずです。 - My friend ( [友達]->ともだち ) is good ( [上手]->じょうず ) at cooking.
+
+   3) りょうりはおいしくありませんでした。 - The cooking was not delicious.
+
+   4) 友だちはあまり食べませんでした。 - My friend didn't eat ( [食べませんでした]->たべませんでした ) much.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: 友だちはりょうりがじょうずです。
+
+   ContextIdx: 0
+
+
+
+2. 鈴木さんは９月１０日に何をしましたか。
+
+   1) お菓子を買いました。 - Bought ( [買いました]->かいしました ) sweets ( [お菓子]->おかし ).
+
+   2) 傘を借りました。 - Borrowed ( [借りました]->かりました ) umbrella ( [傘]->かさ ).
+
+   3) 傘を返しました。 - Returned ( [返しました]->かえしました ) umbrella.
+
+   4) お菓子を作りました。 - Made ( [作りました]->つくりました ) sweets.
+
+   English: What did Suzuki-san ( [鈴木さん]->すずきさん ) do on September 10th ( [9月10日]->くがつとおか )?
+
+   Reading: 傘を返しました。
+
+   ContextIdx: 1
+
+
+
+3. あなたはこのたてものの中で何をしますか。
+
+   1) えを見ます。 - View ( [見ます]->みます ) paintings ( [絵]->え ).
+
+   2) たばこをすいます。 - Smoke ( [吸います]->すいます ) cigarettes.
+
+   3) ごはんを食べます。 - Eat ( [食べます]->たべます ) meals.
+
+   4) しゃしんをとります。 - Take ( [撮ります]->とりします ) photographs ( [写真]->しゃしん ).
+
+   English: What will you do inside ( [中]->なか ) this building ( [建物]->たてもの )?
+
+   Reading: えを見ます。
+
+   ContextIdx: 2
+
+
+
+4. ただしいものはどれですか。
+
+   1) あさごはんのあとでテレビを見ました。 - Watched ( [見ました]->みました ) TV after breakfast ( [朝ご飯]->あさごはん ).
+
+   2) あさごはんをたべながら新聞を読みました。 - Read ( [読みました]->よみました ) newspaper ( [新聞]->しんぶん ) while eating breakfast.
+
+   3) テレビを見る前にあさごはんを食べました。 - Ate breakfast before ( [前]->まえ ) watching TV.
+
+   4) シャワーをあびたあとであさごはんを食べました。 - Ate breakfast after ( [後]->あと ) taking a shower.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: シャワーをあびたあとであさごはんを食べました。
+
+   ContextIdx: 3
+
+
+
+5. さくらさんは明日何をすると書いてありますか。
+
+   1) 本を読みます。 - Reads ( [読みます]->よみます ) a book ( [本]->ほん ).
+
+   2) ノートを借ります。 - Borrows ( [借ります]->かります ) a notebook.
+
+   3) ノートを返します。 - Returns ( [返します]->かえします ) a notebook.
+
+   4) 本とノートを使います。 - Uses ( [使います]->つかいます ) a book and notebook.
+
+   English: What is written ( [書かれています]->かかれています ) that Sakura-san will do tomorrow ( [明日]->あした )?
+
+   Reading: ノートを返します。
+
+   ContextIdx: 4
+
+
+
+6. ただしいものはどれですか。
+
+   1) くすりは３日飲みます。１日３かいごはんの前に飲みます。 - Take medicine ( [薬]->くすり ) for 3 days ( [3日]->みっか ). 3 times a day before ( [前]->まえ ) meals.
+
+   2) くすりは３日飲みます。１日３かいごはんの後で飲みます。 - Take medicine for 3 days. 3 times a day after ( [後]->あと ) meals.
+
+   3) くすりは１日４かい、ごはんの前とよるねる前に飲みます。 - Take medicine 4 times a day, before meals and before sleeping ( [寝る前]->ねるまえ ).
+
+   4) くすりは１日４かい、ごはんの後とよるねる前に飲みます。 - Take medicine 4 times a day, after meals and before sleeping.
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: くすりは１日４かい、ごはんの後とよるねる前に飲みます。
+
+   ContextIdx: 5
+
+
+
+7. ただしいいものはどれですか。
+
+   1) 学校は駅から歩いて５分です。 - School ( [学校]->がっこう ) is 5 minutes ( [5分]->ごふん ) on foot ( [歩いて]->あるいて ) from station ( [駅]->えき ).
+
+   2) 学校は橋から歩いて１０分です。 - School is 10 minutes ( [10分]->じゅっぷん ) on foot from bridge ( [橋]->はし ).
+
+   3) 学校は駅の横の建物です。 - School is the building ( [建物]->たてもの ) next to ( [横]->よこ ) station.
+
+   4) 学校は病院の横の建物です。 - School is the building next to hospital ( [病院]->びょういん ).
+
+   English: Which statement is correct ( [正しい]->ただしい )?
+
+   Reading: 学校は病院の横の建物です。
+
+   ContextIdx: 6
+
+
+
+8. （ア）には何を入れますか。
+
+   1) しつれいします - Excuse me ( [失礼します]->しつれいします )
+
+   2) ごめんください - Hello / May I come in?
+
+   3) ごぶさたしています - Long time no see ( [ご疎遠]->ごぶさた )
+
+   4) ようこそ - Welcome
+
+   English: What goes into ( [入れますか]->いれますか ) (ア)?
+
+   Reading: ごぶさたしています
+
+   ContextIdx: 7
+
+
+
+9. （イ）には何を入れますか。
+
+   1) あまり - Not much
+
+   2) ほとんど - Hardly / Scarcely
+
+   3) よくは - Not often
+
+   4) たくさん - A lot
+
+   English: What goes into ( [入れますか]->いれますか ) (イ)?
+
+   Reading: ほとんど
+
+   ContextIdx: 7
+
+
+
+10. （ウ）には何を入れますか。
+
+    1) ところが - However / Even so
+
+    2) ところで - By the way
+
+    3) じつは - As a matter of fact / Actually ( [実は]->じつは )
+
+    4) これは - As for this
+
+    English: What goes into ( [入れますか]->いれますか ) (ウ)?
+
+    Reading: じつは
+
+    ContextIdx: 7
+
+
+
+11. 『しつもん』 ただしいものはどれですか。
+
+    1) はしはこうばんの左にあります。 - The bridge ( [橋]->はし ) is to the left ( [左]->ひだり ) of the police box ( [交番]->こうばん ).
+
+    2) こうばんははしのよこにあります。 - The police box is beside ( [横]->よこ ) the bridge.
+
+    3) こうばんははしのむこうにあります。 - The police box is beyond ( [向こう]->むこう ) the bridge.
+
+    4) はしはここから５分ぐらいかかります。 - The bridge takes about 5 minutes ( [5分]->ごふん ) from here.
+
+    English: Question ( [質問]->しつもん ): Which statement is correct ( [正しい]->ただしい )?
+
+    Reading: こうばんははしのむこうにあります。
+
+    ContextIdx: 8
+
+
+
+12. 『しつもん』 テストのとき本はどこにおきますか。
+
+    1) かばんの中です。 - Inside ( [中]->なか ) the bag ( [鞄]->かばん ).
+
+    2) つくえの中です。 - Inside the desk ( [机]->つくえ ).
+
+    3) つくえの上です。 - On top ( [上]->うえ ) of the desk.
+
+    4) かばんの上です。 - On top of the bag.
+
+    English: Question ( [質問]->しつもん ): Where do you put ( [置きますか]->おきますか ) books during the test ( [時]->とき )?
+
+    Reading: かばんの中です。
+
+    ContextIdx: 9
+
+
+
+13. 『しつもん』 （ア）には何を入れますか。
+
+    1) そうでした - That was so.
+
+    2) そうですか - Is that so? / I see.
+
+    3) そうしましょう - Let's do that.
+
+    4) そうします - I will do so.
+
+    English: Question ( [質問]->しつもん ): What goes into ( [入れますか]->いれますか ) (ア)?
+
+    Reading: そうですか
+
+    ContextIdx: 10
+
+
+
+14. 『しつもん』 （イ）には何を入れますか。
+
+    1) じゃあ - Well then
+
+    2) たぶん - Probably
+
+    3) どうも - Thanks / Somehow
+
+    4) あれから - Since then
+
+    English: Question ( [質問]->しつもん ): What goes into ( [入れますか]->いれますか ) (イ)?
+
+    Reading: じゃあ
+
+    ContextIdx: 10
+
+
+
+15. 『しつもん』 ヤンさんはどうして大山に電話をしましたか。
+
+    1) 大山さんにあいたいから電話しまあした - Called ( [電話しました]->でんわしました ) because wanted to meet ( [会いたい]->あいたい ) Ooyama-san.
+
+    2) 大山さんがアメリカに行くから電話しました - Called because Ooyama-san goes ( [行く]->いく ) to America.
+
+    3) 大山さんがパーティーをするから電話しました - Called because Ooyama-san has a party.
+
+    4) 大山さんのたんじょうびから電話しました - Called because of Ooyama-san's birthday ( [誕生日]->たんじょうび ).
+
+    English: Question ( [質問]->しつもん ): Why did Yan call Ooyama ( [大山]->おおやま )?
+
+    Reading: 大山さんのたんじょうびから電話しました
+
+    ContextIdx: 10
+
+
+
+16. 『しつもん』 ただしいものはどれですか。
+
+    1) 大山さんはあしたかいしゃのともだちとパーティーをします。 - Ooyama-san has a party tomorrow ( [明日]->あした ) with work ( [会社]->かいしゃ ) friends ( [友達]->ともだち ).
+
+    2) 大山さんはきのうかいしゃのともだちとパーティーをしました。 - Ooyama-san had a party yesterday ( [昨日]->きのう ) with work friends.
+
+    3) 大山さんはあしたたんじょうびからともだちとレストランへ行きます。 - Ooyama-san goes to a restaurant with friends because of birthday tomorrow.
+
+    4) 大山さんはきのうたんじょうびだったからかぞくとパーティーをしました。 - Ooyama-san had a party with family ( [家族]->かぞく ) because yesterday was birthday.
+
+    English: Question ( [質問]->しつもん ): Which statement is correct ( [正しい]->ただしい )?
+
+    Reading: 大山さんはきのうかいしゃのともだちとパーティーをしました。
+
+    ContextIdx: 10
+
+
+
+Answer Key:
+
+1. 2, 2. 3, 3. 1, 4. 4, 5. 3, 6. 4, 7. 4, 8. 3, 9. 2, 10. 3, 11. 3, 12. 1, 13. 2, 14. 1, 15. 4, 16. 2
+
+
+
+Vocab:
+
+写真 ( [写]->しゃ[真]->しん ) [shashin] - photograph (noun, n5)
+
+同窓会 ( [同]->どう[窓]->そう[会]->かい ) [dousoukai] - class reunion (noun, n4)
+
+誕生日 ( [誕]->たん[生]->じょう[日]->び ) [tanjoubi] - birthday (noun, n5)
+
+予約 ( [予]->よ[約]->やく ) [yoyaku] - reservation (noun, suru-verb, n5)
+
+---
+
+SetId: set-jtest-ex-read-05
+
+Title: JTEST_EX Reading Practice Set 5 (EX-12 ~ EX-14)
+
+Category: reading
+
+PackTitle: JTEST_EX
+
+Tags: n5, reading, beginner, comprehension, jtest
+
+ContextPassages: Ａ「ねこは、どこへ行きましたか。」\nＢ「ねこ…。あ、いすの上でねていますよ。」\nＡ「ほんとだ。すこしまえはつくえの下でねていましたが…。」 || Ａ「このくつはいくらですか。」\nＢ「３５０0円です。」\nＡ「そのとなりのくろいくつは。」\nＢ「３２００円ですが、きょうは２００円やすくなっています。」 || かんじのしけんをしました。Ａ（１００てん～８０てん）は１０人で、Ｂ（７９てん～７０てん）は１５人で、Ｃ（６９てん～６０てん）は２０人、Ｄ（５９てん～０てん）は５人でした。 || このみちをまっすぐ行って、右にまがって、すこしあるいて、もういちど右にまがると、左がわにぎんこうがあります。 || Ａ「この女の人はおかあさんですか。」\nＢ「ええ、ははです。」\nＡ「おかあさんのとなりはおとうさんですか。」\nＢ「いいえ、おじいさんですよ。ちちはははのうしろです。」 || わたしはかいしゃにつとめています。かいしゃの休みは、日よう日だけですから「１」は、することがたくさんあります。そうじやせんたくやかいものです。そうじとせんたくは、すぐにおわります。「２」、かいものは、時間がかかります。たいていあさ１１時ごろから２時ごろまでかかります。かうものがたくさんある「３」です。はじめに、ちかくのみせに行って、やさいやくだものなど、おもいものをかいます。それからいちどいえにかえって、つぎにかるいものをかいに「カネヤ」というみせに行きます。「カネヤ」は、「４」けれどもやすいのです。 || きのう、本をかって、よる３時間ぐらい読みました。２５０ページの本ですが、まだ１００ページぐらいあります。 || きのうケーキを１０こかった。ばんごはんのあといもうととふたりで２こずつたべた。おいしかった。 || せんしゅう、あたらしいアパートにはいりました。わたしのへやは２かいです。となりには、今だれもすんでいません。１かいには、おばあさんとおとこの大学生がすんでいます。３かいにもだれかいますが、まだどんな人かしりません。 || 「うちでこの本をよんでください。すこしむずかしいですが、とても「１」ですから、がんばってください。知らない「２」がはいっていますが、はじめはじしょをひかないでぜんぶ「３」ください。つぎにじしょをひきながらもう「４」よんでください。いいですか。２かいよむんですよ。」 || サングラスというのはふつうなつのてんきのいい日にかけるめがねだが、わたしはふゆによくつかう。日本ではふゆによくつよい風がふくからだ。 || こんしゅうのもくよう日のパーティーに出る人は、まえの日にキムさんに６００円はらってください。おかねをはらってパーティーに来なかった人には、つぎの日にキムさんがはんぶんかえします。 || きのうはともだちと「１」でえいがに行きました。えいがは２じかんぐらいでおわりました。ひるごはんのじかんに「２」のでしょくどうにはいってごはんをたべました。「３」デパートでかいものをしました。すこしつかれたけれど、「４」いちにちでした。
+
+ContextEnglish: A: "Where did the cat ( [猫]->ねこ ) go ( [行きましたか]->いきしたか )?"\nB: "The cat... Ah, it's sleeping ( [寝ています]->ねています ) on top ( [上]->うえ ) of the chair."\nA: "That's true. A while ago ( [少し前]->すこしまえ ) it was sleeping under ( [下]->した ) the desk ( [机]->つくえ ), though..." || A: "How much are these shoes ( [靴]->くつ )?"\nB: "They are 3500 yen ( [3500円]->さんぜんごひゃくえん )."\nA: "What about the black ( [黒い]->くろい ) shoes next to ( [隣]->となり ) those?"\nB: "They are 3200 yen, but today ( [今日]->きょう ) they are 200 yen cheaper ( [安く]->やすく )." || We had a kanji ( [漢字]->かんじ ) test ( [試験]->しけん ). Group A (100-80 pts) was 10 people ( [10人]->じゅうにん ), Group B (79-70 pts) was 15 people ( [15人]->じゅうごにん ), Group C (69-60 pts) was 20 people ( [20人]->にじゅうにん ), and Group D (59-0 pts) was 5 people ( [5人]->ごにん ). || Go straight along this road ( [道]->みち ), turn right ( [右]->みぎ ), walk a bit, and turn right once more; the bank ( [銀行]->ぎんこう ) will be on your left side ( [左側]->ひだりがわ ). || A: "Is this woman ( [女の人]->おんなのひと ) your mother ( [お母さん]->おかあさん )?"\nB: "Yes, she's my mother ( [母]->はは )."\nA: "Is the person next to ( [隣]->となり ) your mother your father ( [お父さん]->おとうさん )?"\nB: "No, it's my grandfather. My father ( [父]->ちち ) is behind ( [後ろ]->うしろ ) my mother." || I work ( [務めています]->つとめています ) at a company ( [会社]->かいしゃ ). Since company days off ( [休み]->やすみ ) are only Sunday ( [日曜日]->にちようび ), on ( Sunday ) there are many things to do. Cleaning ( [掃除]->そうじ ), laundry ( [洗濯]->せんたく ), and shopping ( [買い物]->かいもの ). Cleaning and laundry finish ( [終わります]->おわります ) quickly. ( However ), shopping takes time ( [時間]->じかん ). It usually takes from around 11 a.m. ( [11時]->じゅういちじ ) to around 2 p.m. ( [2時]->にじ ). It's ( because ) there are many things to buy. First, I go to a nearby shop ( [店]->みせ ) and buy heavy ( [重い]->おもい ) things like vegetables ( [野菜]->やさい ) and fruit ( [果物]->くだもの ). Then I return ( [帰って]->かえって ) home once, and next go to a shop called 'Kaneya' to buy light ( [軽い]->かるい ) things. 'Kaneya' is ( far ), but it's cheap ( [安い]->やすい ). || Yesterday ( [昨日]->きのう ) I bought ( [買って]->かって ) a book ( [本]->ほん ) and read ( [読みました]->よみました ) it for about 3 hours ( [3時間]->さんじかん ) at night ( [夜]->よる ). It's a 250-page book, but there are still about 100 pages left. || Yesterday I bought 10 cakes. After dinner ( [晩ご飯のあと]->ばんごはんのあと ), my younger sister ( [妹]->いもうと ) and I ate 2 cakes each. It was delicious. || Last week ( [先週]->せんしゅう ) I moved into a new ( [新しい]->あたらしい ) apartment. My room ( [部屋]->へや ) is on the 2nd floor ( [2階]->にかい ). Nobody is living next door ( [隣]->となり ) right now ( [今]->いま ). On the 1st floor ( [1階]->いっかい ), an old lady and a male college student ( [大学生]->だいがくせい ) live. There is someone on the 3rd floor ( [3階]->さんかい ) too, but I don't know what kind of person ( [人]->ひと ) yet. || "Please read this book at home ( [家]->うち ). It's a bit difficult ( [難しい]->むずかしい ), but it's very ( interesting ), so please do your best ( [頑張って]->がんばって ). Unknown ( words ) are included, but at first please ( read ) everything without looking up ( [引かないで]->ひかないで ) a dictionary ( [辞書]->じしょ ). Next, please read it once more while consulting a dictionary. Got it? You read it 2 times ( [2回]->にかい )." || Sunglasses are usually ( [普通]->ふつう ) glasses worn on nice weather ( [天気]->てんき ) days in summer ( [夏]->なつ ), but I often use them in winter ( [冬]->ふゆ ). That's because strong ( [強い]->つよい ) winds ( [風]->かぜ ) often blow in winter in Japan ( [日本]->にほん ). || People attending this week's ( [今週]->こんしゅう ) Thursday ( [木曜日]->もくようび ) party, please pay ( [払って]->はらって ) 600 yen to Kim-san the day before ( [前の日]->まえのひ ). For people who paid money ( [お金]->おかね ) but didn't come to the party, Kim-san will return half ( [半分]->はんぶん ) the amount the next day ( [次の日]->つぎのひ ). || Yesterday ( [昨日]->きのう ) I went to the movies ( [映画]->えいが ) with a friend ( two people ). The movie finished in about 2 hours ( [2時間]->にじかん ). It ( became ) lunch time ( [昼ごはんの時間]->ひるごはんのじかん ), so we entered a dining hall ( [食堂]->しょくどう ) and ate a meal. ( After that ), we went shopping at a department store. I was a bit tired, but it was a ( fun ) day ( [一日]->いちにち ).
+
+
+
+1. 「しつもん」ねこは、いまどこにいますか。
+
+   1) いすの上 - On top ( [上]->うえ ) of the chair
+
+   2) いすの下 - Under ( [下]->した ) the chair
+
+   3) つくえの上 - On top of the desk ( [机]->つくえ )
+
+   4) つくえの下 - Under the desk
+
+   English: Question ( [質問]->しつもん ): Where is the cat ( [猫]->ねこ ) right now ( [今]->いま )?
+
+   Reading: いすの上
+
+   ContextIdx: 0
+
+
+
+2. 「しつもん」どのえがいいですか。
+
+   1) え１ - Image 1 ( [絵]->え )
+
+   2) え２ - Image 2
+
+   3) え３ - Image 3
+
+   4) え４ - Image 4
+
+   English: Question ( [質問]->しつもん ): Which image is correct?
+
+   Reading: え３
+
+   ContextIdx: 1
+
+
+
+3. 「しつもん」どのグラフがいいですか。
+
+   1) グラフ１ - Graph 1
+
+   2) グラフ２ - Graph 2
+
+   3) グラフ３ - Graph 3
+
+   4) グラフ４ - Graph 4
+
+   English: Question ( [質問]->しつもん ): Which graph is correct?
+
+   Reading: グラフ４
+
+   ContextIdx: 2
+
+
+
+4. 「しつもん」どのえがいいですか。
+
+   1) え１ - Image 1 ( [絵]->え )
+
+   2) え２ - Image 2
+
+   3) え３ - Image 3
+
+   4) え４ - Image 4
+
+   English: Question ( [質問]->しつもん ): Which image is correct?
+
+   Reading: え１
+
+   ContextIdx: 3
+
+
+
+5. 「しつもん」どのえがいいですか。
+
+   1) え１ - Image 1 ( [絵]->え )
+
+   2) え２ - Image 2
+
+   3) え３ - Image 3
+
+   4) え４ - Image 4
+
+   English: Question ( [質問]->しつもん ): Which image is correct?
+
+   Reading: え３
+
+   ContextIdx: 4
+
+
+
+6. 「１」には、なにをいれますか。
+
+   1) きのう - Yesterday ( [昨日]->きのう )
+
+   2) よる - Night ( [夜]->よる )
+
+   3) かいしゃ - Company ( [会社]->かいしゃ )
+
+   4) 日よう日 - Sunday ( [日曜日]->にちようび )
+
+   English: What goes into (1)?
+
+   Reading: 日よう日
+
+   ContextIdx: 5
+
+
+
+7. 「２」には、なにをいれますか。
+
+   1) しかし - However
+
+   2) それでは - Well then
+
+   3) ちょうど - Exactly / Just
+
+   4) じゃあ - Well then
+
+   English: What goes into (2)?
+
+   Reading: しかし
+
+   ContextIdx: 5
+
+
+
+8. 「３」には、なにをいれますか。
+
+   1) まで - Until
+
+   2) から - Because / Since
+
+   3) でも - But / Even
+
+   4) ながら - While
+
+   English: What goes into (3)?
+
+   Reading: から
+
+   ContextIdx: 5
+
+
+
+9. 「４」には、なにをいれますか。
+
+   1) とおく - Far away (adverb) ( [遠く]->とおく )
+
+   2) ちかく - Nearby (adverb) ( [近く]->ちかく )
+
+   3) とおい - Far (adjective) ( [遠い]->とおい )
+
+   4) ちかい - Near (adjective) ( [近い]->ちかい )
+
+   English: What goes into (4)?
+
+   Reading: とおい
+
+   ContextIdx: 5
+
+
+
+10. 「しつもん」この人は、何ページ読みましたか。
+
+    1) ５０ページぐらい - About 50 pages
+
+    2) １５０ページぐらい - About 150 pages
+
+    3) ２００ページぐらい - About 200 pages
+
+    4) ２５０ページぐらい - About 250 pages
+
+    English: Question ( [質問]->しつもん ): How many pages did this person ( [人]->ひと ) read ( [読みましたか]->よみしたか )?
+
+    Reading: １５０ページぐらい
+
+    ContextIdx: 6
+
+
+
+11. 「しつもん」ケーキはいまいくつありますか。
+
+    1) ２こ - 2 pieces
+
+    2) ４こ - 4 pieces
+
+    3) ６こ - 6 pieces
+
+    4) ８こ - 8 pieces
+
+    English: Question ( [質問]->しつもん ): How many cakes are there right now ( [今]->いま )?
+
+    Reading: ６こ
+
+    ContextIdx: 7
+
+
+
+12. 「しつもん」この人のアパートはどれですか。
+
+    1) アパート１ - Apartment 1
+
+    2) アパート２ - Apartment 2
+
+    3) アパート３ - Apartment 3
+
+    4) アパート４ - Apartment 4
+
+    English: Question ( [質問]->しつもん ): Which one is this person's apartment?
+
+    Reading: アパート４
+
+    ContextIdx: 8
+
+
+
+13. 「１」にはなにをいれますか。
+
+    1) おもしろい - Interesting / Fun ( [面白い]->おもしろい )
+
+    2) つまらない - Boring
+
+    3) やさしい - Easy / Gentle ( [易しい]->やさしい )
+
+    4) むずかしい - Difficult ( [難しい]->むずかしい )
+
+    English: What goes into (1)?
+
+    Reading: おもしろい
+
+    ContextIdx: 9
+
+
+
+14. 「２」にはなにをいれますか。
+
+    1) 本 - Book ( [本]->ほん )
+
+    2) ことば - Word / Vocabulary ( [言葉]->ことば )
+
+    3) じしょ - Dictionary ( [辞書]->じしょ )
+
+    4) 人 - Person ( [人]->ひと )
+
+    English: What goes into (2)?
+
+    Reading: ことば
+
+    ContextIdx: 9
+
+
+
+15. 「３」にはなにをいれますか。
+
+    1) はなして - Speaking ( [話して]->はなして )
+
+    2) よんで - Reading ( [読んで]->よんで )
+
+    3) ひいて - Pulling / Looking up ( [引いて]->ひいて )
+
+    4) はいって - Entering ( [入って]->はいって )
+
+    English: What goes into (3)?
+
+    Reading: よんで
+
+    ContextIdx: 9
+
+
+
+16. 「４」にはなにをいれますか。
+
+    1) いっさつ - One volume ( [一冊]->いっさつ )
+
+    2) ひとり - One person ( [一人]->ひとり )
+
+    3) いっぽん - One long object ( [一本]->いっぽん )
+
+    4) いちど - Once / One time ( [一度]->いちど )
+
+    English: What goes into (4)?
+
+    Reading: いちど
+
+    ContextIdx: 9
+
+
+
+17. この人がサングラスをかけるのはどうしてですか。
+
+    1) 風がつよいからです - Because the wind ( [風]->かぜ ) is strong ( [強い]->つよい ).
+
+    2) さむいからです - Because it is cold ( [寒い]->さむい ).
+
+    3) てんきがいいからです - Because the weather ( [天気]->てんき ) is good.
+
+    4) あついからです - Because it is hot ( [暑い]->あつい ).
+
+    English: Why does this person wear sunglasses?
+
+    Reading: 風がつよいからです
+
+    ContextIdx: 10
+
+
+
+18. 「しつもん」リンさんはおかねをはらいましたが、パーティーに行きませんでした。キムさんはリンさんにいついくらかえしますか。
+
+    1) もくよう日に６００円かえします - Returns 600 yen on Thursday ( [木曜日]->もくようび ).
+
+    2) もくよう日に３００円かえします - Returns 300 yen on Thursday.
+
+    3) きんよう日に６００円かえします - Returns 600 yen on Friday ( [金曜日]->きんようび ).
+
+    4) きんよう日に３００円かえします - Returns 300 yen on Friday.
+
+    English: Question ( [質問]->しつもん ): Rin paid money ( [お金]->おかね ) but didn't go ( [行きませんでした]->いきませんでした ) to the party. When and how much will Kim return ( [返します]->かえします ) to Rin?
+
+    Reading: きんよう日に３００円かえします
+
+    ContextIdx: 11
+
+
+
+19. 「１」にはなにをいれますか。
+
+    1) ふたり - Two people ( [二人]->ふたり )
+
+    2) ににん - Two people (incorrect phrasing)
+
+    3) ににち - Two days (incorrect phrasing)
+
+    4) にかい - Two times / 2nd floor ( [二階]->にかい )
+
+    English: What goes into (1)?
+
+    Reading: ふたり
+
+    ContextIdx: 12
+
+
+
+20. 「２」にはなにをいれますか。
+
+    1) いた - Was / Existed
+
+    2) した - Did
+
+    3) なった - Became
+
+    4) たべた - Ate ( [食べた]->たべた )
+
+    English: What goes into (2)?
+
+    Reading: なった
+
+    ContextIdx: 12
+
+
+
+21. 「３」にはなにをいれますか。
+
+    1) それでは - Well then
+
+    2) そのまえ - Before that ( [その前]->そのまえ )
+
+    3) そのうち - Before long / Meanwhile
+
+    4) それから - After that / And then
+
+    English: What goes into (3)?
+
+    Reading: それから
+
+    ContextIdx: 12
+
+
+
+22. 「４」にはなにをいれますか。
+
+    1) わるい - Bad ( [悪い]->わるい )
+
+    2) たのしい - Enjoyable / Fun ( [楽しい]->たのしい )
+
+    3) きたない - Dirty ( [汚い]->きたない )
+
+    4) むずかしい - Difficult ( [難しい]->むずかしい )
+
+    English: What goes into (4)?
+
+    Reading: たのしい
+
+    ContextIdx: 12
+
+
+
+Answer Key:
+
+1. 1, 2. 3, 3. 4, 4. 1, 5. 3, 6. 4, 7. 1, 8. 2, 9. 3, 10. 2, 11. 3, 12. 4, 13. 1, 14. 2, 15. 2, 16. 4, 17. 1, 18. 4, 19. 1, 20. 3, 21. 4, 22. 2
+
+
+
+Vocab:
+
+眼鏡 ( [眼]->め[鏡]->がね ) [megane] - glasses (noun, n5)
+
+サングラス [sangurasu] - sunglasses (noun, n5)
+
+木曜日 ( [木]->もく[曜]->よう[日]->び ) [mokuyoubi] - Thursday (noun, time, n5)
+
+金曜日 ( [金]->きん[曜]->よう[日]->び ) [kin'youbi] - Friday (noun, time, n5)

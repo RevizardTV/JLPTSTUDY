@@ -189,9 +189,16 @@
 		exportAllQuestionsAsText($questionSets);
 	}
 	function handleExportAttempted() {
+		// Only consider the sets that are currently visible/filtered on the screen
+		const visibleSetIds = new Set(filteredSets.map((s) => s.id));
 		const completedSets = $userProgress.completedSets;
 
-		const allAnswers: UserAnswer[] = Object.values(completedSets).flatMap((val) => {
+		// Extract user answers only from the visible filtered sets
+		const allAnswers: UserAnswer[] = Object.entries(completedSets).flatMap(([setId, val]) => {
+			if (!visibleSetIds.has(setId)) {
+				return []; // Skip sets that are filtered out
+			}
+
 			if (
 				typeof val === 'object' &&
 				val !== null &&
@@ -202,6 +209,11 @@
 			}
 			return [];
 		});
+
+		if (allAnswers.length === 0) {
+			alert('No attempted questions found in the currently visible/filtered sets!');
+			return;
+		}
 
 		exportAttemptedQuestionsAsText(allAnswers);
 	}
