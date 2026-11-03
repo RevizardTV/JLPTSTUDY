@@ -1,190 +1,73 @@
 <script lang="ts">
-	import { questionSets } from '#lib/stores.js';
-	import ListeningUploadModal from '#lib/components/modals/ListeningSetUploadModal.svelte';
+	import QuickListeningModal from '#lib/components/modals/QuickListeningModal.svelte';
+	import type { QuestionListeningSet } from '#lib/types/listening.ts';
 
-	let showUploadModal = $state(false);
-	let activeSetId = $state<string | null>(null);
-	let userAnswers = $state<Record<number, number>>({});
-	let isSubmitted = $state(false);
+	// Explicitly type states to prevent TypeScript compilation errors
+	let isModalOpen = $state<boolean>(false);
+	let activeListeningSets = $state<QuestionListeningSet[]>([]);
 
-	const listeningSets = $derived($questionSets.filter((s) => s.category === 'listening'));
-
-	const activeSet = $derived(
-		listeningSets.find((s) => s.id === activeSetId) ?? listeningSets[0] ?? null
-	);
-
-	function handleSelectOption(qNum: number, optIdx: number) {
-		if (isSubmitted) return;
-		userAnswers[qNum] = optIdx;
-	}
-
-	function calculateScore() {
-		if (!activeSet) return 0;
-		return activeSet.questions.reduce((score, q) => {
-			return userAnswers[q.qNum] === q.answer ? score + 1 : score;
-		}, 0);
+	function handleOpenModal() {
+		isModalOpen = true;
 	}
 </script>
 
-<div class="max-w-6xl mx-auto px-4 py-8 space-y-6">
-	<!-- Top Bar -->
+<div class="max-w-6xl mx-auto px-4 py-8 space-y-8">
+	<!-- Header Section -->
 	<div
 		class="flex justify-between items-center bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
 	>
-		<div>
-			<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
-				Listening Practice Explorer
-			</h2>
-			<p class="text-xs text-slate-400">
-				Stream audio, view PDF booklets, and record option choices
+		<div class="space-y-1">
+			<span class="px-3 py-1 bg-brand-500/10 text-brand-500 rounded-full text-xs font-semibold"
+				>Listening Practice Studio</span
+			>
+			<h1 class="text-2xl font-extrabold text-slate-800 dark:text-slate-100">
+				JLPT Listening Workspace
+			</h1>
+			<p class="text-xs text-slate-500 dark:text-slate-400">
+				Manage question booklets (PDFs) and practice audio files with real-time AI transcription.
 			</p>
 		</div>
+
 		<button
-			onclick={() => (showUploadModal = true)}
-			class="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow transition"
+			onclick={handleOpenModal}
+			class="px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow transition cursor-pointer flex items-center gap-2"
 		>
-			+ Add Listening Set
+			<span>✨</span>
+			<span>Open QuickListening Mass Workspace</span>
 		</button>
 	</div>
 
-	<!-- Set Selection Tabs if multiple exist -->
-	{#if listeningSets.length > 1}
-		<div class="flex gap-2 overflow-x-auto pb-2">
-			{#each listeningSets as set (set.id)}
-				<button
-					onclick={() => {
-						activeSetId = set.id;
-						userAnswers = {};
-						isSubmitted = false;
-					}}
-					class={`px-4 py-2 rounded-xl text-xs font-bold transition border ${
-						activeSet?.id === set.id
-							? 'bg-brand-500 text-white border-brand-600 shadow'
-							: 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-50'
-					}`}
-				>
-					{set.title}
-				</button>
-			{/each}
-		</div>
-	{/if}
-
-	{#if activeSet}
-		<!-- Active Listening Interface -->
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-			<!-- PDF Booklet & Audio Player Panel -->
+	<!-- Active Practice Sets Display Grid -->
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		{#if activeListeningSets.length === 0}
 			<div
-				class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4 flex flex-col"
+				class="col-span-full py-16 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-3xl text-center space-y-3"
 			>
-				<h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm">{activeSet.title}</h3>
-
-				<!-- Audio Player -->
-				{#if activeSet.listeningAssets?.audioUrl}
-					<audio controls class="w-full">
-						<source src={activeSet.listeningAssets.audioUrl} />
-						Your browser does not support the audio element.
-					</audio>
-				{:else}
-					<div class="p-3 bg-amber-500/10 text-amber-500 rounded-xl text-xs font-medium">
-						No audio track attached to this set.
-					</div>
-				{/if}
-
-				<!-- PDF Viewer -->
-				{#if activeSet.listeningAssets?.pdfUrl}
-					<iframe
-						src={activeSet.listeningAssets.pdfUrl}
-						title="Listening Questions Booklet"
-						class="w-full h-125 rounded-xl border border-slate-200 dark:border-slate-700"
-					></iframe>
-				{:else}
-					<div
-						class="h-64 flex items-center justify-center border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl text-slate-400 text-xs"
-					>
-						No PDF booklet provided.
-					</div>
-				{/if}
+				<div class="text-4xl">🎧</div>
+				<h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">
+					No Listening Sets Active
+				</h3>
+				<p class="text-xs text-slate-400 max-w-sm mx-auto">
+					Click the button above to launch the QuickListening modal, upload your PDF question
+					booklets and corresponding audio files, and generate transcripts.
+				</p>
 			</div>
-
-			<!-- Blank Options Answer Grid -->
-			<div
-				class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-6"
-			>
+		{:else}
+			<!-- Keyed each block -->
+			{#each activeListeningSets as set (set.setId)}
 				<div
-					class="flex justify-between items-center pb-3 border-b border-slate-100 dark:border-slate-700"
+					class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-3"
 				>
-					<h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm">Answer Sheet</h4>
-					{#if isSubmitted}
-						<span
-							class="text-xs font-bold text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-full"
-						>
-							Score: {calculateScore()} / {activeSet.questions.length}
-						</span>
-					{/if}
+					<h3 class="font-bold text-sm text-slate-800 dark:text-slate-100">{set.setTitle}</h3>
+					<div class="text-xs text-slate-500 space-y-1">
+						<p>📄 PDFs: {set.pdfFiles.length}</p>
+						<p>🎵 Tracks: {set.audioItems.length}</p>
+					</div>
 				</div>
+			{/each}
+		{/if}
+	</div>
 
-				<div class="space-y-4 max-h-125 overflow-y-auto pr-2">
-					{#each activeSet.questions as q (q.qNum)}
-						<div
-							class="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 space-y-2"
-						>
-							<span class="text-xs font-bold text-slate-700 dark:text-slate-300"
-								>Question {q.qNum}</span
-							>
-							<div class="grid grid-cols-4 gap-2">
-								{#each [0, 1, 2, 3] as optIdx (optIdx)}
-									<button
-										onclick={() => handleSelectOption(q.qNum, optIdx)}
-										class={`py-2 rounded-lg font-bold text-xs transition border ${
-											userAnswers[q.qNum] === optIdx
-												? 'bg-brand-500 text-white border-brand-600'
-												: 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100'
-										} ${
-											isSubmitted && q.answer === optIdx
-												? 'ring-2 ring-emerald-500 border-emerald-500'
-												: ''
-										}`}
-									>
-										{optIdx + 1}
-									</button>
-								{/each}
-							</div>
-						</div>
-					{/each}
-				</div>
-
-				<div class="pt-2">
-					{#if !isSubmitted}
-						<button
-							onclick={() => (isSubmitted = true)}
-							class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl shadow text-xs transition"
-						>
-							Submit Answers
-						</button>
-					{:else}
-						<button
-							onclick={() => {
-								isSubmitted = false;
-								userAnswers = {};
-							}}
-							class="w-full py-3 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold rounded-xl text-xs transition"
-						>
-							Reset & Retry
-						</button>
-					{/if}
-				</div>
-			</div>
-		</div>
-	{:else}
-		<div
-			class="py-16 text-center text-slate-400 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700"
-		>
-			No listening sets available. Click "+ Add Listening Set" to upload audio, PDF booklets, and
-			answer keys.
-		</div>
-	{/if}
-
-	{#if showUploadModal}
-		<ListeningUploadModal onclose={() => (showUploadModal = false)} />
-	{/if}
+	<!-- QuickListening Mass Modal Component -->
+	<QuickListeningModal bind:isOpen={isModalOpen} />
 </div>
