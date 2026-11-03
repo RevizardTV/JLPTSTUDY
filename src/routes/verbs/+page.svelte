@@ -8,6 +8,7 @@
 	let kanjiQuery = $state<string>('');
 	let kanaQuery = $state<string>('');
 	let englishQuery = $state<string>('');
+	let selectedKana = $state<string>('');
 	let showModal = $state<boolean>(false);
 
 	let verbList = $state<VerbItem[]>([
@@ -39,12 +40,26 @@
 					romaji: 'tabemashita',
 					english: 'ate'
 				},
+				masenka: {
+					formName: 'Masen ka (Polite Invitation)',
+					kanji: '食べませんか',
+					kana: 'たべませんか',
+					romaji: 'tabemasen ka',
+					english: "won't you eat?"
+				},
 				te: {
 					formName: 'Te-Form (Connection)',
 					kanji: '食べて',
 					kana: 'たべて',
 					romaji: 'tabete',
-					english: 'eating and...'
+					english: 'eat and...'
+				},
+				tai: {
+					formName: 'Tai-Form (Desire)',
+					kanji: '食べたいです',
+					kana: 'たべたいです',
+					romaji: 'tabetai desu',
+					english: 'want to eat'
 				},
 				potential: {
 					formName: 'Potential Form',
@@ -59,13 +74,6 @@
 					kana: 'たべよう',
 					romaji: 'tabeyou',
 					english: "let's eat"
-				},
-				imperative: {
-					formName: 'Imperative Form',
-					kanji: '食べろ',
-					kana: 'たべろ',
-					romaji: 'tabero',
-					english: 'Eat!'
 				}
 			}
 		}
@@ -91,46 +99,52 @@
 	}
 
 	const filteredVerbs = $derived(
-		verbList.filter((v) => {
-			const mKanji = !kanjiQuery.trim() || v.dictionary.includes(kanjiQuery.trim());
-			const mKana = !kanaQuery.trim() || v.reading.includes(kanaQuery.trim());
+		verbList.filter((verb) => {
+			const mKanji = !kanjiQuery.trim() || verb.dictionary.includes(kanjiQuery.trim());
+			const mKana = !kanaQuery.trim() || verb.reading.includes(kanaQuery.trim());
 			const mEng =
-				!englishQuery.trim() || v.english.toLowerCase().includes(englishQuery.trim().toLowerCase());
-			return mKanji && mKana && mEng;
+				!englishQuery.trim() ||
+				verb.english.toLowerCase().includes(englishQuery.trim().toLowerCase());
+			const mStartingKana = !selectedKana || verb.reading.startsWith(selectedKana);
+
+			return mKanji && mKana && mEng && mStartingKana;
 		})
 	);
 </script>
 
 <div class="max-w-5xl mx-auto px-4 py-8 space-y-6">
+	<!-- Hero Header -->
 	<div
-		class="relative overflow-hidden rounded-2xl bg-linear-to-r from-brand-600 to-rose-500 text-white p-6 sm:p-8 shadow-xl"
+		class="relative overflow-hidden rounded-2xl bg-linear-to-r from-brand-600 to-indigo-600 text-white p-6 sm:p-8 shadow-xl"
 	>
 		<span
-			class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold mb-3"
-			>JLTP N5-N4 Grammar</span
+			class="inline-block px-3 py-1 bg-white/25 backdrop-blur-md rounded-full text-xs font-semibold mb-3"
+			>JLPT N5-N4 Grammar</span
 		>
-		<h2 class="text-2xl sm:text-3xl font-extrabold mb-2">
-			Comprehensive Verb Conjugation Explorer
-		</h2>
-		<p class="text-rose-100 text-sm">
-			Covering all polite forms, past tenses, te-forms, potential, volitional, and imperatives.
+		<h2 class="text-2xl sm:text-3xl font-extrabold mb-2">Verb Conjugation Explorer</h2>
+		<p class="text-indigo-100 text-sm">
+			Explore Group 1, Group 2, and Group 3 verbs across polite tenses, te-forms, potential, and
+			volitional forms.
 		</p>
 	</div>
 
+	<!-- Filter Bar with Kana Filter Binding -->
 	<GrammarFilterBar
 		bind:kanjiQuery
 		bind:kanaQuery
 		bind:englishQuery
+		bind:selectedKana
 		onupload={() => (showModal = true)}
 		oneraseall={handleEraseAll}
 	/>
 
+	<!-- Verb Accordion Boxes List -->
 	<div class="space-y-4">
 		{#each filteredVerbs as verb (verb.id)}
 			<AccordionCard
 				title="{verb.dictionary} ({verb.reading})"
 				subtitle={verb.english}
-				badge="Group {verb.group} Verb"
+				badge="Group {verb.group}"
 			>
 				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
 					{#each Object.entries(verb.forms) as [key, form] (key)}

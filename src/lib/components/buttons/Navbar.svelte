@@ -75,6 +75,24 @@
 				<span class="hidden sm:inline">Adjectives</span>
 			</a>
 
+			<!-- Added Listening Practice Link -->
+			<a
+				href={resolve('/listening')}
+				class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center space-x-1"
+			>
+				<span>🎧</span>
+				<span class="hidden sm:inline">Listening</span>
+			</a>
+
+			<!-- Added Whisper Transcriber Link -->
+			<a
+				href={resolve('/transcribe')}
+				class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center space-x-1"
+			>
+				<span>✨</span>
+				<span class="hidden sm:inline">Transcribe</span>
+			</a>
+
 			<a
 				href={resolve('/stats')}
 				class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center space-x-1"

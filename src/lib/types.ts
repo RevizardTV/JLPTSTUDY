@@ -1,6 +1,12 @@
 // src/lib/types.ts
-export type CategoryType = 'kanji' | 'grammar' | 'reading' | 'vocabulary' | string;
+export type CategoryType = 'kanji' | 'grammar' | 'reading' | 'vocabulary' | 'listening' | string;
 
+export interface ListeningAssets {
+	audioUrl?: string;
+	pdfUrl?: string;
+	pdfFileName?: string;
+	audioFileName?: string;
+}
 export interface Option {
 	text: string;
 	kana: string;
@@ -70,6 +76,7 @@ export interface QuestionSet {
 	vocab?: VocabItem[];
 	verbs?: VerbItem[]; // Added to support verb extraction from text files
 	adjectives?: AdjItem[]; // Added to support adjective extraction from text files
+	listeningAssets?: ListeningAssets;
 }
 
 export interface UserAnswer {

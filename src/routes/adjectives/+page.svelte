@@ -8,6 +8,7 @@
 	let kanjiQuery = $state<string>('');
 	let kanaQuery = $state<string>('');
 	let englishQuery = $state<string>('');
+	let selectedKana = $state<string>('');
 	let showModal = $state<boolean>(false);
 
 	let adjectiveList = $state<AdjItem[]>([
@@ -19,25 +20,32 @@
 			english: 'big',
 			forms: {
 				nonPast: {
-					formName: 'Non-Past (Polite)',
+					formName: 'Non-Past Polite',
 					kanji: '大きいです',
 					kana: 'おおきいです',
 					romaji: 'ookii desu',
 					english: 'is big'
 				},
 				past: {
-					formName: 'Past (Polite)',
+					formName: 'Past Polite',
 					kanji: '大きかったです',
 					kana: 'おおきかったです',
 					romaji: 'ookikatta desu',
 					english: 'was big'
 				},
 				negative: {
-					formName: 'Negative (Polite)',
+					formName: 'Negative Polite',
 					kanji: '大きくないです',
 					kana: 'おおきくないです',
 					romaji: 'ookikunai desu',
 					english: 'is not big'
+				},
+				pastNegative: {
+					formName: 'Past Negative Polite',
+					kanji: '大きくなかったです',
+					kana: 'おおきくなかったです',
+					romaji: 'ookikunakatta desu',
+					english: 'was not big'
 				},
 				adverbial: {
 					formName: 'Adverbial Form (ku-form)',
@@ -45,6 +53,13 @@
 					kana: 'おおきく',
 					romaji: 'ookiku',
 					english: 'big (adverb)'
+				},
+				attributive: {
+					formName: 'Attributive Form',
+					kanji: '大きい',
+					kana: 'おおきい',
+					romaji: 'ookii',
+					english: 'big (base form)'
 				}
 			}
 		}
@@ -70,12 +85,15 @@
 	}
 
 	const filteredAdjectives = $derived(
-		adjectiveList.filter((a) => {
-			const mKanji = !kanjiQuery.trim() || a.dictionary.includes(kanjiQuery.trim());
-			const mKana = !kanaQuery.trim() || a.reading.includes(kanaQuery.trim());
+		adjectiveList.filter((adj) => {
+			const mKanji = !kanjiQuery.trim() || adj.dictionary.includes(kanjiQuery.trim());
+			const mKana = !kanaQuery.trim() || adj.reading.includes(kanaQuery.trim());
 			const mEng =
-				!englishQuery.trim() || a.english.toLowerCase().includes(englishQuery.trim().toLowerCase());
-			return mKanji && mKana && mEng;
+				!englishQuery.trim() ||
+				adj.english.toLowerCase().includes(englishQuery.trim().toLowerCase());
+			const mStartingKana = !selectedKana || adj.reading.startsWith(selectedKana);
+
+			return mKanji && mKana && mEng && mStartingKana;
 		})
 	);
 </script>
@@ -87,7 +105,7 @@
 	>
 		<span
 			class="inline-block px-3 py-1 bg-white/25 backdrop-blur-md rounded-full text-xs font-semibold mb-3"
-			>JLTP N5-N4 Grammar</span
+			>JLPT N5-N4 Grammar</span
 		>
 		<h2 class="text-2xl sm:text-3xl font-extrabold mb-2">Adjective Conjugation Explorer</h2>
 		<p class="text-indigo-100 text-sm">
@@ -95,11 +113,12 @@
 		</p>
 	</div>
 
-	<!-- Filter Bar with Erase All & Upload triggers -->
+	<!-- Filter Bar with Kana Filter Binding -->
 	<GrammarFilterBar
 		bind:kanjiQuery
 		bind:kanaQuery
 		bind:englishQuery
+		bind:selectedKana
 		onupload={() => (showModal = true)}
 		oneraseall={handleEraseAll}
 	/>
