@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { questionSets } from '#lib/stores.js';
-	import type { QuestionSet } from '#lib/types.js';
+	import type { QuestionSet, VerbItem, AdjItem } from '#lib/types.ts';
 	import { SvelteMap } from 'svelte/reactivity';
 	import { getExistingVocabSignatures, filterUniqueVocab } from '#lib/utils/vocabChecker.js';
-	import { parseGrammarTextToSets } from '#lib/utils/textParser.ts'; // Import utility
+	import { parseGrammarTextToSets } from '#lib/utils/textParser.ts';
+	import { filterRedundantVerbs, filterRedundantAdjectives } from '#lib/utils/redundancyChecker.js';
 
 	let { onclose }: { onclose: () => void } = $props();
 
@@ -11,11 +12,15 @@
 	let errorMessage = $state<string | null>(null);
 	let successCount = $state<number | null>(null);
 	let skippedVocabCount = $state<number>(0);
+	let skippedVerbCount = $state<number>(0);
+	let skippedAdjCount = $state<number>(0);
 
 	function handleUpload() {
 		errorMessage = null;
 		successCount = null;
 		skippedVocabCount = 0;
+		skippedVerbCount = 0;
+		skippedAdjCount = 0;
 
 		const trimmed = inputPayload.trim();
 		if (!trimmed) {
@@ -56,7 +61,11 @@
 							? item.contextEnglish.map(String)
 							: undefined,
 						questions: item.questions as QuestionSet['questions'],
-						vocab: Array.isArray(item.vocab) ? (item.vocab as QuestionSet['vocab']) : []
+						vocab: Array.isArray(item.vocab) ? (item.vocab as QuestionSet['vocab']) : [],
+						verbs: Array.isArray(item.verbs) ? (item.verbs as QuestionSet['verbs']) : [],
+						adjectives: Array.isArray(item.adjectives)
+							? (item.adjectives as QuestionSet['adjectives'])
+							: []
 					});
 				}
 			} else {
@@ -78,6 +87,7 @@
 						newSet = { ...newSet, id: finalId };
 					}
 
+					// Deduplicate Vocabulary
 					if (newSet.vocab && newSet.vocab.length > 0) {
 						const { uniqueVocab, skippedCount } = filterUniqueVocab(
 							newSet.vocab,
@@ -86,6 +96,47 @@
 						newSet.vocab = uniqueVocab;
 						skippedVocabCount += skippedCount;
 					}
+
+					// Deduplicate Verbs and persist to LocalStorage
+					if (newSet.verbs && newSet.verbs.length > 0) {
+						const existingVerbs: VerbItem[] = JSON.parse(
+							localStorage.getItem('jlpt_verbs') || '[]'
+						);
+						const { uniqueItems: uniqueVerbs, skippedCount } = filterRedundantVerbs(
+							existingVerbs,
+							newSet.verbs
+						);
+						newSet.verbs = uniqueVerbs;
+						skippedVerbCount += skippedCount;
+
+						if (uniqueVerbs.length > 0) {
+							localStorage.setItem(
+								'jlpt_verbs',
+								JSON.stringify([...uniqueVerbs, ...existingVerbs])
+							);
+						}
+					}
+
+					// Deduplicate Adjectives and persist to LocalStorage
+					if (newSet.adjectives && newSet.adjectives.length > 0) {
+						const existingAdjs: AdjItem[] = JSON.parse(
+							localStorage.getItem('jlpt_adjectives') || '[]'
+						);
+						const { uniqueItems: uniqueAdjs, skippedCount } = filterRedundantAdjectives(
+							existingAdjs,
+							newSet.adjectives
+						);
+						newSet.adjectives = uniqueAdjs;
+						skippedAdjCount += skippedCount;
+
+						if (uniqueAdjs.length > 0) {
+							localStorage.setItem(
+								'jlpt_adjectives',
+								JSON.stringify([...uniqueAdjs, ...existingAdjs])
+							);
+						}
+					}
+
 					setMap.set(newSet.id, newSet);
 				});
 
@@ -122,16 +173,22 @@
 
 		reader.readAsText(file);
 	}
+
 	const placeholderText = `Paste JSON array OR text format:
 ---
 SetId: set-1
-Title: Set 1
-ContextPassages: 毎日... | 京都...
-ContextEnglish: Every day... | Kyoto...
+Title: Verb & Grammar Set
+Category: grammar
 1. Prompt
    1) Option - meaning
 Answer Key:
-1. 1`;
+1. 1
+Vocab:
+単語 (たんご) [tango] - word
+Verbs:
+食べる (たべる) [taberu] - to eat (group2, n5)
+Adjectives:
+大きい (おおきい) [ookii] - big (i-adj, n5)`;
 </script>
 
 <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
@@ -146,10 +203,11 @@ Answer Key:
 					class="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center space-x-2"
 				>
 					<span>📦</span>
-					<span>Upload Multiple Question Sets (JSON or Text)</span>
+					<span>Upload Question Sets, Verbs & Adjectives (JSON/Text)</span>
 				</h3>
 				<p class="text-xs text-slate-500">
-					Paste JSON or raw exercise text files directly to batch import sets
+					Paste JSON or raw exercise text files directly to batch import sets and grammar explorer
+					items
 				</p>
 			</div>
 			<button
@@ -174,14 +232,12 @@ Answer Key:
 			>
 				<div class="flex items-center space-x-2">
 					<span>✓</span>
-					<span
-						>Successfully imported {successCount} question set{successCount > 1 ? 's' : ''}!</span
-					>
+					<span>Successfully imported {successCount} set{successCount > 1 ? 's' : ''}!</span>
 				</div>
-				{#if skippedVocabCount > 0}
+				{#if skippedVocabCount > 0 || skippedVerbCount > 0 || skippedAdjCount > 0}
 					<div class="text-slate-400 text-[11px] font-normal pl-4">
-						Skipped {skippedVocabCount} duplicate vocabulary item{skippedVocabCount > 1 ? 's' : ''} already
-						present.
+						Skipped redundant items: {skippedVocabCount} vocab, {skippedVerbCount} verbs, {skippedAdjCount}
+						adjectives.
 					</div>
 				{/if}
 			</div>

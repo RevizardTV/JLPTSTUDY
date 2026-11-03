@@ -1,4 +1,7 @@
-import type { Question, QuestionSet, VocabItem } from '#lib/types.ts';
+// src/lib/utils/textParser.ts
+import type { Question, QuestionSet, VocabItem, VerbItem, AdjItem } from '#lib/types.ts';
+import { parseVerbTextToItems } from './verbTextParser.js';
+import { parseAdjectiveTextToItems } from './adjectiveTextParser.js';
 
 export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 	const blocks = rawText
@@ -20,9 +23,11 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 
 		const questions: Question[] = [];
 		const vocab: VocabItem[] = [];
+		const verbs: VerbItem[] = [];
+		const adjectives: AdjItem[] = [];
 
 		let currentQ: Question | null = null;
-		let parsingSection = 'metadata'; // metadata, questions, answerKey, vocab
+		let parsingSection = 'metadata'; // metadata, questions, answerKey, vocab, verbs, adjectives
 
 		for (let i = 0; i < lines.length; i++) {
 			const line = lines[i];
@@ -30,7 +35,6 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 			if (!trimmed) continue;
 
 			if (/^Answer Key:/i.test(trimmed)) {
-				// Safety: Push the final active question before leaving the question section
 				if (currentQ) {
 					questions.push(currentQ);
 					currentQ = null;
@@ -39,12 +43,27 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 				continue;
 			}
 			if (/^Vocab:/i.test(trimmed)) {
-				// Safety: Push the final active question just in case Answer Key was missing
 				if (currentQ) {
 					questions.push(currentQ);
 					currentQ = null;
 				}
 				parsingSection = 'vocab';
+				continue;
+			}
+			if (/^Verbs?:/i.test(trimmed)) {
+				if (currentQ) {
+					questions.push(currentQ);
+					currentQ = null;
+				}
+				parsingSection = 'verbs';
+				continue;
+			}
+			if (/^Adjectives?:/i.test(trimmed)) {
+				if (currentQ) {
+					questions.push(currentQ);
+					currentQ = null;
+				}
+				parsingSection = 'adjectives';
 				continue;
 			}
 
@@ -178,15 +197,26 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 						vocabTags
 					});
 				}
+			} else if (parsingSection === 'verbs') {
+				// Parse block lines or individual verb definitions using parseVerbTextToItems
+				const parsedVerbs = parseVerbTextToItems(trimmed);
+				if (parsedVerbs.length > 0) {
+					verbs.push(...parsedVerbs);
+				}
+			} else if (parsingSection === 'adjectives') {
+				// Parse block lines or individual adjective definitions using parseAdjectiveTextToItems
+				const parsedAdjs = parseAdjectiveTextToItems(trimmed);
+				if (parsedAdjs.length > 0) {
+					adjectives.push(...parsedAdjs);
+				}
 			}
 		}
 
-		// Catch any trailing active question at the end of the block
 		if (currentQ) {
 			questions.push(currentQ);
 		}
 
-		if (questions.length > 0) {
+		if (questions.length > 0 || verbs.length > 0 || adjectives.length > 0) {
 			sets.push({
 				id: setId || `set-${Math.random().toString(36).substring(2, 9)}`,
 				title: title || 'Untitled Set',
@@ -196,7 +226,9 @@ export function parseGrammarTextToSets(rawText: string): QuestionSet[] {
 				contextPassages: contextPassages.length > 0 ? contextPassages : [''],
 				contextEnglish: contextEnglish.length > 0 ? contextEnglish : undefined,
 				questions,
-				vocab: vocab.length > 0 ? vocab : undefined
+				vocab: vocab.length > 0 ? vocab : undefined,
+				verbs: verbs.length > 0 ? verbs : undefined,
+				adjectives: adjectives.length > 0 ? adjectives : undefined
 			});
 		}
 	}

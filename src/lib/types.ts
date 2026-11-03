@@ -1,3 +1,4 @@
+// src/lib/types.ts
 export type CategoryType = 'kanji' | 'grammar' | 'reading' | 'vocabulary' | string;
 
 export interface Option {
@@ -30,6 +31,33 @@ export interface VocabItem {
 	vocabTags?: string[];
 }
 
+export interface FormExample {
+	formName: string;
+	kanji: string;
+	kana: string;
+	romaji: string;
+	english: string;
+	usageNote?: string;
+}
+
+export interface VerbItem {
+	id: string;
+	dictionary: string;
+	reading: string;
+	english: string;
+	group: 1 | 2 | 3;
+	forms: Record<string, FormExample>;
+}
+
+export interface AdjItem {
+	id: string;
+	dictionary: string;
+	reading: string;
+	english: string;
+	category: 'i-adj' | 'na-adj';
+	forms: Record<string, FormExample>;
+}
+
 export interface QuestionSet {
 	id: string;
 	title: string;
@@ -37,9 +65,11 @@ export interface QuestionSet {
 	tags?: string[];
 	packTitle?: string;
 	contextPassages: string[];
-	contextEnglish?: string[]; // Added to support context translation display
+	contextEnglish?: string[];
 	questions: Question[];
 	vocab?: VocabItem[];
+	verbs?: VerbItem[]; // Added to support verb extraction from text files
+	adjectives?: AdjItem[]; // Added to support adjective extraction from text files
 }
 
 export interface UserAnswer {
@@ -56,7 +86,7 @@ export interface SetProgress {
 	currentIndex?: number;
 	progressPercentage?: number;
 	attemptedCount?: number;
-	userAnswers?: UserAnswer[]; // Added to fix the property type error
+	userAnswers?: UserAnswer[];
 }
 
 export interface UserProgressData {
