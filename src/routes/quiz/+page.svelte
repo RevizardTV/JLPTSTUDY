@@ -3,19 +3,16 @@
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { questionSets } from '#lib/stores.js';
-	import type {
-		Question,
-		QuestionSet,
-		QuizConfig,
-		UserAnswer,
-		Option,
-		VocabItem
-	} from '#lib/types.js';
+	import type { QuestionSet, QuizConfig, UserAnswer, Question, Option } from '#lib/types.js';
 	import type { QuestionListeningSet } from '#lib/types/listening.ts';
 
-	let config: QuizConfig = $state({ mode: 'all', practice: true });
+	type ListeningQuizQuestion = Question & {
+		answerText?: string;
+	};
+
+	let config: QuizConfig = $state({ mode: 'exercise', practice: true });
 	let currentSet = $state<QuestionListeningSet | null>(null);
-	let questions = $state<ExtendedQuestion[]>([]);
+	let questions = $state<ListeningQuizQuestion[]>([]);
 	let currentIndex = $state<number>(0);
 	let score = $state<number>(0);
 	let userAnswers = $state<UserAnswer[]>([]);
@@ -24,14 +21,9 @@
 	let isAnswered = $state<boolean>(false);
 	let selectedOptionIdx = $state<number | null>(null);
 
-	// PDF viewer state for listening mode
+	// Independent navigation indices for Listening Mode
 	let currentPdfIndex = $state<number>(0);
-
-	type ExtendedQuestion = Question & {
-		contextEnglishText?: string;
-		setVocab?: VocabItem[];
-		audioUrl?: string;
-	};
+	let currentAudioIndex = $state<number>(0);
 
 	onMount(() => {
 		const storedConfig = sessionStorage.getItem('current_quiz_config');
@@ -51,40 +43,12 @@
 	});
 
 	function loadQuestions() {
-		if (config.customQuestions) {
-			questions = config.customQuestions as ExtendedQuestion[];
-		} else if (config.mode === 'exercise' && config.setId) {
+		if (config.setId) {
 			const setObj = ($questionSets as QuestionSet[]).find((s) => s.id === config.setId);
 			if (setObj) {
 				currentSet = setObj as QuestionListeningSet;
-				questions = setObj.questions.map((q, idx) => {
-					const audioItem = currentSet?.audioItems?.[idx];
-					const audioUrl = audioItem?.file ? URL.createObjectURL(audioItem.file) : audioItem?.url;
-
-					return {
-						...q,
-						setId: setObj.id,
-						setTitle: setObj.title,
-						contextText: setObj.contextPassages[q.contextIdx] || '',
-						contextEnglishText: setObj.contextEnglish?.[q.contextIdx] || '',
-						setVocab: setObj.vocab || [],
-						audioUrl
-					};
-				});
+				questions = (setObj.questions || []) as ListeningQuizQuestion[];
 			}
-		} else if (config.mode === 'all') {
-			const all: ExtendedQuestion[] = [];
-			($questionSets as QuestionSet[]).forEach((setObj) => {
-				setObj.questions.forEach((q) => {
-					all.push({
-						...q,
-						setId: setObj.id,
-						setTitle: setObj.title,
-						contextText: setObj.contextPassages[q.contextIdx] || ''
-					});
-				});
-			});
-			questions = all;
 		}
 	}
 
@@ -92,6 +56,7 @@
 		if (isAnswered) return;
 		isAnswered = true;
 		selectedOptionIdx = idx;
+
 		const q = questions[currentIndex];
 		const isCorrect = idx === q.answer;
 		if (isCorrect) score++;
@@ -113,7 +78,7 @@
 					total: questions.length,
 					userAnswers,
 					secondsElapsed,
-					setId: config.setId || questions[0]?.setId
+					setId: config.setId
 				})
 			);
 			await goto(resolve('/summary'));
@@ -129,30 +94,38 @@
 		if (currentPdfIndex > 0) currentPdfIndex--;
 	}
 	function nextPdf() {
-		if (currentSet?.pdfFiles && currentPdfIndex < currentSet.pdfFiles.length - 1) {
-			currentPdfIndex++;
-		}
+		if (currentSet?.pdfFiles && currentPdfIndex < currentSet.pdfFiles.length - 1) currentPdfIndex++;
+	}
+
+	function prevAudio() {
+		if (currentSet?.audioItems && currentAudioIndex > 0) currentAudioIndex--;
+	}
+	function nextAudio() {
+		if (currentSet?.audioItems && currentAudioIndex < currentSet.audioItems.length - 1)
+			currentAudioIndex++;
 	}
 </script>
 
-<div class="max-w-6xl mx-auto px-4 py-8 space-y-6">
+<div class="max-w-5xl mx-auto px-4 py-8 space-y-6">
 	{#if questions.length > 0}
 		{@const q = questions[currentIndex]}
 		{@const isListeningMode = currentSet?.category === 'listening'}
 		{@const pdfFiles = currentSet?.pdfFiles || []}
+		{@const audioItems = currentSet?.audioItems || []}
+		{@const activeAudio = audioItems[currentAudioIndex]}
 
 		{#if isListeningMode}
-			<!-- LISTENING MODE: Split layout with PDF previewer, Audio player & Options -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<!-- Left Column: PDF Booklet Cross-Viewer -->
+			<!-- LISTENING MODE: Large PDF on Top, Independent Audio Navigation, Standard Clickable Options -->
+			<div class="flex flex-col space-y-6">
+				<!-- Top Section: Large PDF Booklet Viewer with Independent Navigation -->
 				<div
-					class="flex flex-col space-y-3 bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm min-h-[550px]"
+					class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-3"
 				>
 					<div class="flex justify-between items-center">
 						<h3
 							class="font-bold text-xs text-slate-700 dark:text-slate-300 uppercase tracking-wider"
 						>
-							Question Booklet PDFs ({pdfFiles.length})
+							Question Booklet PDF Viewer ({pdfFiles.length})
 						</h3>
 						{#if pdfFiles.length > 0}
 							<div
@@ -161,67 +134,91 @@
 								<button
 									onclick={prevPdf}
 									disabled={currentPdfIndex === 0}
-									class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded disabled:opacity-30 cursor-pointer"
-									>&lt;</button
+									class="px-2.5 py-1 bg-slate-100 dark:bg-slate-700 rounded disabled:opacity-30 cursor-pointer"
+									>&lt; Prev PDF</button
 								>
 								<span>{currentPdfIndex + 1} / {pdfFiles.length}</span>
 								<button
 									onclick={nextPdf}
 									disabled={currentPdfIndex === pdfFiles.length - 1}
-									class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded disabled:opacity-30 cursor-pointer"
-									>&gt;</button
+									class="px-2.5 py-1 bg-slate-100 dark:bg-slate-700 rounded disabled:opacity-30 cursor-pointer"
+									>Next PDF &gt;</button
 								>
 							</div>
 						{/if}
 					</div>
 
 					<div
-						class="flex-1 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden flex items-center justify-center"
+						class="w-full h-137.5 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden flex items-center justify-center"
 					>
 						{#if pdfFiles.length > 0 && pdfFiles[currentPdfIndex]}
 							<iframe
 								src={`${pdfFiles[currentPdfIndex].url}#view=FitH`}
 								title={pdfFiles[currentPdfIndex].name}
-								class="w-full h-full min-h-[450px] border-0"
+								class="w-full h-full border-0"
 							></iframe>
 						{:else}
 							<div class="text-center p-6 text-slate-400 text-xs space-y-1">
-								<p class="text-2xl">📄</p>
-								<p>No booklet PDF attached to this set.</p>
+								<p class="text-3xl">📄</p>
+								<p>No PDF booklets attached to this set.</p>
 							</div>
 						{/if}
 					</div>
 				</div>
 
-				<!-- Right Column: Audio Player & Options -->
+				<!-- Bottom Section: Independent Audio Player & Standard Clickable Options -->
 				<div
-					class="flex flex-col space-y-4 bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm justify-between"
+					class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-6"
 				>
-					<div class="space-y-4">
-						<!-- Audio Player -->
-						<div
-							class="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2"
-						>
-							<div class="text-xs font-bold text-slate-500 uppercase tracking-wide">
-								Audio Track {currentIndex + 1}
-							</div>
-							{#if q.audioUrl}
-								<audio controls class="w-full h-10" src={q.audioUrl}>
-									Your browser does not support audio playback.
-								</audio>
-							{:else}
-								<p class="text-xs text-slate-400 italic">
-									No audio track URL attached for this item.
-								</p>
+					<!-- Independent Audio Track Navigation -->
+					<div
+						class="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3"
+					>
+						<div class="flex justify-between items-center">
+							<span class="text-xs font-bold text-slate-500 uppercase tracking-wide">
+								Audio Player (Track {currentAudioIndex + 1} of {audioItems.length})
+							</span>
+							{#if audioItems.length > 1}
+								<div class="flex items-center gap-2 text-xs">
+									<button
+										onclick={prevAudio}
+										disabled={currentAudioIndex === 0}
+										class="px-2 py-0.5 bg-white dark:bg-slate-800 border rounded disabled:opacity-30 cursor-pointer"
+										>&lt; Prev Audio</button
+									>
+									<button
+										onclick={nextAudio}
+										disabled={currentAudioIndex === audioItems.length - 1}
+										class="px-2 py-0.5 bg-white dark:bg-slate-800 border rounded disabled:opacity-30 cursor-pointer"
+										>Next Audio &gt;</button
+									>
+								</div>
 							{/if}
 						</div>
 
-						<div class="text-2xl font-bold font-japanese text-slate-800 dark:text-slate-100">
-							{q.prompt}
+						{#if activeAudio}
+							<audio
+								controls
+								class="w-full h-10"
+								src={activeAudio.url || URL.createObjectURL(activeAudio.file)}
+							>
+								Your browser does not support audio playback.
+							</audio>
+							<div class="text-xs font-semibold text-slate-600 dark:text-slate-400 truncate">
+								Playing: {activeAudio.name}
+							</div>
+						{:else}
+							<p class="text-xs text-slate-400 italic">No audio tracks available.</p>
+						{/if}
+					</div>
+
+					<!-- Question & Clickable Options Grid -->
+					<div class="space-y-4">
+						<div class="text-lg font-bold text-slate-900 dark:text-slate-100 font-japanese">
+							Question {currentIndex + 1}: {q.prompt}
 						</div>
 
-						<!-- Options with Immediate Answer Revelation -->
-						<div class="grid grid-cols-1 gap-3">
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 							{#each q.options as opt, idx (idx)}
 								{@const details = getOptionDetails(opt)}
 								{@const isSelected = selectedOptionIdx === idx}
@@ -249,22 +246,24 @@
 								</button>
 							{/each}
 						</div>
-					</div>
 
-					{#if isAnswered}
-						<button
-							onclick={nextQuestion}
-							class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow transition cursor-pointer"
-						>
-							{currentIndex + 1 < questions.length
-								? 'Next Question →'
-								: 'Finish Quiz & View Summary'}
-						</button>
-					{/if}
+						{#if isAnswered}
+							<div class="pt-2 flex justify-end">
+								<button
+									onclick={nextQuestion}
+									class="px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow cursor-pointer transition"
+								>
+									{currentIndex + 1 < questions.length
+										? 'Next Question →'
+										: 'Finish Quiz & View Summary'}
+								</button>
+							</div>
+						{/if}
+					</div>
 				</div>
 			</div>
 		{:else}
-			<!-- STANDARD MODE (Kanji / Vocabulary sets) -->
+			<!-- STANDARD MODE -->
 			<div
 				class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-lg space-y-6"
 			>
@@ -283,14 +282,6 @@
 						</button>
 					{/each}
 				</div>
-
-				{#if isAnswered}
-					<button
-						onclick={nextQuestion}
-						class="px-6 py-2 bg-brand-500 text-white font-bold rounded-xl shadow"
-						>Next Question</button
-					>
-				{/if}
 			</div>
 		{/if}
 	{/if}

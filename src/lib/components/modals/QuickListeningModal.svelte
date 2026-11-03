@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ListeningQuestionItem } from '#lib/types/listening.ts';
-	import { transcribeItem, transcribeAllItems } from '#lib/utils/transcribeHelper.ts';
+	import { transcribeAllItems } from '#lib/utils/transcribeHelper.ts';
 	import { questionSets } from '#lib/stores.ts';
 
 	let {
@@ -11,18 +11,19 @@
 		onClose?: () => void;
 	} = $props();
 
-	// Pack & Set Info
 	let packTitle = $state<string>('');
 	let setName = $state<string>('');
 
-	let audioItems = $state<
-		(ListeningQuestionItem & { customPrompt: string; correctOptionIndex: number })[]
-	>([]);
+	let audioItems = $state<ListeningQuestionItem[]>([]);
 	let pdfUrls = $state<{ id: string; url: string; name: string }[]>([]);
+
+	// Questions supporting 4 options and answer key mapping like 1.2, 2.4
+	let customQuestions = $state<{ id: string; prompt: string; answerKey: string }[]>([
+		{ id: crypto.randomUUID(), prompt: '', answerKey: '1.2' }
+	]);
 
 	let currentAudioIndex = $state<number>(0);
 	let currentPdfIndex = $state<number>(0);
-	let activeTab = $state<'kanji' | 'kana' | 'english'>('kanji');
 	let isBatchProcessing = $state<boolean>(false);
 
 	function handleFilesSelected(e: Event) {
@@ -41,8 +42,7 @@
 					english: '',
 					loading: false,
 					error: null,
-					customPrompt: `Question ${audioItems.length + 1}`,
-					correctOptionIndex: 0
+					url: URL.createObjectURL(file)
 				});
 			} else if (file.type === 'application/pdf' || file.name.match(/\.pdf$/i)) {
 				pdfUrls.push({
@@ -53,6 +53,19 @@
 			}
 		}
 		target.value = '';
+	}
+
+	function addQuestion() {
+		const nextNum = customQuestions.length + 1;
+		customQuestions.push({
+			id: crypto.randomUUID(),
+			prompt: '',
+			answerKey: `1.${nextNum}` // Uses nextNum dynamically
+		});
+	}
+
+	function removeQuestion(id: string) {
+		customQuestions = customQuestions.filter((q) => q.id !== id);
 	}
 
 	function removeAudio(id: string) {
@@ -69,23 +82,10 @@
 		}
 	}
 
-	async function handleSingleTranscribe(index: number) {
-		if (audioItems[index]) {
-			await transcribeItem(audioItems[index]);
-		}
-	}
-
 	async function handleBatchTranscribe() {
 		isBatchProcessing = true;
 		await transcribeAllItems(audioItems);
 		isBatchProcessing = false;
-	}
-
-	function prevPdf() {
-		if (currentPdfIndex > 0) currentPdfIndex--;
-	}
-	function nextPdf() {
-		if (currentPdfIndex < pdfUrls.length - 1) currentPdfIndex++;
 	}
 
 	function handleSaveSet() {
@@ -99,35 +99,45 @@
 			title: finalTitle,
 			category: 'listening',
 			contextPassages: pdfUrls.map((p) => p.name),
-			questions: audioItems.map((item, idx) => ({
-				qNum: idx + 1,
-				prompt: item.customPrompt || item.name,
-				contextIdx: 0,
-				options: [
-					{ text: item.kanji || 'Option 1', kana: item.kana, english: item.english },
-					{ text: 'Option 2', kana: '', english: '' },
-					{ text: 'Option 3', kana: '', english: '' },
-					{ text: 'Option 4', kana: '', english: '' }
-				],
-				answer: item.correctOptionIndex,
-				kanji: item.kanji,
-				reading: item.kana
-			})),
+			questions: customQuestions.map((q, idx) => {
+				// Parse answerKey like "1.2" where 2 represents option index (0-indexed -> option 2 is index 1)
+				const parts = q.answerKey.split('.');
+				const targetOptionNum = parts.length > 1 ? parseInt(parts[1], 10) : 1;
+				const correctIndex = Math.max(
+					0,
+					Math.min(3, (isNaN(targetOptionNum) ? 1 : targetOptionNum) - 1)
+				);
+
+				return {
+					qNum: idx + 1,
+					prompt: q.prompt || `Question ${idx + 1}`,
+					contextIdx: 0,
+					options: [
+						{ text: 'Option 1', kana: 'Option 1', english: '1' },
+						{ text: 'Option 2', kana: 'Option 2', english: '2' },
+						{ text: 'Option 3', kana: 'Option 3', english: '3' },
+						{ text: 'Option 4', kana: 'Option 4', english: '4' }
+					],
+					answer: correctIndex, // Maps to 0-3 based on answerKey format (e.g. 1.2 -> index 1)
+					answerText: q.answerKey,
+					kanji: q.prompt,
+					reading: q.answerKey
+				};
+			}),
 			vocab: [],
 			pdfFiles: pdfUrls.map((p) => ({ url: p.url, name: p.name })),
 			audioItems: audioItems,
 			createdAt: new Date()
 		};
 
-		// Directly push into the questionSets store so it updates the UI instantly
 		questionSets.update((sets) => [newListeningSet, ...sets]);
 
-		// Reset and close
 		isOpen = false;
 		packTitle = '';
 		setName = '';
 		audioItems = [];
 		pdfUrls = [];
+		customQuestions = [{ id: crypto.randomUUID(), prompt: '', answerKey: '1.2' }];
 		onClose();
 	}
 </script>
@@ -139,243 +149,182 @@
 		<div
 			class="bg-white dark:bg-slate-800 w-full max-w-5xl rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col max-h-[92vh]"
 		>
-			<!-- Modal Header: Pack & Set Inputs -->
 			<div
-				class="flex flex-col sm:flex-row justify-between items-center px-6 py-4 border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 gap-3"
+				class="flex justify-between items-center px-6 py-4 border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 gap-3"
 			>
 				<div class="flex items-center gap-3 w-full">
 					<input
 						type="text"
 						bind:value={packTitle}
-						placeholder="Pack Title (e.g. JLPT N3 Mock)..."
-						class="w-1/2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs text-slate-800 dark:text-slate-100 px-3 py-2 outline-none focus:border-brand-500 transition"
+						placeholder="Pack Title..."
+						class="w-1/2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs px-3 py-2 outline-none"
 					/>
 					<input
 						type="text"
 						bind:value={setName}
-						placeholder="Set Name (e.g. Test 1)..."
-						class="w-1/2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs text-slate-800 dark:text-slate-100 px-3 py-2 outline-none focus:border-brand-500 transition"
+						placeholder="Set Name..."
+						class="w-1/2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs px-3 py-2 outline-none"
 					/>
 				</div>
 				<button
 					onclick={() => (isOpen = false)}
-					class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl transition cursor-pointer font-bold text-sm shrink-0"
+					class="p-2 text-slate-400 hover:text-slate-600 font-bold text-sm cursor-pointer">✕</button
 				>
-					✕
-				</button>
 			</div>
 
-			<!-- Modal Body Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 overflow-y-auto flex-1">
-				<!-- Left Column: PDF Question Viewer -->
-				<div
-					class="flex flex-col space-y-4 bg-slate-50 dark:bg-slate-900/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-700"
-				>
-					<div class="flex justify-between items-center">
-						<h3
-							class="font-bold text-xs text-slate-700 dark:text-slate-300 uppercase tracking-wider"
-						>
-							Question PDFs ({pdfUrls.length})
-						</h3>
-						{#if pdfUrls.length > 0}
-							<div
-								class="flex items-center gap-2 text-xs font-semibold text-slate-600 dark:text-slate-300"
-							>
-								<button
-									onclick={prevPdf}
-									disabled={currentPdfIndex === 0}
-									class="px-2.5 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg disabled:opacity-30 cursor-pointer shadow-xs"
-									>&lt;</button
-								>
-								<span>{currentPdfIndex + 1} / {pdfUrls.length}</span>
-								<button
-									onclick={nextPdf}
-									disabled={currentPdfIndex === pdfUrls.length - 1}
-									class="px-2.5 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg disabled:opacity-30 cursor-pointer shadow-xs"
-									>&gt;</button
-								>
-							</div>
-						{/if}
-					</div>
-
+			<div class="p-6 overflow-y-auto flex-1 space-y-6">
+				<!-- File Upload Section -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					<div
-						class="flex-1 min-h-87.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col overflow-hidden relative shadow-inner"
+						class="p-4 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3"
 					>
-						{#if pdfUrls.length > 0 && pdfUrls[currentPdfIndex]}
-							<div
-								class="flex justify-between items-center bg-slate-100 dark:bg-slate-800 px-3 py-1.5 border-b border-slate-200 dark:border-slate-700 text-xs"
-							>
-								<span class="truncate font-medium text-slate-700 dark:text-slate-300"
-									>{pdfUrls[currentPdfIndex].name}</span
-								>
-								<button
-									onclick={() => removePdf(pdfUrls[currentPdfIndex].id)}
-									class="text-rose-500 hover:text-rose-700 font-bold px-2 py-0.5 rounded cursor-pointer"
-									>Remove ✕</button
-								>
-							</div>
-							<iframe
-								src={`${pdfUrls[currentPdfIndex].url}#view=FitH`}
-								title={pdfUrls[currentPdfIndex].name}
-								class="w-full flex-1 border-0"
-							></iframe>
-						{:else}
-							<div
-								class="h-full flex flex-col items-center justify-center text-center p-6 space-y-2 text-slate-400 my-auto"
-							>
-								<div class="text-3xl">📄</div>
-								<p class="text-xs">No PDF scripts uploaded yet. Add files below.</p>
-							</div>
-						{/if}
-					</div>
-				</div>
-
-				<!-- Right Column: Audio Tracks, Blank Questions & Answer Keys -->
-				<div class="flex flex-col space-y-4">
-					<div class="flex justify-between items-center">
 						<h3
-							class="font-bold text-xs text-slate-700 dark:text-slate-300 uppercase tracking-wider"
+							class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300"
 						>
-							Audio Tracks & Questions ({audioItems.length})
+							PDF Booklets ({pdfUrls.length})[cite: 4]
 						</h3>
-						<div class="flex items-center gap-2">
-							{#if audioItems.length > 0}
-								<button
-									onclick={handleBatchTranscribe}
-									disabled={isBatchProcessing}
-									class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer"
-								>
-									{isBatchProcessing ? 'Transcribing All...' : 'Auto-Transcribe All'}
-								</button>
-							{/if}
+						<div class="flex gap-2">
 							<label
-								class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl cursor-pointer shadow-xs transition"
+								class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl cursor-pointer"
 							>
-								+ Add Files
+								+ Add PDFs
 								<input
 									type="file"
 									multiple
-									accept="audio/*,application/pdf"
+									accept="application/pdf"
 									onchange={handleFilesSelected}
 									class="hidden"
 								/>
 							</label>
 						</div>
+						<ul class="text-xs text-slate-500 space-y-1">
+							{#each pdfUrls as pdf (pdf.id)}
+								<li
+									class="flex justify-between items-center bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700"
+								>
+									<span class="truncate">{pdf.name}</span>
+									<button
+										onclick={() => removePdf(pdf.id)}
+										class="text-rose-500 font-bold cursor-pointer">✕</button
+									>
+								</li>
+							{/each}
+						</ul>
 					</div>
 
-					<div class="flex-1 min-h-87.5 max-h-87.5 overflow-y-auto space-y-3 pr-1">
-						{#if audioItems.length === 0}
-							<div
-								class="h-full border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-2xl flex flex-col items-center justify-center text-center p-6 text-slate-400 space-y-2"
+					<div
+						class="p-4 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3"
+					>
+						<div class="flex justify-between items-center">
+							<h3
+								class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300"
 							>
-								<div class="text-3xl">🎵</div>
-								<p class="text-xs">Upload audio files and PDFs to start setting up questions.</p>
-							</div>
-						{:else}
-							{#each audioItems as item, idx (item.id)}
-								<div
-									class={`p-4 rounded-xl border transition space-y-3 ${currentAudioIndex === idx ? 'border-brand-500 bg-brand-500/5' : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900'}`}
+								Audio Tracks ({audioItems.length})[cite: 4]
+							</h3>
+							{#if audioItems.length > 0}
+								<button
+									onclick={handleBatchTranscribe}
+									disabled={isBatchProcessing}
+									class="px-2.5 py-1 bg-emerald-600 text-white text-[11px] font-bold rounded-lg cursor-pointer"
 								>
-									<div class="flex justify-between items-center gap-2">
-										<button
-											onclick={() => (currentAudioIndex = idx)}
-											class="font-bold text-xs text-slate-800 dark:text-slate-200 truncate text-left hover:text-brand-500 flex-1 cursor-pointer"
-										>
-											{idx + 1}. {item.name}
-										</button>
-										<div class="flex items-center gap-1.5 shrink-0">
-											<button
-												onclick={() => handleSingleTranscribe(idx)}
-												disabled={item.loading}
-												class="px-3 py-1 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-lg text-xs font-bold cursor-pointer disabled:opacity-50 transition"
-											>
-												{item.loading ? 'Transcribing...' : item.kanji ? 'Re-run' : 'Transcribe'}
-											</button>
-											<button
-												onclick={() => removeAudio(item.id)}
-												class="p-1 text-slate-400 hover:text-rose-500 rounded-lg font-bold text-xs transition cursor-pointer"
-												>✕</button
-											>
-										</div>
-									</div>
-
-									<!-- Blank Question Prompt Input & Answer Key Select -->
-									<div class="grid grid-cols-3 gap-2 pt-1">
-										<div class="col-span-2">
-											<input
-												type="text"
-												bind:value={item.customPrompt}
-												placeholder="Enter question text / prompt..."
-												class="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-lg text-xs text-slate-800 dark:text-slate-200 outline-none focus:border-brand-500"
-											/>
-										</div>
-										<div>
-											<select
-												bind:value={item.correctOptionIndex}
-												class="w-full px-2 py-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 rounded-lg text-xs text-slate-800 dark:text-slate-200 outline-none cursor-pointer"
-											>
-												<option value={0}>Answer: Opt 1</option>
-												<option value={1}>Answer: Opt 2</option>
-												<option value={2}>Answer: Opt 3</option>
-												<option value={3}>Answer: Opt 4</option>
-											</select>
-										</div>
-									</div>
-
-									{#if item.error}
-										<p class="text-[11px] text-rose-500 font-semibold">{item.error}</p>
-									{/if}
-
-									{#if item.kanji || item.kana || item.english}
-										<div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
-											<div
-												class="flex gap-1 bg-slate-100 dark:bg-slate-800 p-0.5 rounded-lg text-[11px]"
-											>
-												<button
-													class={`px-2 py-0.5 rounded-md font-semibold transition cursor-pointer ${activeTab === 'kanji' ? 'bg-white dark:bg-slate-700 shadow-xs' : 'text-slate-400'}`}
-													onclick={() => (activeTab = 'kanji')}>Kanji</button
-												>
-												<button
-													class={`px-2 py-0.5 rounded-md font-semibold transition cursor-pointer ${activeTab === 'kana' ? 'bg-white dark:bg-slate-700 shadow-xs' : 'text-slate-400'}`}
-													onclick={() => (activeTab = 'kana')}>Kana</button
-												>
-												<button
-													class={`px-2 py-0.5 rounded-md font-semibold transition cursor-pointer ${activeTab === 'english' ? 'bg-white dark:bg-slate-700 shadow-xs' : 'text-slate-400'}`}
-													onclick={() => (activeTab = 'english')}>English</button
-												>
-											</div>
-
-											<div
-												class="p-2.5 bg-slate-50 dark:bg-slate-950 rounded-lg text-xs font-japanese text-slate-700 dark:text-slate-300 min-h-12 max-h-24 overflow-y-auto"
-											>
-												{#if activeTab === 'kanji'}{item.kanji}{:else if activeTab === 'kana'}{item.kana}{:else}{item.english}{/if}
-											</div>
-										</div>
-									{/if}
-								</div>
+									{isBatchProcessing ? 'Transcribing...' : 'Transcribe All'}
+								</button>
+							{/if}
+						</div>
+						<label
+							class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl cursor-pointer inline-block"
+						>
+							+ Add Audio
+							<input
+								type="file"
+								multiple
+								accept="audio/*"
+								onchange={handleFilesSelected}
+								class="hidden"
+							/>
+						</label>
+						<ul class="text-xs text-slate-500 space-y-1">
+							{#each audioItems as audio (audio.id)}
+								<li
+									class="flex justify-between items-center bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700"
+								>
+									<span class="truncate">{audio.name}</span>
+									<button
+										onclick={() => removeAudio(audio.id)}
+										class="text-rose-500 font-bold cursor-pointer">✕</button
+									>
+								</li>
 							{/each}
-						{/if}
+						</ul>
+					</div>
+				</div>
+
+				<!-- Questions & Answer Key Format (1.2 mapping format) -->
+				<div
+					class="p-4 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3"
+				>
+					<div class="flex justify-between items-center">
+						<div>
+							<h3
+								class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300"
+							>
+								Questions & Answer Key Mappings
+							</h3>
+							<p class="text-[10px] text-slate-400">
+								Format: question.option (e.g., 1.2 sets Option 2 as the correct answer for Q1)
+							</p>
+						</div>
+						<button
+							onclick={addQuestion}
+							class="px-3 py-1 bg-brand-500 text-white text-xs font-bold rounded-xl cursor-pointer"
+							>+ Add Question</button
+						>
+					</div>
+
+					<div class="space-y-2">
+						{#each customQuestions as q, idx (q.id)}
+							<div
+								class="flex items-center gap-3 bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700"
+							>
+								<span class="font-bold text-xs text-slate-400">#{idx + 1}</span>
+								<input
+									type="text"
+									bind:value={q.prompt}
+									placeholder="Question label / description..."
+									class="flex-1 bg-slate-50 dark:bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-xs outline-none"
+								/>
+								<div class="flex flex-col">
+									<span class="text-[9px] text-slate-400 font-bold">Answer Key (Q.Opt)</span>
+									<input
+										type="text"
+										bind:value={q.answerKey}
+										placeholder="e.g. 1.2"
+										class="w-24 bg-slate-50 dark:bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold text-brand-600 outline-none"
+									/>
+								</div>
+								<button
+									onclick={() => removeQuestion(q.id)}
+									class="text-rose-500 font-bold cursor-pointer px-2 mt-4">✕</button
+								>
+							</div>
+						{/each}
 					</div>
 				</div>
 			</div>
 
-			<!-- Modal Footer -->
 			<div
 				class="flex justify-end items-center px-6 py-4 border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 gap-3"
 			>
 				<button
 					onclick={() => (isOpen = false)}
-					class="px-4 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-700 dark:text-slate-200 font-bold text-xs rounded-xl cursor-pointer transition"
+					class="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs rounded-xl cursor-pointer"
 					>Cancel</button
 				>
 				<button
 					onclick={handleSaveSet}
-					disabled={audioItems.length === 0}
-					class="px-5 py-2.5 bg-brand-500 hover:bg-brand-600 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow transition cursor-pointer flex items-center gap-2"
+					class="px-5 py-2.5 bg-brand-500 text-white font-bold text-xs rounded-xl shadow cursor-pointer"
+					>Save Listening Set</button
 				>
-					<span>💾</span>
-					<span>Upload & Save Question Set</span>
-				</button>
 			</div>
 		</div>
 	</div>
