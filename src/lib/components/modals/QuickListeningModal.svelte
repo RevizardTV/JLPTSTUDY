@@ -17,9 +17,9 @@
 	let audioItems = $state<ListeningQuestionItem[]>([]);
 	let pdfUrls = $state<{ id: string; url: string; name: string }[]>([]);
 
-	// Questions supporting 4 options and answer key mapping like 1.2, 2.4
-	let customQuestions = $state<{ id: string; prompt: string; answerKey: string }[]>([
-		{ id: crypto.randomUUID(), prompt: '', answerKey: '1.2' }
+	// Questions supporting question|OptionNo format
+	let customQuestions = $state<{ id: string; rawInput: string }[]>([
+		{ id: crypto.randomUUID(), rawInput: '' }
 	]);
 
 	let currentAudioIndex = $state<number>(0);
@@ -56,11 +56,9 @@
 	}
 
 	function addQuestion() {
-		const nextNum = customQuestions.length + 1;
 		customQuestions.push({
 			id: crypto.randomUUID(),
-			prompt: '',
-			answerKey: `1.${nextNum}` // Uses nextNum dynamically
+			rawInput: ''
 		});
 	}
 
@@ -100,17 +98,34 @@
 			category: 'listening',
 			contextPassages: pdfUrls.map((p) => p.name),
 			questions: customQuestions.map((q, idx) => {
-				// Parse answerKey like "1.2" where 2 represents option index (0-indexed -> option 2 is index 1)
-				const parts = q.answerKey.split('.');
-				const targetOptionNum = parts.length > 1 ? parseInt(parts[1], 10) : 1;
-				const correctIndex = Math.max(
-					0,
-					Math.min(3, (isNaN(targetOptionNum) ? 1 : targetOptionNum) - 1)
-				);
+				const trimmed = q.rawInput.trim();
+				// If empty, set prompt as Empty and default answer to 0
+				if (!trimmed) {
+					return {
+						qNum: idx + 1,
+						prompt: 'Empty',
+						contextIdx: 0,
+						options: [
+							{ text: 'Option 1', kana: 'Option 1', english: '1' },
+							{ text: 'Option 2', kana: 'Option 2', english: '2' },
+							{ text: 'Option 3', kana: 'Option 3', english: '3' },
+							{ text: 'Option 4', kana: 'Option 4', english: '4' }
+						],
+						answer: 0,
+						kanji: 'Empty',
+						reading: '1'
+					};
+				}
+
+				// Split by pipe "|" (e.g. Question text|2)
+				const parts = trimmed.split('|');
+				const promptText = parts[0]?.trim() || `Question ${idx + 1}`;
+				const optionNum = parts[1] ? parseInt(parts[1].trim(), 10) : 1;
+				const correctIndex = Math.max(0, Math.min(3, (isNaN(optionNum) ? 1 : optionNum) - 1));
 
 				return {
 					qNum: idx + 1,
-					prompt: q.prompt || `Question ${idx + 1}`,
+					prompt: promptText,
 					contextIdx: 0,
 					options: [
 						{ text: 'Option 1', kana: 'Option 1', english: '1' },
@@ -118,10 +133,9 @@
 						{ text: 'Option 3', kana: 'Option 3', english: '3' },
 						{ text: 'Option 4', kana: 'Option 4', english: '4' }
 					],
-					answer: correctIndex, // Maps to 0-3 based on answerKey format (e.g. 1.2 -> index 1)
-					answerText: q.answerKey,
-					kanji: q.prompt,
-					reading: q.answerKey
+					answer: correctIndex,
+					kanji: promptText,
+					reading: String(correctIndex + 1)
 				};
 			}),
 			vocab: [],
@@ -137,7 +151,7 @@
 		setName = '';
 		audioItems = [];
 		pdfUrls = [];
-		customQuestions = [{ id: crypto.randomUUID(), prompt: '', answerKey: '1.2' }];
+		customQuestions = [{ id: crypto.randomUUID(), rawInput: '' }];
 		onClose();
 	}
 </script>
@@ -181,7 +195,7 @@
 						<h3
 							class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300"
 						>
-							PDF Booklets ({pdfUrls.length})[cite: 4]
+							PDF Booklets ({pdfUrls.length})
 						</h3>
 						<div class="flex gap-2">
 							<label
@@ -219,7 +233,7 @@
 							<h3
 								class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300"
 							>
-								Audio Tracks ({audioItems.length})[cite: 4]
+								Audio Tracks ({audioItems.length})
 							</h3>
 							{#if audioItems.length > 0}
 								<button
@@ -259,7 +273,7 @@
 					</div>
 				</div>
 
-				<!-- Questions & Answer Key Format (1.2 mapping format) -->
+				<!-- Question + AnswerKey format section -->
 				<div
 					class="p-4 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3"
 				>
@@ -268,10 +282,11 @@
 							<h3
 								class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300"
 							>
-								Questions & Answer Key Mappings
+								Questions (Question|OptionNo Format)
 							</h3>
 							<p class="text-[10px] text-slate-400">
-								Format: question.option (e.g., 1.2 sets Option 2 as the correct answer for Q1)
+								Example: <code class="text-brand-500">What did the speaker buy?|2</code> (Leave empty
+								if none)
 							</p>
 						</div>
 						<button
@@ -289,22 +304,13 @@
 								<span class="font-bold text-xs text-slate-400">#{idx + 1}</span>
 								<input
 									type="text"
-									bind:value={q.prompt}
-									placeholder="Question label / description..."
-									class="flex-1 bg-slate-50 dark:bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-xs outline-none"
+									bind:value={q.rawInput}
+									placeholder="Question text|OptionNo (e.g. Dialogue audio 1|3)"
+									class="flex-1 bg-slate-50 dark:bg-slate-950 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-100 outline-none focus:border-brand-500"
 								/>
-								<div class="flex flex-col">
-									<span class="text-[9px] text-slate-400 font-bold">Answer Key (Q.Opt)</span>
-									<input
-										type="text"
-										bind:value={q.answerKey}
-										placeholder="e.g. 1.2"
-										class="w-24 bg-slate-50 dark:bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-bold text-brand-600 outline-none"
-									/>
-								</div>
 								<button
 									onclick={() => removeQuestion(q.id)}
-									class="text-rose-500 font-bold cursor-pointer px-2 mt-4">✕</button
+									class="text-rose-500 font-bold cursor-pointer px-2">✕</button
 								>
 							</div>
 						{/each}
