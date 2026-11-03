@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import type { QuestionSet, QuizConfig, SetProgress, UserAnswer } from '#lib/types.js';
 	import { resetSetProgress } from '#lib/stores.js';
 
@@ -14,8 +16,8 @@
 		progress?: SetProgress | boolean;
 		isSelected?: boolean;
 		onselect?: () => void;
-		onstart: (config: QuizConfig) => void;
-		ondelete: (setId: string, title: string) => void;
+		onstart?: (config: QuizConfig) => void;
+		ondelete?: (setId: string, title: string) => void;
 	} = $props();
 
 	const stats = $derived(
@@ -68,9 +70,36 @@
 		};
 	});
 
-	function handleReset() {
+	function startQuiz(practice: boolean, timed: boolean) {
+		const config: QuizConfig = {
+			mode: 'exercise',
+			setId: set.id,
+			practice,
+			timed
+		};
+
+		// 1. Store configuration in sessionStorage
+		sessionStorage.setItem('current_quiz_config', JSON.stringify(config));
+
+		// 2. Call onstart if provided by parent, otherwise directly route to /listening-quiz
+		if (onstart) {
+			onstart(config);
+		} else {
+			goto(resolve('/quiz'));
+		}
+	}
+
+	function handleReset(e: MouseEvent) {
+		e.stopPropagation();
 		if (confirm(`Are you sure you want to reset progress for "${set.title}"?`)) {
 			resetSetProgress(set.id);
+		}
+	}
+
+	function handleDelete(e: MouseEvent) {
+		e.stopPropagation();
+		if (ondelete) {
+			ondelete(set.id, set.title);
 		}
 	}
 </script>
@@ -88,7 +117,6 @@
 		<!-- Category, Selection Badge & Status Header -->
 		<div class="flex justify-between items-center mb-3 gap-2">
 			<div class="flex items-center space-x-2">
-				<!-- Modern Selection Check Indicator -->
 				<div
 					class={`w-5 h-5 rounded-lg flex items-center justify-center transition-colors border ${
 						isSelected
@@ -132,7 +160,7 @@
 				{/if}
 
 				<button
-					onclick={() => ondelete(set.id, set.title)}
+					onclick={handleDelete}
 					title="Delete Set"
 					class="text-slate-400 hover:text-red-500 transition p-1 rounded-md hover:bg-red-500/10 text-xs cursor-pointer"
 				>
@@ -163,7 +191,6 @@
 				</div>
 			</div>
 
-			<!-- Split Multi-Colored Progress Bar -->
 			<div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden flex">
 				{#if correctPercent > 0}
 					<div
@@ -180,7 +207,6 @@
 			</div>
 		</div>
 
-		<!-- Pack & Tags Badges / Audio Details -->
 		<div class="flex flex-wrap gap-1.5 mt-2">
 			<span
 				class="text-[10px] px-2 py-0.5 bg-slate-100 dark:bg-slate-700/60 rounded-md text-slate-500 font-medium"
@@ -203,7 +229,7 @@
 		onclick={(e) => e.stopPropagation()}
 	>
 		<button
-			onclick={() => onstart({ mode: 'exercise', setId: set.id, practice: true })}
+			onclick={() => startQuiz(true, false)}
 			class="flex-1 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow-sm transition flex items-center justify-center space-x-1.5 cursor-pointer"
 		>
 			<span>✏️</span>
@@ -217,7 +243,7 @@
 			</span>
 		</button>
 		<button
-			onclick={() => onstart({ mode: 'exercise', setId: set.id, practice: false, timed: true })}
+			onclick={() => startQuiz(false, true)}
 			class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 font-semibold text-xs rounded-xl transition flex items-center justify-center space-x-1.5 cursor-pointer"
 		>
 			<span>⏱️</span>
