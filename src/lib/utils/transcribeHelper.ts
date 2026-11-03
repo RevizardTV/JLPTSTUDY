@@ -30,10 +30,9 @@ export async function transcribeItem(item: ListeningQuestionItem): Promise<void>
 }
 
 /**
- * Helper to mass-transcribe all audio items in a listening set sequentially or concurrently.
+ * Helper to mass-transcribe all audio items in a listening set sequentially.
  */
 export async function transcribeAllItems(items: ListeningQuestionItem[]): Promise<void> {
-	// Run sequentially to prevent overwhelming local CPU Whisper processing
 	for (const item of items) {
 		if (!item.kanji && !item.loading) {
 			await transcribeItem(item);

@@ -1,3 +1,5 @@
+import type { QuestionSet } from '#lib/types.js';
+
 export interface ListeningQuestionItem {
 	id: string;
 	file: File;
@@ -7,25 +9,27 @@ export interface ListeningQuestionItem {
 	english: string;
 	loading: boolean;
 	error: string | null;
+	url?: string;
 }
 
-export interface QuestionListeningSet {
-	setId: string;
-	setTitle: string;
-	pdfFiles: { url: string; name: string }[];
-	audioItems: ListeningQuestionItem[];
-	createdAt: Date;
+export interface ListeningQuestionOption {
+	text: string;
+	kana: string;
+	english: string;
 }
 
-/**
- * Helper to initialize a new listening set structure
- */
-export function createListeningSet(title: string): QuestionListeningSet {
-	return {
-		setId: crypto.randomUUID(),
-		setTitle: title || 'Untitled Listening Practice',
-		pdfFiles: [],
-		audioItems: [],
-		createdAt: new Date()
-	};
+export interface ListeningQuestionDetail {
+	qNum: number;
+	prompt: string;
+	contextIdx: number;
+	options: ListeningQuestionOption[];
+	answer: number;
+	kanji: string;
+	reading: string;
+}
+
+// Extend QuestionSet so TypeScript recognizes listening-specific properties
+export interface QuestionListeningSet extends QuestionSet {
+	pdfFiles: { id?: string; url: string; name: string }[];
+	audioItems: (ListeningQuestionItem & { customPrompt?: string; correctOptionIndex?: number })[];
 }
