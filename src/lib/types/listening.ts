@@ -15,4 +15,5 @@ export interface ListeningQuestionItem {
 export interface QuestionListeningSet extends QuestionSet {
 	pdfFiles: { id?: string; url: string; name: string }[];
 	audioItems: ListeningQuestionItem[];
+	listeningMode?: 'MatchMode' | 'LockMode';
 }

@@ -2,7 +2,8 @@
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import type { QuestionSet, QuizConfig, SetProgress, UserAnswer } from '#lib/types.js';
-	import { resetSetProgress } from '#lib/stores.js';
+	import { questionSets, resetSetProgress } from '#lib/stores.js';
+	import type { QuestionListeningSet } from '#lib/types/listening.ts';
 
 	let {
 		set,
@@ -25,16 +26,25 @@
 	);
 
 	const totalQuestions = $derived(set.questions.length);
+
+	// Robustly retrieve attempted count from various progress structures
 	const attemptedCount = $derived(
-		stats?.attemptedCount || (stats?.userAnswers ? stats.userAnswers.length : 0)
+		stats?.attemptedCount !== undefined
+			? stats.attemptedCount
+			: stats?.userAnswers
+				? stats.userAnswers.length
+				: ((stats as unknown as Record<string, unknown>)?.currentIndex as number) || 0
 	);
+
+	// Robustly retrieve correct count by casting through unknown first
 	const correctCount = $derived(
 		stats?.bestScore !== undefined
 			? stats.bestScore
 			: stats?.userAnswers
 				? stats.userAnswers.filter((a: UserAnswer) => a.isCorrect).length
-				: 0
+				: ((stats as unknown as Record<string, unknown>)?.correctCount as number) || 0
 	);
+
 	const incorrectCount = $derived(Math.max(0, attemptedCount - correctCount));
 
 	const correctPercent = $derived(totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0);
@@ -81,7 +91,7 @@
 		// 1. Store configuration in sessionStorage
 		sessionStorage.setItem('current_quiz_config', JSON.stringify(config));
 
-		// 2. Call onstart if provided by parent, otherwise directly route to /listening-quiz
+		// 2. Call onstart if provided by parent, otherwise directly route to /quiz
 		if (onstart) {
 			onstart(config);
 		} else {
@@ -98,8 +108,13 @@
 
 	function handleDelete(e: MouseEvent) {
 		e.stopPropagation();
-		if (ondelete) {
-			ondelete(set.id, set.title);
+		if (confirm(`Are you sure you want to delete "${set.title}"?`)) {
+			if (ondelete) {
+				ondelete(set.id, set.title);
+			} else {
+				// Fallback: directly update the store to remove this set ID
+				questionSets.update((sets) => sets.filter((s) => s.id !== set.id));
+			}
 		}
 	}
 </script>
@@ -142,6 +157,14 @@
 				>
 					🎧 Listening
 				</span>
+
+				{#if (set as QuestionListeningSet).listeningMode}
+					<span
+						class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 capitalize"
+					>
+						{(set as QuestionListeningSet).listeningMode}
+					</span>
+				{/if}
 			</div>
 
 			<div class="flex items-center space-x-1.5" onclick={(e) => e.stopPropagation()}>

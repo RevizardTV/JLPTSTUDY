@@ -13,18 +13,18 @@
 
 	let packTitle = $state<string>('');
 	let setName = $state<string>('');
+	let quizMode = $state<'MatchMode' | 'LockMode'>('MatchMode');
 
 	let audioItems = $state<ListeningQuestionItem[]>([]);
 	let pdfUrls = $state<{ id: string; url: string; name: string }[]>([]);
 
-	// Questions supporting question|OptionNo format
-	let customQuestions = $state<{ id: string; rawInput: string }[]>([
-		{ id: crypto.randomUUID(), rawInput: '' }
-	]);
+	// Bulk textarea input state
+	let bulkQuestionsInput = $state<string>('');
 
 	let currentAudioIndex = $state<number>(0);
 	let currentPdfIndex = $state<number>(0);
 	let isBatchProcessing = $state<boolean>(false);
+	let transcriptionStatus = $state<string>('');
 
 	function handleFilesSelected(e: Event) {
 		const target = e.target as HTMLInputElement;
@@ -55,17 +55,6 @@
 		target.value = '';
 	}
 
-	function addQuestion() {
-		customQuestions.push({
-			id: crypto.randomUUID(),
-			rawInput: ''
-		});
-	}
-
-	function removeQuestion(id: string) {
-		customQuestions = customQuestions.filter((q) => q.id !== id);
-	}
-
 	function removeAudio(id: string) {
 		audioItems = audioItems.filter((item) => item.id !== id);
 		if (currentAudioIndex >= audioItems.length) {
@@ -81,51 +70,31 @@
 	}
 
 	async function handleBatchTranscribe() {
+		if (audioItems.length === 0) return;
 		isBatchProcessing = true;
-		await transcribeAllItems(audioItems);
-		isBatchProcessing = false;
+		transcriptionStatus = `Transcribing ${audioItems.length} audio track(s)...`;
+
+		try {
+			await transcribeAllItems(audioItems);
+			const transcribedCount = audioItems.filter((item) => item.kanji || item.english).length;
+			transcriptionStatus = `Successfully transcribed ${transcribedCount} of ${audioItems.length} tracks!`;
+		} catch {
+			transcriptionStatus = 'Transcription completed with some errors.';
+		} finally {
+			isBatchProcessing = false;
+		}
 	}
 
-	function handleSaveSet() {
-		const finalTitle =
-			packTitle.trim() && setName.trim()
-				? `${packTitle.trim()} - ${setName.trim()}`
-				: packTitle.trim() || setName.trim() || 'Untitled Listening Practice';
-
-		const newListeningSet = {
-			id: `listening-${Date.now()}`,
-			title: finalTitle,
-			category: 'listening',
-			contextPassages: pdfUrls.map((p) => p.name),
-			questions: customQuestions.map((q, idx) => {
-				const trimmed = q.rawInput.trim();
-				// If empty, set prompt as Empty and default answer to 0
-				if (!trimmed) {
-					return {
-						qNum: idx + 1,
-						prompt: 'Empty',
-						contextIdx: 0,
-						options: [
-							{ text: 'Option 1', kana: 'Option 1', english: '1' },
-							{ text: 'Option 2', kana: 'Option 2', english: '2' },
-							{ text: 'Option 3', kana: 'Option 3', english: '3' },
-							{ text: 'Option 4', kana: 'Option 4', english: '4' }
-						],
-						answer: 0,
-						kanji: 'Empty',
-						reading: '1'
-					};
-				}
-
-				// Split by pipe "|" (e.g. Question text|2)
-				const parts = trimmed.split('|');
-				const promptText = parts[0]?.trim() || `Question ${idx + 1}`;
-				const optionNum = parts[1] ? parseInt(parts[1].trim(), 10) : 1;
-				const correctIndex = Math.max(0, Math.min(3, (isNaN(optionNum) ? 1 : optionNum) - 1));
-
-				return {
-					qNum: idx + 1,
-					prompt: promptText,
+	/**
+	 * Parses bulk text matching: QuestionName[OAN], QuestionName[OAN]
+	 * Example: What is this?[2], Where is the station?[1]
+	 */
+	function parseBulkQuestions(rawText: string) {
+		if (!rawText.trim()) {
+			return [
+				{
+					qNum: 1,
+					prompt: 'Empty',
 					contextIdx: 0,
 					options: [
 						{ text: 'Option 1', kana: 'Option 1', english: '1' },
@@ -133,11 +102,88 @@
 						{ text: 'Option 3', kana: 'Option 3', english: '3' },
 						{ text: 'Option 4', kana: 'Option 4', english: '4' }
 					],
-					answer: correctIndex,
-					kanji: promptText,
-					reading: String(correctIndex + 1)
-				};
-			}),
+					answer: 0,
+					kanji: 'Empty',
+					reading: '1'
+				}
+			];
+		}
+
+		// Regex matching pattern text followed by [optionNo] separated by commas or newlines
+		// Handles formats like: Question[2], Question[3]
+		const regex = /([\s\S]*?)\[(\d+)\]/g;
+		let match;
+		let parsedList = [];
+		let index = 0;
+
+		while ((match = regex.exec(rawText)) !== null) {
+			index++;
+			const promptText = match[1].trim().replace(/^,\s*/, '');
+			const optionNum = parseInt(match[2], 10);
+			const correctIndex = Math.max(0, Math.min(3, (isNaN(optionNum) ? 1 : optionNum) - 1));
+
+			parsedList.push({
+				qNum: index,
+				prompt: promptText || `Question ${index}`,
+				contextIdx: 0,
+				options: [
+					{ text: 'Option 1', kana: 'Option 1', english: '1' },
+					{ text: 'Option 2', kana: 'Option 2', english: '2' },
+					{ text: 'Option 3', kana: 'Option 3', english: '3' },
+					{ text: 'Option 4', kana: 'Option 4', english: '4' }
+				],
+				answer: correctIndex,
+				kanji: promptText || `Question ${index}`,
+				reading: String(correctIndex + 1)
+			});
+		}
+
+		// Fallback if no bracket pattern found but text exists
+		if (parsedList.length === 0 && rawText.trim()) {
+			parsedList.push({
+				qNum: 1,
+				prompt: rawText.trim(),
+				contextIdx: 0,
+				options: [
+					{ text: 'Option 1', kana: 'Option 1', english: '1' },
+					{ text: 'Option 2', kana: 'Option 2', english: '2' },
+					{ text: 'Option 3', kana: 'Option 3', english: '3' },
+					{ text: 'Option 4', kana: 'Option 4', english: '4' }
+				],
+				answer: 0,
+				kanji: rawText.trim(),
+				reading: '1'
+			});
+		}
+
+		return parsedList;
+	}
+
+	function handleSaveSet() {
+		// Check if any audio tracks are untranscribed
+		const untranscribed = audioItems.filter((item) => !item.kanji && !item.english);
+		if (untranscribed.length > 0) {
+			const proceed = confirm(
+				`You have ${untranscribed.length} untranscribed audio track(s). Do you still want to save without full transcription?`
+			);
+			if (!proceed) return;
+		}
+
+		const finalTitle =
+			packTitle.trim() && setName.trim()
+				? `${packTitle.trim()} - ${setName.trim()}`
+				: packTitle.trim() || setName.trim() || 'Untitled Listening Practice';
+
+		const questionsArray = parseBulkQuestions(bulkQuestionsInput);
+
+		const newListeningSet = {
+			id: `listening-${Date.now()}`,
+			title: finalTitle,
+			packTitle: packTitle.trim() || 'General',
+			category: 'listening',
+			listeningMode: quizMode,
+			contextPassages: pdfUrls.map((p) => p.name),
+			questions: questionsArray,
 			vocab: [],
 			pdfFiles: pdfUrls.map((p) => ({ url: p.url, name: p.name })),
 			audioItems: audioItems,
@@ -151,7 +197,8 @@
 		setName = '';
 		audioItems = [];
 		pdfUrls = [];
-		customQuestions = [{ id: crypto.randomUUID(), rawInput: '' }];
+		bulkQuestionsInput = '';
+		transcriptionStatus = '';
 		onClose();
 	}
 </script>
@@ -171,14 +218,21 @@
 						type="text"
 						bind:value={packTitle}
 						placeholder="Pack Title..."
-						class="w-1/2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs px-3 py-2 outline-none"
+						class="w-1/3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs px-3 py-2 outline-none"
 					/>
 					<input
 						type="text"
 						bind:value={setName}
 						placeholder="Set Name..."
-						class="w-1/2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs px-3 py-2 outline-none"
+						class="w-1/3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs px-3 py-2 outline-none"
 					/>
+					<select
+						bind:value={quizMode}
+						class="w-1/3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-xs px-3 py-2 outline-none cursor-pointer"
+					>
+						<option value="MatchMode">MatchMode (Instant Transcript Reveal)</option>
+						<option value="LockMode">LockMode (Reveal at Quiz End)</option>
+					</select>
 				</div>
 				<button
 					onclick={() => (isOpen = false)}
@@ -197,20 +251,18 @@
 						>
 							PDF Booklets ({pdfUrls.length})
 						</h3>
-						<div class="flex gap-2">
-							<label
-								class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl cursor-pointer"
-							>
-								+ Add PDFs
-								<input
-									type="file"
-									multiple
-									accept="application/pdf"
-									onchange={handleFilesSelected}
-									class="hidden"
-								/>
-							</label>
-						</div>
+						<label
+							class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl cursor-pointer inline-block"
+						>
+							+ Add PDFs
+							<input
+								type="file"
+								multiple
+								accept="application/pdf"
+								onchange={handleFilesSelected}
+								class="hidden"
+							/>
+						</label>
 						<ul class="text-xs text-slate-500 space-y-1">
 							{#each pdfUrls as pdf (pdf.id)}
 								<li
@@ -239,12 +291,21 @@
 								<button
 									onclick={handleBatchTranscribe}
 									disabled={isBatchProcessing}
-									class="px-2.5 py-1 bg-emerald-600 text-white text-[11px] font-bold rounded-lg cursor-pointer"
+									class="px-2.5 py-1 bg-emerald-600 text-white text-[11px] font-bold rounded-lg cursor-pointer disabled:opacity-50"
 								>
 									{isBatchProcessing ? 'Transcribing...' : 'Transcribe All'}
 								</button>
 							{/if}
 						</div>
+
+						{#if transcriptionStatus}
+							<div
+								class="text-xs font-semibold px-3 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-xl border border-emerald-500/20"
+							>
+								{transcriptionStatus}
+							</div>
+						{/if}
+
 						<label
 							class="px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl cursor-pointer inline-block"
 						>
@@ -262,7 +323,15 @@
 								<li
 									class="flex justify-between items-center bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700"
 								>
-									<span class="truncate">{audio.name}</span>
+									<div class="flex items-center gap-2 truncate">
+										<span class="truncate">{audio.name}</span>
+										{#if audio.kanji || audio.english}
+											<span
+												class="text-[10px] px-1.5 py-0.5 bg-emerald-500/10 text-emerald-500 rounded font-bold"
+												>Transcribed</span
+											>
+										{/if}
+									</div>
 									<button
 										onclick={() => removeAudio(audio.id)}
 										class="text-rose-500 font-bold cursor-pointer">✕</button
@@ -273,48 +342,29 @@
 					</div>
 				</div>
 
-				<!-- Question + AnswerKey format section -->
+				<!-- Bulk Questions Textarea Section -->
 				<div
 					class="p-4 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3"
 				>
-					<div class="flex justify-between items-center">
-						<div>
-							<h3
-								class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300"
-							>
-								Questions (Question|OptionNo Format)
-							</h3>
-							<p class="text-[10px] text-slate-400">
-								Example: <code class="text-brand-500">What did the speaker buy?|2</code> (Leave empty
-								if none)
-							</p>
-						</div>
-						<button
-							onclick={addQuestion}
-							class="px-3 py-1 bg-brand-500 text-white text-xs font-bold rounded-xl cursor-pointer"
-							>+ Add Question</button
+					<div>
+						<h3
+							class="font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1"
 						>
+							Bulk Questions Input
+						</h3>
+						<p class="text-[11px] text-slate-400">
+							Format: <code class="text-brand-500 font-bold"
+								>QuestionName[OptionNo], QuestionName[OptionNo]</code
+							>
+						</p>
 					</div>
 
-					<div class="space-y-2">
-						{#each customQuestions as q, idx (q.id)}
-							<div
-								class="flex items-center gap-3 bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700"
-							>
-								<span class="font-bold text-xs text-slate-400">#{idx + 1}</span>
-								<input
-									type="text"
-									bind:value={q.rawInput}
-									placeholder="Question text|OptionNo (e.g. Dialogue audio 1|3)"
-									class="flex-1 bg-slate-50 dark:bg-slate-950 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-100 outline-none focus:border-brand-500"
-								/>
-								<button
-									onclick={() => removeQuestion(q.id)}
-									class="text-rose-500 font-bold cursor-pointer px-2">✕</button
-								>
-							</div>
-						{/each}
-					</div>
+					<textarea
+						rows="4"
+						bind:value={bulkQuestionsInput}
+						placeholder="What is the speaker buying?[2], Where is the train going?[4]"
+						class="w-full bg-white dark:bg-slate-950 px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-100 outline-none focus:border-brand-500 font-mono leading-relaxed resize-y"
+					></textarea>
 				</div>
 			</div>
 

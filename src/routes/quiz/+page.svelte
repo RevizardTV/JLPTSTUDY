@@ -110,12 +110,13 @@
 	{#if questions.length > 0}
 		{@const q = questions[currentIndex]}
 		{@const isListeningMode = currentSet?.category === 'listening'}
+		{@const listeningModeType = currentSet?.listeningMode || 'MatchMode'}
 		{@const pdfFiles = currentSet?.pdfFiles || []}
 		{@const audioItems = currentSet?.audioItems || []}
 		{@const activeAudio = audioItems[currentAudioIndex]}
 
 		{#if isListeningMode}
-			<!-- LISTENING MODE: Large PDF on Top, Independent Audio Navigation, Standard Clickable Options -->
+			<!-- LISTENING MODE: Large PDF on Top, Independent Audio Navigation, Match/Lock Mode support -->
 			<div class="flex flex-col space-y-6">
 				<!-- Top Section: Large PDF Booklet Viewer with Independent Navigation -->
 				<div
@@ -219,7 +220,7 @@
 						</div>
 
 						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-							{#each q.options as opt, idx (idx)}
+							{#each q.options as opt, idx (typeof opt === 'string' ? opt : opt.text + '-' + idx)}
 								{@const details = getOptionDetails(opt)}
 								{@const isSelected = selectedOptionIdx === idx}
 								{@const isCorrectAnswer = idx === q.answer}
@@ -247,6 +248,38 @@
 							{/each}
 						</div>
 
+						<!-- MatchMode Transcript Reveal Panel (Displays upon answering in MatchMode) -->
+						{#if isAnswered && listeningModeType === 'MatchMode' && activeAudio}
+							<div
+								class="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-xl space-y-2 text-xs"
+							>
+								<div class="font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
+									🎧 Audio Transcription Breakdown (MatchMode)
+								</div>
+								<div class="grid grid-cols-1 gap-1 text-slate-700 dark:text-slate-300">
+									<div>
+										<strong>Kanji + Kana:</strong>
+										<span class="font-japanese">{activeAudio.kanji || activeAudio.name}</span>
+									</div>
+									<div>
+										<strong>Kana / Reading:</strong>
+										<span class="font-japanese">{activeAudio.kana || 'N/A'}</span>
+									</div>
+									<div>
+										<strong>English Meaning:</strong>
+										<span>{activeAudio.english || 'No translation generated.'}</span>
+									</div>
+								</div>
+							</div>
+						{:else if isAnswered && listeningModeType === 'LockMode'}
+							<div
+								class="p-3 bg-slate-100 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700 text-xs text-slate-500 italic"
+							>
+								🔒 LockMode active: Audio transcription details will be revealed in the summary
+								report after finishing the quiz.
+							</div>
+						{/if}
+
 						{#if isAnswered}
 							<div class="pt-2 flex justify-end">
 								<button
@@ -271,7 +304,7 @@
 				<div class="text-3xl font-bold font-japanese text-brand-600">{q.prompt}</div>
 
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-					{#each q.options as opt, idx (idx)}
+					{#each q.options as opt, idx (typeof opt === 'string' ? opt : opt.text + '-' + idx)}
 						{@const details = getOptionDetails(opt)}
 						<button
 							disabled={isAnswered}
