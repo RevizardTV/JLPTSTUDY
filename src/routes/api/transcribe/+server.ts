@@ -1,35 +1,31 @@
-import { error, json } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
-		const formData = await request.formData();
-		const audioFile = formData.get('file');
-
-		if (!audioFile) {
-			return json({ error: 'No audio file provided' }, { status: 400 });
-		}
-
-		// Forward the audio file to your Python FastAPI Whisper backend
+		// Forward the incoming request directly to FastAPI to preserve multipart boundaries
 		const pythonRes = await fetch('http://127.0.0.1:8000/transcribe', {
 			method: 'POST',
-			body: formData
-		});
+			headers: {
+				// Forward content-type header (including the multipart boundary)
+				'Content-Type': request.headers.get('content-type') || ''
+			},
+			body: request.body,
+			duplex: 'half' // Required for streaming request bodies in server runtimes
+		} as RequestInit);
 
 		if (!pythonRes.ok) {
 			const errText = await pythonRes.text();
-			throw new Error(`Python transcription service failed: ${errText}`);
+			return json({ error: `Python transcription service failed: ${errText}` }, { status: 500 });
 		}
 
 		const data = await pythonRes.json();
 		return json(data);
 	} catch (err) {
 		const errorMessage = err instanceof Error ? err.message : String(err);
-
-		// Log full error internally for terminal debugging
 		console.error('Transcription API Error:', errorMessage);
 
-		// Pass a valid string or object matching SvelteKit's expected Error interface
-		throw error(500, errorMessage);
+		// Return JSON response directly instead of throwing SvelteKit HTML errors
+		return json({ error: errorMessage }, { status: 500 });
 	}
 };
