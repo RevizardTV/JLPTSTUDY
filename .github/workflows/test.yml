@@ -37,14 +37,15 @@ jobs:
       - name: Type Check (Svelte & TS)
         run: bun x svelte-check --tsconfig ./tsconfig.json
 
-      - name: Start Python Backend (Background)
+      - name: Start Services and Run Tests
         env:
           HF_TOKEN: '${{ secrets.HF_TOKEN }}'
         run: |
+          # 1. Start Python FastAPI backend in the background
           source venv/bin/activate
           python python/server.py &
 
-          # Poll FastAPI server until it responds on port 8000 (up to 30s)
+          # 2. Poll FastAPI server until ready on port 8000
           echo "Waiting for Python FastAPI server on port 8000..."
           for i in {1..30}; do
             if curl -s http://127.0.0.1:8000/docs > /dev/null; then
@@ -54,12 +55,11 @@ jobs:
             sleep 1
           done
 
-      - name: Build and Start SvelteKit Server (Background)
-        run: |
+          # 3. Build and start SvelteKit preview server in the background
           bun run build
           bun run preview -- --port 5173 &
 
-          # Poll SvelteKit preview server until port 5173 is ready
+          # 4. Poll SvelteKit server until ready on port 5173
           echo "Waiting for SvelteKit server on port 5173..."
           for i in {1..15}; do
             if curl -s http://localhost:5173 > /dev/null; then
@@ -69,5 +69,5 @@ jobs:
             sleep 1
           done
 
-      - name: Run Test Suite
-        run: bun test
+          # 5. Run the test suite while both servers are active
+          bun test
