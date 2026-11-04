@@ -2,16 +2,20 @@ import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
-		// Forward the incoming request directly to FastAPI to preserve multipart boundaries
+		// 1. Read incoming form data from the client request
+		const formData = await request.formData();
+
+		// 2. Re-build a clean FormData payload to send to FastAPI
+		const upstreamFormData = new FormData();
+		for (const [key, value] of formData.entries()) {
+			upstreamFormData.append(key, value);
+		}
+
+		// 3. Forward to FastAPI (let fetch handle the multipart boundary automatically)
 		const pythonRes = await fetch('http://127.0.0.1:8000/transcribe', {
 			method: 'POST',
-			headers: {
-				// Forward content-type header (including the multipart boundary)
-				'Content-Type': request.headers.get('content-type') || ''
-			},
-			body: request.body,
-			duplex: 'half' // Required for streaming request bodies in server runtimes
-		} as RequestInit);
+			body: upstreamFormData
+		});
 
 		if (!pythonRes.ok) {
 			const errText = await pythonRes.text();
@@ -27,7 +31,6 @@ export const POST: RequestHandler = async ({ request }) => {
 		const errorMessage = err instanceof Error ? err.message : String(err);
 		console.error('Transcription API Error:', errorMessage);
 
-		// Return standard JSON response directly on failure
 		return Response.json({ error: errorMessage }, { status: 500 });
 	}
 };
