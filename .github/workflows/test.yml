@@ -42,7 +42,7 @@ jobs:
           HF_TOKEN: '${{ secrets.HF_TOKEN }}'
         run: |
           source venv/bin/activate
-          python main.py &
+          python python/server.py &
 
           # Poll FastAPI server until it responds on port 8000 (up to 30s)
           echo "Waiting for Python FastAPI server on port 8000..."
