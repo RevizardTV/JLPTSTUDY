@@ -97,7 +97,7 @@ simpleeval==1.0.8
 six==1.17.0
 sortedcontainers==2.4.0
 SQLAlchemy==2.0.52
-starlette==1.6.0
+starlette>=0.40.0,<1.0
 stevedore==5.9.1
 tavern==3.7.0
 tomlkit==0.13.3
