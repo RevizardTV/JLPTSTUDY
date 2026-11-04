@@ -19,11 +19,34 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install Dependencies
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Python & Whisper Dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Install Bun Dependencies
         run: bun install
 
       - name: Type Check (Svelte & TS)
         run: bun x svelte-check --tsconfig ./tsconfig.json
+
+      - name: Start Python Backend (Background)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }} # Optional: add your token under repo Settings -> Secrets if required
+        run: |
+          source venv/bin/activate
+          # Replace 'python main.py' with your actual python entrypoint command
+          python main.py &
+          # Give the background server a few seconds to boot up
+          sleep 3
 
       - name: Run Test Suite
         run: bun test

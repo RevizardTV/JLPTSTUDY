@@ -1,0 +1,78 @@
+========================================================================
+             LOCAL SETUP & GIT SYNC GUIDE (DIY)
+========================================================================
+
+Welcome! Follow this simple guide to set up and run this application on 
+your local machine, as well as keep your local instance updated with the 
+latest changes from GitHub.
+
+------------------------------------------------------------------------
+PREREQUISITES
+------------------------------------------------------------------------
+Make sure you have the following installed on your computer:
+1. Bun -> https://bun.sh
+2. Python (v3.10+ recommended) -> https://python.org
+3. Git -> https://git-scm.com
+
+------------------------------------------------------------------------
+STEP 1: FIRST TIME SETUP (CLONE & INSTALL)
+------------------------------------------------------------------------
+1. Open your terminal or command prompt.
+
+2. Clone the repository to your local machine:
+   git clone <YOUR-REPOSITORY-URL>
+
+3. Navigate into the project folder:
+   cd <YOUR-PROJECT-FOLDER-NAME>
+
+4. Install frontend dependencies using Bun:
+   bun install
+
+5. Set up Python backend / environment (if required):
+   python -m venv venv
+   
+   # On macOS/Linux:
+   source venv/bin/activate
+   
+   # On Windows:
+   .\venv\Scripts\activate
+
+   # Install Python packages:
+   pip install -r requirements.txt
+
+6. Start the development server with Bun:
+   bun dev
+
+7. Open your browser and navigate to the local URL shown in your 
+   terminal (typically http://localhost:5173).
+
+------------------------------------------------------------------------
+STEP 2: KEEPING YOUR LOCAL VERSION UP TO DATE
+------------------------------------------------------------------------
+Whenever updates or bug fixes are pushed to the remote repository, follow 
+these steps to update your local copy:
+
+1. Open your terminal in the project directory.
+
+2. Fetch and pull the latest changes from Git:
+   git pull origin main
+
+   *(Note: Replace "main" with "master" if your primary branch uses master).*
+
+3. Update dependencies:
+   bun install
+   pip install -r requirements.txt
+
+4. Restart your development server:
+   bun dev
+
+------------------------------------------------------------------------
+TROUBLESHOOTING & HINTS
+------------------------------------------------------------------------
+- Local Storage: Your quiz progress and user settings are stored in 
+  `localStorage` in your browser and will stay intact across git updates.
+- Conflict Resolution: If you altered files locally and `git pull` fails, 
+  reset your local branch to the latest commit:
+    git reset --hard HEAD
+    git pull origin main
+========================================================================

@@ -1,0 +1,51 @@
+@echo off
+TITLE Launching Application (Python + Svelte + Whisper)
+:: ========================================================================
+:: Batch script to initialize environment, install Hugging Face/Whisper,
+:: and launch Python & Svelte processes simultaneously.
+:: ========================================================================
+:: 1. SET OR PROMPT FOR HUGGING FACE ACCESS TOKEN
+if "%HF_TOKEN%"=="" (
+set /p HF_TOKEN="Enter your Hugging Face Access Token (or press Enter to skip): "
+)
+if not "%HF_TOKEN%"=="" (
+echo [INFO] Hugging Face Access Token set.
+set HUGGING_FACE_HUB_TOKEN=%HF_TOKEN%
+set HF_HUB_ENABLE_HF_TRANSFER=1
+)
+:: 2. PYTHON VIRTUAL ENVIRONMENT & DEPENDENCIES SETUP
+echo.
+echo ===================================================
+echo Setting up Python Environment & OpenAI Whisper...
+echo ===================================================
+if not exist "venv" (
+echo [INFO] Creating Python virtual environment...
+python -m venv venv
+)
+echo [INFO] Activating virtual environment...
+call venv\Scripts\activate
+echo [INFO] Checking/Installing dependencies (PyTorch, Whisper, Transformers)...
+pip install --upgrade pip
+pip install -r requirements.txt
+:: Optionally login to Hugging Face CLI if token provided
+if not "%HF_TOKEN%"=="" (
+echo [INFO] Authenticating with Hugging Face...
+python -c "from huggingface_hub import login; login(token='%HF_TOKEN%')"
+)
+:: 3. BUN / SVELTE DEPENDENCIES SETUP
+echo.
+echo ===================================================
+echo Checking Frontend Dependencies (Bun)...
+echo ===================================================
+call bun install
+:: 4. LAUNCH BOTH SERVICES CONCURRENTLY
+echo.
+echo ===================================================
+echo Starting Services...
+echo ===================================================
+:: Start Python Backend Server in a separate command window
+start "Python Backend Server" cmd /k "call venv\Scripts\activate && python main.py"
+:: Start Svelte Frontend in current window via Bun
+echo [INFO] Starting Svelte Dev Server...
+call bun dev
+pause
