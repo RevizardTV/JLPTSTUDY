@@ -1,4 +1,3 @@
-import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
@@ -16,16 +15,19 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		if (!pythonRes.ok) {
 			const errText = await pythonRes.text();
-			return json({ error: `Python transcription service failed: ${errText}` }, { status: 500 });
+			return Response.json(
+				{ error: `Python transcription service failed: ${errText}` },
+				{ status: 500 }
+			);
 		}
 
 		const data = await pythonRes.json();
-		return json(data);
+		return Response.json(data);
 	} catch (err) {
 		const errorMessage = err instanceof Error ? err.message : String(err);
 		console.error('Transcription API Error:', errorMessage);
 
-		// Return JSON response directly instead of throwing SvelteKit HTML errors
-		return json({ error: errorMessage }, { status: 500 });
+		// Return standard JSON response directly on failure
+		return Response.json({ error: errorMessage }, { status: 500 });
 	}
 };
