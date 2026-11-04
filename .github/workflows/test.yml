@@ -22,7 +22,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       - name: Install Python & Whisper Dependencies
         run: |
@@ -41,9 +41,11 @@ jobs:
         env:
           HF_TOKEN: '${{ secrets.HF_TOKEN }}'
         run: |
-          # 1. Start Python FastAPI backend in the background
+          # 1. Start Python FastAPI backend from the python folder using uvicorn
           source venv/bin/activate
-          python python/server.py &
+          cd python
+          uvicorn server:app --host 127.0.0.1 --port 8000 &
+          cd ..
 
           # 2. Poll FastAPI server until ready on port 8000
           echo "Waiting for Python FastAPI server on port 8000..."
