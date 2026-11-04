@@ -44,14 +44,30 @@ jobs:
           source venv/bin/activate
           python main.py &
 
+          # Poll FastAPI server until it responds on port 8000 (up to 30s)
+          echo "Waiting for Python FastAPI server on port 8000..."
+          for i in {1..30}; do
+            if curl -s http://127.0.0.1:8000/docs > /dev/null; then
+              echo "FastAPI backend is ready!"
+              break
+            fi
+            sleep 1
+          done
+
       - name: Build and Start SvelteKit Server (Background)
         run: |
-          # Build the app so it can run via preview on port 5173, or use `bun run dev &`
           bun run build
           bun run preview -- --port 5173 &
 
-          # Give both servers enough time to initialize and bind to ports
-          sleep 6
+          # Poll SvelteKit preview server until port 5173 is ready
+          echo "Waiting for SvelteKit server on port 5173..."
+          for i in {1..15}; do
+            if curl -s http://localhost:5173 > /dev/null; then
+              echo "SvelteKit server is ready!"
+              break
+            fi
+            sleep 1
+          done
 
       - name: Run Test Suite
         run: bun test
