@@ -43,8 +43,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }} # Optional: add your token under repo Settings -> Secrets if required
         run: |
           source venv/bin/activate
-          # Replace 'python main.py' with your actual python entrypoint command
-          python main.py &
+          python python/server.py &
           # Give the background server a few seconds to boot up
           sleep 3
 
