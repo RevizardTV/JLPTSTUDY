@@ -10,6 +10,7 @@
 	let kanaQuery = $state<string>('');
 	let englishQuery = $state<string>('');
 	let selectedKana = $state<string>('');
+	let selectedGroup = $state<string>('all'); // 'all', '1', '2', or '3'
 	let showModal = $state<boolean>(false);
 
 	let verbList = $state<VerbItem[]>([]);
@@ -47,8 +48,9 @@
 				!englishQuery.trim() ||
 				verb.english.toLowerCase().includes(englishQuery.trim().toLowerCase());
 			const mStartingKana = !selectedKana || verb.reading.startsWith(selectedKana);
+			const mGroup = selectedGroup === 'all' || verb.group.toString() === selectedGroup;
 
-			return mKanji && mKana && mEng && mStartingKana;
+			return mKanji && mKana && mEng && mStartingKana && mGroup;
 		})
 	);
 </script>
@@ -69,15 +71,60 @@
 		</p>
 	</div>
 
-	<!-- Filter Bar with Kana Filter Binding -->
-	<GrammarFilterBar
-		bind:kanjiQuery
-		bind:kanaQuery
-		bind:englishQuery
-		bind:selectedKana
-		onupload={() => (showModal = true)}
-		oneraseall={handleEraseAll}
-	/>
+	<!-- Filter Bar with Group Selector Tabs -->
+	<div class="space-y-4">
+		<GrammarFilterBar
+			bind:kanjiQuery
+			bind:kanaQuery
+			bind:englishQuery
+			bind:selectedKana
+			onupload={() => (showModal = true)}
+			oneraseall={handleEraseAll}
+		/>
+
+		<!-- Verb Group Filter Toggle -->
+		<div
+			class="flex items-center gap-2 bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs"
+		>
+			<span class="text-xs font-semibold text-slate-500 dark:text-slate-400 mr-2">Group:</span>
+			<button
+				type="button"
+				class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors {selectedGroup === 'all'
+					? 'bg-brand-600 text-white'
+					: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}"
+				onclick={() => (selectedGroup = 'all')}
+			>
+				All Groups
+			</button>
+			<button
+				type="button"
+				class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors {selectedGroup === '1'
+					? 'bg-brand-600 text-white'
+					: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}"
+				onclick={() => (selectedGroup = '1')}
+			>
+				Group 1 (Godan)
+			</button>
+			<button
+				type="button"
+				class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors {selectedGroup === '2'
+					? 'bg-brand-600 text-white'
+					: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}"
+				onclick={() => (selectedGroup = '2')}
+			>
+				Group 2 (Ichidan)
+			</button>
+			<button
+				type="button"
+				class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors {selectedGroup === '3'
+					? 'bg-brand-600 text-white'
+					: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}"
+				onclick={() => (selectedGroup = '3')}
+			>
+				Group 3 (Irregular)
+			</button>
+		</div>
+	</div>
 
 	<!-- Verb Accordion Boxes List -->
 	<div class="space-y-4">
