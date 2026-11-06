@@ -1,6 +1,11 @@
 import { writable } from 'svelte/store';
 import type { QuestionSet, UserProgressData, FinishEventData, SetProgress, UserAnswer } from '#lib/types.js';
+import type { VerbItem, AdjItem } from '#lib/types/grammar.js';
 import { SvelteSet } from 'svelte/reactivity';
+
+// ==========================================
+// 1. QUESTION SETS & QUIZ PROGRESS STORES
+// ==========================================
 
 export const initialData: QuestionSet[] = [
   {
@@ -42,7 +47,6 @@ const defaultProgress: UserProgressData = {
   totalQuizzes: 0
 };
 
-// Unified progress key: 'kanji_question_progress'
 const savedProgress = typeof window !== 'undefined' ? localStorage.getItem('kanji_question_progress') : null;
 export const userProgress = writable<UserProgressData>(savedProgress ? JSON.parse(savedProgress) : defaultProgress);
 
@@ -52,11 +56,9 @@ userProgress.subscribe(value => {
   }
 });
 
-// Load sets using the unified 'kanji_question_sets' key
 const savedSets = typeof window !== 'undefined' ? localStorage.getItem('kanji_question_sets') : null;
 const rawSets: QuestionSet[] = savedSets ? JSON.parse(savedSets) : initialData;
 
-// Runtime safety pass to guarantee unique IDs and prevent each_key_duplicate crashes
 const seenIds = new SvelteSet<string>();
 const sanitizedSets = rawSets.map((set, index) => {
   let id = set.id || `set-${index}`;
@@ -75,9 +77,74 @@ questionSets.subscribe(value => {
   }
 });
 
-/**
- * Records quiz completion statistics.
- */
+// ==========================================
+// 2. VERB GRAMMAR STORE
+// ==========================================
+
+export const initialVerbs: VerbItem[] = [
+  {
+    id: 'taberu',
+    group: 2,
+    dictionary: '食べる',
+    reading: 'たべる',
+    english: 'to eat',
+    forms: {
+      masu: { formName: 'Masu (Polite Non-Past)', kanji: '食べます', kana: 'たべます', romaji: 'tabemasu', english: 'eat / will eat' },
+      masen: { formName: 'Masen (Polite Negative)', kanji: '食べません', kana: 'たべません', romaji: 'tabemasen', english: 'do not eat' },
+      mashita: { formName: 'Mashita (Polite Past)', kanji: '食べました', kana: 'たべました', romaji: 'tabemashita', english: 'ate' },
+      masenka: { formName: 'Masen ka (Polite Invitation)', kanji: '食べませんか', kana: 'たべませんか', romaji: 'tabemasen ka', english: "won't you eat?" },
+      te: { formName: 'Te-Form (Connection)', kanji: '食べて', kana: 'たべて', romaji: 'tabete', english: 'eat and...' },
+      tai: { formName: 'Tai-Form (Desire)', kanji: '食べたいです', kana: 'たべたいです', romaji: 'tabetai desu', english: 'want to eat' },
+      potential: { formName: 'Potential Form', kanji: '食べられる', kana: 'たべられる', romaji: 'taberareru', english: 'can eat' },
+      volitional: { formName: 'Volitional Form', kanji: '食べよう', kana: 'たべよう', romaji: 'tabeyou', english: "let's eat" }
+    }
+  }
+];
+
+const savedVerbs = typeof window !== 'undefined' ? localStorage.getItem('jlpt_verb_list') : null;
+export const verbStore = writable<VerbItem[]>(savedVerbs ? JSON.parse(savedVerbs) : initialVerbs);
+
+verbStore.subscribe(value => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('jlpt_verb_list', JSON.stringify(value));
+  }
+});
+
+// ==========================================
+// 3. ADJECTIVE GRAMMAR STORE
+// ==========================================
+
+export const initialAdjectives: AdjItem[] = [
+  {
+    id: 'ookii',
+    category: 'i-adj',
+    dictionary: '大きい',
+    reading: 'おおきい',
+    english: 'big',
+    forms: {
+      nonPast: { formName: 'Non-Past Polite', kanji: '大きいです', kana: 'おおきいです', romaji: 'ookii desu', english: 'is big' },
+      past: { formName: 'Past Polite', kanji: '大きかったです', kana: 'おおきかったです', romaji: 'ookikatta desu', english: 'was big' },
+      negative: { formName: 'Negative Polite', kanji: '大きくないです', kana: 'おおきくないです', romaji: 'ookikunai desu', english: 'is not big' },
+      pastNegative: { formName: 'Past Negative Polite', kanji: '大きくなかったです', kana: 'おおきくなかったです', romaji: 'ookikunakatta desu', english: 'was not big' },
+      adverbial: { formName: 'Adverbial Form (ku-form)', kanji: '大きく', kana: 'おおきく', romaji: 'ookiku', english: 'big (adverb)' },
+      attributive: { formName: 'Attributive Form', kanji: '大きい', kana: 'おおきい', romaji: 'ookii', english: 'big (base form)' }
+    }
+  }
+];
+
+const savedAdjectives = typeof window !== 'undefined' ? localStorage.getItem('jlpt_adjective_list') : null;
+export const adjectiveStore = writable<AdjItem[]>(savedAdjectives ? JSON.parse(savedAdjectives) : initialAdjectives);
+
+adjectiveStore.subscribe(value => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('jlpt_adjective_list', JSON.stringify(value));
+  }
+});
+
+// ==========================================
+// 4. HELPER FUNCTIONS
+// ==========================================
+
 export function recordQuizCompletion(data: FinishEventData) {
   if (!data.setId) return;
 
@@ -115,9 +182,6 @@ export function recordQuizCompletion(data: FinishEventData) {
   });
 }
 
-/**
- * Deletes a question set by ID and removes progress.
- */
 export function deleteQuestionSet(setId: string) {
   questionSets.update((sets) => sets.filter((s) => s.id !== setId));
   
@@ -131,9 +195,6 @@ export function deleteQuestionSet(setId: string) {
   });
 }
 
-/**
- * Updates active index, score, attempted count, and saved user answers.
- */
 export function updateSetProgressIndex(
   setId: string, 
   currentIndex: number, 
@@ -173,9 +234,6 @@ export function updateSetProgressIndex(
   });
 }
 
-/**
- * Resets a specific question set's progress back to unattempted.
- */
 export function resetSetProgress(setId: string) {
   userProgress.update((prog) => {
     const updatedCompleted = { ...prog.completedSets };

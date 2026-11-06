@@ -19,12 +19,19 @@ print("Whisper model loaded successfully!")
 
 @app.post("/transcribe")
 async def transcribe(file: UploadFile = File(...)):
+    if not file.filename:
+        raise HTTPException(status_code=400, detail="Invalid or empty audio file provided.")
+        
     temp_file_path = None
     try:
         suffix = os.path.splitext(file.filename)[1] if file.filename else ".mp3"
         with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
             shutil.copyfileobj(file.file, temp_file)
             temp_file_path = temp_file.name
+
+        # Ensure the file isn't empty before passing to Whisper
+        if os.path.getsize(temp_file_path) == 0:
+            raise HTTPException(status_code=400, detail="Uploaded audio file is empty.")
 
         # 1. Transcribe normal Japanese (Kanji + Kana)
         segments_ja, info_ja = model.transcribe(temp_file_path, beam_size=5, language="ja", task="transcribe")
@@ -46,6 +53,8 @@ async def transcribe(file: UploadFile = File(...)):
             "english": english_text
         }
 
+    except HTTPException as he:
+        raise he
     except Exception as err:
         print(f"Transcription error: {err}")
         raise HTTPException(status_code=500, detail=str(err))

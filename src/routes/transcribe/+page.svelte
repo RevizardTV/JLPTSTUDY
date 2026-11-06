@@ -98,7 +98,7 @@
 			<div
 				class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-6 text-center space-y-3 hover:border-brand-500 transition"
 			>
-				<div class="text-3xl">🎵</div>
+				<div class="text-3xl">📁</div>
 				<div class="text-xs text-slate-500 dark:text-slate-400">
 					{#if audioFileName}
 						<span class="font-bold text-emerald-500">{audioFileName}</span>
@@ -127,10 +127,10 @@
 				class="w-full py-3 bg-brand-500 hover:bg-brand-600 disabled:opacity-50 text-white font-bold text-xs rounded-xl shadow transition flex items-center justify-center gap-2 cursor-pointer"
 			>
 				{#if isTranscribing}
-					<span class="animate-spin">🌀</span>
+					<span class="animate-spin">⏳</span>
 					<span>Processing Japanese Audio...</span>
 				{:else}
-					<span>✨</span>
+					<span>🎙️</span>
 					<span>Run Transcription & Translation</span>
 				{/if}
 			</button>
@@ -152,7 +152,7 @@
 				class="flex justify-between items-center border-b border-slate-100 dark:border-slate-700 pb-3 gap-2"
 			>
 				<h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm flex items-center gap-2">
-					<span>📝</span>
+					<span>📄</span>
 					<span>Transcript</span>
 				</h3>
 

@@ -2,20 +2,15 @@ import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
-		// 1. Read incoming form data from the client request
-		const formData = await request.formData();
-
-		// 2. Re-build a clean FormData payload to send to FastAPI
-		const upstreamFormData = new FormData();
-		for (const [key, value] of formData.entries()) {
-			upstreamFormData.append(key, value);
-		}
-
-		// 3. Forward to FastAPI (let fetch handle the multipart boundary automatically)
+		// Forward the request directly using the original headers and body stream
 		const pythonRes = await fetch('http://127.0.0.1:8000/transcribe', {
 			method: 'POST',
-			body: upstreamFormData
-		});
+			headers: {
+				'Content-Type': request.headers.get('content-type') || ''
+			},
+			body: request.body,
+			duplex: 'half'
+		} as RequestInit);
 
 		if (!pythonRes.ok) {
 			const errText = await pythonRes.text();

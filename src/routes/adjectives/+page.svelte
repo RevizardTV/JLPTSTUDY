@@ -4,72 +4,28 @@
 	import AccordionCard from '#lib/components/grammar/AccordionCard.svelte';
 	import AdjectiveUploadModal from '#lib/components/modals/AdjectiveUploadModal.svelte';
 	import { filterRedundantAdjectives } from '#lib/utils/redundancyChecker.js';
+	import { adjectiveStore } from '#lib/stores.js';
 
 	let kanjiQuery = $state<string>('');
 	let kanaQuery = $state<string>('');
 	let englishQuery = $state<string>('');
 	let selectedKana = $state<string>('');
+	let selectedCategory = $state<string>('all'); // 'all', 'i-adj', or 'na-adj'
 	let showModal = $state<boolean>(false);
 
-	let adjectiveList = $state<AdjItem[]>([
-		{
-			id: 'ookii',
-			category: 'i-adj',
-			dictionary: '大きい',
-			reading: 'おおきい',
-			english: 'big',
-			forms: {
-				nonPast: {
-					formName: 'Non-Past Polite',
-					kanji: '大きいです',
-					kana: 'おおきいです',
-					romaji: 'ookii desu',
-					english: 'is big'
-				},
-				past: {
-					formName: 'Past Polite',
-					kanji: '大きかったです',
-					kana: 'おおきかったです',
-					romaji: 'ookikatta desu',
-					english: 'was big'
-				},
-				negative: {
-					formName: 'Negative Polite',
-					kanji: '大きくないです',
-					kana: 'おおきくないです',
-					romaji: 'ookikunai desu',
-					english: 'is not big'
-				},
-				pastNegative: {
-					formName: 'Past Negative Polite',
-					kanji: '大きくなかったです',
-					kana: 'おおきくなかったです',
-					romaji: 'ookikunakatta desu',
-					english: 'was not big'
-				},
-				adverbial: {
-					formName: 'Adverbial Form (ku-form)',
-					kanji: '大きく',
-					kana: 'おおきく',
-					romaji: 'ookiku',
-					english: 'big (adverb)'
-				},
-				attributive: {
-					formName: 'Attributive Form',
-					kanji: '大きい',
-					kana: 'おおきい',
-					romaji: 'ookii',
-					english: 'big (base form)'
-				}
-			}
-		}
-	]);
+	let adjectiveList = $state<AdjItem[]>([]);
+	$effect(() => {
+		const unsubscribe = adjectiveStore.subscribe((value) => {
+			adjectiveList = value;
+		});
+		return unsubscribe;
+	});
 
 	function handleNewAdjectives(newItems: AdjItem[]) {
 		const { uniqueItems, skippedCount } = filterRedundantAdjectives(adjectiveList, newItems);
 
 		if (uniqueItems.length > 0) {
-			adjectiveList = [...uniqueItems, ...adjectiveList];
+			adjectiveStore.update((curr) => [...uniqueItems, ...curr]);
 			alert(
 				`Successfully added ${uniqueItems.length} new adjective(s). ${skippedCount > 0 ? `(${skippedCount} redundant items skipped)` : ''}`
 			);
@@ -80,7 +36,7 @@
 
 	function handleEraseAll() {
 		if (confirm('Are you sure you want to erase all adjectives?')) {
-			adjectiveList = [];
+			adjectiveStore.set([]);
 		}
 	}
 
@@ -92,8 +48,10 @@
 				!englishQuery.trim() ||
 				adj.english.toLowerCase().includes(englishQuery.trim().toLowerCase());
 			const mStartingKana = !selectedKana || adj.reading.startsWith(selectedKana);
+			const mCategory =
+				selectedCategory === 'all' || adj.category.toLowerCase() === selectedCategory.toLowerCase();
 
-			return mKanji && mKana && mEng && mStartingKana;
+			return mKanji && mKana && mEng && mStartingKana && mCategory;
 		})
 	);
 </script>
@@ -113,15 +71,54 @@
 		</p>
 	</div>
 
-	<!-- Filter Bar with Kana Filter Binding -->
-	<GrammarFilterBar
-		bind:kanjiQuery
-		bind:kanaQuery
-		bind:englishQuery
-		bind:selectedKana
-		onupload={() => (showModal = true)}
-		oneraseall={handleEraseAll}
-	/>
+	<!-- Filter Bar with Category Selector Tabs -->
+	<div class="space-y-4">
+		<GrammarFilterBar
+			bind:kanjiQuery
+			bind:kanaQuery
+			bind:englishQuery
+			bind:selectedKana
+			onupload={() => (showModal = true)}
+			oneraseall={handleEraseAll}
+		/>
+
+		<!-- Additional I-Adj / Na-Adj Filter Toggle -->
+		<div
+			class="flex items-center gap-2 bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xs"
+		>
+			<span class="text-xs font-semibold text-slate-500 dark:text-slate-400 mr-2">Type:</span>
+			<button
+				type="button"
+				class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors {selectedCategory ===
+				'all'
+					? 'bg-purple-600 text-white'
+					: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}"
+				onclick={() => (selectedCategory = 'all')}
+			>
+				All
+			</button>
+			<button
+				type="button"
+				class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors {selectedCategory ===
+				'i-adj'
+					? 'bg-purple-600 text-white'
+					: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}"
+				onclick={() => (selectedCategory = 'i-adj')}
+			>
+				I-Adjectives
+			</button>
+			<button
+				type="button"
+				class="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors {selectedCategory ===
+				'na-adj'
+					? 'bg-purple-600 text-white'
+					: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}"
+				onclick={() => (selectedCategory = 'na-adj')}
+			>
+				Na-Adjectives
+			</button>
+		</div>
+	</div>
 
 	<!-- Adjective Accordion Boxes List -->
 	<div class="space-y-4">

@@ -4,6 +4,7 @@
 	import AccordionCard from '#lib/components/grammar/AccordionCard.svelte';
 	import VerbUploadModal from '#lib/components/modals/VerbUploadModal.svelte';
 	import { filterRedundantVerbs } from '#lib/utils/redundancyChecker.js';
+	import { verbStore } from '#lib/stores.js';
 
 	let kanjiQuery = $state<string>('');
 	let kanaQuery = $state<string>('');
@@ -11,79 +12,19 @@
 	let selectedKana = $state<string>('');
 	let showModal = $state<boolean>(false);
 
-	let verbList = $state<VerbItem[]>([
-		{
-			id: 'taberu',
-			group: 2,
-			dictionary: '食べる',
-			reading: 'たべる',
-			english: 'to eat',
-			forms: {
-				masu: {
-					formName: 'Masu (Polite Non-Past)',
-					kanji: '食べます',
-					kana: 'たべます',
-					romaji: 'tabemasu',
-					english: 'eat / will eat'
-				},
-				masen: {
-					formName: 'Masen (Polite Negative)',
-					kanji: '食べません',
-					kana: 'たべません',
-					romaji: 'tabemasen',
-					english: 'do not eat'
-				},
-				mashita: {
-					formName: 'Mashita (Polite Past)',
-					kanji: '食べました',
-					kana: 'たべました',
-					romaji: 'tabemashita',
-					english: 'ate'
-				},
-				masenka: {
-					formName: 'Masen ka (Polite Invitation)',
-					kanji: '食べませんか',
-					kana: 'たべませんか',
-					romaji: 'tabemasen ka',
-					english: "won't you eat?"
-				},
-				te: {
-					formName: 'Te-Form (Connection)',
-					kanji: '食べて',
-					kana: 'たべて',
-					romaji: 'tabete',
-					english: 'eat and...'
-				},
-				tai: {
-					formName: 'Tai-Form (Desire)',
-					kanji: '食べたいです',
-					kana: 'たべたいです',
-					romaji: 'tabetai desu',
-					english: 'want to eat'
-				},
-				potential: {
-					formName: 'Potential Form',
-					kanji: '食べられる',
-					kana: 'たべられる',
-					romaji: 'taberareru',
-					english: 'can eat'
-				},
-				volitional: {
-					formName: 'Volitional Form',
-					kanji: '食べよう',
-					kana: 'たべよう',
-					romaji: 'tabeyou',
-					english: "let's eat"
-				}
-			}
-		}
-	]);
+	let verbList = $state<VerbItem[]>([]);
+	$effect(() => {
+		const unsubscribe = verbStore.subscribe((value) => {
+			verbList = value;
+		});
+		return unsubscribe;
+	});
 
 	function handleNewVerbs(newItems: VerbItem[]) {
 		const { uniqueItems, skippedCount } = filterRedundantVerbs(verbList, newItems);
 
 		if (uniqueItems.length > 0) {
-			verbList = [...uniqueItems, ...verbList];
+			verbStore.update((curr) => [...uniqueItems, ...curr]);
 			alert(
 				`Successfully added ${uniqueItems.length} new verb(s). ${skippedCount > 0 ? `(${skippedCount} redundant items skipped)` : ''}`
 			);
@@ -94,7 +35,7 @@
 
 	function handleEraseAll() {
 		if (confirm('Are you sure you want to erase all verbs?')) {
-			verbList = [];
+			verbStore.set([]);
 		}
 	}
 
